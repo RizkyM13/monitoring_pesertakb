@@ -228,10 +228,10 @@
               <span>Setting</span>
               </a>
             <ul class="sub">
-              <li><a href="general.html">Profil Instansi</a></li>
-              <li><a href="buttons.html">Ms Menu</a></li>
-              <li><a href="panels.html">Ms Group</a></li>
-              <li><a href="font_awesome.html">Ms User</a></li>
+              <li><a href="">Profil Instansi</a></li>
+              <li><a href="">Ms Menu</a></li>
+              <li><a href="">Ms Group</a></li>
+              <li><a href="">Ms User</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -240,12 +240,12 @@
               <span>Master Data</span>
               </a>
             <ul class="sub">
-              <li><a href="general.html">Data Kecamatan</a></li>
-              <li><a href="buttons.html">Data Desa</a></li>
-              <li><a href="panels.html">Data RW</a></li>
-              <li><a href="font_awesome.html">Data RT</a></li>
-              <li><a href="font_awesome.html">Data Faskes</a></li>
-              <li><a href="font_awesome.html">Data Kader</a></li>
+              <li><a href="">Data Kecamatan</a></li>
+              <li><a href="">Data Desa</a></li>
+              <li><a href="">Data RW</a></li>
+              <li><a href="">Data RT</a></li>
+              <li><a href="">Data Faskes</a></li>
+              <li><a href="">Data Kader</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -254,10 +254,10 @@
               <span>Transaksi</span>
               </a>
             <ul class="sub">
-              <li><a href="general.html">Data KK</a></li>
-              <li><a href="buttons.html">Data Penduduk</a></li>
-              <li><a href="panels.html">Data Akseptor KB</a></li>
-              <li><a href="font_awesome.html">Kunjungan Ulang Akseptor</a></li>
+              <li><a href="">Data KK</a></li>
+              <li><a href="">Data Penduduk</a></li>
+              <li><a href="">Data Akseptor KB</a></li>
+              <li><a href="">Kunjungan Ulang Akseptor</a></li>
             </ul>
           </li>
           <li class="sub-menu">
