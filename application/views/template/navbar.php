@@ -209,120 +209,75 @@
     <!--sidebar start-->
     <aside>
       <div id="sidebar" class="nav-collapse ">
+  <!--sidebar start-->
+    <aside>
+      <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="profile.html"><img src="<?= base_url() ?>/assets/img/ui-sam.jpg" class="img-circle" width="80"></a></p>
-          <h5 class="centered">Sam Soffes</h5>
+          <p class="centered"><a href="profile.html"><img src="<?= base_url() ?>/assets/img/KB.jpg" class="img-circle" width="80"></a></p>
+          <h5 class="centered">Admin</h5>
           <li class="mt">
-            <a class="active" href="index.html">
+            <a class="active" href="<?= base_url() ?>DashboardAdmin">
               <i class="fa fa-dashboard"></i>
               <span>Dashboard</span>
               </a>
           </li>
           <li class="sub-menu">
             <a href="javascript:;">
-              <i class="fa fa-desktop"></i>
-              <span>UI Elements</span>
-              </a>
-            <ul class="sub">
-              <li><a href="<?= base_url() ?>/assets/general.html">General</a></li>
-              <li><a href="<?= base_url() ?>/assets/buttons.html">Buttons</a></li>
-              <li><a href="<?= base_url() ?>/assets/panels.html">Panels</a></li>
-              <li><a href="<?= base_url() ?>/assets/font_awesome.html">Font Awesome</a></li>
-            </ul>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;">
               <i class="fa fa-cogs"></i>
-              <span>Components</span>
+              <span>Setting</span>
               </a>
             <ul class="sub">
-              <li><a href="<?= base_url() ?>/assets/grids.html">Grids</a></li>
-              <li><a href="<?= base_url() ?>/assets/calendar.html">Calendar</a></li>
-              <li><a href="<?= base_url() ?>/assets/gallery.html">Gallery</a></li>
-              <li><a href="<?= base_url() ?>/assets/todo_list.html">Todo List</a></li>
-              <li><a href="<?= base_url() ?>/assets/dropzone.html">Dropzone File Upload</a></li>
-              <li><a href="<?= base_url() ?>/assets/inline_editor.html">Inline Editor</a></li>
-              <li><a href="<?= base_url() ?>/assets/file_upload.html">Multiple File Upload</a></li>
+              <li><a href="general.html">Profil Instansi</a></li>
+              <li><a href="buttons.html">Ms Menu</a></li>
+              <li><a href="panels.html">Ms Group</a></li>
+              <li><a href="font_awesome.html">Ms User</a></li>
             </ul>
           </li>
           <li class="sub-menu">
             <a href="javascript:;">
               <i class="fa fa-book"></i>
-              <span>Extra Pages</span>
+              <span>Master Data</span>
               </a>
             <ul class="sub">
-              <li><a href="<?= base_url() ?>/assets/blank.html">Blank Page</a></li>
-              <li><a href="<?= base_url() ?>/assets/login.html">Login</a></li>
-              <li><a href="<?= base_url() ?>/assets/lock_screen.html">Lock Screen</a></li>
-              <li><a href="<?= base_url() ?>/assets/profile.html">Profile</a></li>
-              <li><a href="<?= base_url() ?>/assets/invoice.html">Invoice</a></li>
-              <li><a href="<?= base_url() ?>/assets/pricing_table.html">Pricing Table</a></li>
-              <li><a href="<?= base_url() ?>/assets/faq.html">FAQ</a></li>
-              <li><a href="<?= base_url() ?>/assets/404.html">404 Error</a></li>
-              <li><a href="<?= base_url() ?>/assets/500.html">500 Error</a></li>
+              <li><a href="general.html">Data Kecamatan</a></li>
+              <li><a href="buttons.html">Data Desa</a></li>
+              <li><a href="panels.html">Data RW</a></li>
+              <li><a href="font_awesome.html">Data RT</a></li>
+              <li><a href="font_awesome.html">Data Faskes</a></li>
+              <li><a href="font_awesome.html">Data Kader</a></li>
             </ul>
           </li>
           <li class="sub-menu">
             <a href="javascript:;">
-              <i class="fa fa-tasks"></i>
-              <span>Forms</span>
+              <i class="fa fa-book"></i>
+              <span>Transaksi</span>
               </a>
             <ul class="sub">
-              <li><a href="<?= base_url() ?>/assets/form_component.html">Form Components</a></li>
-              <li><a href="<?= base_url() ?>/assets/advanced_form_components.html">Advanced Components</a></li>
-              <li><a href="<?= base_url() ?>/assets/form_validation.html">Form Validation</a></li>
-              <li><a href="<?= base_url() ?>/assets/contactform.html">Contact Form</a></li>
+              <li><a href="general.html">Data KK</a></li>
+              <li><a href="buttons.html">Data Penduduk</a></li>
+              <li><a href="panels.html">Data Akseptor KB</a></li>
+              <li><a href="font_awesome.html">Kunjungan Ulang Akseptor</a></li>
             </ul>
           </li>
           <li class="sub-menu">
             <a href="javascript:;">
-              <i class="fa fa-th"></i>
-              <span>Data Tables</span>
+              <i class="fa fa-desktop"></i>
+              <span>Laporan</span>
               </a>
             <ul class="sub">
-              <li><a href="<?= base_url() ?>/assets/basic_table.html">Basic Table</a></li>
-              <li><a href="<?= base_url() ?>/assets/responsive_table.html">Responsive Table</a></li>
-              <li><a href="<?= base_url() ?>/assets/advanced_table.html">Advanced Table</a></li>
+              <li><a href="general.html">General</a></li>
+              <li><a href="buttons.html">Buttons</a></li>
+              <li><a href="panels.html">Panels</a></li>
+              <li><a href="font_awesome.html">Font Awesome</a></li>
             </ul>
           </li>
-          <li>
-            <a href="inbox.html">
-              <i class="fa fa-envelope"></i>
-              <span>Mail </span>
-              <span class="label label-theme pull-right mail-info">2</span>
-              </a>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;">
-              <i class=" fa fa-bar-chart-o"></i>
-              <span>Charts</span>
-              </a>
-            <ul class="sub">
-              <li><a href="<?= base_url() ?>/assets/morris.html">Morris</a></li>
-              <li><a href="<?= base_url() ?>/assets/chartjs.html">Chartjs</a></li>
-              <li><a href="<?= base_url() ?>/assets/flot_chart.html">Flot Charts</a></li>
-              <li><a href="<?= base_url() ?>/assets/xchart.html">xChart</a></li>
-            </ul>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;">
-              <i class="fa fa-comments-o"></i>
-              <span>Chat Room</span>
-              </a>
-            <ul class="sub">
-              <li><a href="<?= base_url() ?>/assets/lobby.html">Lobby</a></li>
-              <li><a href="<?= base_url() ?>/assets/chat_room.html"> Chat Room</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="google_maps.html">
-              <i class="fa fa-map-marker"></i>
-              <span>Google Maps </span>
-              </a>
-          </li>
+
         </ul>
         <!-- sidebar menu end-->
+      </div>
+    </aside>
+    <!--sidebar end-->
       </div>
     </aside>
     <!--sidebar end-->
