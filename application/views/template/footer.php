@@ -22,16 +22,17 @@
   </section>
   <!-- js placed at the end of the document so the pages load faster -->
   <script src="<?= base_url() ?>/assets/lib/jquery/jquery.min.js"></script>
-
   <script src="<?= base_url() ?>/assets/lib/bootstrap/js/bootstrap.min.js"></script>
   <script class="include" type="text/javascript" src="<?= base_url() ?>/assets/lib/jquery.dcjqaccordion.2.7.js"></script>
   <script src="<?= base_url() ?>/assets/lib/jquery.scrollTo.min.js"></script>
   <script src="<?= base_url() ?>/assets/lib/jquery.nicescroll.js" type="text/javascript"></script>
   <script src="<?= base_url() ?>/assets/lib/jquery.sparkline.js"></script>
+
   <!--common script for all pages-->
   <script src="<?= base_url() ?>/assets/lib/common-scripts.js"></script>
   <script type="text/javascript" src="<?= base_url() ?>/assets/lib/gritter/js/jquery.gritter.js"></script>
   <script type="text/javascript" src="<?= base_url() ?>/assets/lib/gritter-conf.js"></script>
+  
   <!--script for this page-->
   <script src="<?= base_url() ?>/assets/lib/sparkline-chart.js"></script>
   <script src="<?= base_url() ?>/assets/lib/zabuto_calendar.js"></script>
@@ -43,7 +44,7 @@
         // (string | mandatory) the text inside the notification
         text: 'Hover me to enable the Close Button. You can hide the left sidebar clicking on the button next to the logo.',
         // (string | optional) the image to display on the left
-        image: 'img/ui-sam.jpg',
+        image: '<?= base_url() ?>/assets/img/ui-sam.jpg',
         // (bool | optional) if you want it to fade out on its own or just sit there
         sticky: false,
         // (int | optional) the time you want it to be alive for before fading out

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 27, 2020 at 04:05 AM
+-- Generation Time: Oct 28, 2020 at 04:41 AM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 5.6.15
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `monitoring_pesertakb`
+-- Database: `prakerin`
 --
 
 -- --------------------------------------------------------
@@ -118,7 +118,6 @@ CREATE TABLE `kk` (
   `kk_id` bigint(20) UNSIGNED NOT NULL,
   `kk_no` varchar(16) NOT NULL,
   `kk_tgl` date DEFAULT NULL COMMENT 'tgl dikeluarkan',
-  `rumah_id` int(10) UNSIGNED DEFAULT NULL,
   `kk_status` tinyint(1) DEFAULT '1',
   `kk_lastupdate` timestamp NULL DEFAULT NULL,
   `kk_lastupdate_by` int(11) DEFAULT NULL
@@ -381,8 +380,7 @@ CREATE TABLE `penduduk` (
   `kode_desa` varchar(10) DEFAULT NULL,
   `rt` char(3) DEFAULT NULL,
   `rw` char(3) DEFAULT NULL,
-  `kk` varchar(20) DEFAULT NULL,
-  `rmh_id` int(11) DEFAULT NULL
+  `kk` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -472,8 +470,7 @@ ALTER TABLE `kecamatan`
 -- Indexes for table `kk`
 --
 ALTER TABLE `kk`
-  ADD PRIMARY KEY (`kk_id`),
-  ADD KEY `kk_FK_rumah` (`rumah_id`);
+  ADD PRIMARY KEY (`kk_id`);
 
 --
 -- Indexes for table `ms_faskes`
@@ -610,49 +607,6 @@ ALTER TABLE `penduduk`
 --
 ALTER TABLE `profil`
   MODIFY `id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `kk`
---
-ALTER TABLE `kk`
-  ADD CONSTRAINT `kk_FK_rumah` FOREIGN KEY (`rumah_id`) REFERENCES `rumah` (`rumah_id`) ON UPDATE CASCADE;
-
---
--- Constraints for table `ms_group_menu`
---
-ALTER TABLE `ms_group_menu`
-  ADD CONSTRAINT `FK_ms_group_menu` FOREIGN KEY (`menu_id`) REFERENCES `ms_menu` (`mn_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `FK_ms_group_menu2` FOREIGN KEY (`grp_id`) REFERENCES `ms_group` (`grp_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `ms_user`
---
-ALTER TABLE `ms_user`
-  ADD CONSTRAINT `FK_ms_user` FOREIGN KEY (`kader_id`) REFERENCES `kader` (`kader_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `ms_user_group`
---
-ALTER TABLE `ms_user_group`
-  ADD CONSTRAINT `FK_ms_user_group1` FOREIGN KEY (`user_id`) REFERENCES `ms_user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `FK_ms_user_group2` FOREIGN KEY (`grp_id`) REFERENCES `ms_group` (`grp_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `penduduk`
---
-ALTER TABLE `penduduk`
-  ADD CONSTRAINT `FK_penduduk` FOREIGN KEY (`kk_id`) REFERENCES `kk` (`kk_id`) ON UPDATE CASCADE;
-
---
--- Constraints for table `wilayah_kader`
---
-ALTER TABLE `wilayah_kader`
-  ADD CONSTRAINT `FK_wilayah_desa` FOREIGN KEY (`desa_kode`) REFERENCES `desa` (`desa_kode`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `FK_wilayah_kader` FOREIGN KEY (`kader_id`) REFERENCES `kader` (`kader_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

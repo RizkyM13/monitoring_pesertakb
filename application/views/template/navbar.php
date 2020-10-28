@@ -497,7 +497,7 @@
               <div class="col-lg-4 col-md-4 col-sm-4 mb">
                 <div class="product-panel-2 pn">
                   <div class="badge badge-hot">HOT</div>
-                  <img src="img/product.jpg" width="200" alt="">
+                  <img src="<?= base_url() ?>/assets/img/product.jpg" width="200" alt="">
                   <h5 class="mt">Flat Pack Heritage</h5>
                   <h6>TOTAL SALES: 1388</h6>
                   <button class="btn btn-small btn-theme04">FULL REPORT</button>
