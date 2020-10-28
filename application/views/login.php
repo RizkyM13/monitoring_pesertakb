@@ -17,6 +17,7 @@
   <link href="<?= base_url() ?>/assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!--external css-->
   <link href="<?= base_url() ?>/assets/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+
   <!-- Custom styles for this template -->
   <link href="<?= base_url() ?>/assets/css/style.css" rel="stylesheet">
   <link href="<?= base_url() ?>/assets/css/style-responsive.css" rel="stylesheet">
@@ -47,8 +48,14 @@
             <a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
             </span>
             </label-->
+          <br>
           <button class="btn btn-theme btn-block" href="" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
           <hr>
+          </div>
+        </form>
+      </div>
+    </div>
+          
           <!--div class="login-social-link centered">
             <p>or you can sign in via your social network</p>
             <button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button>
@@ -56,13 +63,15 @@
           </div-->
           
   <!-- js placed at the end of the document so the pages load faster -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="<?= base_url() ?>/assets/lib/jquery/jquery.min.js"></script>
+  <script src="<?= base_url() ?>/assets/lib/bootstrap/js/bootstrap.min.js"></script>
+
   <!--BACKSTRETCH-->
+
   <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
-  <script type="text/javascript" src="lib/jquery.backstretch.min.js"></script>
+  <script type="text/javascript" src="<?= base_url() ?>/assets/lib/jquery.backstretch.min.js"></script>
   <script>
-    $.backstretch("img/login-bg.jpg", {
+    $.backstretch("<?= base_url() ?>/assets/img/login-bg.jpg", {
       speed: 500
     });
   </script>
