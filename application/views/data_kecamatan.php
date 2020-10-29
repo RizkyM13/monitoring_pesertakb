@@ -19,13 +19,13 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><label class="sr-only" for="exampleInputEmail2"></label>
-                  <input type="email" class="form-control" id="exampleInputEmail2">
+                    <td><label class="sr-only" for="kec_kode"></label>
+                  <input type="text" class="form-control" id="kec_kode">
                     </td>
-                    <td class="hidden-phone"><label class="sr-only" for="exampleInputEmail2"></label>
-                  <input type="email" class="form-control" id="exampleInputEmail2"></td>
-                    <td><label class="sr-only" for="exampleInputEmail2"></label>
-                  <input type="email" class="form-control" id="exampleInputEmail2"></td>
+                    <td class="hidden-phone"><label class="sr-only" for="kec_nama"></label>
+                  <input type="text" class="form-control" id="kec_nama"></td>
+                    <td><label class="sr-only" for="kec_aktif"></label>
+                  <input type="text" class="form-control" id="kec_aktif"></td>
                     <td><button type="submit" class="btn btn-theme">Input</button></td>
                   </tr>
                 
