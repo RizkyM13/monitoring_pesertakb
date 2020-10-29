@@ -22,8 +22,8 @@ class Welcome extends CI_Controller {
 	{
 		//check_not_login();
 		$this->load->view('template/header');
-		//$this->load->view('template/js');
 		$this->load->view('template/navbar');
+		$this->load->view('template/sidebar');
 		$this->load->view('template/footer');
 	}
 }

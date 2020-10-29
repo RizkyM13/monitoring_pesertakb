@@ -36,12 +36,12 @@
       *********************************************************************************************************************************************************** -->
   <div id="login-page">
     <div class="container">
-      <form class="form-login" action="<?php echo base_url().'login/proses' ?>">
+      <form class="form-login" action="<?php echo base_url().'auth/proses' ?>">
         <h2 class="form-login-heading">sign in now</h2>
         <div class="login-wrap">
-          <input type="text" class="form-control" placeholder="User ID" autofocus>
+          <input type="text" name="user_name" class="form-control" placeholder="Username" autofocus>
           <br>
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" name="user_password"class="form-control" placeholder="Password">
           <!--label class="checkbox">
             <input type="checkbox" value="remember-me"> Remember me
             <span class="pull-right">
@@ -49,7 +49,7 @@
             </span>
             </label-->
           <br>
-          <button class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
+          <button name="login" class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
           <hr>
           </div>
         </form>
