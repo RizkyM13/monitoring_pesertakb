@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="Dashboard">
   <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-  <title>Dashio - Bootstrap Admin Template</title>
+  <title>Login</title>
 
   <!-- Favicons -->
   <link href="<?= base_url() ?>/assets/img/favicon.png" rel="icon">
@@ -36,11 +36,7 @@
       *********************************************************************************************************************************************************** -->
   <div id="login-page">
     <div class="container">
-<<<<<<< HEAD:application/views/v_login.php
       <form class="form-login" action="<?php echo base_url().'auth/proses' ?>">
-=======
-      <form class="form-login" action="<?php echo base_url().'Welcome'?>">
->>>>>>> 233e9bea0113172fe75900010bdd8f294a3ec8ae:application/views/login.php
         <h2 class="form-login-heading">sign in now</h2>
         <div class="login-wrap">
           <input type="text" name="user_name" class="form-control" placeholder="Username" autofocus>
@@ -53,11 +49,7 @@
             </span>
             </label-->
           <br>
-<<<<<<< HEAD:application/views/v_login.php
           <button name="login" class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
-=======
-          <button class="btn btn-theme btn-block" href="" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
->>>>>>> 233e9bea0113172fe75900010bdd8f294a3ec8ae:application/views/login.php
           <hr>
           </div>
         </form>
