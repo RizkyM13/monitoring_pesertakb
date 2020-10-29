@@ -20,7 +20,6 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		//check_not_login();
 		$this->load->view('template/header');
 		//$this->load->view('template/js');
 		$this->load->view('template/navbar');
