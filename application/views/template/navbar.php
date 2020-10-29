@@ -217,7 +217,7 @@
           <p class="centered"><a href="profile.html"><img src="<?= base_url() ?>/assets/img/KB.jpg" class="img-circle" width="80"></a></p>
           <h5 class="centered">Admin</h5>
           <li class="mt">
-            <a href="<?= base_url() ?>DashboardAdmin">
+            <a href="<?= base_url() ?>dashboard">
               <i class="fa fa-dashboard"></i>
               <span>Dashboard</span>
               </a>
