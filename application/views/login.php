@@ -36,7 +36,7 @@
       *********************************************************************************************************************************************************** -->
   <div id="login-page">
     <div class="container">
-      <form class="form-login" action="<?php echo base_url().'auth/proses' ?>">
+      <form class="form-login" action="<?php echo base_url().'login/proses' ?>">
         <h2 class="form-login-heading">sign in now</h2>
         <div class="login-wrap">
           <input type="text" name="user_name" class="form-control" placeholder="Username" autofocus>
