@@ -1,5 +1,4 @@
-<?php $this->load->view('template/header') ?>
-<?php $this->load->view('template/navbar') ?>
+
 <!-- isi halaman memulai -->
     <section id="main-content">
       <section class="wrapper">
@@ -81,5 +80,3 @@
     </section>
 
 <!-- isi halaman end -->
-<?php $this->load->view('template/footer') ?>
-<?php $this->load->view('template/js') ?>

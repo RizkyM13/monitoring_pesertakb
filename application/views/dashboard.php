@@ -1,5 +1,4 @@
-<?php $this->load->view('template/header') ?>
-<?php $this->load->view('template/navbar') ?>
+
 <!-- isi halaman memulai -->
     <!--main content start-->
     <section id="main-content">
@@ -427,5 +426,3 @@
     <!--main content end-->
 
 <!-- isi halaman end -->
-<?php $this->load->view('template/footer') ?>
-<?php $this->load->view('template/js') ?>
