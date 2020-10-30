@@ -198,7 +198,7 @@
       </div>
       <div class="top-menu">
         <ul class="nav pull-right top-menu">
-          <li><a class="logout" href="">Logout</a></li>
+          <li><a class="logout" href="<?php echo base_url() . 'login'; ?>">Logout</a></li>
         </ul>
       </div>
     </header>
@@ -215,9 +215,9 @@
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
           <p class="centered"><a href="profile.html"><img src="<?= base_url() ?>/assets/img/KB.jpg" class="img-circle" width="80"></a></p>
-          <h5 class="centered">Admin</h5>
+          <h5 class="centered"></h5>
           <li class="mt">
-            <a href="<?= base_url() ?>DashboardAdmin">
+            <a href="<?= base_url(). 'Dashboard'?>">
               <i class="fa fa-dashboard"></i>
               <span>Dashboard</span>
               </a>
@@ -231,7 +231,7 @@
               <li><a href="">Profil Instansi</a></li>
               <li><a href="">Ms Menu</a></li>
               <li><a href="">Ms Group</a></li>
-              <li><a href="">Ms User</a></li>
+              <li><a href="<?= base_url(). 'Ms_user'?>">Ms User</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -266,10 +266,10 @@
               <span>Laporan</span>
               </a>
             <ul class="sub">
-              <li><a href="general.html">General</a></li>
-              <li><a href="buttons.html">Buttons</a></li>
-              <li><a href="panels.html">Panels</a></li>
-              <li><a href="font_awesome.html">Font Awesome</a></li>
+              <li><a href="<?= base_url() ?>/assets/general.html">General</a></li>
+              <li><a href="<?= base_url() ?>/assets/buttons.html">Buttons</a></li>
+              <li><a href="<?= base_url() ?>/assets/panels.html">Panels</a></li>
+              <li><a href="<?= base_url() ?>/assets/font_awesome.html">Font Awesome</a></li>
             </ul>
           </li>
 

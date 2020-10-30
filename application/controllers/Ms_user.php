@@ -13,7 +13,6 @@ class Ms_user extends CI_Controller {
 	{
 		$data['user'] = $this->m_user->tampil_data()->result();
 		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
 		$this->load->view('template/navbar');
 		$this->load->view('v_user', $data);
 		$this->load->view('template/footer');
