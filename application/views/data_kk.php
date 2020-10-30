@@ -59,20 +59,22 @@
                 <thead>
                   <tr>
                     <th><i></i> NO</th>
-                    <th><i></i> Kode Kecamatan</th>
-                    <th><i></i> Nama Kecamatan</th>
-                    <th><i></i> Kecamatan Aktif</th>
-                    <th></th>
+                    <th><i></i> ID KK</th>
+                    <th><i></i> NO KK</th>
+                    <th><i></i> Tanggal KK</th>
+                    <th><i></i> Status KK</th>
+                    <th><i></i> KK Update</th>
+                    <th><i></i> KK Update By</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>
-                      <a>1</a>
-                    </td>
-                    <td class="hidden-phone">345678908765</td>
+                    <td>1</td>
+                    <td>345678908765</td>
                     <td>Mang Oleh</td>
-                    <td>Bandung</td>
+                    <td>Bandung</td><td>1</td>
+                    <td>345678908765</td>
+                    <td>Mang Oleh</td>
                     <td>
                       <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
                       <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
