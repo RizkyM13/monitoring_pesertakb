@@ -38,10 +38,10 @@
     <form class="form-login" action="<?php echo base_url().'login/proses'?>" method="post">
         <h2 class="form-login-heading">Silahkan Login</h2>
         <div class="login-wrap">
-        <input name="user_name" type="text" class="form-control" placeholder="Masukkan Username" autofocus>
+        <input name="username" type="text" class="form-control" placeholder="Masukkan Username" autofocus>
 
       <br>
-        <input name="user_password" type="password" class="form-control" placeholder=" Masukkan Password">
+        <input name="password" type="password" class="form-control" placeholder=" Masukkan Password">
           <!--label class="checkbox">
             <input type="checkbox" value="remember-me"> Remember me
             <span class="pull-right">
