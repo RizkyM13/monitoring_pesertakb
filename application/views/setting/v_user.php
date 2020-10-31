@@ -1,4 +1,4 @@
-<!-- isi halaman memulai -->
+<!--TAMPILAN TAMBAH DATA MS USER -->
     <section id="main-content">
       <section class="wrapper">
         <h3><i class="fa fa-angle-right"></i> MS_User</h3>
@@ -31,17 +31,17 @@
 
                     <td>
                         <label class="sr-only" for="exampleInputEmail2"></label>
-                        <input type="email" class="form-control" id="exampleInputEmail2">
+                        <input type="text" class="form-control" id="exampleInputEmail2">
                     </td>
 
                     <td class="hidden-phone">
                         <label class="sr-only" for="exampleInputEmail2"></label>
-                        <input type="email" class="form-control" id="exampleInputEmail2">
+                        <input type="text" class="form-control" id="exampleInputEmail2">
                     </td>
 
                     <td>
                         <label class="sr-only" for="exampleInputEmail2"></label>
-                        <input type="email" class="form-control" id="exampleInputEmail2">
+                        <input type="text" class="form-control" id="exampleInputEmail2">
                     </td>
                     <td>
                         <button type="submit" class="btn btn-theme">Input</button>
@@ -55,13 +55,13 @@
           </div>
           <!-- /col-md-12 -->
         </div>
-
+<!--FUNGSI TAMBAH DATA MS USER -->
         <!-- BASIC FORM ELELEMNTS -->
         <div class="row mt">
         <div class="col-md-12">
         <div class="content-panel">
         <table class="table table-striped table-advance table-hover">
-        <h4><i class="fa fa-angle-right"></i>Table Data Kecamatan</h4>
+        <h4><i class="fa fa-angle-right"></i>Data User</h4>
 
                 <hr>
                 <thead>

@@ -53,12 +53,10 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>
-                      <a>1</a>
-                    </td>
-                    <td class="hidden-phone">345678908765</td>
-                    <td>Mang Oleh</td>
-                    <td>Bandung</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td>
                       <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
                       <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
