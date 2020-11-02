@@ -7,7 +7,7 @@ class DataPenduduk extends CI_Controller {
 	{
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
-		$this->load->view('transaksi/datapenduduk');
+		$this->load->view('transaksi/data_penduduk');
 		$this->load->view('template/footer');
 	}
 }
