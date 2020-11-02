@@ -16,26 +16,60 @@
           </h4>
 
                 <hr>
+                <thead>
+                  <tr>
+                    <th>mn_id</th>
+                    <th>mn_kode</th>
+                    <th>mn_nama</th>
+                    <th>mn_level</th>
+                    <th>mn_induk</th>
+                    <th>mn_icon</th>
+                    <th>mn_url</th>
+                    <th>mn_aktif</th>
+                  </tr>
+                </thead>
+                
                 <tbody>
                   <tr>
-                  <div class="form-group row">
-                    <div class="col-sm-6 mb-3 mb-sm-0">
-                        <label class="col-sm-8 col-sm-8 col-sm-0">mn_id</label>
-                        <input type="text" class="form-control" id="exampleInputEmail2">
-                    </div>
-                    <div class="col-sm-6 mb-3 mb-sm-0">
-                        <label class="sr-only" for="exampleInputEmail2">mn_id</label>
-                        <input type="text" class="form-control" id="exampleInputEmail2">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-sm-8 col-sm-8 col-sm-0">Default</label>
-                    <input type="text" class="form-control">
-                  <div class="col-sm-6 col-sm-3 col-sm-0">
-                    
-                  </div>
-                  </div>
-                    
+                  <td>
+                        <label class="sr-only" for=""></label>
+                        <input type="text" class="form-control" id="">
+                    </td>
+
+                    <td>
+                        <label class="sr-only" for=""></label>
+                        <input type="text" class="form-control" id="">
+                    </td>
+
+                    <td>
+                        <label class="sr-only" for=""></label>
+                        <input type="text" class="form-control" id="">
+                    </td>
+
+                    <td>
+                        <label class="sr-only" for=""></label>
+                        <input type="text" class="form-control" id="">
+                    </td>
+
+                    <td>
+                        <label class="sr-only" for=""></label>
+                        <input type="text" class="form-control" id="">
+                    </td>
+
+                    <td>
+                        <label class="sr-only" for=""></label>
+                        <input type="text" class="form-control" id="">
+                    </td>
+
+                    <td>
+                        <label class="sr-only" for=""></label>
+                        <input type="text" class="form-control" id="">
+                    </td>
+
+                    <td>
+                        <label class="sr-only" for=""></label>
+                        <input type="text" class="form-control" id="">
+                    </td>
                     <td>
                         <button type="submit" class="btn btn-theme">Input</button>
                     </td>
@@ -66,7 +100,7 @@
                     <th>mn_id</th>
                     <th>mn_kode</th>
                     <th>mn_nama</th>
-                    <th>>mn_level</th>
+                    <th>mn_level</th>
                     <th>mn_induk</th>
                     <th>mn_icon</th>
                     <th>mn_url</th>
