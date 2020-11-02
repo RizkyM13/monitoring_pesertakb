@@ -87,7 +87,7 @@
           <div class="col-md-12">
             <div class="content-panel">
               <table class="table table-striped table-advance table-hover">
-                <h4><i class="fa fa-angle-right"></i>Data Faskes</h4>
+                <h4><i class="fa fa-angle-right"></i>Data Kader</h4>
                 <hr>
                 <thead>
                   <tr>
@@ -105,22 +105,28 @@
                   </tr>
                 </thead>
                 <tbody>
+                  <?php
+                            foreach ($kdr as $item) {
+                            ?>
                   <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
+                    <td><?= $item->kader_id ?></td>
+                    <td><?= $item->kader_nama ?></td>
+                    <td><?= $item->kader_nik ?></td>
+                    <td><?= $item->kader_sex ?></td>
+                    <td><?= $item->kader_kelahiran ?></td>
+                    <td><?= $item->kader_tglahir ?></td>
+                    <td><?= $item->kader_email ?></td>
+                    <td><?= $item->kader_hp ?></td>
+                    <td><?= $item->kader_aktif ?></td>
+                    <td style="text-align:center">
+
                       <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
                       <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+                      <button class="btn btn-success btn-xs"><i class=" fa fa-check"></i>
+                      </button>
                     </td>
                   </tr>
-                
+                <?php } ?>
                 </tbody>
               </table>
             </div>
