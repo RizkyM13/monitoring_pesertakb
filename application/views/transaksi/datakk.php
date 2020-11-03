@@ -10,7 +10,7 @@
           <div class="row mt">
           <div class="col-md-12">
             <div class="content-panel">
-              <table class="table table-striped table-advance table-hover">
+              <table class="table table-striped table-advance table-hover" method="post">
 
                 <h4>
                   <i class="fa fa-angle-right"></i>Data Kartu keluarga
@@ -23,8 +23,8 @@
                     <th>NO KK</th>
                     <th>Tanggal KK</th>
                     <th>Status KK</th>
-                    <th>KK Update</th>
-                    <th>KK Update By</th>
+                    <th>KK LastUpdate</th>
+                    <th>KK LastUpdate By</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -51,7 +51,7 @@
 
                     <td class="hidden-phone">
                       <label class="sr-only"></label>
-                      <input type="text" class="form-control" id="kk_lastupdate">
+                      <input type="date" class="form-control" id="kk_lastupdate">
                     </td>
 
                     <td>
@@ -88,20 +88,24 @@
                     <th> NO KK</th>
                     <th> Tanggal KK</th>
                     <th> Status KK</th>
-                    <th> KK Update</th>
-                    <th> KK Update By</th>
+                    <th> KK LastUpdate</th>
+                    <th> KK LastUpdate By</th>
                     <th> Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
 
+                  <?php 
+                  foreach ($v_kk as $item) {
+                  ?>
                   
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <tr>
+                  <td><?= $item->kk_id?></td>
+                  <td><?= $item->kk_no?></td>
+                  <td><?= $item->kk_tgl?></td>
+                  <td><?= $item->kk_status?></td>
+                  <td><?= $item->kk_lastupdate?></td>
+                  <td><?= $item->kk_lastupdate_by?></td>
                                         
 
                     <td style="text-align:center">
@@ -111,10 +115,9 @@
                       </button>
                       <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
                     </td>
-                    
-                    
                       
-
+                  </tr>
+                  <?php } ?>
                 </tbody>
               </table>
             </div>

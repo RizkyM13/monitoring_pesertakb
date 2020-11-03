@@ -5,7 +5,7 @@
           <div class="row mt">
           <div class="col-md-12">
             <div class="content-panel">
-              <table class="table table-striped table-advance table-hover">
+              <table class="table table-striped table-advance table-hover" method="post">
                 <h4><i class="fa fa-angle-right"></i>Input Data</h4>
                 <hr>
                 <thead>

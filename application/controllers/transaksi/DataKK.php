@@ -6,6 +6,9 @@ class DataKK extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('m_kk');
+		$this->load->helper('date');
+		$now = time();
+		$humanReadable = unix_to_human($now);
 	}
 
 	public function index()

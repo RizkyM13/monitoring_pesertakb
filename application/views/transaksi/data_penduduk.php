@@ -2,12 +2,12 @@
 <!-- isi halaman memulai -->
     <section id="main-content">
       <section class="wrapper">
-        <h3><i class="fa fa-angle-right"></i> Data Kartu Keluarga</h3>
+        <h3><i class="fa fa-angle-right"></i> Data Penduduk</h3>
           <div class="row mt">
           <div class="col-md-12">
             <div class="content-panel">
               <table class="table table-striped table-advance table-hover">
-                <h4><i class="fa fa-angle-right"></i>Input Data Kartu keluarga</h4>
+                <h4><i class="fa fa-angle-right"></i>Data Penduduk</h4>
                 <hr>
                 <thead>
                   <tr>
@@ -46,7 +46,7 @@
                     <th><i>Tempat Lahir</i></th>
                     <th><i>Tanggal Lahir</i></th>
                     <th><i>Tahun Lahir</i></th>
-                    <th><i>Golonan Darah</i></th>
+                    <th><i>Golongan Darah</i></th>
                     <th><i>Rhesus</i> </th>
                   </tr>
                 </thead>
@@ -176,7 +176,7 @@
           <div class="col-md-12">
             <div class="content-panel">
               <table class="table table-striped table-advance table-hover">
-                <h4><i class="fa fa-angle-right"></i>Table Data Kecamatan</h4>
+                <h4><i class="fa fa-angle-right"></i>Data Penduduk</h4>
                 <hr>
                 <thead>
                   <tr>
