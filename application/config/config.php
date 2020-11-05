@@ -521,3 +521,13 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+
+//$this->load->library('ftp');
+//$config['hostname']	= 'pkl.bensae.id';
+//$config['username']	= 'prakerin';
+//$config['password']	= 'Pr4k3rin@2020';
+//config['debug']	= TRUE;
+
+//$this->ftp->connect($config);
+//$this->ftp->mirror('/path/to/monitoring_pesertakb', '/public_html/monitoring_pesertakb');
+//$this->ftp->close();
