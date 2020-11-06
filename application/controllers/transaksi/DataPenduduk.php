@@ -85,7 +85,7 @@ class DataPenduduk extends CI_Controller {
 
 	public function hapus ($id=''){
 		$where = array('penduduk_id'=>$id);
-		$this->m_kk->hapus_data($where, 'penduduk');
+		$this->m_penduduk->hapus_data($where, 'penduduk');
 		redirect('transaksi/datapenduduk');
 	}
 

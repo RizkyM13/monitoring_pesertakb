@@ -16,11 +16,19 @@ class DataKK extends CI_Controller {
 		$data['v_kk'] = $this->m_kk->tampil_data()->result();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
-		$this->load->view('transaksi/datakk',$data);
+		$this->load->view('transaksi/datakk/datakk',$data);
 		$this->load->view('template/footer');
 	}
 
 	public function tambah(){
+	$data['v_kk'] = $this->m_kk->tampil_data()->result();
+		$this->load->view('template/header');
+		$this->load->view('template/navbar');
+		$this->load->view('transaksi/datakk/tambahdata',$data);
+		$this->load->view('template/footer');
+	}
+
+	public function tambah_aksi(){
 		$kk_id				= $this->input->post('kk_id');
 		$kk_no				= $this->input->post('kk_no');
 		$kk_tgl				= $this->input->post('kk_tgl');

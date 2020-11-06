@@ -1,105 +1,57 @@
 <section id="main-content">
-  <section class="wrapper">
-    <div class="row mt">
-      <div class="col-lg-12">
-        <div class="form-panel">
-          <h4 class="mb">Judul File</h4>
-        </div>
+<section class="wrapper">
+<div class="row mt">
+    <div class="col-lg-12">
+      <div class="form-panel">
+      <h4 class="mb">DATA KARTU KELUARGA</h4>
       </div>
-
-      <div class="col-md-12">
-        <div class="form-panel">
-          <a href="<?php echo base_url() . 'transaksi/datakk/tambah'; ?>" class="btn btn-primary">Primary</a>
-          <hr>
-      <table class="table table-striped table-advance table-hover">
-                
-                
-                <thead>
+    </div>
+<div class="col-lg-12">
+            <div class="form-panel">
+              <a href="<?php echo base_url() . 'transaksi/datakk/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
+              <hr>
+              <section id="unseen">
+                <table class="table table-bordered table-striped table-condensed">
+                  <thead>
                   <tr>
-                    <th><i class="fa fa-bullhorn"></i> Company</th>
-                    <th class="hidden-phone"><i class="fa fa-question-circle"></i> Descrition</th>
-                    <th><i class="fa fa-bookmark"></i> Profit</th>
-                    <th><i class=" fa fa-edit"></i> Status</th>
-                    <th></th>
+                      <th>ID KK</th>
+                      <th>Nomor KK</th>
+                      <th>Tanggal KK</th>
+                      <th>Status KK</th>
+                      <th>Last Update</th>
+                      <th>Last Update By</th>
+                      <th>Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>
-                      <a href="basic_table.html#">Company Ltd</a>
-                    </td>
-                    <td class="hidden-phone">Lorem Ipsum dolor</td>
-                    <td>12000.00$ </td>
-                    <td><span class="label label-info label-mini">Due</span></td>
-                    <td>
-                      <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                      <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                      <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                    </td>
+                            <?php
+                            foreach ($v_kk as $item) {
+                            ?>
+                      <th><?= $item->kk_id ?></th>
+                      <th><?= $item->kk_no ?></th>
+                      <th><?= $item->kk_tgl?></th>
+                      <th><?= $item->kk_status?></th>
+                      <th><?= $item->kk_lastupdate?></th>
+                      <th><?= $item->kk_lastupdate_by?></th>
+                      <th>
+                        <button class="btn btn-success btn-xs">
+                            <i class="fa fa-check"></i>
+                          </button>
+                          <button class="btn btn-primary btn-xs" href="<?php echo base_url() . 'transaksi/datakk/edit'; ?>/<?php echo $item->kk_id ?>">
+                            <i class="fa fa-pencil"></i>
+                          </button>
+                          <button class="btn btn-danger btn-xs">
+                            <i class="fa fa-trash-o " href="<?php echo base_url() . 'transaksi/datakk/hapus'; ?>/<?php echo $item->kk_id ?>" onclick="return confirm('Yakin Menghapus Data?')"></i> 
+                          </button>
+                        </th>
                   </tr>
-                  <tr>
-                    <td>
-                      <a href="basic_table.html#">
-                        Dashio co
-                        </a>
-                    </td>
-                    <td class="hidden-phone">Lorem Ipsum dolor</td>
-                    <td>17900.00$ </td>
-                    <td><span class="label label-warning label-mini">Due</span></td>
-                    <td>
-                      <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                      <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                      <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <a href="basic_table.html#">
-                        Another Co
-                        </a>
-                    </td>
-                    <td class="hidden-phone">Lorem Ipsum dolor</td>
-                    <td>14400.00$ </td>
-                    <td><span class="label label-success label-mini">Paid</span></td>
-                    <td>
-                      <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                      <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                      <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <a href="basic_table.html#">Dashio ext</a>
-                    </td>
-                    <td class="hidden-phone">Lorem Ipsum dolor</td>
-                    <td>22000.50$ </td>
-                    <td><span class="label label-success label-mini">Paid</span></td>
-                    <td>
-                      <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                      <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                      <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <a href="basic_table.html#">Total Ltd</a>
-                    </td>
-                    <td class="hidden-phone">Lorem Ipsum dolor</td>
-                    <td>12120.00$ </td>
-                    <td><span class="label label-warning label-mini">Due</span></td>
-                    <td>
-                      <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                      <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                      <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                    </td>
-                  </tr>
+                <?php } ?>
                 </tbody>
-              </table>
+                </table>
+              </section>
             </div>
             <!-- /content-panel -->
-        </div>
-      </div>
-    </section>
-  </section>
-
-        
+          </div>
+</section>
+</section>
