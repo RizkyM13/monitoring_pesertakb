@@ -38,12 +38,14 @@
                         <button class="btn btn-success btn-xs">
                             <i class="fa fa-check"></i>
                           </button>
-                          <button class="btn btn-primary btn-xs" href="<?php echo base_url() . 'transaksi/datakk/edit'; ?>/<?php echo $item->kk_id ?>">
-                            <i class="fa fa-pencil"></i>
-                          </button>
-                          <button class="btn btn-danger btn-xs">
-                            <i class="fa fa-trash-o " href="<?php echo base_url() . 'transaksi/datakk/hapus'; ?>/<?php echo $item->kk_id ?>" onclick="return confirm('Yakin Menghapus Data?')"></i> 
-                          </button>
+                          <a href="<?php echo base_url() . 'transaksi/datakk/edit'; ?>/<?php echo $item->kk_id ?>" class="btn btn-primary btn-xs">
+                              <i class="fa fa-pencil"></i>
+                          </a>
+                          
+                          <a href="<?php echo base_url() . 'transaksi/datakk/hapus';?>/<?php echo $item->kk_id ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
+                              <i class="fa fa-trash-o "></i>
+                          </a> 
+                          
                         </th>
                   </tr>
                 <?php } ?>

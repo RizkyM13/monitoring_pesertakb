@@ -57,10 +57,10 @@ class DataKK extends CI_Controller {
 
 	public function edit($id){
 		$where = array('kk_id'=>$id);
-		$data['kk'] = $this->m_kk->edit_data('kk', $where)->row_array();
+		$data['v_kk'] = $this->m_kk->edit_data('kk', $where)->row_array();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
-		$this->load->view('transaksi/datakk',$data);
+		$this->load->view('transaksi/datakk/editdata',$data);
 		$this->load->view('template/footer');
 	}
 
