@@ -28,6 +28,9 @@
                       <input type="text" name="kk_status"class="form-control" placeholder="Masukkan Status KK" value="<?php echo $v_kk['kk_status'] ?>">
                     </div>
                 </div>
+
+                  <input type="hidden" name="kk_lastupdate"class="form-control" placeholder="Masukkan Status KK" value="<?php echo date('Y-m-d H:i:s', time()) ?>">
+                  <input type="hidden" name="kk_lastupdate_by"class="form-control" placeholder="Masukkan Status KK">
                 
                   <button type="submit" class="btn btn-primary">Simpan</button>
                   <a href="<?php echo base_url() . 'transaksi/datakk'; ?>" class="btn btn-danger">Kembali</a>
