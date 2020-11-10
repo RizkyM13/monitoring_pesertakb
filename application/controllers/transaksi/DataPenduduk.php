@@ -6,6 +6,7 @@ class DataPenduduk extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('m_penduduk');
+
 	}
 	
 	public function index()
@@ -18,6 +19,13 @@ class DataPenduduk extends CI_Controller {
 	}
 
 	public function tambah(){
+		$data['v_penduduk'] = $this->m_penduduk->tampil_data()->result();
+		$this->load->view('template/header');
+		$this->load->view('template/navbar');
+		$this->load->view('transaksi/datakk/tambahdata',$data);
+		$this->load->view('template/footer');
+		
+	public function tambah_aksi(){
 		$penduduk_id			= $this->input->post('penduduk_id');
 		$kk_id					= $this->input->post('kk_id');
 		$kk_urut				= $this->input->post('kk_urut');
@@ -41,13 +49,15 @@ class DataPenduduk extends CI_Controller {
 		$no_paspor				= $this->input->post('no_paspor');
 		$no_kitas				= $this->input->post('no_kitas');
 		$ayah					= $this->input->post('ayah');
-		$ibu					= $this->input->post('pendidikan_ditempuh');
-		$stt	 				= $this->input->post('pekerjaan');
-		$ada					= $this->input->post('status_perkawinan');
-		$kode_desa				= $this->input->post('hub_keluarga');
-		$rt						= $this->input->post('kewarganegaraan');
-		$rw						= $this->input->post('no_paspor');
-		$kk 					= $this->input->post('no_kitas');
+		$ibu					= $this->input->post('ibu');
+		$stt	 				= $this->input->post('stt');
+		$ada					= $this->input->post('ada');
+		$kode_desa				= $this->input->post('kode_desa');
+		$rt						= $this->input->post('rt');
+		$rw						= $this->input->post('rw');
+		$kk 					= $this->input->post('kk');
+
+
 		
 		$data = array(
 			'penduduk_id'			=> $penduduk_id,
@@ -71,15 +81,15 @@ class DataPenduduk extends CI_Controller {
 			'kewarganegaraan'		=> $kewarganegaraan,
 			'no_kitas'				=> $no_kitas,
 			'ayah'					=> $ayah,
-			'ibu'					=> $pendidikan_ditempuh,
-			'stt' 					=> $pekerjaan,
-			'ada'					=> $status_perkawinan,
-			'rt	'					=> $kewarganegaraan,
-			'rw'					=> $no_paspor,
-			'kk' 					=> $no_kitas,
+			'ibu'					=> $ibu,
+			'stt' 					=> $stt,
+			'ada'					=> $ada,
+			'rt	'					=> $rt,
+			'rw'					=> $rw,
+			'kk' 					=> $kk,
 		);
 
-		$this->m_kk->input_data($data, 'penduduk');
+		$this->m_penduduk->input_data($data, 'penduduk');
 		redirect('transaksi/datapenduduk');
 	}
 
@@ -91,7 +101,7 @@ class DataPenduduk extends CI_Controller {
 
 	public function edit($id){
 		$where = array('penduduk_id'=>$id);
-		$data['penduduk'] = $this->m_kk->edit_data('penduduk', $where)->row_array();
+		$data['v_penduduk'] = $this->m_penduduk->edit_data('penduduk', $where)->row_array();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('transaksi/datapenduduk',$data);
@@ -122,13 +132,14 @@ class DataPenduduk extends CI_Controller {
 		$no_paspor				= $this->input->post('no_paspor');
 		$no_kitas				= $this->input->post('no_kitas');
 		$ayah					= $this->input->post('ayah');
-		$ibu					= $this->input->post('pendidikan_ditempuh');
-		$stt	 				= $this->input->post('pekerjaan');
-		$ada					= $this->input->post('status_perkawinan');
-		$kode_desa				= $this->input->post('hub_keluarga');
-		$rt						= $this->input->post('kewarganegaraan');
-		$rw						= $this->input->post('no_paspor');
-		$kk 					= $this->input->post('no_kitas');
+		$ibu					= $this->input->post('ibu');
+		$stt	 				= $this->input->post('stt');
+		$ada					= $this->input->post('ada');
+		$kode_desa				= $this->input->post('kode_desa');
+		$rt						= $this->input->post('rt');
+		$rw						= $this->input->post('rw');
+		$kk 					= $this->input->post('kk');
+
 
 		$data = array(
 			'penduduk_id'			=> $penduduk_id,
@@ -152,19 +163,19 @@ class DataPenduduk extends CI_Controller {
 			'kewarganegaraan'		=> $kewarganegaraan,
 			'no_kitas'				=> $no_kitas,
 			'ayah'					=> $ayah,
-			'ibu'					=> $pendidikan_ditempuh,
-			'stt' 					=> $pekerjaan,
-			'ada'					=> $status_perkawinan,
-			'rt	'					=> $kewarganegaraan,
-			'rw'					=> $no_paspor,
-			'kk' 					=> $no_kitas,
+			'ibu'					=> $ibu,
+			'stt' 					=> $stt,
+			'ada'					=> $ada,
+			'rt	'					=> $rt,
+			'rw'					=> $rw,
+			'kk' 					=> $kk,
 		);
 
 		$where = array(
 			'penduduk_id'=>$penduduk_id
 		);
 
-		$this->m_kk->update_data($where, $data, 'penduduk');
+		$this->m_penduduk->update_data($where, $data, 'penduduk');
 		redirect('transaksi/penduduk');
 	}
 
