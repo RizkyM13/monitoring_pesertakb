@@ -1,90 +1,53 @@
-
-<!-- isi halaman memulai -->
-    <section id="main-content">
-      <section class="wrapper">
-        <h3><i class="fa fa-angle-right"></i>Data RW</h3>
-          <div class="row mt">
-          <div class="col-md-12">
-            <div class="content-panel">
-              <table class="table table-striped table-advance table-hover">
-                <h4><i class="fa fa-angle-right"></i>Data RW</h4>
-                <hr>
-                <thead>
+<section id="main-content">
+<section class="wrapper">
+<div class="row mt">
+    <div class="col-lg-12">
+      <div class="form-panel">
+      <h4 class="mb">DATA RW</h4>
+      </div>
+    </div>
+<div class="col-lg-12">
+            <div class="form-panel">
+              <a href="<?php echo base_url() . 'master-data/datarw/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
+              <hr>
+              <section id="unseen">
+                <table class="table table-bordered table-striped table-condensed">
+                  <thead>
                   <tr>
-                    <th><i></i>ID RW</th>
-                    <th><i></i>Kode Desa</th>
-                    <th><i></i>RW</th>
+                      <th>ID RW</th>
+                      <th>Kode Desa</th>
+                      <th>RW</th>
+                      <th>Aksi</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>
-                      <label class="sr-only" for=""></label>
-                      <input type="text" class="form-control" id="">
-                    </td>
-
-                    <td>
-                      <label class="sr-only" for=""></label>
-                      <input type="text" class="form-control" id="">
-                    </td>
-
-                    <td>
-                      <label class="sr-only" for=""></label>
-                      <input type="text" class="form-control" id="">
-                    </td>
-
-                    <td>
-                      <button type="submit" class="btn btn-theme">Input</button>
-                    </td>
-
+                  <?php
+                    foreach ($v_rw as $item) {
+                  ?>
+                      <th><?= $item->rw_id  ?></th>
+                      <th><?= $item->desa_kode  ?></th>
+                      <th><?= $item->rw  ?></th>
+                      <th>
+                        <button class="btn btn-success btn-xs">
+                            <i class="fa fa-check"></i>
+                          </button>
+                          <a href="<?php echo base_url() . 'master-data/datarw/edit'; ?>/<?php echo $item->rw_id ?>" class="btn btn-primary btn-xs">
+                              <i class="fa fa-pencil"></i>
+                          </a>
+                          
+                          <a href="<?php echo base_url() . 'master-data/datarw/hapus';?>/<?php echo $item->rw_id ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
+                              <i class="fa fa-trash-o "></i>
+                          </a> 
+                          
+                        </th>
                   </tr>
-                
+                <?php } ?>
                 </tbody>
-              </table>
+                </table>
+              </section>
             </div>
             <!-- /content-panel -->
           </div>
-          <!-- /col-md-12 -->
-        </div>
-        <!-- BASIC FORM ELELEMNTS -->
-        <div class="row mt">
-          <div class="col-md-12">
-            <div class="content-panel">
-              <table class="table table-striped table-advance table-hover">
-                <h4><i class="fa fa-angle-right"></i>Data RW</h4>
-                <hr>
-                <thead>
-                  <tr>
-          
-                    <th><i></i>ID RW</th>
-                    <th><i></i>Kode Desa</th>
-                    <th><i></i>RW</th>
-                    <th>Aksi</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                      <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                    </td>
-                  </tr>
-                
-                </tbody>
-              </table>
-            </div>
-            <!-- /content-panel -->
-          </div>
-          <!-- /col-md-12 -->
-        </div>        <!-- /row -->
-
-
-        <!-- /row -->
-      </section>
-      <!-- /wrapper -->
-    </section>
-
-<!-- isi halaman end -->
+</section>
+</section>

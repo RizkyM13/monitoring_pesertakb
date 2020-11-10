@@ -19,7 +19,7 @@ class DataKecamatan extends CI_Controller {
 	}
 
 	public function tambah(){
-		$data['v_kecamatan'] = $this->m_desa->tampil_data()->result();
+		$data['v_kecamatan'] = $this->m_kecamatan->tampil_data()->result();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('master-data/datakecamatan/tambahdata',$data);

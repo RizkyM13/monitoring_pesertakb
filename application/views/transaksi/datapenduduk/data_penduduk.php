@@ -9,42 +9,42 @@
     </div>
 <div class="col-lg-12">
             <div class="form-panel">
-              <a href="<?php echo base_url() . 'transaksi/datapenduduktambah'; ?>" class="btn btn-primary">Tambah Data</a>
+              <a href="<?php echo base_url() . 'transaksi/datapenduduk/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
               <hr>
               <section id="unseen">
                 <table class="table table-bordered table-striped table-condensed">
                   <thead>
                   <tr>
-                    <th><i>ID Penduduk</i></th>
-                    <th><i>ID KK</i></th>
-                    <th><i>KK Urut</i></th>
-                    <th><i></i>NIK</th>
-                    <th><i></i>E-KTP</th>
-                    <th><i></i>Nama</th>
-                    <th><i>Jenis Kelamin</i></th>
-                    <th><i>Tempat Lahir</i></th>
-                    <th><i>Tanggal Lahir</i></th>
-                    <th><i>Tahun Lahir</i></th>
-                    <th><i>Golongan Darah</i></th>
-                    <th><i>Rhesus</i> </th>   
-                    <th><i>ID Suku</i></th>
-                    <th><i>Agama</i></th>
-                    <th><i>Pendidikan</i></th>
-                    <th><i>Pendidikan Ditempuh</i></th>
-                    <th><i>Perkerjaan</i></th>
-                    <th><i>Status Perkawinan</i> </th>
-                    <th><i>Hubungan Keluarga</i></th>
-                    <th><i>Kewarganegaraan</i></th>
-                    <th><i>No Pasport</i></th>
-                    <th><i>No Kitas</i></th>
-                    <th><i>Ayah</i></th>
-                    <th><i>Ibu</i> </th>
-                    <th><i>STT</i></th>
-                    <th><i>ADA</i></th>
-                    <th><i>Kode Desa</i></th>
-                    <th><i>RT</i></th>
-                    <th><i>RW</i></th>
-                    <th><i>KK</i></th>
+                    <th>ID Penduduk</th>
+                    <th>ID KK</th>
+                    <th>KK Urut</th>
+                    <th>NIK</th>
+                    <th>E-KTP</th>
+                    <th>Nama</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Tempat Lahir</th>
+                    <th>Tanggal Lahir</th>
+                    <th>Tahun Lahir</th>
+                    <th>Golongan Darah</th>
+                    <th>Rhesus</th>   
+                    <th>ID Suku></th>
+                    <th>Agama</th>
+                    <th>Pendidikan</th>
+                    <th>Pendidikan Ditempuh</th>
+                    <th>Perkerjaan</th>
+                    <th>Status Perkawinan</th>
+                    <th>Hubungan Keluarga</th>
+                    <th>Kewarganegaraan</th>
+                    <th>No Pasport</th>
+                    <th>No Kitas</th>
+                    <th>Ayah</th>
+                    <th>Ibu</th>
+                    <th>STT</th>
+                    <th>ADA</th>
+                    <th>Kode Desa<</th>
+                    <th>RT</th>
+                    <th>RW</th>
+                    <th>KK</th>
                 </tr>
                 </thead>
                 <tbody>
