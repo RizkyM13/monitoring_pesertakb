@@ -22,9 +22,12 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <th></th>
-                      <th></th>
-                      <th></th>
+                    <?php
+                    foreach ($v_kecamatan as $item) {
+                    ?>
+                      <th><?= $item->kec_kode ?></th>
+                      <th><?= $item->kec_nama ?></th>
+                      <th><?= $item->kec_aktif ?></th>
                       <th>
                         <button class="btn btn-success btn-xs">
                             <i class="fa fa-check"></i>
@@ -39,6 +42,7 @@
                           
                         </th>
                   </tr>
+                  <?php } ?>
                 </tbody>
                 </table>
               </section>
