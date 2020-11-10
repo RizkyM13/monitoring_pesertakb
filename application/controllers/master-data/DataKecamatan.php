@@ -7,7 +7,8 @@ class DataKecamatan extends CI_Controller {
 	{
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
-		$this->load->view('master-data/data_kecamatan');
+		$this->load->view('master-data/datakecamatan/datakecamatan');
 		$this->load->view('template/footer');
 	}
 }
+
