@@ -32,7 +32,7 @@ class DataKader extends CI_Controller {
 		$kader_nik				= $this->input->post('kader_nik');
 		$kader_sex				= $this->input->post('kader_sex');
 		$kader_kelahiran		= $this->input->post('kader_kelahiran');
-		$kader_tgllahir			= $this->input->post('kader_tglahir');
+		$kader_tglahir			= $this->input->post('kader_tglahir');
 		$kader_email			= $this->input->post('kader_email');
 		$kader_hp				= $this->input->post('kader_hp');
 		$kader_aktif			= $this->input->post('kader_aktif');
@@ -43,7 +43,7 @@ class DataKader extends CI_Controller {
 			'kader_nik'				=> $kader_nik,
 			'kader_sex'				=> $kader_sex,
 			'kader_kelahiran'		=> $kader_kelahiran,
-			'kader_tgllahir'		=> $kader_tglahir,
+			'kader_tglahir'			=> $kader_tglahir,
 			'kader_email'			=> $kader_email,
 			'kader_hp'				=> $kader_hp,
 			'kader_aktif'			=> $kader_aktif,

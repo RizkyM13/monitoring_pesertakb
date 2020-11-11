@@ -35,9 +35,9 @@
                     </div>
                 </div>
                  <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Tgl Lahir Kader</label>
+                  <label class="col-sm-2 col-sm-2 control-label">Tgl Ahir Kader</label>
                     <div class="col-sm-10">
-                      <input type="text" name="kader_tgllahir"class="form-control" placeholder=""> 
+                      <input type="text" name="kader_tglahir"class="form-control" placeholder=""> 
                     </div>
                 </div>
                  <div class="form-group">
