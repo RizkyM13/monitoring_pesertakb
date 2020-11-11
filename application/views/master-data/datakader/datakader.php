@@ -15,6 +15,7 @@
                 <table class="table table-bordered table-striped table-condensed">
                   <thead>
                   <tr>
+                      <th>No</th>
                       <th>ID Kader</th>
                       <th>Nama Kader</th>
                       <th>NIK Kader</th>
@@ -30,8 +31,10 @@
                 <tbody>
                   <tr>
                     <?php
+                    $i = 1;
                     foreach ($v_kader as $item) {
                     ?>
+                      <th><?= $i++ ?></th>
                       <th><?= $item->kader_id ?></th>
                       <th><?= $item->kader_nama ?></th>
                       <th><?= $item->kader_nik?></th>

@@ -14,6 +14,7 @@
                 <table class="table table-bordered table-striped table-condensed">
                   <thead>
                   <tr>
+                      <th>No</th>
                       <th>ID RW</th>
                       <th>Kode Desa</th>
                       <th>RW</th>
@@ -23,8 +24,10 @@
                 <tbody>
                   <tr>
                   <?php
+                    $i = 1;
                     foreach ($v_rw as $item) {
                   ?>
+                      <th><?= $i++ ?></th>
                       <th><?= $item->rw_id  ?></th>
                       <th><?= $item->desa_kode  ?></th>
                       <th><?= $item->rw  ?></th>

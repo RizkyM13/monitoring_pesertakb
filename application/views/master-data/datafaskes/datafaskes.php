@@ -14,6 +14,7 @@
                 <table class="table table-bordered table-striped table-condensed">
                   <thead>
                   <tr>
+                      <th>No</th>
                       <th>ID Faskes</th>
                       <th>ID Faskes Jenis</th>
                       <th>Kode Faskes</th>
@@ -27,8 +28,10 @@
                 <tbody>
                   <tr>
                   <?php
+                    $i = 1;
                     foreach ($v_faskes as $item) {
                   ?>
+                      <th><?= $i++ ?></th>
                       <th><?= $item->faskes_id        ?></th>
                       <th><?= $item->faskesjenis_id   ?></th>
                       <th><?= $item->faskes_kode      ?></th>

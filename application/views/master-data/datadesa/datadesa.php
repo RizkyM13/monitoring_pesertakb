@@ -14,6 +14,7 @@
                 <table class="table table-bordered table-striped table-condensed">
                   <thead>
                   <tr>
+                      <th>No</th>
                       <th>Kode Desa</th>
                       <th>Kode Kecamatan</th>
                       <th>Nama Desa</th>
@@ -24,8 +25,10 @@
                 <tbody>
                   <tr>
                   <?php
+                    $i = 1;
                     foreach ($v_desa as $item) {
                   ?>
+                      <th><?= $i++ ?></th>
                       <th><?= $item->desa_kode  ?></th>
                       <th><?= $item->kec_kode   ?></th>
                       <th><?= $item->desa_nama  ?></th>
