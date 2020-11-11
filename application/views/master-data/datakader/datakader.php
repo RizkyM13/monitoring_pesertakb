@@ -20,7 +20,7 @@
                       <th>NIK Kader</th>
                       <th>Sex Kader</th>
                       <th>Kelahiran Kader</th>
-                      <th>Tgl Lahir Kader</th>
+                      <th>Tgl Ahir Kader</th>
                       <th>Email Kader</th>
                       <th>Hp Kader/th>
                       <th>Kader Aktif</th>
