@@ -13,7 +13,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Nama Kader</label>
                     <div class="col-sm-10">
-                      <input type="number" name="kader_nama" class="form-control" placeholder="Masukkan Nama Kader" value="<?php echo $v_kader['kader_nama'] ?>">
+                      <input type="text" name="kader_nama" class="form-control" placeholder="Masukkan Nama Kader" value="<?php echo $v_kader['kader_nama'] ?>">
                     </div>
                 </div>
                 <div class="form-group">
@@ -25,31 +25,36 @@
                  <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Sex Kader</label>
                     <div class="col-sm-10">
-                      <input type="text" name="kader_sex"class="form-control" placeholder="Masukkan Sex Kader" value="<?php echo $v_kader['kader_sex'] ?>">
+                      <select name="kader_sex" class="form-control">
+                          <option value="">--Pilih Status--</option>
+                          <option value="L">Laki-laki</option>
+                          <option value="P">Perempuan</option>
+                       
+                      </select>
                     </div>
                 </div>
                  <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Kelahiran Kader</label>
                     <div class="col-sm-10">
-                      <input type="text" name="kader_kelahiran"class="form-control" placeholder="Masukkan Kelahiran Kader" value="<?php echo $v_kader['kader_kelahiran'] ?>">
+                      <input type="text" name="kader_kelahiran"class="form-control" placeholder="Masukkan Tempat Lahir" value="<?php echo $v_kader['kader_kelahiran'] ?>">
                     </div>
                 </div>
                  <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Tgl Lahir Kader</label>
                     <div class="col-sm-10">
-                      <input type="text" name="kader_tgllahir"class="form-control" placeholder="Masukkan Tgl Lahir Kader" value="<?php echo $v_kader['kader_tgllahir'] ?>">
+                      <input type="date" name="kader_tglahir"class="form-control" placeholder="Masukkan Tanggal Lahir" value="<?php echo $v_kader['kader_tglahir'] ?>">
                     </div>
                 </div>
                  <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Email Kader</label>
                     <div class="col-sm-10">
-                      <input type="text" name="kader_email"class="form-control" placeholder="Masukkan Email Kader" value="<?php echo $v_kader['kader_email'] ?>">
+                      <input type="text" name="kader_email"class="form-control" placeholder="Masukkan Email" value="<?php echo $v_kader['kader_email'] ?>">
                     </div>
                 </div>
                  <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Hp Kader</label>
                     <div class="col-sm-10">
-                      <input type="text" name="kader_hp"class="form-control" placeholder="Masukkan Hp Kader" value="<?php echo $v_kader['kader_hp'] ?>">
+                      <input type="number" name="kader_hp"class="form-control" placeholder="Masukkan Hp" value="<?php echo $v_kader['kader_hp'] ?>">
                     </div>
                 </div>
                 <div class="form-group">

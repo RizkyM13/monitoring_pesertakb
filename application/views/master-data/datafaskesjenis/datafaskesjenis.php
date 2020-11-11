@@ -34,7 +34,7 @@
                         <button class="btn btn-success btn-xs">
                             <i class="fa fa-check"></i>
                           </button>
-                          <a href="<?php echo base_url() . 'master-data/datadfaskesjenis/edit'; ?>/<?php echo $item->faskesjenis_id ?>" class="btn btn-primary btn-xs">
+                          <a href="<?php echo base_url() . 'master-data/datafaskesjenis/edit'; ?>/<?php echo $item->faskesjenis_id ?>" class="btn btn-primary btn-xs">
                               <i class="fa fa-pencil"></i>
                           </a>
                           

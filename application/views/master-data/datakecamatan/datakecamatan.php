@@ -27,7 +27,7 @@
                     $i = 1;
                     foreach ($v_kecamatan as $item) {
                     ?>
-                      <th><?= $i ?></th>
+                      <th><?= $i++ ?></th>
                       <th><?= $item->kec_kode ?></th>
                       <th><?= $item->kec_nama ?></th>
                       <th><?= $item->kec_aktif ?></th>
@@ -35,18 +35,18 @@
                         <button class="btn btn-success btn-xs">
                             <i class="fa fa-check"></i>
                           </button>
-                          <a href="<?php echo base_url() . 'master-data/datakecamatan/edit'; ?>/<?php echo $item->kec_kode ?>" class="btn btn-primary btn-xs">
+                              <a href="<?php echo base_url() . 'master-data/datakecamatan/edit'; ?>/<?php echo $item->kec_kode ?>" class="btn btn-primary btn-xs">
                               <i class="fa fa-pencil"></i>
-                          </a>
+                              </a>
                           
-                          <a href="<?php echo base_url() . 'master-data/datakecataman/hapus';?>/<?php echo $item->kec_kode ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
+                              <a href="<?php echo base_url() . 'master-data/datakecamatan/hapus';?>/<?php echo $item->kec_kode ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
                               <i class="fa fa-trash-o "></i>
-                          </a> 
+                              </a> 
                           
                         </th>
                   </tr>
                   
-                  <?php $i++; } ?>
+                  <?php } ?>
                 </tbody>
                 </table>
               </section>

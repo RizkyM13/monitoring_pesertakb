@@ -3,23 +3,23 @@
 <div class="col-lg-12">
           <div class="form-panel">
             <br>
-              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'master-data/datadesa/update'; ?>">
+              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'master-data/datafaskesjenis/update'; ?>">
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">ID Faskes Data</label>
                     <div class="col-sm-10">
-                      <input type="number" name="faskesjenis_id" class="form-control" placeholder="Masukkan ID Faskes Data" value="<?php echo $v_faskesjenis['faskesjenis_id'] ?>">
+                      <input type="number" name="faskesjenis_id" class="form-control" placeholder="Masukkan ID Faskes Data" value="<?php echo $v_ms_faskes_jenis['faskesjenis_id'] ?>">
                     </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Kode Faskes Jenis</label>
                     <div class="col-sm-10">
-                      <input type="number" name="faskesjenis_kode" class="form-control" placeholder="Masukkan Kode Faskes Jenis" value="<?php echo $v_faskesjenis['faskesjenis_kode'] ?>">
+                      <input type="number" name="faskesjenis_kode" class="form-control" placeholder="Masukkan Kode Faskes Jenis" value="<?php echo $v_ms_faskes_jenis['faskesjenis_kode'] ?>">
                     </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Nama Faskes Jenis</label>
                     <div class="col-sm-10">
-                      <input type="text" name="faskesjenis_nama"class="form-control" placeholder="" value="<?php echo $v_faskesjenis['faskesjenis_nama'] ?>">
+                      <input type="text" name="faskesjenis_nama"class="form-control" placeholder="Masukkan Jenis Faskes" value="<?php echo $v_ms_faskes_jenis['faskesjenis_nama'] ?>">
                     </div>
                 </div>
                 <div class="form-group">

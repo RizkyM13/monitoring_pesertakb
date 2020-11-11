@@ -40,19 +40,19 @@ class DataFaskesJenis extends CI_Controller {
 			'faskesjenis_aktif'		=> $faskesjenis_aktif
 		);
 
-		$this->m_ms_faskes_jenis->input_data($data, 'faskesjenis');
-		redirect('master-desa/datafaskesjenis');
+		$this->m_ms_faskes_jenis->input_data($data, 'ms_faskes_jenis');
+		redirect('master-data/datafaskesjenis');
 	}
 
 	public function hapus ($id=''){
 		$where = array('faskesjenis_id'=>$id);
-		$this->m_ms_faskes_jenis->hapus_data($where, 'faskesjenis');
+		$this->m_ms_faskes_jenis->hapus_data($where, 'ms_faskes_jenis');
 		redirect('master-data/datafaskesjenis');
 	}
 
 	public function edit($id){
 		$where = array('faskesjenis_id'=>$id);
-		$data['v_ms_faskes_jenis'] = $this->m_ms_faskes_jenis->edit_data('faskesjenis_id', $where)->row_array();
+		$data['v_ms_faskes_jenis'] = $this->m_ms_faskes_jenis->edit_data('ms_faskes_jenis', $where)->row_array();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('master-data/datafaskesjenis/editdata',$data);
@@ -77,7 +77,7 @@ class DataFaskesJenis extends CI_Controller {
 			'faskesjenis_id'=>$faskesjenis_id
 		);
 
-		$this->m_ms_faskes_jenis->update_data($where, $data, 'faskesjenis');
+		$this->m_ms_faskes_jenis->update_data($where, $data, 'ms_faskes_jenis');
 		redirect('master-data/datafaskesjenis');
 	}
 }

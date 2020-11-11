@@ -40,11 +40,11 @@ class DataRw extends CI_Controller {
 		);
 
 		$this->m_rw->input_data($data, 'data_rw');
-		redirect('master-desa/datarw');
+		redirect('master-data/datarw');
 	}
 
 	public function hapus ($id=''){
-		$where = array('rt_id'=>$id);
+		$where = array('rw_id'=>$id);
 		$this->m_rw->hapus_data($where, 'data_rw');
 		redirect('master-data/datarw');
 	}

@@ -51,7 +51,7 @@ class DataKader extends CI_Controller {
 		);
 
 		$this->m_kader->input_data($data, 'kader');
-		redirect('master-desa/datakader');
+		redirect('master-data/datakader');
 	}
 
 	public function hapus ($id=''){
@@ -62,7 +62,7 @@ class DataKader extends CI_Controller {
 
 	public function edit($id){
 		$where = array('kader_id'=>$id);
-		$data['v_kader'] = $this->m_kader->edit_data('kader_id', $where)->row_array();
+		$data['v_kader'] = $this->m_kader->edit_data('kader', $where)->row_array();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('master-data/datakader/editdata',$data);
@@ -75,7 +75,7 @@ class DataKader extends CI_Controller {
 		$kader_nik				= $this->input->post('kader_nik');
 		$kader_sex				= $this->input->post('kader_sex');
 		$kader_kelahiran		= $this->input->post('kader_kelahiran');
-		$kader_tgllahir			= $this->input->post('kader_tglahir');
+		$kader_tglahir			= $this->input->post('kader_tglahir');
 		$kader_email			= $this->input->post('kader_email');
 		$kader_hp				= $this->input->post('kader_hp');
 		$kader_aktif			= $this->input->post('kader_aktif');
@@ -86,7 +86,7 @@ class DataKader extends CI_Controller {
 			'kader_nik'				=> $kader_nik,
 			'kader_sex'				=> $kader_sex,
 			'kader_kelahiran'		=> $kader_kelahiran,
-			'kader_tgllahir'		=> $kader_tglahir,
+			'kader_tglahir'			=> $kader_tglahir,
 			'kader_email'			=> $kader_email,
 			'kader_hp'				=> $kader_hp,
 			'kader_aktif'			=> $kader_aktif,

@@ -19,7 +19,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Nama Faskes Jenis</label>
                     <div class="col-sm-10">
-                      <input type="text" name="faskesjenis_nama"class="form-control" placeholder="">
+                      <input type="text" name="faskesjenis_nama"class="form-control" placeholder="Masukkan Nama Faskes Jenis">
                     </div>
                 </div>
                 <div class="form-group">

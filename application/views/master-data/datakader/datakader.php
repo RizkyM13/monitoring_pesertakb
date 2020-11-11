@@ -16,13 +16,13 @@
                   <thead>
                   <tr>
                       <th>ID Kader</th>
-                      <th>Nama Kader/th>
+                      <th>Nama Kader</th>
                       <th>NIK Kader</th>
                       <th>Sex Kader</th>
                       <th>Kelahiran Kader</th>
                       <th>Tgl Ahir Kader</th>
                       <th>Email Kader</th>
-                      <th>Hp Kader/th>
+                      <th>Hp Kader</th>
                       <th>Kader Aktif</th>
                       <th>Aksi</th>
                   </tr>
@@ -45,11 +45,11 @@
                         <button class="btn btn-success btn-xs">
                             <i class="fa fa-check"></i>
                           </button>
-                          <a href="echo base_url() . 'master-data/datakader/edit'/" class="btn btn-primary btn-xs">
+                          <a href="<?php echo base_url() . 'master-data/datakader/edit'; ?>/<?php echo $item->kader_id ?>" class="btn btn-primary btn-xs">
                               <i class="fa fa-pencil"></i>
                           </a>
                           
-                          <a href="echo base_url() . 'master-data/datakader/hapus'/" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
+                          <a href="<?php echo base_url() . 'master-data/datakader/hapus';?>/<?php echo $item->kader_id?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
                               <i class="fa fa-trash-o "></i>
                           </a> 
                           

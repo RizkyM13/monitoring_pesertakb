@@ -40,7 +40,7 @@ class DataRt extends CI_Controller {
 		);
 
 		$this->m_rt->input_data($data, 'data_rt');
-		redirect('master-desa/datart');
+		redirect('master-data/datart');
 	}
 
 	public function hapus ($id=''){
@@ -75,7 +75,7 @@ class DataRt extends CI_Controller {
 			'rt_id'	=>$rt_id
 		);
 
-		$this->m_desa->update_data($where, $data, 'data_rt');
+		$this->m_rt->update_data($where, $data, 'data_rt');
 		redirect('master-data/datart');
 	}
 }

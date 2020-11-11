@@ -13,43 +13,48 @@
                  <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Nama Kader</label>
                     <div class="col-sm-10">
-                      <input type="text" name="kader_nama" class="form-control" placeholder="">
+                      <input type="text" name="kader_nama" class="form-control" placeholder="Masukkan Nama Kader">
                     </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">NIK Kader</label>
                     <div class="col-sm-10">
-                      <input type="number" name="kader_nik"class="form-control" placeholder="">
+                      <input type="number" name="kader_nik"class="form-control" placeholder="Masukkan NIK Kader">
                     </div>
                 </div>
-                 <div class="form-group">
+                <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Sex Kader</label>
                     <div class="col-sm-10">
-                      <input type="text" name="kader_sex"class="form-control" placeholder=""> 
+                      <select name="kader_sex" class="form-control">
+                          <option value="">--Pilih Status--</option>
+                          <option value="L">Laki-laki</option>
+                          <option value="P">Perempuan</option>
+                       
+                      </select>
                     </div>
                 </div>
                  <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Kelahiran Kader</label>
                     <div class="col-sm-10">
-                      <input type="text" name="kader_kelahiran"class="form-control" placeholder="">
+                      <input type="text" name="kader_kelahiran"class="form-control" placeholder="Masukkan Tempat Lahir">
                     </div>
                 </div>
                  <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Tgl Ahir Kader</label>
+                  <label class="col-sm-2 col-sm-2 control-label">Tgl Lahir Kader</label>
                     <div class="col-sm-10">
-                      <input type="text" name="kader_tglahir"class="form-control" placeholder=""> 
+                      <input type="date" name="kader_tglahir"class="form-control" placeholder="Masukkan Tanggal Lahir"> 
                     </div>
                 </div>
                  <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Email Kader</label>
                     <div class="col-sm-10">
-                      <input type="text" name="kader_email"class="form-control" placeholder=""> 
+                      <input type="text" name="kader_email"class="form-control" placeholder="Masukkan Email"> 
                     </div>
                 </div>
                  <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Hp Kader</label>
                     <div class="col-sm-10">
-                      <input type="number" name="kader_hp"class="form-control" placeholder=""> 
+                      <input type="number" name="kader_hp"class="form-control" placeholder="Masukkan Nomor HP"> 
                     </div>
                 </div>
                 <div class="form-group">

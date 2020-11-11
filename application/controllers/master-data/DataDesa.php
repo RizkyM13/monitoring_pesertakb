@@ -41,7 +41,7 @@ class DataDesa extends CI_Controller {
 		);
 
 		$this->m_desa->input_data($data, 'desa');
-		redirect('master-desa/datadesa');
+		redirect('master-data/datadesa');
 	}
 
 	public function hapus ($id=''){
@@ -52,7 +52,7 @@ class DataDesa extends CI_Controller {
 
 	public function edit($id){
 		$where = array('desa_kode'=>$id);
-		$data['v_desa'] = $this->m_desa->edit_data('desa_kode', $where)->row_array();
+		$data['v_desa'] = $this->m_desa->edit_data('desa', $where)->row_array();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('master-data/datadesa/editdata',$data);
