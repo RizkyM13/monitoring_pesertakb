@@ -37,7 +37,7 @@
                       <th><?= $item->kader_nik?></th>
                       <th><?= $item->kader_sex?></th>
                       <th><?= $item->kader_kelahiran?></th>
-                      <th><?= $item->kader_tgllahir?></th>
+                      <th><?= $item->kader_tglahir?></th>
                       <th><?= $item->kader_email ?></th>
                       <th><?= $item->kader_hp ?></th>
                       <th><?= $item->kader_aktif?></th>
