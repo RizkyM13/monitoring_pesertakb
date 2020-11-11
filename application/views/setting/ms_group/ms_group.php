@@ -4,7 +4,7 @@
 <div class="row mt">
     <div class="col-lg-12">
       <div class="form-panel">
-      <h4 class="mb">MS Menu</h4>
+      <h4 class="mb">MS Group</h4>
       </div>
     </div>
 <div class="col-lg-12">
