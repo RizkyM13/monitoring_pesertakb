@@ -3,29 +3,29 @@
 <div class="col-lg-12">
           <div class="form-panel">
             <br>
-              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'setting/ms_group/ms_menu'; ?>">
+              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'setting/ms_group/tambah_aksi'; ?>">
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">ID Group</label>
                     <div class="col-sm-10">
-                      <input type="number" name="kader_id" class="form-control" placeholder="">
+                      <input type="number" name="group_id" class="form-control" placeholder="Masukkan ID Group">
                     </div>
                 </div>
                  <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Kode Group</label>
                     <div class="col-sm-10">
-                      <input type="text" name="kader_nama" class="form-control" placeholder="">
+                      <input type="text" name="group_kode" class="form-control" placeholder="Masukkan Kode Group">
                     </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Nama Group</label>
                     <div class="col-sm-10">
-                      <input type="number" name="kader_nik"class="form-control" placeholder="">
+                      <input type="number" name="group_nama"class="form-control" placeholder="">
                     </div>
                 </div>
                  <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Group Aktif</label>
                     <div class="col-sm-10">
-                      <select name="kader_aktif" class="form-control">
+                      <select name="group_aktif" class="form-control">
                           <option value="">--Pilih Status--</option>
                           <option value="1">Aktif</option>
                           <option value="0">Non Aktif</option>
