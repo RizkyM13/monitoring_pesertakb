@@ -3,17 +3,17 @@
 <div class="col-lg-12">
           <div class="form-panel">
             <br>
-              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'setting/ms_menu/ms_menu'; ?>">
+              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'setting/ms_menu/tambah_aksi'; ?>">
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">ID Menu</label>
                     <div class="col-sm-10">
-                      <input type="number" name="kader_id" class="form-control" placeholder="">
+                      <input type="number" name="kader_id" class="form-control" placeholder="Masukkan ID Menu">
                     </div>
                 </div>
                  <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Kode Menu</label>
                     <div class="col-sm-10">
-                      <input type="text" name="kader_nama" class="form-control" placeholder="">
+                      <input type="text" name="kader_nama" class="form-control" placeholder="Masukkan Kode Menu">
                     </div>
                 </div>
                 <div class="form-group">

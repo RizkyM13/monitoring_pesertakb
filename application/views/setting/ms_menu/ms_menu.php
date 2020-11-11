@@ -4,7 +4,7 @@
 <div class="row mt">
     <div class="col-lg-12">
       <div class="form-panel">
-      <h4 class="mb">MS Menu</h4>
+      <h4 class="mb">MS MENU</h4>
       </div>
     </div>
 <div class="col-lg-12">
@@ -15,16 +15,14 @@
                 <table class="table table-bordered table-striped table-condensed">
                   <thead>
                   <tr>
-                      <th>NO</th>
-                      <th>nm_id</th>
-                      <th>nm_kode</th>
-                      <th>mn_nama</th>
-                      <th>mn_level</th>
-                      <th>mn_induk</th>
-                      <th>mn_icon</th>
-                      <th>mn_icon</th>
-                      <th>mn_url</th>
-                      <th>mn_aktif</th>
+                      <th>ID Menu</th>
+                      <th>Kode Menu</th>
+                      <th>Nama Menu</th>
+                      <th>Level Menu</th>
+                      <th>Induk Menu</th>
+                      <th>Icon Menu</th>
+                      <th>Url Menu</th>
+                      <th>Menu Aktif</th>
                       <th>Aksi</th>
                   </tr>
                 </thead>
