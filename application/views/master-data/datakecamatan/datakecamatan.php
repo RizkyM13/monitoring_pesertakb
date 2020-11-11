@@ -14,6 +14,7 @@
                 <table class="table table-bordered table-striped table-condensed">
                   <thead>
                   <tr>
+                      <th>No</th>
                       <th>Kode Kecamatan</th>
                       <th>Nama Kecamatan</th>
                       <th>Kecamatan Aktif</th>
@@ -23,8 +24,10 @@
                 <tbody>
                   <tr>
                     <?php
+                    $i = 1;
                     foreach ($v_kecamatan as $item) {
                     ?>
+                      <th><?= $i ?></th>
                       <th><?= $item->kec_kode ?></th>
                       <th><?= $item->kec_nama ?></th>
                       <th><?= $item->kec_aktif ?></th>
@@ -32,17 +35,18 @@
                         <button class="btn btn-success btn-xs">
                             <i class="fa fa-check"></i>
                           </button>
-                          <a href="echo base_url() . 'master-data/datakecamatan/edit'/" class="btn btn-primary btn-xs">
+                          <a href="<?php echo base_url() . 'master-data/datakecamatan/edit'; ?>/<?php echo $item->kec_kode ?>" class="btn btn-primary btn-xs">
                               <i class="fa fa-pencil"></i>
                           </a>
                           
-                          <a href="echo base_url() . 'master-data/datakecamatan/hapus'/" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
+                          <a href="<?php echo base_url() . 'master-data/datakecataman/hapus';?>/<?php echo $item->kec_kode ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
                               <i class="fa fa-trash-o "></i>
                           </a> 
                           
                         </th>
                   </tr>
-                  <?php } ?>
+                  
+                  <?php $i++; } ?>
                 </tbody>
                 </table>
               </section>
