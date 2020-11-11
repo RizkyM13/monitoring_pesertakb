@@ -7,19 +7,24 @@
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Kode Kecamatan</label>
                     <div class="col-sm-10">
-                      <input type="text" name="kk_id" class="form-control" placeholder="Masukkan Kode Kecamatan">
+                      <input type="number" name="kec_kode" class="form-control" placeholder="Masukkan Kode Kecamatan">
                     </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Nama Kecamatan</label>
                     <div class="col-sm-10">
-                      <input type="text" name="kk_no" class="form-control" placeholder="Masukkan Nama Kecamatan">
+                      <input type="text" name="kec_nama" class="form-control" placeholder="Masukkan Nama Kecamatan">
                     </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Kecamatan Aktif</label>
                     <div class="col-sm-10">
-                      <input type="text" name="kk_status"class="form-control" placeholder="Masukkan Kecamatan">
+                      <select name="kec_aktif" class="form-control">
+                          <option value="">--Pilih Status--</option>
+                          <option value="1">Aktif</option>
+                          <option value="0">Non Aktif</option>
+                       
+                      </select>
                     </div>
                 </div>
                   <button type="submit" class="btn btn-primary">Simpan</button>

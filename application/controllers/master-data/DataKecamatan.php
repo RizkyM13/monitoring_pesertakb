@@ -39,7 +39,7 @@ class DataKecamatan extends CI_Controller {
 		);
 
 		$this->m_kecamatan->input_data($data, 'kecamatan');
-		redirect('master-desa/datakecamatan');
+		redirect('master-data/datakecamatan');
 	}
 
 	public function hapus ($id=''){
@@ -50,7 +50,7 @@ class DataKecamatan extends CI_Controller {
 
 	public function edit($id){
 		$where = array('kec_kode'=>$id);
-		$data['v_kecamatan'] = $this->m_kecamatan->edit_data('kec_kode', $where)->row_array();
+		$data['v_kecamatan'] = $this->m_kecamatan->edit_data('kecamatan', $where)->row_array();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('master-data/datakecamatan/editdata',$data);
@@ -73,7 +73,7 @@ class DataKecamatan extends CI_Controller {
 			'kec_kode'=>$kec_kode
 		);
 
-		$this->m_desa->update_data($where, $data, 'kecamatan');
+		$this->m_kecamatan->update_data($where, $data, 'kecamatan');
 		redirect('master-data/datakecamatan');
 	}
 }
