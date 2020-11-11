@@ -14,7 +14,7 @@ class DataPenduduk extends CI_Controller {
 		$data['v_penduduk'] = $this->m_penduduk->tampil_data()->result();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
-		$this->load->view('transaksi/data_penduduk');
+		$this->load->view('transaksi/datapenduduk/data_penduduk', $data);
 		$this->load->view('template/footer');
 	}
 
@@ -22,7 +22,7 @@ class DataPenduduk extends CI_Controller {
 		$data['v_penduduk'] = $this->m_penduduk->tampil_data()->result();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
-		$this->load->view('transaksi/datakk/tambahdata',$data);
+		$this->load->view('transaksi/datapenduduk/tambahdata',$data);
 		$this->load->view('template/footer');
 		
 	public function tambah_aksi(){
@@ -104,7 +104,7 @@ class DataPenduduk extends CI_Controller {
 		$data['v_penduduk'] = $this->m_penduduk->edit_data('penduduk', $where)->row_array();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
-		$this->load->view('transaksi/datapenduduk',$data);
+		$this->load->view('transaksi/datapenduduk/editdata',$data);
 		$this->load->view('template/footer');
 	}
 
