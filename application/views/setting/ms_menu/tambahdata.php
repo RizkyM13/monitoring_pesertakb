@@ -46,14 +46,8 @@
                       <input type="text" name="kader_email"class="form-control" placeholder=""> 
                     </div>
                 </div>
-                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Menu Aktif</label>
-                    <div class="col-sm-10">
-                      <input type="number" name="kader_hp"class="form-control" placeholder=""> 
-                    </div>
-                </div>
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Kader Aktif</label>
+                  <label class="col-sm-2 col-sm-2 control-label">Menu Aktif</label>
                     <div class="col-sm-10">
                       <select name="kader_aktif" class="form-control">
                           <option value="">--Pilih Status--</option>

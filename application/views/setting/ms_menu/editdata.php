@@ -5,55 +5,50 @@
             <br>
               <form class="form-horizontal style-form" method="post">
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">ID Kader</label>
+                  <label class="col-sm-2 col-sm-2 control-label">ID Menu</label>
                     <div class="col-sm-10">
-                      <input type="number" name="kader_id" class="form-control" placeholder="Masukkan ID Kader">
+                      <input type="number" name="kader_id" class="form-control" placeholder="">
+                    </div>
+                </div>
+                 <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Kode Menu</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="kader_nama" class="form-control" placeholder="">
                     </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Nama Kader</label>
+                  <label class="col-sm-2 col-sm-2 control-label">Nama Menu</label>
                     <div class="col-sm-10">
-                      <input type="number" name="kader_nama" class="form-control" placeholder="Masukkan Nama Kader">
+                      <input type="number" name="kader_nik"class="form-control" placeholder="">
                     </div>
+                </div>
+                 <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Menu Level</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="kader_sex"class="form-control" placeholder=""> 
+                    </div>
+                </div>
+                 <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Menu Induk</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="kader_kelahiran"class="form-control" placeholder="">
+                    </div>
+                </div>
+                 <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Icon Menu</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="kader_tgllahir"class="form-control" placeholder=""> 
+                    </div>
+                </div>
+                 <div class="form-group">
+                  <label class="col-sm-2 col-sm-2 control-label">Url Menu</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="kader_email"class="form-control" placeholder=""> 
+                    </div>
+                </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">NIK Kader</label>
-                    <div class="col-sm-10">
-                      <input type="text" name="kader_nik"class="form-control" placeholder="Masukkan NIK Kader">
-                    </div>
-                </div>
-                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Sex Kader</label>
-                    <div class="col-sm-10">
-                      <input type="text" name="kader_sex"class="form-control" placeholder="Masukkan Sex Kader">
-                    </div>
-                </div>
-                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Kelahiran Kader</label>
-                    <div class="col-sm-10">
-                      <input type="text" name="kader_kelahiran"class="form-control" placeholder="Masukkan Kelahiran Kader">
-                    </div>
-                </div>
-                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Tgl Lahir Kader</label>
-                    <div class="col-sm-10">
-                      <input type="text" name="kader_tgllahir"class="form-control" placeholder="Masukkan Tgl Lahir Kader">
-                    </div>
-                </div>
-                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Email Kader</label>
-                    <div class="col-sm-10">
-                      <input type="text" name="kader_email"class="form-control" placeholder="Masukkan Email Kader">
-                    </div>
-                </div>
-                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Hp Kader</label>
-                    <div class="col-sm-10">
-                      <input type="text" name="kader_hp"class="form-control" placeholder="Masukkan Hp Kader">
-                    </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Kader Aktif</label>
+                  <label class="col-sm-2 col-sm-2 control-label">Menu Aktif</label>
                     <div class="col-sm-10">
                       <select name="kader_aktif" class="form-control">
                           <option value="">--Pilih Status--</option>
