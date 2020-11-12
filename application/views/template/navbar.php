@@ -228,7 +228,9 @@
               <li><a href="<?= base_url(). 'setting/profil_instansi'?>">Profil Instansi</a></li>
               <li><a href="<?= base_url(). 'setting/ms_menu'?>">Ms Menu</a></li>
               <li><a href="<?= base_url(). 'setting/ms_group'?>">Ms Group</a></li>
+              <li><a href="<?= base_url(). 'setting/ms_user'?>">Ms Group Menu</a></li>
               <li><a href="<?= base_url(). 'setting/ms_user'?>">Ms User</a></li>
+              <li><a href="<?= base_url(). 'setting/ms_user'?>">Ms User group</a></li>
             </ul>
           </li>
           <li class="sub-menu">
