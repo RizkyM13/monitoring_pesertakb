@@ -22,7 +22,7 @@ class Ms_menu extends CI_Controller {
 		$data['v_ms_menu'] = $this->m_ms_menu->tampil_data()->result();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
-		$this->load->view('setting/ms_menu/ms_menu',$data);
+		$this->load->view('setting/ms_menu/tambahdata',$data);
 		$this->load->view('template/footer');
 	}
 
@@ -61,7 +61,7 @@ class Ms_menu extends CI_Controller {
 
 	public function edit($id){
 		$where = array('user_id'=>$id);
-		$data['v_ms_menu'] = $this->m_ms_menu->edit_data('mn_id', $where)->row_array();
+		$data['v_ms_menu'] = $this->m_ms_menu->edit_data('ms_menu', $where)->row_array();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('setting/ms_menu/editdata',$data);

@@ -22,7 +22,7 @@ class Ms_user extends CI_Controller {
 		$data['v_ms_user'] = $this->m_ms_user->tampil_data()->result();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
-		$this->load->view('setting/ms_user/ms_user',$data);
+		$this->load->view('setting/ms_user/tambahdata',$data);
 		$this->load->view('template/footer');
 	}
 
@@ -54,7 +54,7 @@ class Ms_user extends CI_Controller {
 
 	public function edit($id){
 		$where = array('user_id'=>$id);
-		$data['v_ms_user'] = $this->m_ms_user->edit_data('user_id', $where)->row_array();
+		$data['v_ms_user'] = $this->m_ms_user->edit_data('ms_user', $where)->row_array();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('setting/ms_user/editdata',$data);

@@ -14,7 +14,7 @@ class Profil_instansi extends CI_Controller {
 		$data['profil'] = $this->m_profil_instansi->tampil_data()->result();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
-		$this->load->view('setting\profil_instansi/profil_instansi', $data);
+		$this->load->view('setting/profil_instansi/profil_instansi', $data);
 		$this->load->view('template/footer');
 	}
 
@@ -22,7 +22,7 @@ class Profil_instansi extends CI_Controller {
 		$data['profil'] = $this->m_profil_instansi->tampil_data()->result();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
-		$this->load->view('m_profil_instansi/tambahdata',$data);
+		$this->load->view('setting/profil_instansi/tambahdata',$data);
 		$this->load->view('template/footer');
 	}
 
@@ -55,21 +55,21 @@ class Profil_instansi extends CI_Controller {
 		);
 
 		$this->m_profil_instansi->input_data($data, 'profil');
-		redirect('m_profil_instansi');
+		redirect('setting/profil_instansi');
 	}
 
 	public function hapus ($id=''){
 		$where = array('kec_kode'=>$id);
 		$this->m_profil_instansi->hapus_data($where, 'profil');
-		redirect('m_profil_instansi');
+		redirect('setting/profil_instansi');
 	}
 
 	public function edit($id){
-		$where = array('kec_kode'=>$id);
+		$where = array('id'=>$id);
 		$data['v_profil'] = $this->m_profil_instansi->edit_data('profil', $where)->row_array();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
-		$this->load->view('m_profil_instansi/editdata',$data);
+		$this->load->view('template/profil_instansi/editdata',$data);
 		$this->load->view('template/footer');
 	}
 
@@ -102,10 +102,10 @@ class Profil_instansi extends CI_Controller {
 		);
 
 		$where = array(
-			'kec_kode'=>$kec_kode
+			'id'=>$id
 		);
 
-		$this->m_profil_instansi->update_data($where, $data, 'kecamatan');
-		redirect('m_profil_instansi');
+		$this->m_profil_instansi->update_data($where, $data, 'profil');
+		redirect('setting/profil_instansi');
 	}
 }
