@@ -19,19 +19,24 @@
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Nama User</label>
                     <div class="col-sm-10">
-                      <input type="text" name="user_name"class="form-control" placeholder="">
+                      <input type="text" name="user_name"class="form-control" placeholder="Masukkan username">
                     </div>
                 </div>
                  <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Password User</label>
                     <div class="col-sm-10">
-                      <input type="text" name="user_password"class="form-control" placeholder="">
+                      <input type="text" name="user_password"class="form-control" placeholder="Masukkan Password">
                     </div>
                 </div>
                  <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Status User</label>
                     <div class="col-sm-10">
-                      <input type="text" name="user_status"class="form-control" placeholder="">
+                      <select name="user_status" class="form-control">
+                          <option value="">--Pilih Status--</option>
+                          <option value="1">Aktif</option>
+                          <option value="0">Non Aktif</option>
+                       
+                      </select>
                     </div>
                 </div>
                

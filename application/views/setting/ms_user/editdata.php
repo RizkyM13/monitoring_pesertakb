@@ -17,21 +17,26 @@
                     </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Nama User</label>
+                  <label class="col-sm-2 col-sm-2 control-label">Username</label>
                     <div class="col-sm-10">
-                      <input type="text" name="user_name"class="form-control" placeholder="" value="<?php echo $v_ms_user['user_name'] ?>">
+                      <input type="text" name="user_name"class="form-control" placeholder="Masukkan Username" value="<?php echo $v_ms_user['user_name'] ?>">
                     </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Password User</label>
+                  <label class="col-sm-2 col-sm-2 control-label">Password</label>
                     <div class="col-sm-10">
-                      <input type="text" name="user_password"class="form-control" placeholder="" value="<?php echo $v_ms_user['user_password'] ?>">
+                      <input type="text" name="user_password"class="form-control" placeholder="Masukkan Password" value="<?php echo $v_ms_user['user_password'] ?>">
                     </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Status User</label>
                     <div class="col-sm-10">
-                      <input type="text" name="user_status"class="form-control" placeholder="" value="<?php echo $v_ms_user['user_status'] ?>">
+                      <select name="user_status" class="form-control">
+                          <option value="">--Pilih Status--</option>
+                          <option value="1">Aktif</option>
+                          <option value="0">Non Aktif</option>
+                       
+                      </select>
                     </div>
                 </div>
                 

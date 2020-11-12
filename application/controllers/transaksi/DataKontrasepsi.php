@@ -5,7 +5,7 @@ class DataKontrasepsi extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('ms_kontrasepsi');
+		$this->load->model('m_kontrasepsi');
 		
 	}
 
@@ -55,7 +55,7 @@ class DataKontrasepsi extends CI_Controller {
 
 	public function edit($id){
 		$where = array('kontrasepsi_id'=>$id);
-		$data['v_kontrasepsi'] = $this->m_kk->edit_data('ms_kontrasepsi', $where)->row_array();
+		$data['v_kontrasepsi'] = $this->m_kontrasepsi->edit_data('ms_kontrasepsi', $where)->row_array();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('transaksi/datakontrasepsi/editdata',$data);

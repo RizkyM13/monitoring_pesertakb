@@ -14,7 +14,7 @@
                 <table class="table table-bordered table-striped table-condensed">
                   <thead>
                   <tr>
-                      <th>ID Kontrasepsi</th>
+                      
                       <th>Kode Kontrasepsi</th>
                       <th>Nama Kontrasepsi</th>
                       <th>Kontrasepsi Kadaluarsa</th>
@@ -27,7 +27,7 @@
                             <?php
                             foreach ($v_kontrasepsi as $item) {
                             ?>
-                      <th><?= $item->kontrasepsi_id       ?></th>
+                      
                       <th><?= $item->kontrasepsi_kode     ?></th>
                       <th><?= $item->kontrasepsi_nama     ?></th>
                       <th><?= $item->kontrasepsi_expired  ?></th>
