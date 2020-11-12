@@ -15,6 +15,7 @@
                   <thead>
                   <tr>
                       
+                      <th>ID Kontrasepsi</th>
                       <th>Kode Kontrasepsi</th>
                       <th>Nama Kontrasepsi</th>
                       <th>Kontrasepsi Kadaluarsa</th>
@@ -27,10 +28,10 @@
                             <?php
                             foreach ($v_kontrasepsi as $item) {
                             ?>
-                      
-                      <th><?= $item->kontrasepsi_kode     ?></th>
-                      <th><?= $item->kontrasepsi_nama     ?></th>
-                      <th><?= $item->kontrasepsi_expired  ?></th>
+                      <th><?= $item->kontrasepsi_id     ?></th>
+                      <th><?= $item->kontransepsi_kode     ?></th>
+                      <th><?= $item->kontransepsi_nama     ?></th>
+                      <th><?= $item->kontransepsi_expired  ?></th>
                       <th><?= $item->kontrasepsi_aktif    ?></th>
                       <th>
                         <button class="btn btn-success btn-xs">
