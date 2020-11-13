@@ -17,13 +17,13 @@
                     </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Nama User</label>
+                  <label class="col-sm-2 col-sm-2 control-label">Username</label>
                     <div class="col-sm-10">
                       <input type="text" name="user_name"class="form-control" placeholder="Masukkan username">
                     </div>
                 </div>
                  <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Password User</label>
+                  <label class="col-sm-2 col-sm-2 control-label">Password</label>
                     <div class="col-sm-10">
                       <input type="text" name="user_password"class="form-control" placeholder="Masukkan Password">
                     </div>
