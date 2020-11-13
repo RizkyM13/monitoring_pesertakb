@@ -14,7 +14,7 @@
                 <table class="table table-bordered table-striped table-condensed">
                   <thead>
                   <tr>
-                      <th>ID User</th>
+                      <th>No</th>
                       <th>ID Kader</th>
                       <th>Nama User</th>
                       <th>Password User</th>
@@ -25,9 +25,10 @@
                 <tbody>
                   <tr>
                   <?php
+                  $i = 1;
                     foreach ($v_ms_user as $item) {
                   ?>
-                      <th><?= $item->user_id        ?></th>
+                      <th><?= $i++        ?></th>
                       <th><?= $item->kader_id       ?></th>
                       <th><?= $item->user_name       ?></th>
                       <th><?= $item->user_password  ?></th>

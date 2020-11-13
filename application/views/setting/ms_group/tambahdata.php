@@ -5,9 +5,9 @@
             <br>
               <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'setting/ms_group/tambah_aksi'; ?>">
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">ID Group</label>
+                  
                     <div class="col-sm-10">
-                      <input type="number" name="group_id" class="form-control" placeholder="Masukkan ID Group">
+                      <input type="hidden" name="group_id" class="form-control" placeholder="Masukkan ID Group">
                     </div>
                 </div>
                  <div class="form-group">
@@ -19,7 +19,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Nama Group</label>
                     <div class="col-sm-10">
-                      <input type="number" name="group_nama"class="form-control" placeholder="">
+                      <input type="number" name="group_nama"class="form-control" placeholder="Masukkan Nama Group">
                     </div>
                 </div>
                  <div class="form-group">

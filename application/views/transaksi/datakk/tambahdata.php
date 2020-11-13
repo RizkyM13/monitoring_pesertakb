@@ -17,18 +17,16 @@
                       <input type="date" name="kk_tgl"class="form-control" placeholder="">
                     </div>
                 </div>
+
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Status KK</label>
                     <div class="col-sm-10">
                       <select name="kk_status" class="form-control">
-                          <?php 
-                          foreach ($status as $s) {
-                            
-                          ?>
+                          
                           <option value="">--Pilih Status--</option>
-                          <option value="<?php echo($s->kk_status == 'aktif'); ?>">Aktif</option>
-                          <option value="0"<?php echo($s->kk_status == 'non aktif'); ?> >Non Aktif</option>
-                          <?php } ?>
+                          <option value="1">Aktif</option>
+                          <option value="0">Non Aktif</option>
+                          
                       </select>
                     </div>
                 </div>

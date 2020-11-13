@@ -15,7 +15,7 @@
                   <thead>
                   <tr>
                       
-                      <th>ID Kontrasepsi</th>
+                      <th>No</th>
                       <th>Kode Kontrasepsi</th>
                       <th>Nama Kontrasepsi</th>
                       <th>Kontrasepsi Kadaluarsa</th>
@@ -26,9 +26,10 @@
                 <tbody>
                   <tr>
                             <?php
+                            $i = 1;
                             foreach ($v_kontrasepsi as $item) {
                             ?>
-                      <th><?= $item->kontrasepsi_id     ?></th>
+                      <th><?= $i++    ?></th>
                       <th><?= $item->kontransepsi_kode     ?></th>
                       <th><?= $item->kontransepsi_nama     ?></th>
                       <th><?= $item->kontransepsi_expired  ?></th>

@@ -15,7 +15,7 @@
                 <table class="table table-bordered table-striped table-condensed">
                   <thead>
                   <tr>
-                      <th>ID Menu</th>
+                      <th>No</th>
                       <th>Kode Menu</th>
                       <th>Nama Menu</th>
                       <th>Level Menu</th>
@@ -28,6 +28,18 @@
                 </thead>
                 <tbody>
                   <tr>
+                    <?php
+                            $i = 1;
+                            foreach ($v_ms_menu as $item) {
+                            ?>
+                      <th><?= $i++ ?></th>
+                      <th><?= $item->mn_kode ?></th>
+                      <th><?= $item->mn_nama?></th>
+                      <th><?= $item->mn_level?></th>
+                      <th><?= $item->mn_induk?></th>
+                      <th><?= $item->mn_icon?></th>
+                      <th><?= $item->mn_url?></th>
+                      <th><?= $item->mn_aktif?></th>
                       <th>
                         <button class="btn btn-success btn-xs">
                             <i class="fa fa-check"></i>
@@ -41,7 +53,9 @@
                           </a> 
                           
                         </th>
+                      
                   </tr>
+                  <?php } ?>
                 </tbody>
                 </table>
               </section>

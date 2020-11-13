@@ -5,9 +5,9 @@
             <br>
               <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'transaksi/datakk/update'; ?>">
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">ID KK</label>
+                  
                     <div class="col-sm-10">
-                      <input type="text" name="kk_id" class="form-control" placeholder="Masukkan ID" value="<?php echo $v_kk['kk_id'] ?>">
+                      <input type="hidden" name="kk_id" class="form-control" placeholder="Masukkan ID" value="<?php echo $v_kk['kk_id'] ?>">
                     </div>
                 </div>
                 <div class="form-group">
@@ -25,15 +25,12 @@
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Status KK</label>
                     <div class="col-sm-10">
-                      <?php
-                      foreach ($status as $a) {
-                        
-                      ?>
+                      
                       <select name="kk_status" class="form-control">
                           <option value="">--Pilih Status--</option>
-                          <option value="<?php echo $a->kk_status ?>"><?php echo $a->kk_status ?>Aktif</option>
-                          <option value="<?php echo $a->kk_status ?>"><?php echo $a->kk_status ?>Non Aktif</option>
-                       <?php } ?>
+                          <option value="">Aktif</option>
+                          <option value="">Non Aktif</option>
+                       
                       </select>
                     </div>
                 </div>

@@ -14,7 +14,7 @@
                 <table class="table table-bordered table-striped table-condensed">
                   <thead>
                   <tr>
-                      <th>ID KK</th>
+                      <th>No</th>
                       <th>Nomor KK</th>
                       <th>Tanggal KK</th>
                       <th>Status KK</th>
@@ -26,9 +26,10 @@
                 <tbody>
                   <tr>
                             <?php
+                            $i = 1;
                             foreach ($v_kk as $item) {
                             ?>
-                      <th><?= $item->kk_id ?></th>
+                      <th><?= $i++ ?></th>
                       <th><?= $item->kk_no ?></th>
                       <th><?= $item->kk_tgl?></th>
                       <th><?= $item->kk_status?></th>

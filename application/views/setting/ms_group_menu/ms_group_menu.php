@@ -15,7 +15,7 @@
                 <table class="table table-bordered table-striped table-condensed">
                   <thead>
                   <tr>
-                      <th>ID Menu</th>
+                      <th>No</th>
                       <th>ID Group</th>
                       <th>Update By</th>
                       <th>Update Time</th>
@@ -24,6 +24,14 @@
                 </thead>
                 <tbody>
                   <tr>
+                    <?php
+                            $i = 1;
+                            foreach ($v_group_menu as $item) {
+                            ?>
+                      <th><?= $i++ ?></th>
+                      <th><?= $item->grp_id ?></th>
+                      <th><?= $item->update_by?></th>
+                      <th><?= $item->update_time?></th>
                       <th>
                         <button class="btn btn-success btn-xs">
                             <i class="fa fa-check"></i>
@@ -38,6 +46,7 @@
                           
                         </th>
                   </tr>
+                <?php } ?>
                 </tbody>
                 </table>
               </section>

@@ -5,9 +5,9 @@
             <br>
               <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'setting/ms_group_menu/ms_group_menu'; ?>">
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">ID Menu</label>
+                  
                     <div class="col-sm-10">
-                      <input type="number" name="user_id" class="form-control" placeholder="Masukkan ID Menu">
+                      <input type="hidden" name="user_id" class="form-control" placeholder="Masukkan ID Menu">
                     </div>
                 </div>
                 <div class="form-group">
