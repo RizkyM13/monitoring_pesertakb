@@ -60,6 +60,15 @@ class Ms_group extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
+	public function menu($id){
+		$where = array('grp_id'=>$id);
+		//$data['v_ms_group'] = $this->m_ms_group->edit_data('ms_group', $where)->row_array();
+		$this->load->view('template/header');
+		$this->load->view('template/navbar');
+		$this->load->view('setting/ms_group/menu');
+		$this->load->view('template/footer');
+	}
+
 	public function update(){
 		$grp_id				= $this->input->post('grp_id');
 		$grp_kode			= $this->input->post('grp_kode');

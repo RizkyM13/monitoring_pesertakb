@@ -30,11 +30,11 @@
                       <th><?= $i++ ?></th>
                       <th><?= $item->grp_kode ?></th>
                       <th><?= $item->grp_nama?></th>
-                      <th><?= $item->grp_aktif?></th>
+                      <th><?= $item->grp_aktif == 1 ? 'Aktif' : 'Non Aktif'?></th>
                       <th>
-                        <button class="btn btn-success btn-xs">
+                        <a href="<?php echo base_url() . 'setting/ms_group/menu'; ?>/<?php echo $item->grp_id ?>"class="btn btn-success btn-xs">
                             <i class="fa fa-check"></i>
-                          </button>
+                        </a>
                           <a href="<?php echo base_url() . 'setting/ms_group/edit'; ?>/<?php echo $item->grp_id ?>" class="btn btn-primary btn-xs">
                               <i class="fa fa-pencil"></i>
                           </a>

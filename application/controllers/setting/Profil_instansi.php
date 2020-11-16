@@ -11,7 +11,7 @@ class Profil_instansi extends CI_Controller {
 
 	public function index()
 	{
-		$data['profil'] = $this->m_profil_instansi->tampil_data()->result();
+		$data['v_profil'] = $this->m_profil_instansi->tampil_data()->result();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('setting/profil_instansi/profil_instansi', $data);
@@ -19,7 +19,7 @@ class Profil_instansi extends CI_Controller {
 	}
 
 	public function tambah(){
-		$data['profil'] = $this->m_profil_instansi->tampil_data()->result();
+		$data['v_profil'] = $this->m_profil_instansi->tampil_data()->result();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('setting/profil_instansi/tambahdata',$data);
@@ -43,15 +43,15 @@ class Profil_instansi extends CI_Controller {
 		$data = array(
 			'id'				=> $id,
 			'kode'				=> $kode,
-			'instansi'			=> $instansi
+			'instansi'			=> $instansi,
 			'instansi_nick'		=> $instansi_nick,
 			'alamat'			=> $alamat,
-			'kab_kode'			=> $kab_kode
+			'kab_kode'			=> $kab_kode,
 			'telp'				=> $telp,
 			'email'				=> $email,
-			'webiste'			=> $webiste
+			'webiste'			=> $webiste,
 			'kodepos'			=> $kodepos,
-			'logo'				=> $logo,
+			'logo'				=> $logo
 		);
 
 		$this->m_profil_instansi->input_data($data, 'profil');
@@ -90,15 +90,15 @@ class Profil_instansi extends CI_Controller {
 		$data = array(
 			'id'				=> $id,
 			'kode'				=> $kode,
-			'instansi'			=> $instansi
+			'instansi'			=> $instansi,
 			'instansi_nick'		=> $instansi_nick,
 			'alamat'			=> $alamat,
-			'kab_kode'			=> $kab_kode
+			'kab_kode'			=> $kab_kode,
 			'telp'				=> $telp,
 			'email'				=> $email,
-			'webiste'			=> $webiste
+			'webiste'			=> $webiste,
 			'kodepos'			=> $kodepos,
-			'logo'				=> $logo,
+			'logo'				=> $logo
 		);
 
 		$where = array(

@@ -15,8 +15,8 @@
                   <thead>
                   <tr>
                       <th>No</th>
-                      <th>ID Faskes</th>
-                      <th>ID Faskes Jenis</th>
+                      
+                      
                       <th>Kode Faskes</th>
                       <th>Nama Faskes</th>
                       <th>Alamat Faskes</th>
@@ -32,13 +32,13 @@
                     foreach ($v_faskes as $item) {
                   ?>
                       <th><?= $i++ ?></th>
-                      <th><?= $item->faskes_id        ?></th>
-                      <th><?= $item->faskesjenis_id   ?></th>
+                      
+                      
                       <th><?= $item->faskes_kode      ?></th>
                       <th><?= $item->faskes_nama      ?></th>
                       <th><?= $item->faskes_alamat    ?></th>
                       <th><?= $item->desa_kode        ?></th>
-                      <th><?= $item->faskes_aktif     ?></th>
+                      <th><?= $item->faskes_aktif   == 1 ? 'Aktif' : 'Non Aktif'  ?></th>
                       <th>
                         <button class="btn btn-success btn-xs">
                             <i class="fa fa-check"></i>

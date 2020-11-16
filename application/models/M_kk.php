@@ -10,6 +10,7 @@ class M_kk extends CI_Model {
 	function tampil_data(){
 		
 		return $this->db->get('kk');
+		
 	}
 
 	function input_data($data, $table){

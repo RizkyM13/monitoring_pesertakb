@@ -4,12 +4,11 @@
           <div class="form-panel">
             <br>
               <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'setting\profil_instansi/tambah_aksi'; ?>">
-                <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">ID</label>
-                    <div class="col-sm-10">
-                      <input type="number" name="id" class="form-control" placeholder="Masukkan ID">
-                    </div>
-                </div>
+                
+                  
+                      <input type="hidden" name="id" class="form-control" placeholder="Masukkan ID">
+                   
+                
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Kode</label>
                     <div class="col-sm-10">
@@ -19,13 +18,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Instansi</label>
                     <div class="col-sm-10">
-                      <input type="text" name="instansi" class="form-control" placeholder="Masukkan Instansi">
+                      <input type="text" name="instansi" class="form-control" placeholder="Masukkan Nama Panjang Instansi">
                     </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Nick Instansi</label>
                     <div class="col-sm-10">
-                      <input type="text" name="instansi_nick" class="form-control" placeholder="Masukkan Nick Instansi">
+                      <input type="text" name="instansi_nick" class="form-control" placeholder="Masukkan Nama Pendek Instansi">
                     </div>
                 </div>
                 <div class="form-group">

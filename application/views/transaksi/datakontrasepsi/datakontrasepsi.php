@@ -33,7 +33,7 @@
                       <th><?= $item->kontransepsi_kode     ?></th>
                       <th><?= $item->kontransepsi_nama     ?></th>
                       <th><?= $item->kontransepsi_expired  ?></th>
-                      <th><?= $item->kontrasepsi_aktif    ?></th>
+                      <th><?= $item->kontrasepsi_aktif  == 1 ? 'Aktif' : 'Non Aktif'  ?></th>
                       <th>
                         <button class="btn btn-success btn-xs">
                             <i class="fa fa-check"></i>

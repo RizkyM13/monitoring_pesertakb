@@ -32,7 +32,7 @@
                 </div>
 
                       <input type="hidden" name="kk_lastupdate"class="form-control" placeholder="Masukkan Status KK" value="<?php echo date('Y-m-d H:i:s', time()) ?>">
-                      <input type="hidden" name="kk_lastupdate_by"class="form-control" placeholder="Masukkan Status KK" value="<?php echo $this->session->userdata('user_status') ?>">
+                      <input type="hidden" name="kk_lastupdate_by"class="form-control" placeholder="Masukkan Status KK" value="<?php echo $this->session->userdata('user_id'); ?> ">
                   
                 
                   <button type="submit" class="btn btn-primary">Simpan</button>
