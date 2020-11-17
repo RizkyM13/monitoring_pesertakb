@@ -16,6 +16,7 @@ class DataKK extends CI_Controller {
 	public function index()
 	{
 		$data['v_kk'] = $this->m_kk->tampil_data()->result();
+		//$data[''] = $this->m_kk->getUser();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('transaksi/datakk/datakk',$data);

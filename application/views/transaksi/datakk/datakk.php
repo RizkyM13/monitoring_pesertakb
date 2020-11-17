@@ -35,7 +35,7 @@
                       <th><?= $item->kk_tgl?></th>
                       <th><?= $item->kk_status == 1 ? 'Aktif' : 'Non Aktif'?></th>
                       <th><?= $item->kk_lastupdate ?></th>
-                      <th><?= $item->kk_lastupdate_by ?></th>
+                      <th><?= $item->user_name ?></th>
                       <th>
                         <button class="btn btn-success btn-xs">
                             <i class="fa fa-check"></i>

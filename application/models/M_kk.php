@@ -8,9 +8,17 @@ class M_kk extends CI_Model {
 		
 	//}
 	function tampil_data(){
+		//$this->db->select('*');
+		//$this->db->from('kk');
+		//$this->db->join('ms_user', 'kk.kk_lastupdate_by = ms_user.user_name' );
+		//$query = $this->db->get();
+		return $this->db->query('SELECT r.user_name, b.kk_id, b.kk_no, b.kk_tgl, b.kk_status, b.kk_lastupdate, b.kk_lastupdate_by FROM `kk` as b JOIN ms_user as r ON r.user_id=b.kk_lastupdate_by');
+		//return $this->db->get('kk');
 		
-		return $this->db->get('kk');
-		
+	}
+
+	function getUser(){
+		return $this->db->get('ms_user')->result();
 	}
 
 	function input_data($data, $table){
