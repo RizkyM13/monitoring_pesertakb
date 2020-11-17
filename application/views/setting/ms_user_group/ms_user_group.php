@@ -24,6 +24,14 @@
                 </thead>
                 <tbody>
                   <tr>
+                    <?php
+                            $i = 1;
+                            foreach ($v_user_group as $item) {
+                            ?>
+                      <th><?= $i++ ?></th>
+                      <th><?= $item->grp_id ?></th>
+                      <th><?= $item->update_by?></th>
+                      <th><?= $item->update_time?></th>
                       <th>
                         <button class="btn btn-success btn-xs">
                             <i class="fa fa-check"></i>
@@ -38,6 +46,7 @@
                           
                         </th>
                   </tr>
+                  <?php } ?>
                 </tbody>
                 </table>
               </section>
