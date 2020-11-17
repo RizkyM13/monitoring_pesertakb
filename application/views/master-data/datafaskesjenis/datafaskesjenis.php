@@ -15,7 +15,7 @@
                   <thead>
                   <tr>
                       <th>No</th>
-                      <th>ID Faskes Jenis</th>
+                      
                       <th>Kode Faskes Jenis</th>
                       <th>Nama Faskes Jenis</th>
                       <th>Faskes Jenis Aktif</th>
@@ -29,10 +29,10 @@
                     foreach ($v_ms_faskes_jenis as $item) {
                   ?>
                       <th><?= $i++ ?></th>
-                      <th><?= $item->faskesjenis_id    ?></th>
+                      
                       <th><?= $item->faskesjenis_kode  ?></th>
                       <th><?= $item->faskesjenis_nama  ?></th>
-                      <th><?= $item->faskesjenis_aktif ?></th>
+                      <th><?= $item->faskesjenis_aktif == 1 ? 'Aktif' : 'Non Aktif' ?></th>
                       <th>
                         <button class="btn btn-success btn-xs">
                             <i class="fa fa-check"></i>

@@ -28,8 +28,8 @@
                       
                       <select name="kk_status" class="form-control">
                           <option value="">--Pilih Status--</option>
-                          <option value="">Aktif</option>
-                          <option value="">Non Aktif</option>
+                          <option value="1">Aktif</option>
+                          <option value="0">Non Aktif</option>
                        
                       </select>
                     </div>

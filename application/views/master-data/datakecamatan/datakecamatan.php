@@ -30,7 +30,7 @@
                       <th><?= $i++ ?></th>
                       <th><?= $item->kec_kode ?></th>
                       <th><?= $item->kec_nama ?></th>
-                      <th><?= $item->kec_aktif ?></th>
+                      <th><?= $item->kec_aktif == 1 ? 'Aktif' : 'Non Aktif'?></th>
                       <th>
                         <button class="btn btn-success btn-xs">
                             <i class="fa fa-check"></i>

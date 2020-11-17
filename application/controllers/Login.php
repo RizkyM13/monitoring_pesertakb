@@ -30,6 +30,7 @@ class Login extends CI_Controller{
     			$params = array(
     				'user_id' => $row->user_id,
     				'user_status' => $row->user_status
+                    //'user_name' => $row->user_name
     			);
 
     			$this->session->set_userdata($params);

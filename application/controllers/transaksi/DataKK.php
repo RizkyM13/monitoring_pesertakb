@@ -7,6 +7,7 @@ class DataKK extends CI_Controller {
 		parent::__construct();
 		$this->load->model('m_kk');
 		date_default_timezone_set('Asia/Jakarta');
+		 
 		//$this->load->helper('date');
 		//$now = time();
 		//$humanReadable = unix_to_human($now);
@@ -23,7 +24,7 @@ class DataKK extends CI_Controller {
 
 	public function tambah(){
 	$data['v_kk'] = $this->m_kk->tampil_data()->result();
-	$data['status'] = $this->m_kk->tampil_data()->result();
+	//$data['status'] = $this->m_kk->tampil_data()->result();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('transaksi/datakk/tambahdata',$data);

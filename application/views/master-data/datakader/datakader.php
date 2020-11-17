@@ -16,7 +16,7 @@
                   <thead>
                   <tr>
                       <th>No</th>
-                      <th>ID Kader</th>
+                      
                       <th>Nama Kader</th>
                       <th>NIK Kader</th>
                       <th>Sex Kader</th>
@@ -35,7 +35,7 @@
                     foreach ($v_kader as $item) {
                     ?>
                       <th><?= $i++ ?></th>
-                      <th><?= $item->kader_id ?></th>
+                      
                       <th><?= $item->kader_nama ?></th>
                       <th><?= $item->kader_nik?></th>
                       <th><?= $item->kader_sex?></th>
@@ -43,7 +43,7 @@
                       <th><?= $item->kader_tglahir?></th>
                       <th><?= $item->kader_email ?></th>
                       <th><?= $item->kader_hp ?></th>
-                      <th><?= $item->kader_aktif?></th>
+                      <th><?= $item->kader_aktif == 1 ? 'Aktif' : 'Non Aktif'?></th>
                       <th>
                         <button class="btn btn-success btn-xs">
                             <i class="fa fa-check"></i>

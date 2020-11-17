@@ -39,7 +39,7 @@
                       <th><?= $item->mn_induk?></th>
                       <th><?= $item->mn_icon?></th>
                       <th><?= $item->mn_url?></th>
-                      <th><?= $item->mn_aktif?></th>
+                      <th><?= $item->mn_aktif == 1 ? 'Aktif' : 'Non Aktif'?></th>
                       <th>
                         <button class="btn btn-success btn-xs">
                             <i class="fa fa-check"></i>
