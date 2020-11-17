@@ -46,7 +46,7 @@ class Profil_instansi extends CI_Controller {
 			'instansi'			=> $instansi
 			'instansi_nick'		=> $instansi_nick,
 			'alamat'			=> $alamat,
-			'kab_kode'			=> $kab_kode
+			'kab_kode'			=> $kab_kode,
 			'telp'				=> $telp,
 			'email'				=> $email,
 			'webiste'			=> $webiste
