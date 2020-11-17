@@ -15,7 +15,8 @@
                 <table class="table table-bordered table-striped table-condensed">
                   <thead>
                   <tr>
-                      <th>ID User</th>
+                      <th>No</th>
+                      
                       <th>ID Group</th>
                       <th>Update By</th>
                       <th>Update Time</th>
@@ -36,11 +37,11 @@
                         <button class="btn btn-success btn-xs">
                             <i class="fa fa-check"></i>
                           </button>
-                          <a class="btn btn-primary btn-xs">
-                              <i  class="fa fa-pencil"></i>
+                          <a href="<?php echo base_url() . 'setting/ms_user_group/edit'; ?>/<?php echo $item->user_id ?>" class="btn btn-primary btn-xs">
+                              <i class="fa fa-pencil"></i>
                           </a>
                           
-                          <a class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
+                          <a href="<?php echo base_url() . 'setting/ms_user_group/hapus';?>/<?php echo $item->user_id ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
                               <i class="fa fa-trash-o "></i>
                           </a> 
                           

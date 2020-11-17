@@ -32,6 +32,6 @@
             </div>
           </div>
           <!-- col-lg-12-->
-        </div>
+        
       </section>
     </section>

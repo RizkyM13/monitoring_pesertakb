@@ -38,7 +38,6 @@ class DataPenduduk extends CI_Controller {
 		$thn_lahir				= $this->input->post('thn_lahir');
 		$goldarah		 		= $this->input->post('goldarah');
 		$rhesus					= $this->input->post('rhesus');
-		$suku_id				= $this->input->post('suku_id');
 		$agama					= $this->input->post('agama');
 		$pendidikan				= $this->input->post('pendidikan');
 		$pendidikan_ditempuh 	= $this->input->post('pendidikan_ditempuh');
@@ -72,7 +71,6 @@ class DataPenduduk extends CI_Controller {
 			'thn_lahir'				=> $thn_lahir,
 			'goldarah'		 		=> $goldarah,
 			'rhesus'				=> $rhesus,
-			'suku_id'				=> $suku_id,
 			'agama'					=> $agama,
 			'pendidikan'			=> $pendidikan,
 			'pendidikan_ditempuh' 	=> $pendidikan_ditempuh,

@@ -254,7 +254,7 @@
               <span>Transaksi</span>
               </a>
             <ul class="sub">
-              <li><a href="<?= base_url().'transaksi/datakk'?>">Data KK</a></li>
+              <li><a href="<?= base_url().'transaksi/DataKK'?>">Data KK</a></li>
               <li><a href="<?= base_url().'transaksi/datapenduduk'?>">Data Penduduk</a></li>
               <li><a href="<?= base_url().'transaksi/datakontrasepsi'?>">Data Kontrasepsi</a></li>
               <li><a href="<?= base_url().'transaksi/kunjungan_ulang'?>">Kunjungan Ulang Akseptor</a></li>

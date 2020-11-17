@@ -19,7 +19,6 @@ class Ms_group extends CI_Controller {
 
 	public function tambah(){
 	$data['v_ms_group'] = $this->m_ms_group->tampil_data()->result();
-	//$data['status'] = $this->m_kk->tampil_data()->result();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('setting/ms_group/tambahdata',$data);
@@ -62,7 +61,6 @@ class Ms_group extends CI_Controller {
 
 	public function menu($id){
 		$where = array('grp_id'=>$id);
-		//$data['v_ms_group'] = $this->m_ms_group->edit_data('ms_group', $where)->row_array();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('setting/ms_group/menu');

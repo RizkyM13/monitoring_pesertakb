@@ -4,28 +4,25 @@
           <div class="form-panel">
             <br>
               <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'setting/ms_group/tambah_aksi'; ?>">
-                <div class="form-group">
-                  
-                    <div class="col-sm-10">
-                      <input type="hidden" name="group_id" class="form-control" placeholder="Masukkan ID Group">
-                    </div>
-                </div>
+                
+                      <input type="hidden" name="grp_id" class="form-control" placeholder="Masukkan ID Group">
+                    
                  <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Kode Group</label>
                     <div class="col-sm-10">
-                      <input type="text" name="group_kode" class="form-control" placeholder="Masukkan Kode Group">
+                      <input type="text" name="grp_kode" class="form-control" placeholder="Masukkan Kode Group">
                     </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Nama Group</label>
                     <div class="col-sm-10">
-                      <input type="number" name="group_nama"class="form-control" placeholder="Masukkan Nama Group">
+                      <input type="text" name="grp_nama"class="form-control" placeholder="Masukkan Nama Group">
                     </div>
                 </div>
                  <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Group Aktif</label>
                     <div class="col-sm-10">
-                      <select name="group_aktif" class="form-control">
+                      <select name="grp_aktif" class="form-control">
                           <option value="">--Pilih Status--</option>
                           <option value="1">Aktif</option>
                           <option value="0">Non Aktif</option>

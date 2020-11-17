@@ -6,6 +6,7 @@ class Ms_user_group extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('m_user_group');
+		date_default_timezone_set('Asia/Jakarta');
 	}
 
 	public function index()
