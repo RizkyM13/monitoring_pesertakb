@@ -63,7 +63,7 @@ class Ms_group extends CI_Controller {
 		$where = array('grp_id'=>$id);
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
-		$this->load->view('setting/ms_group/menu');
+		$this->load->view('setting/ms_group/menu1');
 		$this->load->view('template/footer');
 	}
 

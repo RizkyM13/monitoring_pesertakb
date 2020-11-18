@@ -39,6 +39,7 @@ class DataPenduduk extends CI_Controller {
 		$thn_lahir				= $this->input->post('thn_lahir');
 		$goldarah		 		= $this->input->post('goldarah');
 		$rhesus					= $this->input->post('rhesus');
+		$suku_id				= $this->input->post('suku_id');
 		$agama					= $this->input->post('agama');
 		$pendidikan				= $this->input->post('pendidikan');
 		$pendidikan_ditempuh 	= $this->input->post('pendidikan_ditempuh');
@@ -72,6 +73,7 @@ class DataPenduduk extends CI_Controller {
 			'thn_lahir'				=> $thn_lahir,
 			'goldarah'		 		=> $goldarah,
 			'rhesus'				=> $rhesus,
+			'suku_id'				=> $suku_id,
 			'agama'					=> $agama,
 			'pendidikan'			=> $pendidikan,
 			'pendidikan_ditempuh' 	=> $pendidikan_ditempuh,
@@ -85,7 +87,7 @@ class DataPenduduk extends CI_Controller {
 			'ada'					=> $ada,
 			'rt	'					=> $rt,
 			'rw'					=> $rw,
-			'kk' 					=> $kk,
+			'kk' 					=> $kk
 		);
 
 		$this->m_penduduk->input_data($data, 'penduduk');
@@ -167,7 +169,7 @@ class DataPenduduk extends CI_Controller {
 			'ada'					=> $ada,
 			'rt	'					=> $rt,
 			'rw'					=> $rw,
-			'kk' 					=> $kk,
+			'kk' 					=> $kk
 		);
 
 		$where = array(
@@ -176,6 +178,30 @@ class DataPenduduk extends CI_Controller {
 
 		$this->m_penduduk->update_data($where, $data, 'penduduk');
 		redirect('transaksi/penduduk');
+	}
+
+	public function menu2(){
+		$data['v_penduduk'] = $this->m_penduduk->tampil_data()->result();
+		$this->load->view('template/header');
+		$this->load->view('template/navbar');
+		$this->load->view('transaksi/datapenduduk/penduduk1',$data);
+		$this->load->view('template/footer');
+	}
+
+	public function menu3(){
+		$data['v_penduduk'] = $this->m_penduduk->tampil_data()->result();
+		$this->load->view('template/header');
+		$this->load->view('template/navbar');
+		$this->load->view('transaksi/datapenduduk/penduduk2',$data);
+		$this->load->view('template/footer');
+	}
+
+	public function menu4(){
+		$data['v_penduduk'] = $this->m_penduduk->tampil_data()->result();
+		$this->load->view('template/header');
+		$this->load->view('template/navbar');
+		$this->load->view('transaksi/datapenduduk/penduduk3',$data);
+		$this->load->view('template/footer');
 	}
 
 

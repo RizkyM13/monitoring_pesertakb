@@ -15,12 +15,13 @@
                   <thead>
                   <tr>
                       <th>No</th>
-                      <th>ID KK</th>
-                      <th>Pengurutan KK</th>
-                      <th>NIK</th>
-                      <th>EKTP</th>
-                      <th>Nama</th>
-                      <th>Jenis Kelamin</th>
+                      <th>Tempat Lahir</th>
+                      <th>Tanggal Lahir</th>
+                      <th>Tahun Lahir</th>
+                      <th>Golongan Darah</th>
+                      <th>Rhesus</th>
+                      <th>Suku</th>
+                      <th>Agama</th>
                       
                       
                       <th>Aksi</th>
@@ -33,12 +34,13 @@
                             foreach ($v_penduduk as $item) {
                             ?>
                       <th><?= $no++ ?></th>
-                      <th><?= $item->kk_id ?></th>
-                      <th><?= $item->kk_urut?></th>
-                      <th><?= $item->nik?></th>
-                      <th><?= $item->ektp?></th>
-                      <th><?= $item->nama?></th>
-                      <th><?= $item->jenis_kelamin ?></th>
+                      <th><?= $item->tmp_lahir ?></th>
+                      <th><?= $item->tgl_lahir?></th>
+                      <th><?= $item->thn_lahir?></th>
+                      <th><?= $item->goldarah?></th>
+                      <th><?= $item->rhesus?></th>
+                      <th><?= $item->suku_id?></th>
+                      <th><?= $item->agama ?></th>
                       
                       
                       <th>
