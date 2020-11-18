@@ -21,7 +21,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Pengurutan KK</label>
                     <div class="col-sm-10">
-                      <input type="text" name="kk_urut"class="form-control" placeholder="Masukkan Pengurutan KK" value="<?php echo $v_penduduk['kk_urut'] ?>">
+                      <input type="number" name="kk_urut"class="form-control" placeholder="Masukkan Pengurutan KK" value="<?php echo $v_penduduk['kk_urut'] ?>">
                     </div>
                 </div>
                 <div class="form-group">
@@ -39,19 +39,19 @@
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">NAMA</label>
                     <div class="col-sm-10">
-                      <input type="number" name="nama"class="form-control" placeholder="Masukkan Nama" value="<?php echo $v_penduduk['nama'] ?>">
+                      <input type="text" name="nama"class="form-control" placeholder="Masukkan Nama" value="<?php echo $v_penduduk['nama'] ?>">
                     </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Jenis Kelamin</label>
                     <div class="col-sm-10">
-                      <input type="number" name="jenis_kelamin"class="form-control" placeholder="Masukkan Jenis Kelamin" value="<?php echo $v_penduduk['jenis_kelamin'] ?>">
+                      <input type="text" name="jenis_kelamin"class="form-control" placeholder="Masukkan Jenis Kelamin" value="<?php echo $v_penduduk['jenis_kelamin'] ?>">
                     </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Tempat Lahir</label>
                     <div class="col-sm-10">
-                      <input type="number" name="tmp_lahir"class="form-control" placeholder="Masukkan Tempat Lahir" value="<?php echo $v_penduduk['tmp_lahir'] ?>">
+                      <input type="text" name="tmp_lahir"class="form-control" placeholder="Masukkan Tempat Lahir" value="<?php echo $v_penduduk['tmp_lahir'] ?>">
                     </div>
                 </div>
                 <div class="form-group">
@@ -69,13 +69,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Golongan Darah</label>
                     <div class="col-sm-10">
-                      <input type="number" name="goldarah"class="form-control" placeholder="Masukkan Golongan Darah" value="<?php echo $v_penduduk['goldarah'] ?>">
+                      <input type="text" name="goldarah"class="form-control" placeholder="Masukkan Golongan Darah" value="<?php echo $v_penduduk['goldarah'] ?>">
                     </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Rhesus</label>
                     <div class="col-sm-10">
-                      <input type="number" name="reshus"class="form-control" placeholder="Masukkan Rhesus" value="<?php echo $v_penduduk['rhesus'] ?>">
+                      <input type="text" name="reshus"class="form-control" placeholder="Masukkan Rhesus" value="<?php echo $v_penduduk['rhesus'] ?>">
                     </div>
                 </div>
                 <div class="form-group">
@@ -87,13 +87,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Agama</label>
                     <div class="col-sm-10">
-                      <input type="number" name="agama"class="form-control" placeholder="Masukkan Agama" value="<?php echo $v_penduduk['agama'] ?>">
+                      <input type="text" name="agama"class="form-control" placeholder="Masukkan Agama" value="<?php echo $v_penduduk['agama'] ?>">
                     </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Pendidikan</label>
                     <div class="col-sm-10">
-                      <input type="number" name="pendidikan"class="form-control" placeholder="Masukkan Pendidikan" value="<?php echo $v_penduduk['pendidikan'] ?>">
+                      <input type="text" name="pendidikan"class="form-control" placeholder="Masukkan Pendidikan" value="<?php echo $v_penduduk['pendidikan'] ?>">
                     </div>
                 </div>
                 <div class="form-group">
@@ -105,25 +105,25 @@
                 div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Pekerjaan</label>
                     <div class="col-sm-10">
-                      <input type="number" name="pekerjaan"class="form-control" placeholder="Masukkan Pekerjaan" value="<?php echo $v_penduduk['pekerjaan'] ?>">
+                      <input type="text" name="pekerjaan"class="form-control" placeholder="Masukkan Pekerjaan" value="<?php echo $v_penduduk['pekerjaan'] ?>">
                     </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Status Perkawinan</label>
                     <div class="col-sm-10">
-                      <input type="number" name="status_perkawinan"class="form-control" placeholder="Masukkan Status Perkawinan" value="<?php echo $v_penduduk['status_perkawinan'] ?>">
+                      <input type="text" name="status_perkawinan"class="form-control" placeholder="Masukkan Status Perkawinan" value="<?php echo $v_penduduk['status_perkawinan'] ?>">
                     </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Hubungan Keluarga</label>
                     <div class="col-sm-10">
-                      <input type="number" name="hub_keluarga"class="form-control" placeholder="Masukkan Hubungan Keluarga" value="<?php echo $v_penduduk['hub_keluarga'] ?>">
+                      <input type="text" name="hub_keluarga"class="form-control" placeholder="Masukkan Hubungan Keluarga" value="<?php echo $v_penduduk['hub_keluarga'] ?>">
                     </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Kewarganegaraan</label>
                     <div class="col-sm-10">
-                      <input type="number" name="kewarganegaraan"class="form-control" placeholder="Masukkan Kewarganegaraan" value="<?php echo $v_penduduk['kewarganegaraan'] ?>">
+                      <input type="text" name="kewarganegaraan"class="form-control" placeholder="Masukkan Kewarganegaraan" value="<?php echo $v_penduduk['kewarganegaraan'] ?>">
                     </div>
                 </div>
                 <div class="form-group">
@@ -141,13 +141,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Ayah</label>
                     <div class="col-sm-10">
-                      <input type="number" name="ayah"class="form-control" placeholder="Masukkan Ayah" value="<?php echo $v_penduduk['ayah'] ?>">
+                      <input type="text" name="ayah"class="form-control" placeholder="Masukkan Ayah" value="<?php echo $v_penduduk['ayah'] ?>">
                     </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Ibu</label>
                     <div class="col-sm-10">
-                      <input type="number" name="ibu"class="form-control" placeholder="Masukkan Ibu" value="<?php echo $v_penduduk['ibu'] ?>">
+                      <input type="text" name="ibu"class="form-control" placeholder="Masukkan Ibu" value="<?php echo $v_penduduk['ibu'] ?>">
                     </div>
                 </div>
                 <div class="form-group">
@@ -159,7 +159,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Ada</label>
                     <div class="col-sm-10">
-                      <input type="number" name="ada"class="form-control" placeholder="Masukkan Ada" value="<?php echo $v_penduduk['ada'] ?>">
+                      <input type="text" name="ada"class="form-control" placeholder="Masukkan Ada" value="<?php echo $v_penduduk['ada'] ?>">
                     </div>
                 </div>
                 <div class="form-group">
@@ -171,13 +171,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">RT</label>
                     <div class="col-sm-10">
-                      <input type="number" name="rt"class="form-control" placeholder="Masukkan RT" value="<?php echo $v_penduduk['rt'] ?>">
+                      <input type="text" name="rt"class="form-control" placeholder="Masukkan RT" value="<?php echo $v_penduduk['rt'] ?>">
                     </div>
                 </div>
                  <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">RW</label>
                     <div class="col-sm-10">
-                      <input type="number" name="rw"class="form-control" placeholder="Masukkan RW" value="<?php echo $v_penduduk['rw'] ?>">
+                      <input type="text" name="rw"class="form-control" placeholder="Masukkan RW" value="<?php echo $v_penduduk['rw'] ?>">
                     </div>
                 </div>
                  <div class="form-group">
