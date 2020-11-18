@@ -24,6 +24,7 @@ class DataPenduduk extends CI_Controller {
 		$this->load->view('template/navbar');
 		$this->load->view('transaksi/datapenduduk/tambahdata',$data);
 		$this->load->view('template/footer');
+	}
 		
 	public function tambah_aksi(){
 		$penduduk_id			= $this->input->post('penduduk_id');
@@ -176,5 +177,6 @@ class DataPenduduk extends CI_Controller {
 		$this->m_penduduk->update_data($where, $data, 'penduduk');
 		redirect('transaksi/penduduk');
 	}
+
 
 }
