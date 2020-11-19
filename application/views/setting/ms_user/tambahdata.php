@@ -25,7 +25,7 @@
                  <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Password</label>
                     <div class="col-sm-10">
-                      <input type="text" name="user_password"class="form-control" placeholder="Masukkan Password">
+                      <input type="password" name="user_password"class="form-control" placeholder="Masukkan Password">
                     </div>
                 </div>
                  <div class="form-group">
