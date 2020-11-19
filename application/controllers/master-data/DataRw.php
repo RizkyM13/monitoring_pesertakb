@@ -76,7 +76,7 @@ class DataRw extends CI_Controller {
 			'rw_id'	=>$rw_id
 		);
 
-		$this->m_desa->update_data($where, $data, 'data_rw');
+		$this->m_rw->update_data($where, $data, 'data_rw');
 		redirect('master-data/datarw');
 	}
 }

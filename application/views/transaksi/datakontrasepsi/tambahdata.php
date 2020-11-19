@@ -8,19 +8,19 @@
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Kode Kontrasepsi</label>
                     <div class="col-sm-10">
-                      <input type="number" name="kontrasepsi_kode" class="form-control" placeholder="Masukkan Kode Kontrasepsi">
+                      <input type="number" name="kontransepsi_kode" class="form-control" placeholder="Masukkan Kode Kontrasepsi">
                     </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Nama Kontrasepsi</label>
                     <div class="col-sm-10">
-                      <input type="text" name="kontrasepsi_nama"class="form-control" placeholder="Masukkan Nama Kontrasepsi">
+                      <input type="text" name="kontransepsi_nama"class="form-control" placeholder="Masukkan Nama Kontrasepsi">
                     </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Expired Kontrasepsi</label>
                     <div class="col-sm-10">
-                      <input type="number" name="kontrasepsi_expired"class="form-control" placeholder="Masukkan Expired Kontrasepsi Dalam Satuan Hari">
+                      <input type="number" name="kontransepsi_expired"class="form-control" placeholder="Masukkan Expired Kontrasepsi Dalam Satuan Hari">
                     </div>
                 </div>
                 <div class="form-group">

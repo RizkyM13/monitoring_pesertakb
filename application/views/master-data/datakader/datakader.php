@@ -16,7 +16,6 @@
                   <thead>
                   <tr>
                       <th>No</th>
-                      
                       <th>Nama Kader</th>
                       <th>NIK Kader</th>
                       <th>Sex Kader</th>
@@ -35,7 +34,6 @@
                     foreach ($v_kader as $item) {
                     ?>
                       <th><?= $i++ ?></th>
-                      
                       <th><?= $item->kader_nama ?></th>
                       <th><?= $item->kader_nik?></th>
                       <th><?= $item->kader_sex?></th>

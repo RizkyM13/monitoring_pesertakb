@@ -15,7 +15,6 @@
                   <thead>
                   <tr>
                       <th>No</th>
-                      <th>ID RW</th>
                       <th>Kode Desa</th>
                       <th>RW</th>
                       <th>Aksi</th>
@@ -28,7 +27,6 @@
                     foreach ($v_rw as $item) {
                   ?>
                       <th><?= $i++ ?></th>
-                      <th><?= $item->rw_id  ?></th>
                       <th><?= $item->desa_kode  ?></th>
                       <th><?= $item->rw  ?></th>
                       <th>

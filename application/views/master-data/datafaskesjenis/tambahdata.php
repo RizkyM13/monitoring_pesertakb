@@ -4,12 +4,9 @@
           <div class="form-panel">
             <br>
               <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'master-data/datafaskesjenis/tambah_aksi'; ?>">
-                <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">ID Faskes Jenis</label>
-                    <div class="col-sm-10">
-                      <input type="number" name="faskesjenis_id" class="form-control" placeholder="Masukkan ID Faskes Jenis">
-                    </div>
-                </div>
+                
+                      <input type="hidden" name="faskesjenis_id" class="form-control" placeholder="Masukkan ID Faskes Jenis">
+                    
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Kode Faskes Jenis</label>
                     <div class="col-sm-10">

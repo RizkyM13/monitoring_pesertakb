@@ -4,16 +4,13 @@
           <div class="form-panel">
             <br>
               <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'master-data/datart/update'; ?>">
-                <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">ID RT</label>
-                    <div class="col-sm-10">
-                      <input type="number" name="rt_id" class="form-control" placeholder="Masukkan ID RT" value="<?php echo $v_rt['rt_id'] ?>">
-                    </div>
-                </div>
+                
+                      <input type="hidden" name="rt_id" class="form-control" placeholder="Masukkan ID RT" value="<?php echo $v_rt['rt_id'] ?>">
+                    
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">ID RW</label>
                     <div class="col-sm-10">
-                      <input type="number" name="rt_id" class="form-control" placeholder="Masukkan ID RW" value="<?php echo $v_rt['rw_id'] ?>">
+                      <input type="number" name="rw_id" class="form-control" placeholder="Masukkan ID RW" value="<?php echo $v_rt['rw_id'] ?>">
                     </div>
                 </div>
                 <div class="form-group">
