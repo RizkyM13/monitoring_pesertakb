@@ -42,9 +42,10 @@
                       
                       
                       <th>
-                        <button class="btn btn-success btn-xs">
-                            <i class="fa fa-check"></i>
-                          </button>
+                        
+                          <a href="<?php echo base_url() . 'transaksi/datapenduduk/detail'; ?>/<?php echo $item->penduduk_id ?>" class="btn btn-success btn-xs">
+                              <i class="fa fa-check"></i>
+                          </a>
                           <a href="<?php echo base_url() . 'transaksi/datapenduduk/edit'; ?>/<?php echo $item->penduduk_id ?>" class="btn btn-primary btn-xs">
                               <i class="fa fa-pencil"></i>
                           </a>
@@ -59,32 +60,6 @@
                 </tbody>
                 </table>
               </section>
-            </div>
-            <div class="row-fluid">
-                <div class="span6">
-                  <div class="dataTables_paginate paging_bootstrap pagination">
-                    <ul>
-                      <li class="prev disabled">
-                        <a href="<?php echo base_url('transaksi/datapenduduk'); ?>">? Previous</a>
-                      </li>
-                      <li class="active">
-                        <a href="<?php echo base_url('transaksi/datapenduduk'); ?>">1</a>
-                      </li>
-                      <li>
-                        <a href="<?php echo base_url('transaksi/datapenduduk/menu2'); ?>">2</a>
-                      </li>
-                      <li>
-                        <a href="<?php echo base_url('transaksi/datapenduduk/menu3'); ?>">3</a>
-                      </li>
-                      <li>
-                        <a href="<?php echo base_url('transaksi/datapenduduk/menu4'); ?>">4</a>
-                      </li>
-                      <li class="next">
-                        <a href="#">Next ? </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
             </div>
               </div>
             <!-- /content-panel -->

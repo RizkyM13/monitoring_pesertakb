@@ -180,27 +180,13 @@ class DataPenduduk extends CI_Controller {
 		redirect('transaksi/penduduk');
 	}
 
-	public function menu2(){
-		$data['v_penduduk'] = $this->m_penduduk->tampil_data()->result();
+	public function detail($id){
+		$where = array('penduduk_id'=>$id);
+		$data['v_penduduk'] = $this->m_penduduk->detail('penduduk', $where)->row_array();
+		//$this->db->get_where('penduduk',array('penduduk_id'=>$id))->row_array();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
-		$this->load->view('transaksi/datapenduduk/penduduk1',$data);
-		$this->load->view('template/footer');
-	}
-
-	public function menu3(){
-		$data['v_penduduk'] = $this->m_penduduk->tampil_data()->result();
-		$this->load->view('template/header');
-		$this->load->view('template/navbar');
-		$this->load->view('transaksi/datapenduduk/penduduk2',$data);
-		$this->load->view('template/footer');
-	}
-
-	public function menu4(){
-		$data['v_penduduk'] = $this->m_penduduk->tampil_data()->result();
-		$this->load->view('template/header');
-		$this->load->view('template/navbar');
-		$this->load->view('transaksi/datapenduduk/penduduk3',$data);
+		$this->load->view('transaksi/datapenduduk/menu_penduduk', $data);
 		$this->load->view('template/footer');
 	}
 
