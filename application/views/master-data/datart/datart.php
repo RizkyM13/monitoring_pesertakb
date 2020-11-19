@@ -15,7 +15,6 @@
                   <thead>
                   <tr>
                       <th>No</th>
-                      <th>ID RT</th>
                       <th>ID RW</th>
                       <th>RT</th>
                       <th>Aksi</th>
@@ -28,7 +27,6 @@
                     foreach ($v_rt as $item) {
                   ?>
                       <th><?= $i++ ?></th>
-                      <th><?= $item->rt_id  ?></th>
                       <th><?= $item->rw_id   ?></th>
                       <th><?= $item->rt  ?></th>
                       <th>

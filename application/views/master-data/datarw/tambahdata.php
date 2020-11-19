@@ -4,12 +4,9 @@
           <div class="form-panel">
             <br>
               <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'master-data/datarw/tambah_aksi'; ?>">
-                <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">ID RW</label>
-                    <div class="col-sm-10">
-                      <input type="number" name="rw_id" class="form-control" placeholder="Masukkan ID RW">
-                    </div>
-                </div>
+                
+                      <input type="hidden" name="rw_id" class="form-control" placeholder="Masukkan ID RW">
+                    
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Kode Desa</label>
                     <div class="col-sm-10">

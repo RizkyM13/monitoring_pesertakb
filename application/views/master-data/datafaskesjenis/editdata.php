@@ -4,12 +4,9 @@
           <div class="form-panel">
             <br>
               <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'master-data/datafaskesjenis/update'; ?>">
-                <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">ID Faskes Data</label>
-                    <div class="col-sm-10">
-                      <input type="number" name="faskesjenis_id" class="form-control" placeholder="Masukkan ID Faskes Data" value="<?php echo $v_ms_faskes_jenis['faskesjenis_id'] ?>">
-                    </div>
-                </div>
+                
+                      <input type="hidden" name="faskesjenis_id" class="form-control" placeholder="Masukkan ID Faskes Data" value="<?php echo $v_ms_faskes_jenis['faskesjenis_id'] ?>">
+                    
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Kode Faskes Jenis</label>
                     <div class="col-sm-10">

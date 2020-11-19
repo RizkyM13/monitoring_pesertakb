@@ -29,16 +29,16 @@ class DataKontrasepsi extends CI_Controller {
 
 	public function tambah_aksi(){
 		$kontrasepsi_id					= $this->input->post('kontrasepsi_id');
-		$kontrasepsi_kode				= $this->input->post('kontrasepsi_kode');
-		$kontrasepsi_nama				= $this->input->post('kontrasepsi_nama');
-		$kontrasepsi_expired			= $this->input->post('kontrasepsi_expired');
+		$kontransepsi_kode				= $this->input->post('kontransepsi_kode');
+		$kontransepsi_nama				= $this->input->post('kontransepsi_nama');
+		$kontransepsi_expired			= $this->input->post('kontransepsi_expired');
 		$kontrasepsi_aktif 				= $this->input->post('kontrasepsi_aktif');
 
 		$data = array(
 			'kontrasepsi_id'			=> $kontrasepsi_id,
-			'kontrasepsi_kode'			=> $kontrasepsi_kode,
-			'kontrasepsi_nama'			=> $kontrasepsi_nama,
-			'kontrasepsi_expired'		=> $kontrasepsi_expired,
+			'kontransepsi_kode'			=> $kontransepsi_kode,
+			'kontransepsi_nama'			=> $kontransepsi_nama,
+			'kontransepsi_expired'		=> $kontransepsi_expired,
 			'kontrasepsi_aktif'			=> $kontrasepsi_aktif
 			
 		);
@@ -64,16 +64,16 @@ class DataKontrasepsi extends CI_Controller {
 
 	public function update(){
 		$kontrasepsi_id					= $this->input->post('kontrasepsi_id');
-		$kontrasepsi_kode				= $this->input->post('kontrasepsi_kode');
-		$kontrasepsi_nama				= $this->input->post('kontrasepsi_nama');
-		$kontrasepsi_expired			= $this->input->post('kontrasepsi_expired');
+		$kontransepsi_kode				= $this->input->post('kontransepsi_kode');
+		$kontransepsi_nama				= $this->input->post('kontransepsi_nama');
+		$kontransepsi_expired			= $this->input->post('kontransepsi_expired');
 		$kontrasepsi_aktif 				= $this->input->post('kontrasepsi_aktif');
 
 		$data = array(
 			'kontrasepsi_id'			=> $kontrasepsi_id,
-			'kontrasepsi_kode'			=> $kontrasepsi_kode,
-			'kontrasepsi_nama'			=> $kontrasepsi_nama,
-			'kontrasepsi_expired'		=> $kontrasepsi_expired,
+			'kontransepsi_kode'			=> $kontransepsi_kode,
+			'kontransepsi_nama'			=> $kontransepsi_nama,
+			'kontransepsi_expired'		=> $kontransepsi_expired,
 			'kontrasepsi_aktif'			=> $kontrasepsi_aktif
 			
 		);

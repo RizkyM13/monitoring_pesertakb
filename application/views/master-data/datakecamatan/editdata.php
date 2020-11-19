@@ -7,13 +7,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Kode Kecamatan</label>
                     <div class="col-sm-10">
-                      <input type="number" name="" class="form-control" placeholder="Masukkan Kode Kecamatan" value="<?php echo $v_kecamatan['kec_kode'] ?>">
+                      <input type="number" name="kec_kode" class="form-control" placeholder="Masukkan Kode Kecamatan" value="<?php echo $v_kecamatan['kec_kode'] ?>">
                     </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Nama Kecamatan</label>
                     <div class="col-sm-10">
-                      <input type="text" name="" class="form-control" placeholder="Masukkan Nama Kecamatan" value="<?php echo $v_kecamatan['kec_nama'] ?>">
+                      <input type="text" name="kec_nama" class="form-control" placeholder="Masukkan Nama Kecamatan" value="<?php echo $v_kecamatan['kec_nama'] ?>">
                     </div>
                 </div>
                 <div class="form-group">

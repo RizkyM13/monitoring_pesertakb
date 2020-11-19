@@ -15,8 +15,6 @@
                   <thead>
                   <tr>
                       <th>No</th>
-                      
-                      
                       <th>Kode Faskes</th>
                       <th>Nama Faskes</th>
                       <th>Alamat Faskes</th>
@@ -32,8 +30,6 @@
                     foreach ($v_faskes as $item) {
                   ?>
                       <th><?= $i++ ?></th>
-                      
-                      
                       <th><?= $item->faskes_kode      ?></th>
                       <th><?= $item->faskes_nama      ?></th>
                       <th><?= $item->faskes_alamat    ?></th>
