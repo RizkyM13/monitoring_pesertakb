@@ -57,6 +57,9 @@ class Ms_user_group extends CI_Controller {
 		$data['v_user_group'] = $this->m_user_group->edit_data('ms_user_group', $where)->row_array();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
+
+		$data['user_id'] = $this->session->userdata('user_id');
+		$data['timestamp'] = date("Y-m-d H:i:s");
 		$this->load->view('setting/ms_user_group/editdata',$data);
 		$this->load->view('template/footer');
 	}

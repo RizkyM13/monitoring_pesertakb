@@ -33,11 +33,11 @@
                       <th><?= $item->update_by?></th>
                       <th><?= $item->update_time?></th>
                       <th>
-                        <button class="btn btn-success btn-xs">
+                       <button class="btn btn-success btn-xs">
                             <i class="fa fa-check"></i>
                           </button>
-                          <a class="btn btn-primary btn-xs">
-                              <i  class="fa fa-pencil"></i>
+                          <a href="<?php echo base_url() . 'setting/ms_group_menu/edit'; ?>/<?php echo $item->grp_id ?>" class="btn btn-primary btn-xs">
+                              <i class="fa fa-pencil"></i>
                           </a>
                           
                           <a class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">

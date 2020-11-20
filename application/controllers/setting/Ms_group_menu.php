@@ -13,6 +13,9 @@ class Ms_group_menu extends CI_Controller {
 		$data['v_group_menu'] = $this->m_group_menu->tampil_data()->result();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
+
+		$data['grp_id'] = $this->session->userdata('grp_id');
+		$data['timestamp'] = date("Y-m-d H:i:s");
 		$this->load->view('setting/ms_group_menu/ms_group_menu',$data);
 		$this->load->view('template/footer');
 	}
@@ -54,6 +57,9 @@ class Ms_group_menu extends CI_Controller {
 	public function edit($id){
 		$where = array('menu_id'=>$id);
 		$data['v_group_menu'] = $this->m_group_menu->edit_data('ms_group_menu', $where)->row_array();
+		
+		$data['user_id'] = $this->session->userdata('user_id');
+		$data['timestamp'] = date("Y-m-d H:i:s");
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('setting/ms_group_menu/editdata',$data);

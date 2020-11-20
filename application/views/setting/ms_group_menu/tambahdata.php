@@ -19,13 +19,15 @@
                  <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Update By</label>
                     <div class="col-sm-10">
-                      <input type="text" name="update_by"class="form-control" placeholder="Masukkan Update By"> 
+                      <input type="text" name="update_by"class="form-control" placeholder="Masukkan Update By">
+                      value="<?php echo $this->session->userdata('user_id'); ?>> 
+                     
                     </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Update Time</label>
                     <div class="col-sm-10">
-                      <input type="date" name="update_time"class="form-control" placeholder="Masukkan Update Time">
+                      <input type="date" name="update_time"class="form-control" placeholder="Masukkan Update Time"> value="<?php echo date('Y-m-d H:i:s', time()) ?>">
                     </div>
                 </div>
                   
