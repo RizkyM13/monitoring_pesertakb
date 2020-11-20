@@ -20,6 +20,7 @@ class DataRt extends CI_Controller {
 
 	public function tambah(){
 		$data['v_rt'] = $this->m_rt->tampil_data()->result();
+		$data['nama'] = $this->m_rt->getRw();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('master-data/datart/tambahdata',$data);
@@ -52,6 +53,7 @@ class DataRt extends CI_Controller {
 	public function edit($id){
 		$where = array('rt_id'=>$id);
 		$data['v_rt'] = $this->m_rt->edit_data('data_rt', $where)->row_array();
+		$data['nama'] = $this->m_rt->getRw();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('master-data/datart/editdata',$data);

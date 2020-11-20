@@ -16,13 +16,13 @@
                   <thead>
                   <tr>
                       <th>No</th>
-                      <th>Nama Kader</th>
-                      <th>NIK Kader</th>
-                      <th>Sex Kader</th>
-                      <th>Kelahiran Kader</th>
-                      <th>Tgl Ahir Kader</th>
-                      <th>Email Kader</th>
-                      <th>Hp Kader</th>
+                      <th>Nama</th>
+                      <th>NIK</th>
+                      <th>Jenis Kelamin</th>
+                      <th>Kelahiran</th>
+                      <th>Tanggal Lahir</th>
+                      <th>Email</th>
+                      <th>Telepon</th>
                       <th>Kader Aktif</th>
                       <th>Aksi</th>
                   </tr>

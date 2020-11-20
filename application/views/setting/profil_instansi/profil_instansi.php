@@ -8,7 +8,7 @@
     </div>
 <div class="col-lg-12">
             <div class="form-panel">
-              <a href="<?= base_url(). 'setting\profil_instansi/tambah'?>" class="btn btn-primary">Tambah Data</a>
+              <a href="<?= base_url(). 'setting/profil_instansi/tambah'?>" class="btn btn-primary">Tambah Data</a>
               <hr>
               <section id="unseen">
                 <table class="table table-bordered table-striped table-condensed">
@@ -17,14 +17,12 @@
                       <th>No</th>
                       <th>Kode</th>
                       <th>Instansi</th>
-                      <th>Nick Instansi</th>
                       <th>Alamat</th>
-                      <th>Kode Kabupaten</th>
                       <th>No Telepon</th>
                       <th>Email</th>
                       <th>Website</th>
                       <th>Kode Pos</th>
-                      <th>Logo</th>
+                      
                       <th>Aksi</th>
                   </tr>
                 </thead>
@@ -35,21 +33,20 @@
                     foreach ($v_profil as $item) {
                     ?>
                       <th><?= $i++ ?></th>
-                      
                       <th><?= $item->kode ?></th>
                       <th><?= $item->instansi ?></th>
-                      <th><?= $item->instansi_nick ?></th>
                       <th><?= $item->alamat ?></th>
-                      <th><?= $item->kab_kode ?></th>
                       <th><?= $item->telp ?></th>
                       <th><?= $item->email ?></th>
                       <th><?= $item->website ?></th>
                       <th><?= $item->kodepos ?></th>
-                      <th><?= $item->logo ?></th>
+                      
                       <th>
-                        <button class="btn btn-success btn-xs">
-                            <i class="fa fa-check"></i>
-                          </button>
+                        
+                          <a href="<?php echo base_url() . 'setting/profil_instansi/detail'; ?>/<?php echo $item->id ?>" class="btn btn-success btn-xs">
+                              <i class="fa fa-cogs"></i>
+                          </a>
+                          
                           <a href="<?php echo base_url() . 'setting/profil_instansi/edit'; ?>/<?php echo $item->id ?>" class="btn btn-primary btn-xs">
                               <i class="fa fa-pencil"></i>
                           </a>

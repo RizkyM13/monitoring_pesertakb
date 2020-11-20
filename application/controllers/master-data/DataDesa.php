@@ -20,6 +20,7 @@ class DataDesa extends CI_Controller {
 
 	public function tambah(){
 		$data['v_desa'] = $this->m_desa->tampil_data()->result();
+		$data['nama'] = $this->m_desa->getDesa();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('master-data/datadesa/tambahdata',$data);
@@ -53,6 +54,7 @@ class DataDesa extends CI_Controller {
 	public function edit($id){
 		$where = array('desa_kode'=>$id);
 		$data['v_desa'] = $this->m_desa->edit_data('desa', $where)->row_array();
+		$data['nama'] = $this->m_desa->getDesa();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('master-data/datadesa/editdata',$data);

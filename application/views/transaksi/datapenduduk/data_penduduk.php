@@ -15,12 +15,11 @@
                   <thead>
                   <tr>
                       <th>No</th>
-                      <th>ID KK</th>
-                      <th>Pengurutan KK</th>
                       <th>NIK</th>
-                      <th>EKTP</th>
                       <th>Nama</th>
                       <th>Jenis Kelamin</th>
+                      <th>Status Perkawinan</th>
+                      <th>Hubungan Keluarga</th>
                       
                       
                       <th>Aksi</th>
@@ -33,12 +32,11 @@
                             foreach ($v_penduduk as $item) {
                             ?>
                       <th><?= $no++ ?></th>
-                      <th><?= $item->kk_id ?></th>
-                      <th><?= $item->kk_urut?></th>
                       <th><?= $item->nik?></th>
-                      <th><?= $item->ektp?></th>
                       <th><?= $item->nama?></th>
                       <th><?= $item->jenis_kelamin ?></th>
+                      <th><?= $item->status_perkawinan ?></th>
+                      <th><?= $item->hub_keluarga ?></th>
                       
                       
                       <th>

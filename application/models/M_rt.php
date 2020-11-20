@@ -8,8 +8,14 @@ class M_rt extends CI_Model {
 		
 	//}
 	function tampil_data(){
+
+		return $this->db->query('SELECT r.rw, b.rt_id, b.rw_id, b.rt FROM `data_rt` as b JOIN data_rw as r ON r.rw_id=b.rw_id');
 		
-		return $this->db->get('data_rt');
+		//return $this->db->get('data_rt');
+	}
+
+	function getRw(){
+		return $this->db->get('data_rw')->result();
 	}
 
 	function input_data($data, $table){

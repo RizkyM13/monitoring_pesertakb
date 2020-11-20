@@ -20,6 +20,7 @@ class Ms_user extends CI_Controller {
 
 	public function tambah(){
 		$data['v_ms_user'] = $this->m_ms_user->tampil_data()->result();
+		$data['nama'] = $this->m_ms_user->getKader();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('setting/ms_user/tambahdata',$data);
@@ -55,6 +56,7 @@ class Ms_user extends CI_Controller {
 	public function edit($id){
 		$where = array('user_id'=>$id);
 		$data['v_ms_user'] = $this->m_ms_user->edit_data('ms_user', $where)->row_array();
+		$data['nama'] = $this->m_ms_user->getKader();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('setting/ms_user/editdata',$data);

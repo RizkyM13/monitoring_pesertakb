@@ -15,7 +15,7 @@
                   <thead>
                   <tr>
                       <th>No</th>
-                      <th>ID RW</th>
+                      <th>RW</th>
                       <th>RT</th>
                       <th>Aksi</th>
                   </tr>
@@ -27,7 +27,7 @@
                     foreach ($v_rt as $item) {
                   ?>
                       <th><?= $i++ ?></th>
-                      <th><?= $item->rw_id   ?></th>
+                      <th><?= $item->rw   ?></th>
                       <th><?= $item->rt  ?></th>
                       <th>
                         <button class="btn btn-success btn-xs">

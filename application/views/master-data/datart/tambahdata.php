@@ -8,11 +8,21 @@
                       <input type="hidden" name="rt_id" class="form-control" placeholder="Masukkan ID RT">
                     
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">ID RW</label>
+                  <label class="col-sm-2 col-sm-2 control-label">RW</label>
                     <div class="col-sm-10">
-                      <input type="number" name="rw_id" class="form-control" placeholder="Masukkan ID RW">
-                    </div>
+                    <select name="rw_id" class="form-control">
+                        <option value="">-- Pilih RW --</option>
+                        <?php
+                        foreach ($nama as $v) {
+                        ?>
+                        <option value="<?php echo $v->rw_id ?>"><?php echo $v->rw ?></option>}
+                        
+                        <?php
+                        }
+                        ?>
+                    </select>
                 </div>
+              </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">RT</label>
                     <div class="col-sm-10">

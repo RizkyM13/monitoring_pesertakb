@@ -29,4 +29,8 @@ class M_profil_instansi extends CI_Model {
 	function edit_data($table,$where){
 		return $this->db->get_where($table, $where);
 	}
+
+	function detail($table,$where){
+		return $this->db->get_where($table, $where);
+	}
 }

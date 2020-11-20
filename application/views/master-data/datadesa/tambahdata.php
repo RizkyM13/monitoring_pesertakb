@@ -11,11 +11,21 @@
                     </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Kode Kecamatan</label>
+                  <label class="col-sm-2 col-sm-2 control-label">Kecamatan</label>
                     <div class="col-sm-10">
-                      <input type="number" name="kec_kode" class="form-control" placeholder="Masukkan Kode Kecamatan">
-                    </div>
+                    <select name="kec_kode" class="form-control">
+                        <option value="">-- Pilih Kecamatan --</option>
+                        <?php
+                        foreach ($nama as $v) {
+                        ?>
+                        <option value="<?php echo $v->kec_kode ?>"><?php echo $v->kec_nama ?></option>}
+                        
+                        <?php
+                        }
+                        ?>
+                    </select>
                 </div>
+              </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Nama Desa</label>
                     <div class="col-sm-10">

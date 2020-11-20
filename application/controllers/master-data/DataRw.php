@@ -12,6 +12,7 @@ class DataRw extends CI_Controller {
 	public function index()
 	{
 		$data['v_rw'] = $this->m_rw->tampil_data()->result();
+
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('master-data/datarw/datarw', $data);
@@ -20,6 +21,7 @@ class DataRw extends CI_Controller {
 
 	public function tambah(){
 		$data['v_rw'] = $this->m_rw->tampil_data()->result();
+		$data['nama'] = $this->m_rw->getNama();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('master-data/datarw/tambahdata',$data);
@@ -52,6 +54,7 @@ class DataRw extends CI_Controller {
 	public function edit($id){
 		$where = array('rw_id'=>$id);
 		$data['v_rw'] = $this->m_rw->edit_data('data_rw', $where)->row_array();
+		$data['nama'] = $this->m_rw->getNama();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('master-data/datarw/editdata',$data);

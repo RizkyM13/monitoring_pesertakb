@@ -15,7 +15,7 @@
                   <thead>
                   <tr>
                       <th>No</th>
-                      <th>ID Kader</th>
+                      <th>Kader</th>
                       <th>Nama User</th>
                       <th>Password User</th>
                       <th>Status User</th>
@@ -29,7 +29,7 @@
                     foreach ($v_ms_user as $item) {
                   ?>
                       <th><?= $i++        ?></th>
-                      <th><?= $item->kader_id       ?></th>
+                      <th><?= $item->kader_nama       ?></th>
                       <th><?= $item->user_name       ?></th>
                       <th><?= $item->user_password  ?></th>
                       <th><?= $item->user_status   == 1 ? 'Aktif' : 'Non Aktif' ?></th>

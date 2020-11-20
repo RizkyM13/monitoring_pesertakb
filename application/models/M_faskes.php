@@ -8,9 +8,14 @@ class M_faskes extends CI_Model {
 		
 	//}
 	function tampil_data(){
-		
-		return $this->db->get('ms_faskes');
+		return $this->db->query('SELECT r.desa_nama, b.faskes_id, b.faskesjenis_id, b.faskes_kode, b.faskes_nama, b.faskes_alamat, b.desa_kode, b.faskes_aktif FROM `ms_faskes` as b JOIN desa as r ON r.desa_kode=b.desa_kode');
+		//return $this->db->get('ms_faskes');
 	}
+
+	function getFaskes(){
+		return $this->db->get('desa')->result();
+	}
+
 
 	function input_data($data, $table){
 		$this->db->insert($table, $data);

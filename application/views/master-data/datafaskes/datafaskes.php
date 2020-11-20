@@ -15,10 +15,11 @@
                   <thead>
                   <tr>
                       <th>No</th>
+                      
                       <th>Kode Faskes</th>
-                      <th>Nama Faskes</th>
-                      <th>Alamat Faskes</th>
-                      <th>Kode Desa</th>
+                      <th>Nama</th>
+                      <th>Alamat</th>
+                      <th>Desa</th>
                       <th>Faskes Aktif</th>
                       <th>Aksi</th>
                   </tr>
@@ -30,10 +31,11 @@
                     foreach ($v_faskes as $item) {
                   ?>
                       <th><?= $i++ ?></th>
+                      
                       <th><?= $item->faskes_kode      ?></th>
                       <th><?= $item->faskes_nama      ?></th>
                       <th><?= $item->faskes_alamat    ?></th>
-                      <th><?= $item->desa_kode        ?></th>
+                      <th><?= $item->desa_nama        ?></th>
                       <th><?= $item->faskes_aktif   == 1 ? 'Aktif' : 'Non Aktif'  ?></th>
                       <th>
                         <button class="btn btn-success btn-xs">

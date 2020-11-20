@@ -35,7 +35,7 @@ class Profil_instansi extends CI_Controller {
 		$kab_kode			= $this->input->post('kab_kode');
 		$telp				= $this->input->post('telp');
 		$email				= $this->input->post('email');
-		$website			= $this->input->post('webiste');
+		$website			= $this->input->post('website');
 		$kodepos			= $this->input->post('kodepos');
 		$logo				= $this->input->post('logo');
 		
@@ -49,7 +49,7 @@ class Profil_instansi extends CI_Controller {
 			'kab_kode'			=> $kab_kode,
 			'telp'				=> $telp,
 			'email'				=> $email,
-			'webiste'			=> $webiste,
+			'website'			=> $website,
 			'kodepos'			=> $kodepos,
 			'logo'				=> $logo
 		);
@@ -59,7 +59,7 @@ class Profil_instansi extends CI_Controller {
 	}
 
 	public function hapus ($id=''){
-		$where = array('kec_kode'=>$id);
+		$where = array('id'=>$id);
 		$this->m_profil_instansi->hapus_data($where, 'profil');
 		redirect('setting/profil_instansi');
 	}
@@ -69,7 +69,7 @@ class Profil_instansi extends CI_Controller {
 		$data['v_profil'] = $this->m_profil_instansi->edit_data('profil', $where)->row_array();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
-		$this->load->view('template/profil_instansi/editdata',$data);
+		$this->load->view('setting/profil_instansi/editdata',$data);
 		$this->load->view('template/footer');
 	}
 
@@ -82,7 +82,7 @@ class Profil_instansi extends CI_Controller {
 		$kab_kode			= $this->input->post('kab_kode');
 		$telp				= $this->input->post('telp');
 		$email				= $this->input->post('email');
-		$website			= $this->input->post('webiste');
+		$website			= $this->input->post('website');
 		$kodepos			= $this->input->post('kodepos');
 		$logo				= $this->input->post('logo');
 		
@@ -96,7 +96,7 @@ class Profil_instansi extends CI_Controller {
 			'kab_kode'			=> $kab_kode,
 			'telp'				=> $telp,
 			'email'				=> $email,
-			'webiste'			=> $webiste,
+			'website'			=> $website,
 			'kodepos'			=> $kodepos,
 			'logo'				=> $logo
 		);
@@ -107,5 +107,15 @@ class Profil_instansi extends CI_Controller {
 
 		$this->m_profil_instansi->update_data($where, $data, 'profil');
 		redirect('setting/profil_instansi');
+	}
+
+	public function detail($id){
+		$where = array('id'=>$id);
+		$data['v_profil'] = $this->m_profil_instansi->detail('profil', $where)->row_array();
+		//$this->db->get_where('penduduk',array('penduduk_id'=>$id))->row_array();
+		$this->load->view('template/header');
+		$this->load->view('template/navbar');
+		$this->load->view('setting/profil_instansi/menu_profil', $data);
+		$this->load->view('template/footer');
 	}
 }

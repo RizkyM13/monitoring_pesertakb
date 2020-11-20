@@ -8,8 +8,12 @@ class M_rw extends CI_Model {
 		
 	//}
 	function tampil_data(){
-		
-		return $this->db->get('data_rw');
+		return $this->db->query('SELECT r.desa_nama, b.rw_id, b.desa_kode, b.rw FROM `data_rw` as b JOIN desa as r ON r.desa_kode=b.desa_kode');
+		//return $this->db->get('data_rw');
+	}
+
+	function getNama(){
+		return $this->db->get('desa')->result();
 	}
 
 	function input_data($data, $table){

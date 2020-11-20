@@ -15,7 +15,7 @@
                   <thead>
                   <tr>
                       <th>No</th>
-                      <th>Kode Desa</th>
+                      <th>Nama Desa</th>
                       <th>RW</th>
                       <th>Aksi</th>
                   </tr>
@@ -27,7 +27,7 @@
                     foreach ($v_rw as $item) {
                   ?>
                       <th><?= $i++ ?></th>
-                      <th><?= $item->desa_kode  ?></th>
+                      <th><?= $item->desa_nama  ?></th>
                       <th><?= $item->rw  ?></th>
                       <th>
                         <button class="btn btn-success btn-xs">

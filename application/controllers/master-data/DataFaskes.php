@@ -20,6 +20,7 @@ class DataFaskes extends CI_Controller {
 
 	public function tambah(){
 		$data['v_faskes'] = $this->m_faskes->tampil_data()->result();
+		$data['nama'] = $this->m_faskes->getFaskes();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('master-data/datafaskes/tambahdata',$data);
@@ -59,6 +60,7 @@ class DataFaskes extends CI_Controller {
 	public function edit($id){
 		$where = array('faskes_id'=>$id);
 		$data['v_faskes'] = $this->m_faskes->edit_data('ms_faskes', $where)->row_array();
+		$data['nama'] = $this->m_faskes->getFaskes();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('master-data/datafaskes/editdata',$data);

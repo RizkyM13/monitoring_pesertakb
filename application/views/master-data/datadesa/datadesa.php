@@ -16,7 +16,7 @@
                   <tr>
                       <th>No</th>
                       <th>Kode Desa</th>
-                      <th>Kode Kecamatan</th>
+                      <th>Kecamatan</th>
                       <th>Nama Desa</th>
                       <th>Desa Aktif</th>
                       <th>Aksi</th>
@@ -30,7 +30,7 @@
                   ?>
                       <th><?= $i++ ?></th>
                       <th><?= $item->desa_kode  ?></th>
-                      <th><?= $item->kec_kode   ?></th>
+                      <th><?= $item->kec_nama   ?></th>
                       <th><?= $item->desa_nama  ?></th>
                       <th><?= $item->desa_aktif == 1 ? 'Aktif' : 'Non Aktif'?></th>
                       <th>

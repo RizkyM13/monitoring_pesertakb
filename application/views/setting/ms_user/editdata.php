@@ -11,11 +11,21 @@
                     </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">ID Kader</label>
+                  <label class="col-sm-2 col-sm-2 control-label">Kader</label>
                     <div class="col-sm-10">
-                      <input type="number" name="kader_id" class="form-control" placeholder="Masukkan ID Kader" value="<?php echo $v_ms_user['kader_id'] ?>">
-                    </div>
+                    <select name="kader_id" class="form-control">
+                        <option value="">-- Pilih Kader --</option>
+                        <?php
+                        foreach ($nama as $v) {
+                        ?>
+                        <option value="<?php echo $v->kader_id ?>"><?php echo $v->kader_nama ?></option>}
+                        
+                        <?php
+                        }
+                        ?>
+                    </select>
                 </div>
+              </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Username</label>
                     <div class="col-sm-10">

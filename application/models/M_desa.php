@@ -8,8 +8,13 @@ class M_desa extends CI_Model {
 		
 	//}
 	function tampil_data(){
+		return $this->db->query('SELECT r.kec_nama, b.desa_kode, b.kec_kode, b.desa_nama, b.desa_aktif FROM `desa` as b JOIN kecamatan as r ON r.kec_kode=b.kec_kode');
 		
-		return $this->db->get('desa');
+		//return $this->db->get('desa');
+	}
+
+	function getDesa(){
+		return $this->db->get('kecamatan')->result();
 	}
 
 	function input_data($data, $table){

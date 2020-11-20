@@ -3,7 +3,7 @@
 <div class="col-lg-12">
           <div class="form-panel">
             <br>
-              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'setting\profil_instansi/tambah_aksi'; ?>">
+              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'setting/profil_instansi/tambah_aksi'; ?>">
                 
                   
                       <input type="hidden" name="id" class="form-control" placeholder="Masukkan ID">
