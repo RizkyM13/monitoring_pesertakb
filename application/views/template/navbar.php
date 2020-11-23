@@ -246,6 +246,7 @@
               <li><a href="<?= base_url(). 'master-data/datafaskes' ?>">Data Faskes</a></li>
               <li><a href="<?= base_url(). 'master-data/datafaskesjenis' ?>">Data Faskes Jenis</a></li>
               <li><a href="<?= base_url(). 'master-data/datakader' ?>">Data Kader</a></li>
+              <li><a href="<?= base_url(). 'master-data/ms_suku' ?>">Ms Suku</a></li>
             </ul>
           </li>
           <li class="sub-menu">
