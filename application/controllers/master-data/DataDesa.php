@@ -61,6 +61,15 @@ class DataDesa extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
+	public function seacrh(){
+		$data['v_desa'] = $this->m_desa->getKeyword();
+		$keyword = $this->input->post('keyword');
+		$this->load->view('template/header');
+		$this->load->view('template/navbar');
+		$this->load->view('master-data/datadesa/datadesa',$data);
+		$this->load->view('template/footer');
+	}
+
 	public function update(){
 		$desa_kode				= $this->input->post('desa_kode');
 		$kec_kode				= $this->input->post('kec_kode');
