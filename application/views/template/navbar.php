@@ -225,12 +225,12 @@
               <span>Setting</span>
               </a>
             <ul class="sub">
-              <li><a href="<?= base_url(). 'setting/profil_instansi'?>">Profil Instansi</a></li>
-              <li><a href="<?= base_url(). 'setting/ms_menu'?>">Ms Menu</a></li>
-              <li><a href="<?= base_url(). 'setting/ms_group'?>">Ms Group</a></li>
-              <li><a href="<?= base_url(). 'setting/ms_group_menu'?>">Ms Group Menu</a></li>
-              <li><a href="<?= base_url(). 'setting/ms_user'?>">Ms User</a></li>
-              <li><a href="<?= base_url(). 'setting/ms_user_group'?>">Ms User group</a></li>
+              <li><a href="<?= base_url(). 'setting/profil'?>">Profil Instansi</a></li>
+              <li><a href="<?= base_url(). 'setting/menu'?>">Ms Menu</a></li>
+              <li><a href="<?= base_url(). 'setting/group'?>">Ms Group</a></li>
+              <li><a href="<?= base_url(). 'setting/groupmenu'?>">Ms Group Menu</a></li>
+              <li><a href="<?= base_url(). 'setting/user'?>">Ms User</a></li>
+              <li><a href="<?= base_url(). 'setting/usergroup'?>">Ms User group</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -239,14 +239,14 @@
               <span>Master Data</span>
               </a>
             <ul class="sub">
-              <li><a href="<?= base_url(). 'master-data/datakecamatan' ?>">Data Kecamatan</a></li>
-              <li><a href="<?= base_url(). 'master-data/datadesa' ?>">Data Desa</a></li>
-              <li><a href="<?= base_url(). 'master-data/datarw' ?>">Data RW</a></li>
-              <li><a href="<?= base_url(). 'master-data/datart' ?>">Data RT</a></li>
-              <li><a href="<?= base_url(). 'master-data/datafaskes' ?>">Data Faskes</a></li>
-              <li><a href="<?= base_url(). 'master-data/datafaskesjenis' ?>">Data Faskes Jenis</a></li>
-              <li><a href="<?= base_url(). 'master-data/datakader' ?>">Data Kader</a></li>
-              <li><a href="<?= base_url(). 'master-data/ms_suku' ?>">Ms Suku</a></li>
+              <li><a href="<?= base_url(). 'master-data/kecamatan' ?>">Data Kecamatan</a></li>
+              <li><a href="<?= base_url(). 'master-data/desa' ?>">Data Desa</a></li>
+              <li><a href="<?= base_url(). 'master-data/rw' ?>">Data RW</a></li>
+              <li><a href="<?= base_url(). 'master-data/rt' ?>">Data RT</a></li>
+              <li><a href="<?= base_url(). 'master-data/faskes' ?>">Data Faskes</a></li>
+              <li><a href="<?= base_url(). 'master-data/faskesjenis' ?>">Data Faskes Jenis</a></li>
+              <li><a href="<?= base_url(). 'master-data/kader' ?>">Data Kader</a></li>
+              <li><a href="<?= base_url(). 'master-data/suku' ?>">Ms Suku</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -255,9 +255,9 @@
               <span>Transaksi</span>
               </a>
             <ul class="sub">
-              <li><a href="<?= base_url().'transaksi/DataKK'?>">Data KK</a></li>
-              <li><a href="<?= base_url().'transaksi/datapenduduk'?>">Data Penduduk</a></li>
-              <li><a href="<?= base_url().'transaksi/datakontrasepsi'?>">Data Kontrasepsi</a></li>
+              <li><a href="<?= base_url().'transaksi/kk'?>">Data KK</a></li>
+              <li><a href="<?= base_url().'transaksi/penduduk'?>">Data Penduduk</a></li>
+              <li><a href="<?= base_url().'transaksi/kontrasepsi'?>">Data Kontrasepsi</a></li>
               <li><a href="<?= base_url().'transaksi/kunjungan_ulang'?>">Kunjungan Ulang Akseptor</a></li>
             </ul>
           </li>
