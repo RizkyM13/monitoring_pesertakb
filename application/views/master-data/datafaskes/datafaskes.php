@@ -8,6 +8,13 @@
     </div>
 <div class="col-lg-12">
             <div class="form-panel">
+              <div class = "col-md-10 col-md-10 col-md-10">
+              <form class="form-inline my-2 my-lg-0-right" action = "<?php echo base_url('master-data/faskes/seacrh') ?>" method ="post">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Pencarian" aria-label="Search" autocomplete="off" autofocus="" name="keyword">
+              <input class="btn btn-outline-success my-2 my-sm-0" type="submit" name = "submit">
+              </form>
+              </div>
+            <div class="form-panel">
               <a href="<?php echo base_url() . 'master-data/datafaskes/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
               <hr>
               <section id="unseen">

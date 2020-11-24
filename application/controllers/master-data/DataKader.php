@@ -69,6 +69,16 @@ class DataKader extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
+	public function seacrh(){
+		$data['v_kader'] = $this->m_kader->getKeyword();
+		$keyword = $this->input->post('keyword');
+		$this->load->view('template/header');
+		$this->load->view('template/navbar');
+		$this->load->view('master-data/datakader/datakader',$data);
+		$this->load->view('template/footer');
+	}
+
+
 	public function update(){
 		$kader_id				= $this->input->post('kader_id');
 		$kader_nama				= $this->input->post('kader_nama');

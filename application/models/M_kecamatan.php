@@ -12,6 +12,15 @@ class M_kecamatan extends CI_Model {
 		return $this->db->get('kecamatan');
 	}
 
+	function getKeyword(){
+		$this->db->select('*');
+		$this->db->from('kecamatan');
+		$this->db->like('kec_nama', $keyword);
+		return $this->db->get();
+		//$this->db->or_like('kec_kode', $keyword);
+
+	}
+
 	function input_data($data, $table){
 		$this->db->insert($table, $data);
 	}

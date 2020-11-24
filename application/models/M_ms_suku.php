@@ -11,6 +11,15 @@ class M_ms_suku extends CI_Model {
 		return $this->db->get('ms_suku');
 	}
 
+	function getKeyword(){
+		$this->db->select('*');
+		$this->db->from('ms_suku');
+		$this->db->like('suku_nama', $keyword);
+		return $this->db->get();
+		//$this->db->or_like('kec_kode', $keyword);
+
+	}
+
 	function input_data($data, $table){
 		$this->db->insert($table, $data);
 	}

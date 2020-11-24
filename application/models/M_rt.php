@@ -18,6 +18,15 @@ class M_rt extends CI_Model {
 		return $this->db->get('data_rw')->result();
 	}
 
+	function getKeyword(){
+		$this->db->select('*');
+		$this->db->from('rt');
+		$this->db->like('rt', $keyword);
+		return $this->db->get();
+		//$this->db->or_like('kec_kode', $keyword);
+
+	}
+
 	function input_data($data, $table){
 		$this->db->insert($table, $data);
 	}

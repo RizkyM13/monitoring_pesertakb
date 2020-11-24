@@ -16,6 +16,14 @@ class M_faskes extends CI_Model {
 		return $this->db->get('desa')->result();
 	}
 
+	function getKeyword(){
+		$this->db->select('*');
+		$this->db->from('faskes');
+		$this->db->like('faskes_nama', $keyword);
+		return $this->db->get();
+		//$this->db->or_like('kec_kode', $keyword);
+
+
 
 	function input_data($data, $table){
 		$this->db->insert($table, $data);
@@ -34,4 +42,5 @@ class M_faskes extends CI_Model {
 	function edit_data($table,$where){
 		return $this->db->get_where($table, $where);
 	}
+}
 }

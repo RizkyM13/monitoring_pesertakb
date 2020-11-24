@@ -61,6 +61,15 @@ class DataRw extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
+	public function seacrh(){
+		$data['v_rw'] = $this->m_rw->getKeyword();
+		$keyword = $this->input->post('keyword');
+		$this->load->view('template/header');
+		$this->load->view('template/navbar');
+		$this->load->view('master-data/datarw/datarw',$data);
+		$this->load->view('template/footer');
+	}
+
 	public function update(){
 		$rw_id				= $this->input->post('rw_id');
 		$desa_kode			= $this->input->post('desa_kode');

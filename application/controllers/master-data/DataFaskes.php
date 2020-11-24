@@ -67,6 +67,15 @@ class DataFaskes extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
+	public function seacrh(){
+		$data['v_faskes'] = $this->m_faskes->getKeyword();
+		$keyword = $this->input->post('keyword');
+		$this->load->view('template/header');
+		$this->load->view('template/navbar');
+		$this->load->view('master-data/faskes/faskes',$data);
+		$this->load->view('template/footer');
+	}
+
 	public function update(){
 		$faskes_id					= $this->input->post('faskes_id');
 		$faskesjenis_id				= $this->input->post('faskesjenis_id');

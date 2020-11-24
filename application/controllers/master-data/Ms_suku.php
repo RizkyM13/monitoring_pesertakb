@@ -60,6 +60,16 @@ class Ms_suku extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
+	public function seacrh(){
+		$data['v_ms_suku'] = $this->m_ms_suku->getKeyword();
+		$keyword = $this->input->post('keyword');
+		$this->load->view('template/header');
+		$this->load->view('template/navbar');
+		$this->load->view('master-data/ms_suku/ms_suku',$data);
+		$this->load->view('template/footer');
+	}
+
+
 	public function update(){
 		$suku_id				= $this->input->post('suku_id');
 		$suku_kode				= $this->input->post('suku_kode');

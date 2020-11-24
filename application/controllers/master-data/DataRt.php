@@ -60,6 +60,15 @@ class DataRt extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
+	public function seacrh(){
+		$data['v_rt'] = $this->m_rt->getKeyword();
+		$keyword = $this->input->post('keyword');
+		$this->load->view('template/header');
+		$this->load->view('template/navbar');
+		$this->load->view('master-data/datart/datart',$data);
+		$this->load->view('template/footer');
+	}
+
 	public function update(){
 		$rt_id				= $this->input->post('rt_id');
 		$rw_id				= $this->input->post('rw_id');

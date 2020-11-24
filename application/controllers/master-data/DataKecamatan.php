@@ -57,6 +57,16 @@ class DataKecamatan extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
+	public function seacrh(){
+		$data['v_kecamatan'] = $this->m_kecamatan->getKeyword();
+		$keyword = $this->input->post('keyword');
+		$this->load->view('template/header');
+		$this->load->view('template/navbar');
+		$this->load->view('master-data/datakecamatan/datakecamatan',$data);
+		$this->load->view('template/footer');
+	}
+
+
 	public function update(){
 		$kec_kode				= $this->input->post('kec_kode');
 		$kec_nama				= $this->input->post('kec_nama');

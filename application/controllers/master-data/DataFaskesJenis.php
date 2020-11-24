@@ -59,6 +59,15 @@ class DataFaskesJenis extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
+	public function seacrh(){
+		$data['v_faskes'] = $this->m_ms_faskes_jenis->getKeyword();
+		$keyword = $this->input->post('keyword');
+		$this->load->view('template/header');
+		$this->load->view('template/navbar');
+		$this->load->view('master-data/datafaskesjenis/faskes',$data);
+		$this->load->view('template/footer');
+	}
+
 	public function update(){
 		$faskesjenis_id			= $this->input->post('faskesjenis_id');
 		$faskesjenis_kode		= $this->input->post('faskesjenis_kode');
