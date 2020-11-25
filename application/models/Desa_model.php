@@ -20,11 +20,12 @@ class Desa_model extends CI_Model {
 	function getKeyword($keyword){
 		 $this->db->select('*');
 		 $this->db->from('desa');
+		 $this->db->join('kecamatan', 'kecamatan.kec_kode=desa.kec_kode');
 		 $this->db->like('desa_kode', $keyword);
-		 $this->db->or_like('kec_kode', $keyword);
+		 $this->db->or_like('kec_nama', $keyword);
 		 $this->db->or_like('desa_nama', $keyword);
 		 $this->db->or_like('desa_aktif', $keyword);
-		 return $this->db->get('')->result();
+		 return $this->db->get()->result();
 		 //return $this->db->get('kecamatan')->result();
 	}
 

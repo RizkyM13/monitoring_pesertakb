@@ -6,21 +6,18 @@
       <h4 class="mb">DATA DESA</h4>
       </div>
     </div>
-<div class="col-lg-12">
-            <div class="form-panel">
-              <div class="navbar-form navbar-right">
-                <form class="form-inline my-2 my-lg-0" action = "<?php echo base_url('master-data/desa/search') ?>" method ="post">
+
+    <div class="col-lg-12">
+    <div class="form-panel">
+            <a href="<?php echo base_url() . 'master-data/desa/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
+            <br>
+            <div class="navbar-form navbar-right">
+            <form class="form-inline my-2 my-lg-0" action = "<?php echo base_url('master-data/desa/search') ?>" method ="post">
                 <input type="text" name="keyword" class="form-control" placeholder="search" autofocus="" autocomplete="off">
                 <button type="submit" class="btn btn-success">Cari</button>
-              </form>
-                
-                
-              </div>
-              
-              
-
-              <a href="<?php echo base_url() . 'master-data/desa/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
-              <hr>
+            </form>
+            </div> 
+            
               <section id="unseen">
                 <table class="table table-bordered table-striped table-condensed">
                   <thead>
@@ -41,7 +38,7 @@
                   ?>
                       <th><?= $i++ ?></th>
                       <th><?= $item->desa_kode  ?></th>
-                      <th><?= $item->kec_kode   ?></th>
+                      <th><?= $item->kec_nama   ?></th>
                       <th><?= $item->desa_nama  ?></th>
                       <th><?= $item->desa_aktif == 1 ? 'Aktif' : 'Non Aktif'?></th>
                       <th>
