@@ -11,7 +11,7 @@
             <div class="form-panel">
               <div class = "col-md-10 col-md-10 col-md-10">
               
-              <form class="form-inline my-2 my-lg-0-right" action = "<?php echo base_url('fungsi/kk_model/search') ?>" method ="post">
+              <form class="form-inline my-2 my-lg-0-right" action = "<?php echo base_url('transaksi/kk/search') ?>" method ="post">
                   <input class="form-control mr-sm-2" type="search" placeholder="Pencarian" aria-label="Search" autocomplete="off" autofocus="" name="keyword">
                   <input class="btn btn-outline-success my-2 my-sm-0" type="submit" name = "submit">
               </form>
