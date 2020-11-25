@@ -198,7 +198,7 @@
       </div>
       <div class="top-menu">
         <ul class="nav pull-right top-menu">
-          <li><a class="logout" href="<?php echo base_url() . 'login/logout'; ?>">Logout</a></li>
+          <li><a class="logout" href="<?php echo base_url() . 'auth/logout'; ?>">Logout</a></li>
         </ul>
       </div>
     </header>
@@ -219,6 +219,7 @@
               <span>Dashboard</span>
               </a>
           </li>
+          <?php if($this->session->userdata('user_name') == 'petugas') { ?>
           <li class="sub-menu">
             <a href="javascript:;">
               <i class="fa fa-cogs"></i>
@@ -233,6 +234,8 @@
               <li><a href="<?= base_url(). 'setting/usergroup'?>">Ms User group</a></li>
             </ul>
           </li>
+        <?php } ?>
+
           <li class="sub-menu">
             <a href="javascript:;">
               <i class="fa fa-book"></i>

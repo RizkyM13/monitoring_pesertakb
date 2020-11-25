@@ -35,7 +35,7 @@
       *********************************************************************************************************************************************************** -->
   <div id="login-page">
   <div class="container">
-    <form class="form-login" action="<?php echo base_url().'login/proses'?>" method="post">
+    <form class="form-login" action="<?php echo base_url().'auth/proses'?>" method="post">
         <h2 class="form-login-heading">Silahkan Login</h2>
         <div class="login-wrap">
         <input name="username" type="text" class="form-control" placeholder="Masukkan Username" autofocus>

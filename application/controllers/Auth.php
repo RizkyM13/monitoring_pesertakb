@@ -1,7 +1,7 @@
 <?php
 defined ('BASEPATH') OR exit ('No direct script acess allowed');
 
-class Login extends CI_Controller{
+class Auth extends CI_Controller{
 
 	public function __construct(){
 		parent::__construct();
@@ -9,7 +9,7 @@ class Login extends CI_Controller{
 
     //default fungsi
     public function index(){
-        //check_already_login();
+        check_already_login();
         $this->load->view('login');
     }
 
@@ -36,7 +36,7 @@ class Login extends CI_Controller{
     			$this->session->set_userdata($params);
     			echo "<script> 
                         alert('Selamat, Login Berhasil!');
-                        window.location='".base_url('dashboard')."';
+                        window.location='".base_url('welcome')."';
                      </script>";
     		} else {
     			echo "<script> 
@@ -52,7 +52,7 @@ class Login extends CI_Controller{
     public function logout(){
     	$params = array('user_id', 'user_status');
     	$this->session->unset_userdata($params);
-    	redirect('login/index');
+    	redirect('auth/index');
     }
 
 

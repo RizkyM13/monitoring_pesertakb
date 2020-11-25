@@ -20,7 +20,7 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		//check_not_login();
+		check_not_login();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('template/footer');
@@ -29,6 +29,6 @@ class Welcome extends CI_Controller {
 	public function logout(){
 		$params = array('user_id', 'user_status');
 		$this->session->unset_userdata($params);
-		redirect('login');
+		redirect('auth');
 	}
 }

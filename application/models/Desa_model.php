@@ -17,13 +17,15 @@ class Desa_model extends CI_Model {
 		return $this->db->get('kecamatan')->result();
 	}
 
-	function getKeyword($sampai, $dari, $like=''){
-		 if($like)
-    		$this->db->where($like);
- 
-   			$query = $this->db->get('desa',$sampai,$dari);
-   			return $query->result_array();
-
+	function getKeyword($keyword){
+		 $this->db->select('*');
+		 $this->db->from('desa');
+		 $this->db->like('desa_kode', $keyword);
+		 $this->db->or_like('kec_kode', $keyword);
+		 $this->db->or_like('desa_nama', $keyword);
+		 $this->db->or_like('desa_aktif', $keyword);
+		 return $this->db->get('')->result();
+		 //return $this->db->get('kecamatan')->result();
 	}
 
 	function input_data($data, $table){
