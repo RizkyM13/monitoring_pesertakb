@@ -68,6 +68,15 @@ class Kk extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
+	public function seacrh(){
+		$data['v_kk'] = $this->kk_model->getKeyword();
+		$keyword = $this->input->post('keyword');
+		$this->load->view('template/header');
+		$this->load->view('template/navbar');
+		$this->load->view('fungsi/datakk/data', $data);
+		$this->load->view('template/footer');
+	}
+
 	public function update(){
 		$kk_id				= $this->input->post('kk_id');
 		$kk_no				= $this->input->post('kk_no');

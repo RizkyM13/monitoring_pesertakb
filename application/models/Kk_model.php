@@ -14,6 +14,15 @@ class Kk_model extends CI_Model {
 		return $this->db->get('ms_user')->result();
 	}
 
+	function getKeyword(){
+		$this->db->select('*');
+		$this->db->from('kk_model');
+		$this->db->like('kk_id', $keyword);
+		return $this->db->get();
+		//$this->db->or_like('kec_kode', $keyword);
+
+	}
+
 	function input_data($data, $table){
 		$this->db->insert($table, $data);
 	}
