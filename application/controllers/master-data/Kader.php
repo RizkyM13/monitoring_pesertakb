@@ -14,7 +14,7 @@ class Kader extends CI_Controller {
 		$data['v_kader'] = $this->kader_model->tampil_data()->result();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
-		$this->load->view('partial/datakader/datakader', $data);
+		$this->load->view('partial/datakader/data', $data);
 		$this->load->view('template/footer');
 	}
 
