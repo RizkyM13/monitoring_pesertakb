@@ -12,6 +12,15 @@ class Kontrasepsi_model extends CI_Model {
 		return $this->db->get('ms_kontrasepsi');
 	}
 
+	function getKeyword($sampai, $dari, $like=''){
+		 if($like)
+    		$this->db->where($like);
+ 
+   			$query = $this->db->get('kontrasepsi',$sampai,$dari);
+   			return $query->result_array();
+
+	}
+
 	function input_data($data, $table){
 		$this->db->insert($table, $data);
 	}

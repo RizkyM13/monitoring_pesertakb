@@ -109,6 +109,11 @@ class Penduduk extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
+	public function search(){
+    $data['v_penduduk'] = $this->penduduk_model->getKeyword('penduduk');
+    }
+
+
 	public function update(){
 		$penduduk_id			= $this->input->post('penduduk_id');
 		$kk_id					= $this->input->post('kk_id');
