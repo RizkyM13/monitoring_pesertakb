@@ -16,13 +16,20 @@ class Faskes_model extends CI_Model {
 		return $this->db->get('desa')->result();
 	}
 
-	function getKeyword(){
-		$this->db->select('*');
-		$this->db->from('faskes');
-		$this->db->like('faskes_nama', $keyword);
-		return $this->db->get();
-		//$this->db->or_like('kec_kode', $keyword);
-
+	function getKeyword($keyword){
+		 $this->db->select('*');
+		 $this->db->from('faskes');
+		 $this->db->join('desa', 'desa.desa_kode=faskes.desa_kode');
+		 $this->db->like('faskes_id', $keyword);
+		 $this->db->or_like('faskesjenis_id', $keyword);
+		 $this->db->or_like('faskes_kode', $keyword);
+		 $this->db->or_like('faskes_nama', $keyword);
+		 $this->db->or_like('faskes_alamat', $keyword);
+		 $this->db->or_like('desa_kode', $keyword);
+		 $this->db->or_like('faskes_aktif', $keyword);
+		 return $this->db->get()->result();
+		 //return $this->db->get('kecamatan')->result();
+	}
 
 
 	function input_data($data, $table){
@@ -43,4 +50,4 @@ class Faskes_model extends CI_Model {
 		return $this->db->get_where($table, $where);
 	}
 }
-}
+
