@@ -219,7 +219,7 @@
               <span>Dashboard</span>
               </a>
           </li>
-          <?php if($this->session->userdata('user_name') == 'petugas') { ?>
+          <?php if($this->session->userdata('kader') == 'petugas') { ?>
           <li class="sub-menu">
             <a href="javascript:;">
               <i class="fa fa-cogs"></i>

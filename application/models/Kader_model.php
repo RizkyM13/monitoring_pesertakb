@@ -14,9 +14,7 @@ class Kader_model extends CI_Model {
 	function getKeyword($keyword){
 		 $this->db->select('*');
 		 $this->db->from('kader');
-		 //$this->db->join('kecamatan', 'kecamatan.kec_kode=desa.kec_kode');
-		 $this->db->like('kader_id', $keyword);
-		 $this->db->or_like('kader_nama', $keyword);
+		 $this->db->like('kader_nama', $keyword);
 		 $this->db->or_like('kader_nik', $keyword);
 		 $this->db->or_like('kader_sex', $keyword);
 		 $this->db->or_like('kader_kelahiran', $keyword);
@@ -25,7 +23,6 @@ class Kader_model extends CI_Model {
 		 $this->db->or_like('kader_hp', $keyword);
 		 $this->db->or_like('kader_aktif', $keyword);
 		 return $this->db->get()->result();
-		 //return $this->db->get('kecamatan')->result();
 	}
 
 	function input_data($data, $table){

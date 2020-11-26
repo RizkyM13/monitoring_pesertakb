@@ -67,9 +67,9 @@ class Faskes extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
-	public function seacrh(){
-		$data['v_faskes'] = $this->faskes_model->getKeyword();
+	public function search(){
 		$keyword = $this->input->post('keyword');
+		$data['v_faskes'] = $this->faskes_model->getKeyword($keyword);
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('partial/datafaskes/data', $data);

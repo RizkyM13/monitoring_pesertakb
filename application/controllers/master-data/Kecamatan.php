@@ -57,9 +57,9 @@ class Kecamatan extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
-	public function seacrh(){
-		$data['v_kecamatan'] = $this->kecamatan_model->getKeyword();
+	public function search(){
 		$keyword = $this->input->post('keyword');
+    	$data['v_kecamatan'] = $this->kecamatan_model->getKeyword($keyword);
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('partial/datakecamatan/data', $data);

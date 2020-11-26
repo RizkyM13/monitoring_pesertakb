@@ -69,12 +69,12 @@ class Kader extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
-	public function seacrh(){
-		$data['v_kader'] = $this->kader_model->getKeyword();
+	public function search(){
 		$keyword = $this->input->post('keyword');
+		$data['v_kader'] = $this->kader_model->getKeyword($keyword);
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
-		$this->load->view('partial/datakader/datakader', $data);
+		$this->load->view('partial/datakader/data', $data);
 		$this->load->view('template/footer');
 	}
 

@@ -11,15 +11,14 @@ class Kecamatan_model extends CI_Model {
 		
 		return $this->db->get('kecamatan');
 	}
-function getKeyword($keyword){
+	
+	function getKeyword($keyword){
 		 $this->db->select('*');
 		 $this->db->from('kecamatan');
-		 $this->db->join('kecamatan', 'kecamatan.kec_kode');
 		 $this->db->like('kec_kode', $keyword);
 		 $this->db->or_like('kec_nama', $keyword);
 		 $this->db->or_like('kec_aktif', $keyword);
 		 return $this->db->get()->result();
-		 //return $this->db->get('kecamatan')->result();
 	}
 
 
