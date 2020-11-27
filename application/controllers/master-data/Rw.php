@@ -61,14 +61,15 @@ class Rw extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
-	public function seacrh(){
-		$data['v_rw'] = $this->rw_model->getKeyword();
+	public function search(){
 		$keyword = $this->input->post('keyword');
+    	$data['v_rw'] = $this->rw_model->getKeyword($keyword);
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('partial/datarw/data', $data);
 		$this->load->view('template/footer');
 	}
+
 
 	public function update(){
 		$rw_id				= $this->input->post('rw_id');

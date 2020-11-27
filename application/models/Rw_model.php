@@ -16,14 +16,18 @@ class Rw_model extends CI_Model {
 		return $this->db->get('desa')->result();
 	}
 
-	function getKeyword(){
-		$this->db->select('*');
-		$this->db->from('rw');
-		$this->db->like('rw', $keyword);
-		return $this->db->get();
-		//$this->db->or_like('kec_kode', $keyword);
-
+	function getKeyword($keyword){
+		 $this->db->select('*');
+		 $this->db->from('rw');
+		 $this->db->join('desa', 'desa.desa_kode=rw.desa_kode');
+		 $this->db->like('rw_id', $keyword);
+		 $this->db->or_like('desa_kode', $keyword);
+		 $this->db->or_like('rw', $keyword);
+		 return $this->db->get()->result();
+		 //return $this->db->get('rw')->result();
 	}
+
+
 
 	function input_data($data, $table){
 		$this->db->insert($table, $data);

@@ -61,14 +61,7 @@ class Desa extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
-	public function search(){
-		$keyword = $this->input->post('keyword');
-    	$data['v_desa'] = $this->desa_model->getKeyword($keyword);
-    	$this->load->view('template/header');
-		$this->load->view('template/navbar');
-		$this->load->view('partial/datadesa/data',$data);
-		$this->load->view('template/footer');
-	}
+	
 	public function update(){
 		$desa_kode				= $this->input->post('desa_kode');
 		$kec_kode				= $this->input->post('kec_kode');
