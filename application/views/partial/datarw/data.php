@@ -9,7 +9,6 @@
 <div class="col-lg-12">
 <div class="form-panel">
             <a href="<?php echo base_url() . 'master-data/rw/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
-            <br>
             <div class="navbar-form navbar-right">
             <form class="form-inline my-2 my-lg-0" action = "<?php echo base_url('master-data/rw/search') ?>" method ="post">
                 <input type="text" name="keyword" class="form-control" placeholder="search" autofocus="" autocomplete="off">

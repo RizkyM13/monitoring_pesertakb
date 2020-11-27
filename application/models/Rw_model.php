@@ -18,8 +18,8 @@ class Rw_model extends CI_Model {
 
 	function getKeyword($keyword){
 		 $this->db->select('*');
-		 $this->db->from('rw');
-		 $this->db->join('desa', 'desa.desa_kode=rw.desa_kode');
+		 $this->db->from('data_rw');
+		 $this->db->join('desa', 'desa.desa_kode=data_rw.desa_kode');
 		 $this->db->like('rw_id', $keyword);
 		 $this->db->or_like('desa_kode', $keyword);
 		 $this->db->or_like('rw', $keyword);
