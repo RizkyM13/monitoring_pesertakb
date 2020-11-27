@@ -6,17 +6,17 @@
       <h4 class="mb">DATA RT</h4>
       </div>
     </div>
-<div class="col-lg-12">
-            <div class="form-panel">
-              <div class = "col-md-10 col-md-10 col-md-10">
-              <form class="form-inline my-2 my-lg-0-right" action = "<?php echo base_url('master-data/rt/seacrh') ?>" method ="post">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Pencarian" aria-label="Search" autocomplete="off" autofocus="" name="keyword">
-              <input class="btn btn-outline-success my-2 my-sm-0" type="submit" name = "submit">
-              </form>
-              </div>
-            <div class="form-panel">
-              <a href="<?php echo base_url() . 'master-data/rt/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
-              <hr>
+ <div class="col-lg-12">
+    <div class="form-panel">
+            <a href="<?php echo base_url() . 'master-data/desa/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
+            <br>
+            <div class="navbar-form navbar-right">
+            <form class="form-inline my-2 my-lg-0" action = "<?php echo base_url('master-data/rt/search') ?>" method ="post">
+                <input type="text" name="keyword" class="form-control" placeholder="search" autofocus="" autocomplete="off">
+                <button type="submit" class="btn btn-success">Cari</button>
+            </form>
+            </div> 
+            
               <section id="unseen">
                 <table class="table table-bordered table-striped table-condensed">
                   <thead>

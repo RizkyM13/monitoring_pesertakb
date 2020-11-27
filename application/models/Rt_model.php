@@ -18,14 +18,17 @@ class Rt_model extends CI_Model {
 		return $this->db->get('data_rw')->result();
 	}
 
-	function getKeyword(){
-		$this->db->select('*');
-		$this->db->from('rt');
-		$this->db->like('rt', $keyword);
-		return $this->db->get();
-		//$this->db->or_like('kec_kode', $keyword);
-
+	function getKeyword($keyword){
+		 $this->db->select('*');
+		 $this->db->from('rt');
+		 $this->db->join('data_rw', 'data_rw.rw_id=rt.rw_id');
+		 $this->db->like('rt_id', $keyword);
+		 $this->db->or_like('rw_id', $keyword);
+		 $this->db->or_like('rt', $keyword);
+		 return $this->db->get()->result();
+		 //return $this->db->get('data_rw')->result();
 	}
+
 
 	function input_data($data, $table){
 		$this->db->insert($table, $data);
