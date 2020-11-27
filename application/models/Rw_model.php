@@ -21,7 +21,7 @@ class Rw_model extends CI_Model {
 		 $this->db->from('data_rw');
 		 $this->db->join('desa', 'desa.desa_kode=data_rw.desa_kode');
 		 $this->db->like('rw_id', $keyword);
-		 $this->db->or_like('desa_kode', $keyword);
+		 $this->db->or_like('desa_nama', $keyword);
 		 $this->db->or_like('rw', $keyword);
 		 return $this->db->get()->result();
 		 //return $this->db->get('rw')->result();

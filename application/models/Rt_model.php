@@ -23,7 +23,7 @@ class Rt_model extends CI_Model {
 		 $this->db->from('data_rt');
 		 $this->db->join('data_rw', 'data_rw.rw_id=data_rt.rw_id');
 		 $this->db->like('rt_id', $keyword);
-		 $this->db->or_like('rw_id', $keyword);
+		 $this->db->or_like('rw', $keyword);
 		 $this->db->or_like('rt', $keyword);
 		 return $this->db->get()->result();
 		 //return $this->db->get('data_rw')->result();
