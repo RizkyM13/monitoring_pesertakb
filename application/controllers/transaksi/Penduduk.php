@@ -110,7 +110,13 @@ class Penduduk extends CI_Controller {
 	}
 
 	public function search(){
-    $data['v_penduduk'] = $this->penduduk_model->getKeyword('penduduk');
+		$keyword = $this->input->post('keyword');
+    	$data['v_penduduk'] = $this->penduduk_model->getKeyword($keyword);
+    	$this->load->view('template/header');
+		$this->load->view('template/navbar');
+		$this->load->view('fungsi/datapenduduk/data',$data);
+		$this->load->view('template/footer');
+
     }
 
 

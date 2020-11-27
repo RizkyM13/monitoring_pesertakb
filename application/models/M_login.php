@@ -12,4 +12,15 @@ class M_login extends CI_Model{
 		return $query;
 	}
 
+	public function get($id = null){
+		$this->db->select('*');
+		$this->db->from('ms_user');
+		if ($id != null) {
+			$this->db->where('user_id', $id);
+			//$this->db->where('user_password', $post['password']);
+		}
+		$query = $this->db->get();
+		return $query;
+	}
+
 }

@@ -212,41 +212,12 @@
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
           <p class="centered"><a href="profile.html"><img src="<?= base_url() ?>/assets/img/KB.jpg" class="img-circle" width="80"></a></p>
-          <h5 class="centered">Admin</h5>
+          <h5 class="centered"></h5>
           <li class="mt">
             <a href="<?= base_url(). 'Dashboard'?>">
               <i class="fa fa-dashboard"></i>
               <span>Dashboard</span>
               </a>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;">
-              <i class="fa fa-cogs"></i>
-              <span>Setting</span>
-              </a>
-            <ul class="sub">
-              <li><a href="<?= base_url(). 'setting/profil'?>">Profil Instansi</a></li>
-              <li><a href="<?= base_url(). 'setting/menu'?>">Ms Menu</a></li>
-              <li><a href="<?= base_url(). 'setting/group'?>">Ms Group</a></li>
-              <li><a href="<?= base_url(). 'setting/user'?>">Ms User</a></li>
-            </ul>
-          </li>
-
-          <li class="sub-menu">
-            <a href="javascript:;">
-              <i class="fa fa-book"></i>
-              <span>Master Data</span>
-              </a>
-            <ul class="sub">
-              <li><a href="<?= base_url(). 'master-data/kecamatan' ?>">Data Kecamatan</a></li>
-              <li><a href="<?= base_url(). 'master-data/desa' ?>">Data Desa</a></li>
-              <li><a href="<?= base_url(). 'master-data/rw' ?>">Data RW</a></li>
-              <li><a href="<?= base_url(). 'master-data/rt' ?>">Data RT</a></li>
-              <li><a href="<?= base_url(). 'master-data/faskes' ?>">Data Faskes</a></li>
-              <li><a href="<?= base_url(). 'master-data/faskesjenis' ?>">Data Faskes Jenis</a></li>
-              <li><a href="<?= base_url(). 'master-data/kader' ?>">Data Kader</a></li>
-              <li><a href="<?= base_url(). 'master-data/suku' ?>">Ms Suku</a></li>
-            </ul>
           </li>
           <li class="sub-menu">
             <a href="javascript:;">

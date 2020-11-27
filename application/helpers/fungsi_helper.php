@@ -16,4 +16,12 @@ function check_not_login(){
 	}
 }
 
+function check_admin(){
+	$ci =& get_instance();
+	$ci->load->library('file');
+	if($ci->fungsi->user_login()->user_aktif != 1){
+		redirect('dashboard');
+	}
+}
+
 ?>

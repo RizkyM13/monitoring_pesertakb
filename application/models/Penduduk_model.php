@@ -11,12 +11,15 @@ class Penduduk_model extends CI_Model {
 		return $this->db->get('penduduk');
 	}
 
-	function getKeyword($sampai, $dari, $like=''){
-		 if($like)
-    		$this->db->where($like);
- 
-   			$query = $this->db->get('penduduk',$sampai,$dari);
-   			return $query->result_array();
+	function getKeyword($keyword){
+		 $this->db->select('*');
+		 $this->db->from('penduduk');
+		 $this->db->like('nik', $keyword);
+		 $this->db->or_like('nama', $keyword);
+		 $this->db->or_like('jenis_kelamin', $keyword);
+		 $this->db->or_like('status_perkawinan', $keyword);
+		 $this->db->or_like('hub_keluarga', $keyword);
+		 return $this->db->get()->result();
 
 	}
 
