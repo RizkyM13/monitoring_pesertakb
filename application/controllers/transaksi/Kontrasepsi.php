@@ -62,10 +62,14 @@ class Kontrasepsi extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
-	public function search(){
-    $data['v_kontrasepsi'] = $this->kontrasepsi_model->getKeyword('kontrasepsi');
-    }
-
+	public function seacrh(){
+		$data['v_kontrasepsi'] = $this->kontrasepsi_model->getKeyword();
+		$keyword = $this->input->post('keyword');
+		$this->load->view('template/header');
+		$this->load->view('template/navbar');
+		$this->load->view('fungsi/kontrasepsi/data', $data);
+		$this->load->view('template/footer');
+	}
 
 	public function update(){
 		$kontrasepsi_id					= $this->input->post('kontrasepsi_id');
