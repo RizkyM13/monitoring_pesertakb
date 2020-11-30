@@ -9,6 +9,12 @@
 <div class="col-lg-12">
             <div class="form-panel">
               <a href="<?php echo base_url() . 'setting/user/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
+              <div class="navbar-form navbar-right">
+            <form class="form-inline my-2 my-lg-0" action = "<?php echo base_url('setting/user/search') ?>" method ="post">
+                <input type="text" name="keyword" class="form-control" placeholder="search" autofocus="" autocomplete="off">
+                <button type="submit" class="btn btn-success">Cari</button>
+            </form>
+            </div> 
               <hr>
               <section id="unseen">
                 <table class="table table-bordered table-striped table-condensed">

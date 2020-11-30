@@ -118,4 +118,13 @@ class Profil extends CI_Controller {
 		$this->load->view('pengaturan/dataprofil/menu_profil', $data);
 		$this->load->view('template/footer');
 	}
+
+	public function search(){
+		$keyword = $this->input->post('keyword');
+    	$data['v_profil'] = $this->profil_model->getKeyword($keyword);
+    	$this->load->view('template/header');
+		$this->load->view('template/navbar');
+		$this->load->view('pengaturan/dataprofil/profil_instansi', $data);
+		$this->load->view('template/footer');
+	}
 }

@@ -11,6 +11,15 @@ class Group_model extends CI_Model {
 		return $this->db->get('ms_group');
 	}
 
+	function getKeyword($keyword){
+		 $this->db->select('*');
+		 $this->db->from('ms_group');
+		 $this->db->like('grp_kode', $keyword);
+		 $this->db->or_like('grp_nama', $keyword);
+		 $this->db->or_like('grp_aktif', $keyword);
+		 return $this->db->get()->result();
+	}
+
 	function input_data($data, $table){
 		$this->db->insert($table, $data);
 	}

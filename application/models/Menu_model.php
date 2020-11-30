@@ -11,6 +11,20 @@ class Menu_model extends CI_Model {
 		return $this->db->get('ms_menu');
 	}
 
+	function getKeyword($keyword){
+		 $this->db->select('*');
+		 $this->db->from('ms_menu');
+		 $this->db->like('mn_kode', $keyword);
+		 $this->db->or_like('mn_nama', $keyword);
+		 $this->db->or_like('mn_level', $keyword);
+		 $this->db->or_like('mn_induk', $keyword);
+		 $this->db->or_like('mn_icon', $keyword);
+		 $this->db->or_like('mn_url', $keyword);
+		 $this->db->or_like('mn_aktif', $keyword);
+		 return $this->db->get()->result();
+		 //return $this->db->get('kecamatan')->result();
+	}
+
 	function input_data($data, $table){
 		$this->db->insert($table, $data);
 	}

@@ -16,6 +16,17 @@ class User_model extends CI_Model {
 		return $this->db->get('kader')->result();
 	}
 
+	function getKeyword($keyword){
+		 $this->db->select('*');
+		 $this->db->from('ms_user');
+		 $this->db->join('kader', 'kader.kader_id=ms_user.kader_id');
+		 $this->db->like('kader_nama', $keyword);
+		 $this->db->or_like('user_name', $keyword);
+		 $this->db->or_like('user_password', $keyword);
+		 $this->db->or_like('user_status', $keyword);
+		 return $this->db->get()->result();
+	}
+	
 	function input_data($data, $table){
 		$this->db->insert($table, $data);
 	}

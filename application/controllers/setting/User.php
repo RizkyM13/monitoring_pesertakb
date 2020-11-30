@@ -63,6 +63,15 @@ class User extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
+	public function search(){
+		$keyword = $this->input->post('keyword');
+    	$data['v_ms_user'] = $this->user_model->getKeyword($keyword);
+    	$this->load->view('template/header');
+		$this->load->view('template/navbar');
+		$this->load->view('pengaturan/datauser/ms_user', $data);
+		$this->load->view('template/footer');
+	}
+
 	public function update(){
 		$user_id				= $this->input->post('user_id');
 		$kader_id				= $this->input->post('kader_id');

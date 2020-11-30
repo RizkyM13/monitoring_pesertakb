@@ -68,6 +68,15 @@ class Group extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
+	public function search(){
+		$keyword = $this->input->post('keyword');
+    	$data['v_ms_group'] = $this->group_model->getKeyword($keyword);
+    	$this->load->view('template/header');
+		$this->load->view('template/navbar');
+		$this->load->view('pengaturan/datagroup/ms_group', $data);
+		$this->load->view('template/footer');
+	}
+
 	public function update(){
 		$grp_id				= $this->input->post('grp_id');
 		$grp_kode			= $this->input->post('grp_kode');
