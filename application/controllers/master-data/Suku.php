@@ -13,7 +13,11 @@ class Suku extends CI_Controller {
 	{
 		$data['v_ms_suku'] = $this->suku_model->tampil_data()->result();
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}
 		$this->load->view('partial/datasuku/data', $data);
 		$this->load->view('template/footer');
 	}
@@ -21,7 +25,11 @@ class Suku extends CI_Controller {
 	public function tambah(){
 		$data['v_ms_suku'] = $this->suku_model->tampil_data()->result();
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}
 		$this->load->view('partial/datasuku/tambahdata',$data);
 		$this->load->view('template/footer');
 	}
@@ -55,7 +63,11 @@ class Suku extends CI_Controller {
 		$data['v_ms_suku'] = $this->suku_model->edit_data('ms_suku', $where)->row_array();
 		//$data['nama'] = $this->suku_model->getDesa();
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}
 		$this->load->view('partial/datasuku/editdata',$data);
 		$this->load->view('template/footer');
 	}
@@ -64,7 +76,11 @@ class Suku extends CI_Controller {
 		$data['v_ms_suku'] = $this->suku_model->getKeyword();
 		$keyword = $this->input->post('keyword');
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}
 		$this->load->view('partial/datasuku/ms_suku',$data);
 		$this->load->view('template/footer');
 	}

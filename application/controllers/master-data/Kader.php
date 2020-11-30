@@ -13,7 +13,11 @@ class Kader extends CI_Controller {
 	{
 		$data['v_kader'] = $this->kader_model->tampil_data()->result();
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}
 		$this->load->view('partial/datakader/data', $data);
 		$this->load->view('template/footer');
 	}
@@ -21,7 +25,11 @@ class Kader extends CI_Controller {
 	public function tambah(){
 		$data['v_kader'] = $this->kader_model->tampil_data()->result();
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}
 		$this->load->view('partial/datakader/tambahdata',$data);
 		$this->load->view('template/footer');
 	}
@@ -64,7 +72,11 @@ class Kader extends CI_Controller {
 		$where = array('kader_id'=>$id);
 		$data['v_kader'] = $this->kader_model->edit_data('kader', $where)->row_array();
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}
 		$this->load->view('partial/datakader/editdata',$data);
 		$this->load->view('template/footer');
 	}
@@ -73,7 +85,11 @@ class Kader extends CI_Controller {
 		$keyword = $this->input->post('keyword');
 		$data['v_kader'] = $this->kader_model->getKeyword($keyword);
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}
 		$this->load->view('partial/datakader/data', $data);
 		$this->load->view('template/footer');
 	}

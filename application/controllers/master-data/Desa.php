@@ -13,7 +13,11 @@ class Desa extends CI_Controller {
 	{
 		$data['v_desa'] = $this->desa_model->tampil_data()->result();
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		 if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}
 		$this->load->view('partial/datadesa/data', $data);
 		$this->load->view('template/footer');
 	}
@@ -22,7 +26,11 @@ class Desa extends CI_Controller {
 		$data['v_desa'] = $this->desa_model->tampil_data()->result();
 		$data['nama'] = $this->desa_model->getDesa();
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}
 		$this->load->view('partial/datadesa/tambahdata',$data);
 		$this->load->view('template/footer');
 	}
@@ -56,7 +64,11 @@ class Desa extends CI_Controller {
 		$data['v_desa'] = $this->desa_model->edit_data('desa', $where)->row_array();
 		$data['nama'] = $this->desa_model->getDesa();
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}
 		$this->load->view('partial/datadesa/editdata',$data);
 		$this->load->view('template/footer');
 	}
@@ -64,7 +76,11 @@ class Desa extends CI_Controller {
 		$keyword = $this->input->post('keyword');
     	$data['v_desa'] = $this->desa_model->getKeyword($keyword);
     	$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}
 		$this->load->view('partial/datadesa/data',$data);
 		$this->load->view('template/footer');
 	}

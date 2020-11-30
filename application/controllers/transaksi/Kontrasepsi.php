@@ -13,7 +13,13 @@ class Kontrasepsi extends CI_Controller {
 	{
 		$data['v_kontrasepsi'] = $this->kontrasepsi_model->tampil_data()->result();
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}elseif($this->session->userdata('user_id') == 3){
+        	   $this->load->view('template/navdinas');
+        	}
 		$this->load->view('fungsi/datakontrasepsi/data',$data);
 		$this->load->view('template/footer');
 	}
@@ -22,7 +28,13 @@ class Kontrasepsi extends CI_Controller {
 	$data['v_kontrasepsi'] = $this->kontrasepsi_model->tampil_data()->result();
 	
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}elseif($this->session->userdata('user_id') == 3){
+        	   $this->load->view('template/navdinas');
+        	}
 		$this->load->view('fungsi/datakontrasepsi/tambahdata',$data);
 		$this->load->view('template/footer');
 	}
@@ -57,17 +69,29 @@ class Kontrasepsi extends CI_Controller {
 		$where = array('kontrasepsi_id'=>$id);
 		$data['v_kontrasepsi'] = $this->kontrasepsi_model->edit_data('ms_kontrasepsi', $where)->row_array();
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}elseif($this->session->userdata('user_id') == 3){
+        	   $this->load->view('template/navdinas');
+        	}
 		$this->load->view('fungsi/datakontrasepsi/editdata',$data);
 		$this->load->view('template/footer');
 	}
 
-	public function seacrh(){
-		$data['v_kontrasepsi'] = $this->kontrasepsi_model->getKeyword();
+	public function search(){
 		$keyword = $this->input->post('keyword');
+		$data['v_kontrasepsi'] = $this->kontrasepsi_model->getKeyword($keyword);
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
-		$this->load->view('fungsi/kontrasepsi/data', $data);
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}elseif($this->session->userdata('user_id') == 3){
+        	   $this->load->view('template/navdinas');
+        	}
+		$this->load->view('fungsi/datakontrasepsi/data', $data);
 		$this->load->view('template/footer');
 	}
 

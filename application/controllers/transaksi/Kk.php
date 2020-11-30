@@ -18,7 +18,13 @@ class Kk extends CI_Controller {
 		$data['v_kk'] = $this->kk_model->tampil_data()->result();
 		//$data[''] = $this->m_kk->getUser();
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}elseif($this->session->userdata('user_id') == 3){
+        	   $this->load->view('template/navdinas');
+        	}
 		$this->load->view('fungsi/datakk/data',$data);
 		$this->load->view('template/footer');
 	}
@@ -27,7 +33,13 @@ class Kk extends CI_Controller {
 	$data['v_kk'] = $this->kk_model->tampil_data()->result();
 	//$data['status'] = $this->m_kk->tampil_data()->result();
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}elseif($this->session->userdata('user_id') == 3){
+        	   $this->load->view('template/navdinas');
+        	}
 		$this->load->view('fungsi/datakk/tambahdata',$data);
 		$this->load->view('template/footer');
 	}
@@ -63,7 +75,13 @@ class Kk extends CI_Controller {
 		$where = array('kk_id'=>$id);
 		$data['v_kk'] = $this->kk_model->edit_data('kk', $where)->row_array();
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}elseif($this->session->userdata('user_id') == 3){
+        	   $this->load->view('template/navdinas');
+        	}
 		$this->load->view('fungsi/datakk/editdata',$data);
 		$this->load->view('template/footer');
 	}
@@ -72,7 +90,13 @@ class Kk extends CI_Controller {
 		$data['v_kk'] = $this->kk_model->getKeyword();
 		$keyword = $this->input->post('keyword');
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}elseif($this->session->userdata('user_id') == 3){
+        	   $this->load->view('template/navdinas');
+        	}
 		$this->load->view('fungsi/datakk/data', $data);
 		$this->load->view('template/footer');
 	}

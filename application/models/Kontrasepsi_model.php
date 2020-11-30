@@ -14,11 +14,10 @@ class Kontrasepsi_model extends CI_Model {
 
 	function getKeyword($keyword){
 		 $this->db->select('*');
-		 $this->db->from('kontrasepsi');
-		 $this->db->like('kontrasepsi_id', $keyword);
-		 $this->db->or_like('kontransepsi_kode', $keyword);
+		 $this->db->from('ms_kontrasepsi');
+		 $this->db->like('kontransepsi_kode', $keyword);
 		 $this->db->or_like('kontransepsi_nama', $keyword);
-		  $this->db->or_like('kontransepsi_expired', $keyword);
+		 $this->db->or_like('kontransepsi_expired', $keyword);
 		 $this->db->or_like('kontrasepsi_aktif', $keyword);
 		 return $this->db->get()->result();
 	}

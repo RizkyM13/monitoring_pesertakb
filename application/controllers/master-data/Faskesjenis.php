@@ -13,7 +13,11 @@ class Faskesjenis extends CI_Controller {
 	{
 		$data['v_ms_faskes_jenis'] = $this->faskesjenis_model->tampil_data()->result();
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}
 		$this->load->view('partial/datafaskesjenis/data', $data);
 		$this->load->view('template/footer');
 	}
@@ -21,7 +25,11 @@ class Faskesjenis extends CI_Controller {
 	public function tambah(){
 		$data['v_ms_faskes_jenis'] = $this->faskesjenis_model->tampil_data()->result();
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}
 		$this->load->view('partial/datafaskesjenis/tambahdata',$data);
 		$this->load->view('template/footer');
 	}
@@ -54,7 +62,11 @@ class Faskesjenis extends CI_Controller {
 		$where = array('faskesjenis_id'=>$id);
 		$data['v_ms_faskes_jenis'] = $this->faskesjenis_model->edit_data('ms_faskes_jenis', $where)->row_array();
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}
 		$this->load->view('partial/datafaskesjenis/editdata',$data);
 		$this->load->view('template/footer');
 	}
@@ -63,7 +75,11 @@ class Faskesjenis extends CI_Controller {
 		$data['v_faskes'] = $this->faskesjenis_model->getKeyword();
 		$keyword = $this->input->post('keyword');
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}
 		$this->load->view('partial/datafaskesjenis/data', $data);
 		$this->load->view('template/footer');
 	}

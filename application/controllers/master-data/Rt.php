@@ -13,7 +13,11 @@ class Rt extends CI_Controller {
 	{
 		$data['v_rt'] = $this->rt_model->tampil_data()->result();
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}
 		$this->load->view('partial/datart/data', $data);
 		$this->load->view('template/footer');
 	}
@@ -22,7 +26,11 @@ class Rt extends CI_Controller {
 		$data['v_rt'] = $this->rt_model->tampil_data()->result();
 		$data['nama'] = $this->rt_model->getRw();
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}
 		$this->load->view('partial/datart/tambahdata',$data);
 		$this->load->view('template/footer');
 	}
@@ -55,7 +63,11 @@ class Rt extends CI_Controller {
 		$data['v_rt'] = $this->rt_model->edit_data('data_rt', $where)->row_array();
 		$data['nama'] = $this->rt_model->getRw();
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}
 		$this->load->view('partial/datart/editdata',$data);
 		$this->load->view('template/footer');
 	}
@@ -64,7 +76,11 @@ class Rt extends CI_Controller {
 		$data['v_rt'] = $this->rt_model->getKeyword();
 		$keyword = $this->input->post('keyword');
 		$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}
 		$this->load->view('partial/datart/data', $data);
 		$this->load->view('template/footer');
 	}
@@ -72,7 +88,11 @@ class Rt extends CI_Controller {
 		$keyword = $this->input->post('keyword');
     	$data['v_rt'] = $this->rt_model->getKeyword($keyword);
     	$this->load->view('template/header');
-		$this->load->view('template/navbar');
+		if($this->session->userdata('user_id') == 1){
+        	   $this->load->view('template/navbar');
+        	}elseif($this->session->userdata('user_id') == 2){
+        	   $this->load->view('template/navpetugas');
+        	}
 		$this->load->view('partial/datart/data',$data);
 		$this->load->view('template/footer');
 	}
