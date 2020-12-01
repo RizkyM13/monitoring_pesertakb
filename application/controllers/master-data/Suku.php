@@ -72,16 +72,16 @@ class Suku extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
-	public function seacrh(){
-		$data['v_ms_suku'] = $this->suku_model->getKeyword();
+	public function search(){
 		$keyword = $this->input->post('keyword');
+		$data['v_ms_suku'] = $this->suku_model->getKeyword($keyword);
 		$this->load->view('template/header');
 		if($this->session->userdata('user_id') == 1){
         	   $this->load->view('template/navbar');
         	}elseif($this->session->userdata('user_id') == 2){
         	   $this->load->view('template/navpetugas');
         	}
-		$this->load->view('partial/datasuku/ms_suku',$data);
+		$this->load->view('partial/datasuku/data',$data);
 		$this->load->view('template/footer');
 	}
 

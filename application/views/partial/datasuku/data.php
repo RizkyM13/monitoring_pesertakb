@@ -10,7 +10,7 @@
             <div class="form-panel">
               <a href="<?= base_url(). 'master-data/suku/tambah'?>" class="btn btn-primary">Tambah Data</a>
               <div class="navbar-form navbar-right">
-            <form class="form-inline my-2 my-lg-0" action = "<?php echo base_url('master-data/datasuku/search') ?>" method ="post">
+            <form class="form-inline my-2 my-lg-0" action = "<?php echo base_url('master-data/suku/search') ?>" method ="post">
                 <input type="text" name="keyword" class="form-control" placeholder="search" autofocus="" autocomplete="off">
                 <button type="submit" class="btn btn-success">Cari</button>
             </form>
