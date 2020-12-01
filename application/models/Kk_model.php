@@ -14,13 +14,18 @@ class Kk_model extends CI_Model {
 		return $this->db->get('ms_user')->result();
 	}
 
-	function getKeyword(){
-		$this->db->select('*');
-		$this->db->from('kk_model');
-		$this->db->like('kk_id', $keyword);
-		return $this->db->get();
-		//$this->db->or_like('kec_kode', $keyword);
-
+	function getKeyword($keyword){
+		 $this->db->select('*');
+		 $this->db->from('kk');
+		 $this->db->join('ms_user', 'ms_user.user_id=kk.kk_lastupdate_by');
+		 $this->db->like('kk_id', $keyword);
+		 $this->db->or_like('kk_no', $keyword);
+		 $this->db->or_like('kk_tgl', $keyword);
+		 $this->db->or_like('kk_status', $keyword);
+		 $this->db->or_like('kk_lastupdate', $keyword);
+		 $this->db->or_like('kk_lastupdate_by', $keyword);
+		 return $this->db->get()->result();
+		 //return $this->db->get('kecamatan')->result();
 	}
 
 	function input_data($data, $table){
