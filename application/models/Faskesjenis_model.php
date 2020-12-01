@@ -15,10 +15,8 @@ class Faskesjenis_model extends CI_Model {
 
 	function getKeyword($keyword){
 		 $this->db->select('*');
-		 $this->db->from('ms_faskes');
-		 $this->db->join('desa', 'desa.desa_kode=ms_faskes.desa_kode');
-		 $this->db->like('faskesjenis_id', $keyword);
-		 $this->db->or_like('faskesjenis_kode', $keyword);
+		 $this->db->from('ms_faskes_jenis');
+		 $this->db->like('faskesjenis_kode', $keyword);
 		 $this->db->or_like('faskesjenis_nama', $keyword);
 		 $this->db->or_like('faskesjenis_aktif', $keyword);
 		 return $this->db->get()->result();

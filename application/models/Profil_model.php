@@ -23,7 +23,6 @@ class Profil_model extends CI_Model {
 		 $this->db->or_like('website', $keyword);
 		 $this->db->or_like('kodepos', $keyword);
 		 return $this->db->get()->result();
-		 //return $this->db->get('kecamatan')->result();
 	}
 
 	function input_data($data, $table){

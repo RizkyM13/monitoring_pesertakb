@@ -71,9 +71,9 @@ class Faskesjenis extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
-	public function seacrh(){
-		$data['v_faskes'] = $this->faskesjenis_model->getKeyword();
+	public function search(){
 		$keyword = $this->input->post('keyword');
+		$data['v_ms_faskes_jenis'] = $this->faskesjenis_model->getKeyword($keyword);
 		$this->load->view('template/header');
 		if($this->session->userdata('user_id') == 1){
         	   $this->load->view('template/navbar');
