@@ -11,15 +11,15 @@ class Suku_model extends CI_Model {
 		return $this->db->get('ms_suku');
 	}
 
-	function getKeyword(){
-		$this->db->select('*');
-		$this->db->from('ms_suku');
-		$this->db->like('suku_nama', $keyword);
-		return $this->db->get();
-		//$this->db->or_like('kec_kode', $keyword);
-
+	function getKeyword($keyword){
+		 $this->db->select('*');
+		 $this->db->from('ms_suku');
+		 $this->db->like('suku_id', $keyword);
+		 $this->db->or_like('suku_kode', $keyword);
+		 $this->db->or_like('suku_nama', $keyword);
+		 $this->db->or_like('suku_aktif', $keyword);
+		 return $this->db->get()->result();
 	}
-
 	function input_data($data, $table){
 		$this->db->insert($table, $data);
 	}
