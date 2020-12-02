@@ -8,8 +8,19 @@
       </div>
     </div>
 <div class="col-lg-12">
-            <div class="form-panel">
-              <a href="<?php echo base_url() . 'transaksi/kk/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
+<div class="form-panel">
+               <a href="<?php echo base_url() . 'transaksi/kk/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
+            <div class="navbar-form navbar-left">
+            <label> Show
+              <select size="1" name="hidden-table-info_length" aria-controls="hidden-table-info">
+                <option value="10" selected="selected">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select> 
+            </label>
+          </div>
+             
               <div class="navbar-form navbar-right">
             <form class="form-inline my-2 my-lg-0" action = "<?php echo base_url('transaksi/kk/search') ?>" method ="post">
                 <input type="text" name="keyword" class="form-control" placeholder="search" autofocus="" autocomplete="off">
