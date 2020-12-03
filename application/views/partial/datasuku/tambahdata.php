@@ -4,12 +4,9 @@
           <div class="form-panel">
             <br>
               <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'master-data/suku/tambah_aksi'; ?>">
-                <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">ID Suku</label>
-                    <div class="col-sm-10">
-                      <input type="number" name="suku_id" class="form-control" placeholder="Masukkan ID Suku">
-                    </div>
-                </div>
+                
+                      <input type="hidden" name="suku_id" class="form-control" placeholder="Masukkan ID Suku">
+                    
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Kode Suku</label>
                     <div class="col-sm-10">

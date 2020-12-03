@@ -10,7 +10,7 @@
                  <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Kode Group</label>
                     <div class="col-sm-10">
-                      <input type="number" name="grp_kode" class="form-control" placeholder="Masukkan Kode Group" value="<?php echo $v_ms_group['grp_id'] ?>">
+                      <input type="number" name="grp_kode" class="form-control" placeholder="Masukkan Kode Group" value="<?php echo $v_ms_group['grp_kode'] ?>">
                     </div>
                 </div>
                 <div class="form-group">

@@ -25,6 +25,13 @@ class Menu_model extends CI_Model {
 		 //return $this->db->get('kecamatan')->result();
 	}
 
+	function getData(){
+		$this->db->select('*');
+		$this->db->from('ms_menu');
+		$this->db->order_by('mn_kode','DESC');
+        return $this->db->get()->result();
+	}
+
 	function input_data($data, $table){
 		$this->db->insert($table, $data);
 	}

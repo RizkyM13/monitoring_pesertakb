@@ -8,7 +8,7 @@
     </div>
 <div class="col-lg-12">
 <div class="form-panel">
-               <a href="<?php echo base_url() . 'master-data/datasuku/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
+               <a href="<?php echo base_url() . 'master-data/suku/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
             <div class="navbar-form navbar-left">
             <label> Show
               <select size="1" name="hidden-table-info_length" aria-controls="hidden-table-info">
