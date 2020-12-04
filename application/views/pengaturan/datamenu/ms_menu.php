@@ -16,25 +16,25 @@
 
                <a href="<?php echo base_url() . 'setting/menu/tambah'; ?>" class="btn btn-primary right">Tambah Data</a>
 
-            <br>
+               <div class="navbar-form navbar-left">
+            <label> Show
+              <select size="1" name="hidden-table-info_length" aria-controls="hidden-table-info">
+                <option value="10" selected="selected">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select> 
+            </label>
+          </div>
+
             <div class="navbar-form navbar-right">
               <form class="form-inline my-2 my-lg-0" action = "<?php echo base_url() . 'setting/menu/search' ?>" method ="post">
                   <input type="text" name="keyword" class="form-control" placeholder="search" autofocus="" autocomplete="off">
                   <button type="submit" class="btn btn-success">Cari</button>
               </form>
             </div> 
-            <br>
+
             
-            <div id="hidden-table-info_lenght" class="dataTables_length navbar-left">
-            <label> Show
-              <select size="1" name="hidden-table-info_length" aria-controls="hidden-table-info" action = "<?php echo base_url() . 'setting/menu/show' ?>">
-                <option value="5" selected="selected">5</option>
-                <option value="10">10</option>
-                <option value="50">50</option>
-                <option value="100">100</option>
-              </select> 
-            </label>
-          </div>
               <br>
               <hr>
               <section id="unseen">
