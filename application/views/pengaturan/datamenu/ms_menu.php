@@ -2,12 +2,13 @@
 <section id="main-content">
 <section class="wrapper">
 <div class="row mt">
-  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/jquery-3.5.1.js">
-              <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js">
     <div class="col-lg-12">
       <div class="form-panel">
       <h4 class="mb">MS MENU</h4>
       </div>
+      <!-- Bootstrap core CSS -->
+      <!--external css-->
+      <link rel="stylesheet" href="<?= base_url() ?>/assets/lib/advanced-datatable/css/DT_bootstrap.css">
     </div>
 <div class="col-lg-12">
 <div class="form-panel">
@@ -16,7 +17,7 @@
 
                <a href="<?php echo base_url() . 'setting/menu/tambah'; ?>" class="btn btn-primary right">Tambah Data</a>
 
-               <div class="navbar-form navbar-left">
+               <div class="navbar-form navbar-left" action="<?php echo base_url() . 'setting/menu/show'; ?>">
             <label> Show
               <select size="1" name="hidden-table-info_length" aria-controls="hidden-table-info">
                 <option value="10" selected="selected">10</option>
@@ -38,11 +39,12 @@
               <br>
               <hr>
               <section id="unseen">
-                <table class="display table table-bordered dataTable" id="hidden-table-info" aria-describedby="hidden-table-info_info" action = "<?php echo base_url() . 'setting/menu/show' ?>">
+                <table class="display table table-bordered dataTable" id="hidden-table-info" aria-describedby="hidden-table-info_info">
                   <thead>
                   <tr role="row">
                       <th>No</th>
-                      <th class="sorting_asc" role="columnheader" tabindex="0" aria-controls="hidden-table-info" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Kode Menu: activate to sort column descending">Kode Menu
+                      <a href='<?= base_url() ?>index.php/Post/loadRecord/0/title/<?= $order ?>'>
+                      <th >Kode Menu
                       </th>
 
                       <th class="sorting" role="columnheader" tabindex="0" aria-controls="hidden-table-info" rowspan="1" colspan="1" aria-label="Nama Menu: activate to sort column ascending">Nama Menu
@@ -127,7 +129,39 @@
                   </div>
                 </div>
               </section>
-              
+  <script src="<?= base_url() ?>/assets/lib/jquery/jquery.min.js"></script>
+  <script type="text/javascript" language="javascript" src="<?= base_url() ?>/assets/lib/advanced-datatable/js/jquery.js"></script>
+  <script src="<?= base_url() ?>/assets/lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="<?= base_url() ?>/assets/lib/jquery.scrollTo.min.js"></script>
+  <script src="<?= base_url() ?>/assets/lib/jquery.nicescroll.js" type="text/javascript"></script>
+  <script type="text/javascript" language="javascript" src="<?= base_url() ?>/assets/lib/advanced-datatable/js/jquery.dataTables.js"></script>
+  <script type="text/javascript" src="<?= base_url() ?>/assets/lib/advanced-datatable/js/DT_bootstrap.js"></script>
+
+  <!--script for this page-->
+  <script type="text/javascript">
+    var tabel = null;
+    $(document).ready(function(){
+      tabel = $('#hidden-table-info').dataTable({
+            "processing": true,
+            "serverSide": true,
+            "ordering": true, // Set true agar bisa di sorting
+            "order": [[ 0, 'asc' ]], // Default sortingnya berdasarkan kolom / field ke 0 (paling pertama)
+            "deferRender": true,
+            "aLengthMenu": [[5, 10, 50],[ 5, 10, 50]], // Combobox Limit
+            "columns": [
+                { "data": "mn_kode" }, // Tampilkan nis
+                { "data": "mn_nama" },
+                { "data": "mn_level" }, // Tampilkan nis
+                { "data": "mn_induk" },
+                { "data": "mn_icon" }, // Tampilkan nis
+                { "data": "mn_url" },
+                { "data": "mn_aktif" },
+          
+          ],
+      });
+    });
+  </script>
+
             </div>
           </div>
             </div>

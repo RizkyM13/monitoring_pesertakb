@@ -8,7 +8,7 @@
     </div>
 <div class="col-lg-12">
 <div class="form-panel">
-              <div class="form-panel">
+              
                <a href="<?php echo base_url() . 'setting/ms_group/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
             <div class="navbar-form navbar-left">
             <label> Show
@@ -67,6 +67,33 @@
                 <?php } ?>
                 </tbody>
                 </table>
+                <div class="row-fluid">
+                  <div class="span6">
+                    <div class="dataTables_info" id="hidden-table-info_info">Showing 1 to 5 of 25 entries
+                    </div>
+                  </div>
+                  <div class="span6">
+                    <div class="dataTables_paginate paging_bootstrap pagination">
+                      <ul>
+                        <li class="prev disabled">
+                          <a href="#">← Previous</a>
+                        </li>
+                        <li class="active">
+                          <a href="#">1</a>
+                        </li>
+                        <li>
+                          <a href="#">2</a>
+                        </li>
+                        <li>
+                          <a href="#">3</a>
+                        </li>
+                        <li class="next">
+                          <a href="#">Next → </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </section>
             </div>
             <!-- /content-panel -->
