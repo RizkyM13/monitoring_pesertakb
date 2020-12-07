@@ -25,24 +25,6 @@ class Menu_model extends CI_Model {
 		 //return $this->db->get('kecamatan')->result();
 	}
 
-	function getData(){
-		 $this->db->select('*');
-		 $this->db->from('ms_menu');
-		 $this->db->order_by('mn_kode', 'ASC');
-		 $this->db->order_by('mn_nama', 'ASC');
-		 $this->db->order_by('mn_level','ASC');
-		 $this->db->order_by('mn_induk', 'ASC');
-		 $this->db->order_by('mn_icon', 'ASC');
-		 $this->db->order_by('mn_url', 'ASC');
-		 $this->db->order_by('mn_aktif', 'ASC');
-    	 return $this->db->get()->result(); // Eksekusi query sql sesuai kondisi diatas
-
-	}
-
-	function count_all(){
-    return $this->db->count_all('ms_menu'); // Untuk menghitung semua data siswa
-  	}
-
 	function input_data($data, $table){
 		$this->db->insert($table, $data);
 	}

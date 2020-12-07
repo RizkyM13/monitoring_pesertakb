@@ -60,7 +60,7 @@ class Menu extends CI_Controller {
 	}
 
 	public function edit($id){
-		$where = array('user_id'=>$id);
+		$where = array('mn_id'=>$id);
 		$data['v_ms_menu'] = $this->menu_model->edit_data('ms_menu', $where)->row_array();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');

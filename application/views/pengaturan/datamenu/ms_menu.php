@@ -8,16 +8,21 @@
       </div>
       <!-- Bootstrap core CSS -->
       <!--external css-->
-      <link rel="stylesheet" href="<?= base_url() ?>/assets/lib/advanced-datatable/css/DT_bootstrap.css">
+      <link href="lib/advanced-datatable/css/demo_page.css" rel="stylesheet" />
+      <link href="lib/advanced-datatable/css/demo_table.css" rel="stylesheet" />
+      <link rel="stylesheet" href="lib/advanced-datatable/css/DT_bootstrap.css" />
+      
     </div>
 <div class="col-lg-12">
 <div class="form-panel">
-              
+<div class="adv-table">
+<div id = "hidden-table-info_wrapper" class="dataTables_wrapper form-inline" role="grid">             
 
 
                <a href="<?php echo base_url() . 'setting/menu/tambah'; ?>" class="btn btn-primary right">Tambah Data</a>
 
-               <div class="navbar-form navbar-left" action="<?php echo base_url() . 'setting/menu/show'; ?>">
+
+               <div id = "hidden-table-info_length" class="dataTables_length">
             <label> Show
               <select size="1" name="hidden-table-info_length" aria-controls="hidden-table-info">
                 <option value="10" selected="selected">10</option>
@@ -43,8 +48,7 @@
                   <thead>
                   <tr role="row">
                       <th>No</th>
-                      <a href='<?= base_url() ?>index.php/Post/loadRecord/0/title/<?= $order ?>'>
-                      <th >Kode Menu
+                      <th class="sorting" role="columnheader" tabindex="0" aria-controls="hidden-table-info" rowspan="1" colspan="1" aria-label="Kode Menu: activate to sort column ascending">Kode Menu
                       </th>
 
                       <th class="sorting" role="columnheader" tabindex="0" aria-controls="hidden-table-info" rowspan="1" colspan="1" aria-label="Nama Menu: activate to sort column ascending">Nama Menu
@@ -84,12 +88,12 @@
                       <th><?= $item->mn_url?></th>
                       <th><?= $item->mn_aktif == 1 ? 'Aktif' : 'Non Aktif'?></th>
                       <th>
-                        <button class="btn btn-success btn-xs">
+                        <a href="<?php echo base_url() . 'setting/menu/menu'; ?>/<?php echo $item->mn_id ?>"class="btn btn-success btn-xs">
                             <i class="fa fa-check"></i>
-                          </button>
-                          <a class="btn btn-primary btn-xs">
+                        </a>
+                          <a href="<?php echo base_url() . 'setting/menu/edit'; ?>/<?php echo $item->mn_id ?>" class="btn btn-primary btn-xs">
                               <i class="fa fa-pencil"></i>
-                          </a>
+                        </a>
                           
                           <a class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
                               <i class="fa fa-trash-o "></i>
@@ -128,37 +132,28 @@
                     </div>
                   </div>
                 </div>
+                
+
               </section>
-  <script src="<?= base_url() ?>/assets/lib/jquery/jquery.min.js"></script>
-  <script type="text/javascript" language="javascript" src="<?= base_url() ?>/assets/lib/advanced-datatable/js/jquery.js"></script>
-  <script src="<?= base_url() ?>/assets/lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="<?= base_url() ?>/assets/lib/jquery.scrollTo.min.js"></script>
-  <script src="<?= base_url() ?>/assets/lib/jquery.nicescroll.js" type="text/javascript"></script>
   <script type="text/javascript" language="javascript" src="<?= base_url() ?>/assets/lib/advanced-datatable/js/jquery.dataTables.js"></script>
   <script type="text/javascript" src="<?= base_url() ?>/assets/lib/advanced-datatable/js/DT_bootstrap.js"></script>
 
   <!--script for this page-->
   <script type="text/javascript">
-    var tabel = null;
     $(document).ready(function(){
-      tabel = $('#hidden-table-info').dataTable({
-            "processing": true,
-            "serverSide": true,
-            "ordering": true, // Set true agar bisa di sorting
-            "order": [[ 0, 'asc' ]], // Default sortingnya berdasarkan kolom / field ke 0 (paling pertama)
-            "deferRender": true,
-            "aLengthMenu": [[5, 10, 50],[ 5, 10, 50]], // Combobox Limit
-            "columns": [
-                { "data": "mn_kode" }, // Tampilkan nis
-                { "data": "mn_nama" },
-                { "data": "mn_level" }, // Tampilkan nis
-                { "data": "mn_induk" },
-                { "data": "mn_icon" }, // Tampilkan nis
-                { "data": "mn_url" },
-                { "data": "mn_aktif" },
-          
-          ],
-      });
+      $('#hidden-table-info').dataTable({
+        "columnDefs": [
+          {
+          "render" : function(data,type,row){
+            return data +' ('+row[3]+')';
+
+          },
+          "targets" : 0
+        },
+        {"visible" : false, "targets": [3]}
+        ]
+        });
+
     });
   </script>
 
@@ -167,3 +162,7 @@
             </div>
             <!-- /content-panel -->
           </div>
+          </div>
+          
+        </section>
+      </section>
