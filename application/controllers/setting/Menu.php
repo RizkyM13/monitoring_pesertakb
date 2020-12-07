@@ -77,14 +77,7 @@ class Menu extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
-	public function show(){
-    	$data['v_ms_menu'] = $this->menu_model->getData($orderby); // Panggil fungsi filter pada SiswaModel
-    	$this->load->view('template/header');
-		$this->load->view('template/navbar');
-		$this->load->view('pengaturan/datamenu/ms_menu', $data);
-		$this->load->view('template/footer');
-
-	}
+	
 
 	public function update(){
 		$mn_id				= $this->input->post('mn_id');

@@ -16,9 +16,9 @@
   <!-- Bootstrap core CSS -->
   <link href="<?= base_url() ?>/assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!--external css-->
-  <link href="<?= base_url() ?>/assets/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <link href="<?= base_url() ?>/assets/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/css/zabuto_calendar.css">
-  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/lib/gritter/css/jquery.gritter.css" />
+  <link rel="stylesheet" type="text/css" href="<?= base_url() ?>/assets/lib/gritter/css/jquery.gritter.css">
 
   <!-- Custom styles for this template -->
   <link href=" <?= base_url() ?>/assets/css/style.css" rel="stylesheet">
