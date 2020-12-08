@@ -11,6 +11,7 @@
       <link href="<?= base_url() ?>/assets/lib/advanced-datatable/css/demo_page.css" rel="stylesheet" />
       <link href="<?= base_url() ?>/assets/lib/advanced-datatable/css/demo_table.css" rel="stylesheet" />
       <link rel="stylesheet" href="<?= base_url() ?>/assets/lib/advanced-datatable/css/DT_bootstrap.css" />
+      <link rel="stylesheet" href="<?= base_url() ?>/assets/lib/advanced-datatable/css/jquery.dataTables.css" />
       
     </div>
 <div class="col-lg-12">
@@ -83,7 +84,8 @@
                 <tbody role="alert" aria-live="polite" aria-relevant="all">
                   <tr>
                     <?php
-                            $i = 1;
+                          
+                            $i = $this->uri->segment('3') + 1;
                             foreach ($v_ms_menu as $item) {
                             ?>
                       <td><?= $i++ ?></td>
@@ -112,6 +114,9 @@
                   <?php } ?>
                 </tbody>
                 </table>
+                <?php 
+                echo $this->pagination->create_links();
+                ?>
                 <div class="row-fluid">
                   <div class="span6">
                     <div class="dataTables_info" id="hidden-table-info_info">Showing 1 to 5 of 25 entries
@@ -203,15 +208,17 @@ function sortTable(n) {
   }
 }
 
-
-
-   
-$(document).ready(function (){
-    var table = $('#hidden-table-info').dataTable({
-       lengthMenu: [ [2, 4, 8, -1], [2, 4, 8, "All"] ],
-       pageLength: 4
-    });
+$(document).ready(function(){
+  $('table#hidden-table-info').dataTable({
+    "search" : true,
+    "pagination": true,
+    "pageLenght" : 5
+  });
 });
+
+
+
+
 
 </script>
 

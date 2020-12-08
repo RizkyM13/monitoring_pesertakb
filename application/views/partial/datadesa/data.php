@@ -30,14 +30,14 @@
             </div> 
             
               <section id="unseen">
-                <table class="table table-bordered table-striped table-condensed">
+                <table class="table table-bordered table-striped table-condensed" id="hidden-table-info">
                   <thead>
                   <tr>
                       <th>No</th>
-                      <th>Kode Desa</th>
-                      <th>Kecamatan</th>
-                      <th>Nama Desa</th>
-                      <th>Desa Aktif</th>
+                      <th onclick="sortTable(1)">Kode Desa</th>
+                      <th onclick="sortTable(0)">Kecamatan</th>
+                      <th onclick="sortTable(0)">Nama Desa</th>
+                      <th onclick="sortTable(1)">Desa Aktif</th>
                       <th>Aksi</th>
                   </tr>
                 </thead>
@@ -47,12 +47,12 @@
                     $i = 1;
                     foreach ($v_desa as $item) {
                   ?>
-                      <th><?= $i++ ?></th>
-                      <th><?= $item->desa_kode  ?></th>
-                      <th><?= $item->kec_nama   ?></th>
-                      <th><?= $item->desa_nama  ?></th>
-                      <th><?= $item->desa_aktif == 1 ? 'Aktif' : 'Non Aktif'?></th>
-                      <th>
+                      <td><?= $i++ ?></th>
+                      <td><?= $item->desa_kode  ?></td>
+                      <td><?= $item->kec_nama   ?></td>
+                      <td><?= $item->desa_nama  ?></td>
+                      <td><?= $item->desa_aktif == 1 ? 'Aktif' : 'Non Aktif'?></th>
+                      <td>
                         <button class="btn btn-success btn-xs">
                             <i class="fa fa-check"></i>
                           </button>
@@ -64,7 +64,7 @@
                               <i class="fa fa-trash-o "></i>
                           </a> 
                           
-                        </th>
+                        </td>
                   </tr>
                 <?php } ?>
                 </tbody>
@@ -97,7 +97,61 @@
                   </div>
                 </div>
               </section>
-              </section>
+              <script>
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("hidden-table-info");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = "asc"; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
             </div>
 
             <!-- /content-panel -->

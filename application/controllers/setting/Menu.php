@@ -6,12 +6,22 @@ class Menu extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->helper(array('url'));
 		$this->load->model('menu_model');
 	}
 
 	public function index()
-	{
-		$data['v_ms_menu'] = $this->menu_model->tampil_data()->result();
+	{	
+		$this->load->database();
+		$jumlah_data = $this->menu_model->jumlah_data();
+		$this->load->library('pagination');
+		$config['base_url']	= base_url(). 'setting/menu';
+		$config['total_rows'] = $jumlah_data;
+		$config['per_page'] = 5;
+		$from = $this->uri->segment(3);
+		$this->pagination->initialize($config);
+		$data['ms_menu'] = $this->menu_model->data($config['per_page'], $from);
+		$data['v_ms_menu'] 	= $this->menu_model->tampil_data()->result();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('pengaturan/datamenu/ms_menu', $data);
@@ -77,8 +87,6 @@ class Menu extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
-	
-
 	public function update(){
 		$mn_id				= $this->input->post('mn_id');
 		$mn_kode			= $this->input->post('mn_kode');
@@ -108,4 +116,5 @@ class Menu extends CI_Controller {
 		$this->menu_model->update_data($where, $data, 'ms_menu');
 		redirect('setting/menu');
 	}
+
 }
