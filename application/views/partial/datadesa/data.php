@@ -5,30 +5,45 @@
       <div class="form-panel">
       <h4 class="mb">DATA DESA</h4>
       </div>
+      <link href="<?= base_url() ?>/assets/lib/advanced-datatable/css/demo_page.css" rel="stylesheet" />
+      <link href="<?= base_url() ?>/assets/lib/advanced-datatable/css/demo_table.css" rel="stylesheet" />
+      <link rel="stylesheet" href="<?= base_url() ?>/assets/lib/advanced-datatable/css/DT_bootstrap.css" />
+      <link rel="stylesheet" href="<?= base_url() ?>/assets/lib/advanced-datatable/css/jquery.dataTables.css" />
     </div>
 
     <div class="col-lg-12">
     <div class="form-panel">
             <a href="<?php echo base_url() . 'master-data/desa/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
 
-            <div class="navbar-form navbar-left">
-            <label> Show
-              <select size="1" name="hidden-table-info_length" aria-controls="hidden-table-info">
-                <option value="10" selected="selected">10</option>
-                <option value="25">25</option>
-                <option value="50">50</option>
-                <option value="100">100</option>
-              </select> 
-            </label>
-          </div>
+            <div class = "row-fluid">  
+            <div id = "hidden-table-info_length" class="dataTables_length">
+              <div class = "navbar-form navbar-left">
+                <label> Show
+                  <select size="1" name="hidden-table-info_length" aria-controls="hidden-table-info">
+                  <option onclick="" value="5" selected="selected">5</option>
+                  <option onclick="" value="10">10</option>
+                  <option onclick="" value="21">21</option>
+                  </select> 
+                </label>
+              </div>
+            </div>
+          
+          
 
-            <div class="navbar-form navbar-right">
-            <form class="form-inline my-2 my-lg-0" action = "<?php echo base_url('master-data/desa/search') ?>" method ="post">
-                <input type="text" name="keyword" class="form-control" placeholder="search" autofocus="" autocomplete="off">
-                <button type="submit" class="btn btn-success">Cari</button>
-            </form>
+            <div class = "span6">     
+              <div id = "hidden-table-info_filter" class="dataTables_filter">
+                <div class="navbar-form navbar-right">
+                  <form class="form-inline my-2 my-lg-0" action = "<?php echo base_url() . 'master-data/desa/search' ?>" method ="post">
+                  <input type="text" name="keyword" class="form-control" placeholder="search" autofocus="" autocomplete="off">
+                  <button type="submit" class="btn btn-success">Cari</button>
+              </form>
             </div> 
-            
+          </div>
+        </div>
+      </div>
+            <br>
+              <br>
+              <hr>
               <section id="unseen">
                 <table class="table table-bordered table-striped table-condensed" id="hidden-table-info">
                   <thead>
@@ -97,6 +112,9 @@
                   </div>
                 </div>
               </section>
+              <script type="text/javascript" language="javascript" src="<?= base_url() ?>/assets/lib/advanced-datatable/js/jquery.dataTables.js"></script>
+  <script type="text/javascript" src="<?= base_url() ?>/assets/lib/advanced-datatable/js/DT_bootstrap.js"></script>
+  <script type="text/javascript" src="<?= base_url() ?>/assets/lib/advanced-datatable/js/jquery.dataTable.min.js"></script>
               <script>
 function sortTable(n) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
@@ -152,6 +170,7 @@ function sortTable(n) {
     }
   }
 }
+</script>
             </div>
 
             <!-- /content-panel -->
