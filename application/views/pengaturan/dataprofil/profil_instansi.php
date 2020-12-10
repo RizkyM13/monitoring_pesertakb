@@ -7,8 +7,7 @@
       </div>
       <!-- Bootstrap core CSS -->
       <!--external css-->
-      <link href="<?= base_url() ?>/assets/lib/advanced-datatable/css/demo_page.css" rel="stylesheet" />
-      <link href="<?= base_url() ?>/assets/lib/advanced-datatable/css/demo_table.css" rel="stylesheet" />
+
       <link rel="stylesheet" href="<?= base_url() ?>/assets/lib/advanced-datatable/css/DT_bootstrap.css" />
       <link rel="stylesheet" href="<?= base_url() ?>/assets/lib/advanced-datatable/css/jquery.dataTables.css" />
       
@@ -56,8 +55,7 @@
                   <thead>
                   <tr role="row">
                       <th>No</th>
-                      <th onclick="sortTable(1)">ID
-                      </th>
+                     
 
                       <th onclick="sortTable(1)">Kode
                       </th>
@@ -65,14 +63,12 @@
                       <th onclick="sortTable(0)">Instansi
                       </th>
 
-                      <th onclick="sortTable(1)">Nick Instansi
-                      </th>
+                     
 
                       <th onclick="sortTable(0)">Alamat
                       </th>
 
-                      <th onclick="sortTable(1)">Kode Kabupaten
-                      </th>
+                      
 
                       <th onclick="sortTable(0)">Telepon
                       </th>
@@ -94,21 +90,18 @@
                   <tr>
                     <?php
                           
-                            $i = $this->uri->segment('3') + 1;
+                            $i = 1;
                             foreach ($v_profil as $item) {
                             ?>
                       <td><?= $i++ ?></td>
-                      <td><?= $item->id ?></td>
                       <td><?= $item->kode?></td>
                       <td><?= $item->instansi?></td>
-                      <td><?= $item->instansi_nick?></td>
                       <td><?= $item->alamat?></td>
-                      <td><?= $item->kab_kode?></td>
                       <td><?= $item->telp?></td>
                       <td><?= $item->email?></td>
                       <td><?= $item->website?></td>
                       <td><?= $item->kodepos?></td>
-                      <td><?= $item->logo?></td>
+                     
                     
                       <td>
                         <a href="<?php echo base_url() . 'setting/profil/menu'; ?>/<?php echo $item->id ?>"class="btn btn-success btn-xs">
@@ -128,9 +121,7 @@
                   <?php } ?>
                 </tbody>
                 </table>
-                <?php 
-                echo $this->pagination->create_links();
-                ?>
+                
                 <div class="row-fluid">
                   <div class="span6">
                     <div class="dataTables_info" id="hidden-table-info_info">Showing 1 to 5 of 25 entries
