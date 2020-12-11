@@ -25,14 +25,6 @@ class Menu_model extends CI_Model {
 		 //return $this->db->get('kecamatan')->result();
 	}
 
-	function data($number, $offset){
-		return $query = $this->db->get('ms_menu', $number, $offset)->result();
-	}
-
-	function jumlah_data(){
-		return $this->db->get('ms_menu')->num_rows();
-	}
-
 	function input_data($data, $table){
 		$this->db->insert($table, $data);
 	}

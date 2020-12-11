@@ -6,9 +6,9 @@
               <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'setting/user/tambah_aksi'; ?>">
                 <div class="form-group">
                  
-                    <div class="col-sm-10">
+                    
                       <input type="hidden" name="user_id" class="form-control" placeholder="Masukkan ID User">
-                    </div>
+                    
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Kader</label>

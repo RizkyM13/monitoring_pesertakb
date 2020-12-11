@@ -13,7 +13,7 @@
 
     <div class="col-lg-12">
     <div class="form-panel">
-            <a href="<?php echo base_url() . 'master-data/ms_suku/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
+            <a href="<?php echo base_url() . 'master-data/suku/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
 
             <div class = "row-fluid">  
             <div id = "hidden-table-info_length" class="dataTables_length">
@@ -71,11 +71,11 @@
                         <button class="btn btn-success btn-xs">
                             <i class="fa fa-check"></i>
                           </button>
-                          <a href="<?php echo base_url() . 'master-data/ms_suku/edit'; ?>/<?php echo $item->suku_id ?>" class="btn btn-primary btn-xs">
+                          <a href="<?php echo base_url() . 'master-data/suku/edit'; ?>/<?php echo $item->suku_id ?>" class="btn btn-primary btn-xs">
                               <i class="fa fa-pencil"></i>
                           </a>
                           
-                          <a href="<?php echo base_url() . 'master-data/ms_suku/hapus';?>/<?php echo $item->suku_id ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
+                          <a href="<?php echo base_url() . 'master-data/suku/hapus';?>/<?php echo $item->suku_id ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
                               <i class="fa fa-trash-o "></i>
                           </a> 
                           

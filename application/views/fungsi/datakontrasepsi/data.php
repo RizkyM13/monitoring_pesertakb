@@ -46,7 +46,7 @@
                   <thead>
                   <tr>
                       <th>No</th>
-                      <th onclick="sortTable(1)">ID Kontrasepsi</th>
+                      
                       <th onclick="sortTable(1)">Kode Kontransepsi</th>
                       <th onclick="sortTable(0)">Nama Kontransepsi</th>
                       <th onclick="sortTable(1)">Kontransepsi Kedaluarsa</th>
@@ -61,7 +61,7 @@
                             foreach ($v_kontrasepsi as $item) {
                             ?>
                       <td><?= $i++ ?></td>
-                      <td><?= $item->kontrasepsi_id ?></td>
+                      
                       <td><?= $item->kontransepsi_kode?></td>
                       <td><?= $item->kontransepsi_nama ?></td>
                       <td><?= $item->kontransepsi_expired ?></td>

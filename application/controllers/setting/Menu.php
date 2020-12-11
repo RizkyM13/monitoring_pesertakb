@@ -6,21 +6,11 @@ class Menu extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->helper(array('url'));
 		$this->load->model('menu_model');
 	}
 
 	public function index()
 	{	
-		$this->load->database();
-		$jumlah_data = $this->menu_model->jumlah_data();
-		$this->load->library('pagination');
-		$config['base_url']	= base_url(). 'setting/menu';
-		$config['total_rows'] = $jumlah_data;
-		$config['per_page'] = 5;
-		$from = $this->uri->segment(3);
-		$this->pagination->initialize($config);
-		$data['ms_menu'] = $this->menu_model->data($config['per_page'], $from);
 		$data['v_ms_menu'] 	= $this->menu_model->tampil_data()->result();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');

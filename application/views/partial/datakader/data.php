@@ -50,14 +50,14 @@
                   <thead>
                   <tr>
                       <th>No</th>
-                      <th onclick="sortTable(1)">ID Kader</th>
+                      
                       <th onclick="sortTable(0)">Nama Kader</th>
-                      <th onclick="sortTable(1)">NIK Kader</th>
-                      <th onclick="sortTable(0)">Jenis Kelamin Kader</th>
+                      <th onclick="sortTable(1)">NIK</th>
+                      <th onclick="sortTable(0)">Jenis Kelamin</th>
                       <th onclick="sortTable(0)">Kelahiran Kader</th>
-                      <th onclick="sortTable(0)">Tanggal Lahir Kader</th>
-                      <th onclick="sortTable(0)">Email Kader</th>
-                      <th onclick="sortTable(0)">Hp Kader</th>
+                      <th onclick="sortTable(0)">Tanggal Lahir</th>
+                      <th onclick="sortTable(0)">Email</th>
+                      <th onclick="sortTable(0)">Nomor Telepon</th>
                       <th onclick="sortTable(1)">Kader Aktif</th>
                       <th>Aksi</th>
                   </tr>
@@ -69,7 +69,7 @@
                     foreach ($v_kader as $item) {
                   ?>
                       <td><?= $i++ ?></th>
-                      <td><?= $item->kader_id  ?></td>
+                      
                       <td><?= $item->kader_nama   ?></td>
                       <td><?= $item->kader_nik  ?></td>
                       <td><?= $item->kader_sex  ?></td>

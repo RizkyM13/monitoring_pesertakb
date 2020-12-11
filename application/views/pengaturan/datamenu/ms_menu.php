@@ -85,8 +85,8 @@
                 <tbody role="alert" aria-live="polite" aria-relevant="all">
                   <tr>
                     <?php
-                          
-                            $i = $this->uri->segment('3') + 1;
+                        
+                            $i = 1;
                             foreach ($v_ms_menu as $item) {
                             ?>
                       <td><?= $i++ ?></td>
@@ -115,9 +115,7 @@
                   <?php } ?>
                 </tbody>
                 </table>
-                <?php 
-                echo $this->pagination->create_links();
-                ?>
+                
                 <div class="row-fluid">
                   <div class="span6">
                     <div class="dataTables_info" id="hidden-table-info_info">Showing 1 to 5 of 25 entries
@@ -145,7 +143,6 @@
                     </div>
                   </div>
                 </div>
-                
 
               </section>
   <script type="text/javascript" language="javascript" src="<?= base_url() ?>/assets/lib/advanced-datatable/js/jquery.dataTables.js"></script>

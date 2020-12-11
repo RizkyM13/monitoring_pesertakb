@@ -56,16 +56,12 @@
                   <thead>
                   <tr role="row">
                       <th>No</th>
-                      <th onclick="sortTable(1)">ID User
-                      </th>
+                      
 
-                      <th onclick="sortTable(1)">ID Kader
+                      <th onclick="sortTable(1)">Nama Kader
                       </th>
 
                       <th onclick="sortTable(1)">Username
-                      </th>
-
-                      <th onclick="sortTable(1)">Password User
                       </th>
 
                       <th onclick="sortTable(0)">Status User
@@ -79,14 +75,13 @@
                   <tr>
                     <?php
                           
-                            $i = $this->uri->segment('3') + 1;
+                            $i = 1;
                             foreach ($v_ms_user as $item) {
                             ?>
                       <td><?= $i++ ?></td>
-                      <td><?= $item->user_id ?></td>
-                      <td><?= $item->kader_id?></td>
+                      <td><?= $item->kader_nama?></td>
                       <td><?= $item->user_name?></td>
-                      <td><?= $item->user_password?></td>
+                      
                       <td><?= $item->user_status?></td>
                       <td>
                         <a href="<?php echo base_url() . 'setting/user/menu'; ?>/<?php echo $item->user_id ?>"class="btn btn-success btn-xs">
@@ -106,9 +101,6 @@
                   <?php } ?>
                 </tbody>
                 </table>
-                <?php 
-                echo $this->pagination->create_links();
-                ?>
                 <div class="row-fluid">
                   <div class="span6">
                     <div class="dataTables_info" id="hidden-table-info_info">Showing 1 to 5 of 25 entries
