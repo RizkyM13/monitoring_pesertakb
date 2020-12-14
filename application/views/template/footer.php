@@ -23,6 +23,9 @@
   <!-- js placed at the end of the document so the pages load faster -->
   <script src="<?= base_url() ?>/assets/lib/jquery/jquery.min.js"></script>
   <script src="<?= base_url() ?>/assets/lib/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" language="javascript" src="<?= base_url() ?>/assets/lib/advanced-datatable/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="<?= base_url() ?>/assets/lib/advanced-datatable/js/jquery.dataTables.js"></script>
+  <script type="text/javascript" src="<?= base_url() ?>/assets/lib/advanced-datatable/js/DT_bootstrap.js"></script>
   <script class="include" type="text/javascript" src="<?= base_url() ?>/assets/lib/jquery.dcjqaccordion.2.7.js"></script>
   <script src="<?= base_url() ?>/assets/lib/jquery.scrollTo.min.js"></script>
   <script src="<?= base_url() ?>/assets/lib/jquery.nicescroll.js" type="text/javascript"></script>
@@ -36,6 +39,48 @@
   <!--script for this page-->
   <script src="<?= base_url() ?>/assets/lib/sparkline-chart.js"></script>
   <script src="<?= base_url() ?>/assets/lib/zabuto_calendar.js"></script>
+  <script type="text/javascript">
+    /* Formating function for row details */
+    function fnFormatDetails(oTable, nTr) {
+      var aData = oTable.fnGetData(nTr);
+      var sOut = '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">';
+      sOut += '<tr><td>Rendering engine:</td><td>' + aData[1] + ' ' + aData[4] + '</td></tr>';
+      sOut += '<tr><td>Link to source:</td><td>Could provide a link here</td></tr>';
+      sOut += '<tr><td>Extra info:</td><td>And any further details here (images etc)</td></tr>';
+      sOut += '</table>';
+
+      return sOut;
+    }
+
+    $(document).ready(function() {
+      /*
+       * Insert a 'details' column to the table
+       */
+      var nCloneTh = document.createElement('th');
+      var nCloneTd = document.createElement('td');
+     
+      nCloneTd.className = "center";
+
+      /*
+       * Initialse DataTables, with no sorting on the 'details' column
+       */
+      var oTable = $('#hidden-table-info').dataTable({
+        "aoColumnDefs": [{
+          "bSortable": true,
+          "aTargets": [0]
+        }],
+        "aaSorting": [
+          [1, 'asc']
+        ]
+      });
+
+      /* Add event listener for opening and closing details
+       * Note that the indicator for showing which row is open is not controlled by DataTables,
+       * rather it is done here
+       */
+      
+    });
+  </script>
   <script type="text/javascript">
     $(document).ready(function() {
       var unique_id = $.gritter.add({

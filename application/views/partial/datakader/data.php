@@ -69,7 +69,6 @@
                     foreach ($v_kader as $item) {
                   ?>
                       <td><?= $i++ ?></th>
-                      
                       <td><?= $item->kader_nama   ?></td>
                       <td><?= $item->kader_nik  ?></td>
                       <td><?= $item->kader_sex  ?></td>

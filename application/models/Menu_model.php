@@ -25,6 +25,7 @@ class Menu_model extends CI_Model {
 		 //return $this->db->get('kecamatan')->result();
 	}
 
+
 	function input_data($data, $table){
 		$this->db->insert($table, $data);
 	}
