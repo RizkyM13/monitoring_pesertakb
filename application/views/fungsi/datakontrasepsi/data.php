@@ -4,176 +4,69 @@
     <div class="col-lg-12">
       <div class="form-panel">
       <h4 class="mb">DATA KONTRASEPSI</h4>
-      <link rel="stylesheet" href="<?= base_url() ?>/assets/lib/advanced-datatable/css/DT_bootstrap.css" />
-      <link rel="stylesheet" href="<?= base_url() ?>/assets/lib/advanced-datatable/css/jquery.dataTables.css" />
       </div>
     </div>
 <div class="col-lg-12">
 <div class="form-panel">
-               <a href="<?php echo base_url() . 'transaksi/kontrasepsi/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
-            <div class = "row-fluid">  
-            <div id = "hidden-table-info_length" class="dataTables_length">
-              <div class = "navbar-form navbar-left">
-                <label> Show
-                  <select size="1" name="hidden-table-info_length" aria-controls="hidden-table-info">
-                  <option onclick="" value="5" selected="selected">5</option>
-                  <option onclick="" value="10">10</option>
-                  <option onclick="" value="21">21</option>
-                  </select> 
-                </label>
-              </div>
-            </div>
-          
-          
 
-            <div class = "span6">     
-              <div id = "hidden-table-info_filter" class="dataTables_filter">
-                <div class="navbar-form navbar-right">
-                  <form class="form-inline my-2 my-lg-0" action = "<?php echo base_url() . 'transaksi/kontrasepsi/search' ?>" method ="post">
-                  <input type="text" name="keyword" class="form-control" placeholder="search" autofocus="" autocomplete="off">
-                  <button type="submit" class="btn btn-success">Cari</button>
-              </form>
-            </div> 
-          </div>
-        </div>
-      </div>
-      
-            <br>
-            <br>
+               <a href="<?php echo base_url() . 'transaksi/kontrasepsi/tambah'; ?>" class="btn btn-primary right" accesskey="t">Tambah Data</a>
+
+          <div class="adv-table">
             <hr>
               <section id="unseen">
-                <table class="table table-bordered table-striped table-condensed" id="hidden-table-info">
+                <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="hidden-table-info">
                   <thead>
-                  <tr>
+                  <tr role="row">
                       <th>No</th>
-                      
-                      <th onclick="sortTable(1)">Kode Kontransepsi</th>
-                      <th onclick="sortTable(0)">Nama Kontransepsi</th>
-                      <th onclick="sortTable(1)">Kontransepsi Kedaluarsa</th>
-                      <th onclick="sortTable(1)">Kontrasepsi Aktif</th>
+                      <th>ID Kontrasepsi</th>
+                      <th>Kode Kontransepsi</th>
+                      <th>Nama Kontransepsi</th>
+                      <th>Kontransepsi Kedaluarsa</th>
+                      <th>Kontrasepsi Aktif</th>
                       <th>Aksi</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody role="alert" aria-live="polite" aria-relevant="all">
                   <tr>
-                            <?php
+                    <?php
+                        
                             $i = 1;
                             foreach ($v_kontrasepsi as $item) {
                             ?>
                       <td><?= $i++ ?></td>
-                      
+                      <td><?= $item->kontrasepsi_id?></td>
                       <td><?= $item->kontransepsi_kode?></td>
-                      <td><?= $item->kontransepsi_nama ?></td>
-                      <td><?= $item->kontransepsi_expired ?></td>
+                      <td><?= $item->kontransepsi_nama?></td>
+                      <td><?= $item->kontransepsi_expired?></td>
                       <td><?= $item->kontrasepsi_aktif == 1 ? 'Aktif' : 'Non Aktif'?></td>
                       <td>
-                        <button class="btn btn-success btn-xs">
+                        <a href="<?php echo base_url() . 'transaksi/kontrasepsi/menu'; ?>/<?php echo $item->kontrasepsi_id ?>"class="btn btn-success btn-xs">
                             <i class="fa fa-check"></i>
-                          </button>
-                          <a href="<?php echo base_url() . 'transaksi/kontrasepsi/edit'; ?>/<?php echo $item->kontrasepsi_id ?>" class="btn btn-primary btn-xs">
+                        </a>
+
+                        <a href="<?php echo base_url() . 'transaksi/kontrasepsi/edit'; ?>/<?php echo $item->kontrasepsi_id ?>" class="btn btn-primary btn-xs">
                               <i class="fa fa-pencil"></i>
-                          </a>
-                          
-                          <a href="<?php echo base_url() . 'transaksi/kontrasepsi/hapus';?>/<?php echo $item->kontrasepsi_id ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
-                              <i class="fa fa-trash-o "></i>
-                          </a> 
+                        </a>
+
+                        <a href="<?php echo base_url() . 'transaksi/kontrasepsi/hapus'; ?>/<?php echo $item->kontrasepsi_id ?>" class="btn btn-danger btn-xs">
+                              <i class="fa fa-trash-o"></i>
+                        </a>
                           
                         </td>
+                      
                   </tr>
-                <?php } ?>
+                  <?php } ?>
                 </tbody>
                 </table>
-                <div class="row-fluid">
-                  <div class="span6">
-                    <div class="dataTables_info" id="hidden-table-info_info">Showing 1 to 5 of 25 entries
-                    </div>
-                  </div>
-                  <div class="span6">
-                    <div class="dataTables_paginate paging_bootstrap pagination">
-                      <ul>
-                        <li class="prev disabled">
-                          <a href="#">← Previous</a>
-                        </li>
-                        <li class="active">
-                          <a href="#">1</a>
-                        </li>
-                        <li>
-                          <a href="#">2</a>
-                        </li>
-                        <li>
-                          <a href="#">3</a>
-                        </li>
-                        <li class="next">
-                          <a href="#">Next → </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
               </section>
-              <script type="text/javascript" language="javascript" src="<?= base_url() ?>/assets/lib/advanced-datatable/js/jquery.dataTables.js"></script>
-  <script type="text/javascript" src="<?= base_url() ?>/assets/lib/advanced-datatable/js/DT_bootstrap.js"></script>
-  <script type="text/javascript" src="<?= base_url() ?>/assets/lib/advanced-datatable/js/jquery.dataTable.min.js"></script>
+            
+          </div>
 
-  <!--script for this page-->
-  <script>
-function sortTable(n) {
-  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-  table = document.getElementById("hidden-table-info");
-  switching = true;
-  //Set the sorting direction to ascending:
-  dir = "asc"; 
-  /*Make a loop that will continue until
-  no switching has been done:*/
-  while (switching) {
-    //start by saying: no switching is done:
-    switching = false;
-    rows = table.rows;
-    /*Loop through all table rows (except the
-    first, which contains table headers):*/
-    for (i = 1; i < (rows.length - 1); i++) {
-      //start by saying there should be no switching:
-      shouldSwitch = false;
-      /*Get the two elements you want to compare,
-      one from current row and one from the next:*/
-      x = rows[i].getElementsByTagName("TD")[n];
-      y = rows[i + 1].getElementsByTagName("TD")[n];
-      /*check if the two rows should switch place,
-      based on the direction, asc or desc:*/
-      if (dir == "asc") {
-        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-          //if so, mark as a switch and break the loop:
-          shouldSwitch= true;
-          break;
-        }
-      } else if (dir == "desc") {
-        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-          //if so, mark as a switch and break the loop:
-          shouldSwitch = true;
-          break;
-        }
-      }
-    }
-    if (shouldSwitch) {
-      /*If a switch has been marked, make the switch
-      and mark that a switch has been done:*/
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-      //Each time a switch is done, increase this count by 1:
-      switchcount ++;      
-    } else {
-      /*If no switching has been done AND the direction is "asc",
-      set the direction to "desc" and run the while loop again.*/
-      if (switchcount == 0 && dir == "asc") {
-        dir = "desc";
-        switching = true;
-      }
-    }
-  }
-}
-</script>
+            </div>
+          </div>
             </div>
             <!-- /content-panel -->
-          </div>
-</section>
-</section>
+          
+        </section>
+      </section>
+
