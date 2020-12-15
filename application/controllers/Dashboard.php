@@ -21,6 +21,6 @@ class Dashboard extends CI_Controller {
 	public function logout(){
 		$params = array('user_id', 'user_status');
 		$this->session->unset_userdata($params);
-		redirect('login');
+		redirect('auth');
 	}
 }

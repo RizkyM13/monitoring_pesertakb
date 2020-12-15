@@ -37,13 +37,14 @@ class Auth extends CI_Controller{
     			$this->session->set_userdata($params);
     			echo "<script> 
                         alert('Selamat, Login Berhasil!');
-                        window.location='".base_url('welcome')."';
+                        window.location='".base_url('dashboard')."';
                      </script>";
     		} else {
     			echo "<script> 
                         alert('Username atau Password Salah!');
-                        window.location='".base_url('login')."';
+                        window.location='".base_url('auth')."';
                      </script>";
+                     
     		}
 
     	}
