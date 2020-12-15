@@ -11,7 +11,7 @@
     </div>
 <div class="col-lg-12">
 <div class="form-panel">
-               <a href="<?php echo base_url() . 'transaksi/kk/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
+               <a href="<?php echo base_url() . 'transaksi/kk/tambah'; ?>" class="btn btn-primary" accesskey="t">Tambah Data</a>
             <div class = "row-fluid">  
             <div id = "hidden-table-info_length" class="dataTables_length">
               <div class = "navbar-form navbar-left">

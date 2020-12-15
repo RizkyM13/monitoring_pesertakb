@@ -53,8 +53,8 @@
                     </div>
                 </div>
                   
-                  <button type="submit" class="btn btn-primary">Simpan</button>
-                  <a href="<?php echo base_url() . 'setting/menu'; ?>" class="btn btn-danger">Kembali</a>
+                  <button type="submit" class="btn btn-primary" accesskey="s">Simpan</button>
+                  <a href="<?php echo base_url() . 'setting/menu'; ?>" class="btn btn-danger" accesskey="b">Kembali</a>
                 
               </form>
               
