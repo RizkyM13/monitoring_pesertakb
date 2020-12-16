@@ -8,7 +8,7 @@
     </div>
 <div class="col-lg-12">
 <div class="form-panel">
-              <div class="form-panel">
+	
                <a href="<?php echo base_url() . 'transaksi/penduduk/tambah'; ?>" class="btn btn-primary right" accesskey="t">Tambah Data</a>
 
           <div class="adv-table">
@@ -34,15 +34,15 @@
                             $no = 1;
                             foreach ($v_penduduk as $item) {
                             ?>
-                      <th><?= $no++ ?></th>
-                      <th><?= $item->nik?></th>
-                      <th><?= $item->nama?></th>
-                      <th><?= $item->jenis_kelamin ?></th>
-                      <th><?= $item->status_perkawinan ?></th>
-                      <th><?= $item->hub_keluarga ?></th>
+                      <td><?= $no++ ?></td>
+                      <td><?= $item->nik?></td>
+                      <td><?= $item->nama?></td>
+                      <td><?= $item->jenis_kelamin ?></td>
+                      <td><?= $item->status_perkawinan ?></td>
+                      <td><?= $item->hub_keluarga ?></td>
                       
                       
-                      <th>
+                      <td>
                         
                           <a href="<?php echo base_url() . 'transaksi/penduduk/detail'; ?>/<?php echo $item->penduduk_id ?>" class="btn btn-success btn-xs">
                               <i class="fa fa-check"></i>
@@ -55,17 +55,20 @@
                               <i class="fa fa-trash-o "></i>
                           </a> 
                           
-                        </th>
+                        </td>
                   </tr>
-                <?php } ?>
+                  <?php } ?>
                 </tbody>
                 </table>
               </section>
-            </div>
-              </div>
-            <!-- /content-panel -->
+            
           </div>
-</section>
-</section>
 
+            </div>
+          </div>
+            </div>
+            <!-- /content-panel -->
+          
+        </section>
+      </section>
 
