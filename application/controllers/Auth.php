@@ -12,7 +12,7 @@ class Auth extends CI_Controller{
 
     //default fungsi
     public function index(){
-        check_already_login();
+        //check_already_login();
         $this->form_validation->set_rules('user_name', 'Username', 'trim|required');
         $this->form_validation->set_rules('user_password', 'Password', 'trim|required');
         if($this->form_validation->run() == false){
@@ -30,10 +30,10 @@ class Auth extends CI_Controller{
             if ($ceklogin) {
                 foreach ($ceklogin as $row) 
                 if ($row->user_status == 1) {
-                        //$this->session->set_userdata('user_name', $row->user_name);
-                        //$this->session->set_userdata('user_password', $row->user_password);
-                        $this->session->set_userdata('user_id', $row->user_id);
-                    if (($this->session->userdata('user_id') == 1) || ($this->session->userdata('user_id') == 2) || ($this->session->userdata('user_id') == 3)) {
+                        $this->session->set_userdata('user_name', $row->user_name);
+                        $this->session->set_userdata('user_password', $row->user_password);
+                        $this->session->set_userdata('kader_id', $row->kader_id);
+                    if (($this->session->userdata('kader_id') == 1) || ($this->session->userdata('kader_id') == 2) || ($this->session->userdata('kader_id') == 3)) {
                         echo "<script> 
                         alert('Selamat, Login Berhasil!');
                         window.location='".base_url('dashboard')."';
@@ -70,9 +70,8 @@ class Auth extends CI_Controller{
     
 
     public function logout(){
-    	$params = array('user_id', 'user_status');
-    	$this->session->unset_userdata($params);
-    	redirect('auth/index');
+    	$this->session->sess_destroy();
+        redirect('auth');
     }
 
 

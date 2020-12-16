@@ -6,6 +6,9 @@ class Group extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('group_model');
+		if ($this->session->userdata('kader_id')==null) {
+			redirect('auth');
+		}
 	}
 
 	public function index()

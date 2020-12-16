@@ -52,7 +52,7 @@
                               <i class="fa fa-pencil"></i>
                         </a>
 
-                        <a href="<?php echo base_url() . 'setting/menu/hapus'; ?>/<?php echo $item->mn_id ?>" class="btn btn-danger btn-xs">
+                        <a href="<?php echo base_url() . 'setting/menu/hapus'; ?>/<?php echo $item->mn_id ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
                               <i class="fa fa-trash-o"></i>
                         </a>
                           

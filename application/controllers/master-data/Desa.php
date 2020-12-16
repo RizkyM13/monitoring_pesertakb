@@ -2,22 +2,20 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Desa extends CI_Controller {
-
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->model('desa_model');
+		if ($this->session->userdata('kader_id')==null) {
+			redirect('auth');
+		}
 	}
 
 	public function index()
 	{
 		$data['v_desa'] = $this->desa_model->tampil_data()->result();
 		$this->load->view('template/header');
-		 if($this->session->userdata('user_id') == 1){
-        	   $this->load->view('template/navbar');
-        	}elseif($this->session->userdata('user_id') == 2){
-        	   $this->load->view('template/navpetugas');
-        	}
+        $this->load->view('template/navbar');
 		$this->load->view('partial/datadesa/data', $data);
 		$this->load->view('template/footer');
 	}
@@ -26,11 +24,10 @@ class Desa extends CI_Controller {
 		$data['v_desa'] = $this->desa_model->tampil_data()->result();
 		$data['nama'] = $this->desa_model->getDesa();
 		$this->load->view('template/header');
-		if($this->session->userdata('user_id') == 1){
+		
         	   $this->load->view('template/navbar');
-        	}elseif($this->session->userdata('user_id') == 2){
-        	   $this->load->view('template/navpetugas');
-        	}
+        	
+        	
 		$this->load->view('partial/datadesa/tambahdata',$data);
 		$this->load->view('template/footer');
 	}
@@ -64,11 +61,10 @@ class Desa extends CI_Controller {
 		$data['v_desa'] = $this->desa_model->edit_data('desa', $where)->row_array();
 		$data['nama'] = $this->desa_model->getDesa();
 		$this->load->view('template/header');
-		if($this->session->userdata('user_id') == 1){
+		
         	   $this->load->view('template/navbar');
-        	}elseif($this->session->userdata('user_id') == 2){
-        	   $this->load->view('template/navpetugas');
-        	}
+        	
+        	   
 		$this->load->view('partial/datadesa/editdata',$data);
 		$this->load->view('template/footer');
 	}
@@ -76,11 +72,9 @@ class Desa extends CI_Controller {
 		$keyword = $this->input->post('keyword');
     	$data['v_desa'] = $this->desa_model->getKeyword($keyword);
     	$this->load->view('template/header');
-		if($this->session->userdata('user_id') == 1){
+		
         	   $this->load->view('template/navbar');
-        	}elseif($this->session->userdata('user_id') == 2){
-        	   $this->load->view('template/navpetugas');
-        	}
+        	
 		$this->load->view('partial/datadesa/data',$data);
 		$this->load->view('template/footer');
 	}

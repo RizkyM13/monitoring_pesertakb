@@ -38,13 +38,13 @@
     <form class="form-login" action="<?php echo base_url().'auth/proses'?>" method="post">
         <h2 class="form-login-heading">Silahkan Login</h2>
         <div class="login-wrap">
-        <input id="user_name" name="user_name" type="text" class="form-control" placeholder="Masukkan Username" autofocus>
-        <?= form_error('username', '<small class="text-danger pl-4">', '</small>'); ?>
+        <input id="user_name" name="user_name" type="text" class="form-control" placeholder="Masukkan Username" autofocus="autofocus" required="required">
+        
 
         <br>
-        <input id="user_password" name="user_password" type="password" class="form-control" placeholder=" Masukkan Password">
+        <input id="user_password" name="user_password" type="password" class="form-control" placeholder=" Masukkan Password" required="required">
         
-        <?= form_error('password', '<small class="text-danger pl-4">', '</small>'); ?>
+        
           <!--label class="checkbox">
             <input type="checkbox" value="remember-me"> Remember me
             <span class="pull-right">

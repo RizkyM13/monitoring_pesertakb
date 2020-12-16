@@ -6,6 +6,10 @@ class Penduduk extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('penduduk_model');
+		if ($this->session->userdata('kader_id')==null) {
+			redirect('auth');
+		}
+		
 
 	}
 	
@@ -13,13 +17,7 @@ class Penduduk extends CI_Controller {
 	{
 		$data['v_penduduk'] = $this->penduduk_model->tampil_data()->result();
 		$this->load->view('template/header');
-		if($this->session->userdata('user_id') == 1){
-        	   $this->load->view('template/navbar');
-        	}elseif($this->session->userdata('user_id') == 2){
-        	   $this->load->view('template/navpetugas');
-        	}elseif($this->session->userdata('user_id') == 3){
-        	   $this->load->view('template/navdinas');
-        	}
+        $this->load->view('template/navbar');
 		$this->load->view('fungsi/datapenduduk/data', $data);
 		$this->load->view('template/footer');
 	}
@@ -27,13 +25,7 @@ class Penduduk extends CI_Controller {
 	public function tambah(){
 		$data['v_penduduk'] = $this->penduduk_model->tampil_data()->result();
 		$this->load->view('template/header');
-		if($this->session->userdata('user_id') == 1){
-        	   $this->load->view('template/navbar');
-        	}elseif($this->session->userdata('user_id') == 2){
-        	   $this->load->view('template/navpetugas');
-        	}elseif($this->session->userdata('user_id') == 3){
-        	   $this->load->view('template/navdinas');
-        	}
+        $this->load->view('template/navbar');
 		$this->load->view('fungsi/datapenduduk/tambahdata',$data);
 		$this->load->view('template/footer');
 	}
@@ -116,13 +108,7 @@ class Penduduk extends CI_Controller {
 		$where = array('penduduk_id'=>$id);
 		$data['v_penduduk'] = $this->penduduk_model->edit_data('penduduk', $where)->row_array();
 		$this->load->view('template/header');
-		if($this->session->userdata('user_id') == 1){
-        	   $this->load->view('template/navbar');
-        	}elseif($this->session->userdata('user_id') == 2){
-        	   $this->load->view('template/navpetugas');
-        	}elseif($this->session->userdata('user_id') == 3){
-        	   $this->load->view('template/navdinas');
-        	}
+        $this->load->view('template/navbar');
 		$this->load->view('fungsi/datapenduduk/editdata',$data);
 		$this->load->view('template/footer');
 	}
@@ -131,13 +117,7 @@ class Penduduk extends CI_Controller {
 		$keyword = $this->input->post('keyword');
     	$data['v_penduduk'] = $this->penduduk_model->getKeyword($keyword);
     	$this->load->view('template/header');
-		if($this->session->userdata('user_id') == 1){
-        	   $this->load->view('template/navbar');
-        	}elseif($this->session->userdata('user_id') == 2){
-        	   $this->load->view('template/navpetugas');
-        	}elseif($this->session->userdata('user_id') == 3){
-        	   $this->load->view('template/navdinas');
-        	}
+        $this->load->view('template/navbar');
 		$this->load->view('fungsi/datapenduduk/data',$data);
 		$this->load->view('template/footer');
 
@@ -220,13 +200,7 @@ class Penduduk extends CI_Controller {
 		$data['v_penduduk'] = $this->penduduk_model->detail('penduduk', $where)->row_array();
 		//$this->db->get_where('penduduk',array('penduduk_id'=>$id))->row_array();
 		$this->load->view('template/header');
-		if($this->session->userdata('user_id') == 1){
-        	   $this->load->view('template/navbar');
-        	}elseif($this->session->userdata('user_id') == 2){
-        	   $this->load->view('template/navpetugas');
-        	}elseif($this->session->userdata('user_id') == 3){
-        	   $this->load->view('template/navdinas');
-        	}
+        $this->load->view('template/navbar');
 		$this->load->view('fungsi/datapenduduk/menu_penduduk', $data);
 		$this->load->view('template/footer');
 	}

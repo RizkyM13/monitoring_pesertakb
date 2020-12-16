@@ -7,6 +7,9 @@ class Rw extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('rw_model');
+		if ($this->session->userdata('kader_id')==null) {
+			redirect('auth');
+		}
 	}
 
 	public function index()
@@ -14,11 +17,7 @@ class Rw extends CI_Controller {
 		$data['v_rw'] = $this->rw_model->tampil_data()->result();
 
 		$this->load->view('template/header');
-		if($this->session->userdata('user_id') == 1){
-        	   $this->load->view('template/navbar');
-        	}elseif($this->session->userdata('user_id') == 2){
-        	   $this->load->view('template/navpetugas');
-        	}
+        $this->load->view('template/navbar');
 		$this->load->view('partial/datarw/data', $data);
 		$this->load->view('template/footer');
 	}
@@ -27,11 +26,7 @@ class Rw extends CI_Controller {
 		$data['v_rw'] = $this->rw_model->tampil_data()->result();
 		$data['nama'] = $this->rw_model->getNama();
 		$this->load->view('template/header');
-		if($this->session->userdata('user_id') == 1){
-        	   $this->load->view('template/navbar');
-        	}elseif($this->session->userdata('user_id') == 2){
-        	   $this->load->view('template/navpetugas');
-        	}
+        $this->load->view('template/navbar');
 		$this->load->view('partial/datarw/tambahdata',$data);
 		$this->load->view('template/footer');
 	}
@@ -64,11 +59,7 @@ class Rw extends CI_Controller {
 		$data['v_rw'] = $this->rw_model->edit_data('data_rw', $where)->row_array();
 		$data['nama'] = $this->rw_model->getNama();
 		$this->load->view('template/header');
-		if($this->session->userdata('user_id') == 1){
-        	   $this->load->view('template/navbar');
-        	}elseif($this->session->userdata('user_id') == 2){
-        	   $this->load->view('template/navpetugas');
-        	}
+        $this->load->view('template/navbar');
 		$this->load->view('partial/datarw/editdata',$data);
 		$this->load->view('template/footer');
 	}
@@ -77,11 +68,7 @@ class Rw extends CI_Controller {
 		$keyword = $this->input->post('keyword');
     	$data['v_rw'] = $this->rw_model->getKeyword($keyword);
 		$this->load->view('template/header');
-		if($this->session->userdata('user_id') == 1){
-        	   $this->load->view('template/navbar');
-        	}elseif($this->session->userdata('user_id') == 2){
-        	   $this->load->view('template/navpetugas');
-        	}
+        $this->load->view('template/navbar');
 		$this->load->view('partial/datarw/data', $data);
 		$this->load->view('template/footer');
 	}

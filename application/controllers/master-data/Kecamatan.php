@@ -7,17 +7,16 @@ class Kecamatan extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('kecamatan_model');
+		if ($this->session->userdata('kader_id')==null) {
+			redirect('auth');
+		}
 	}
 
 	public function index()
 	{
 		$data['v_kecamatan'] = $this->kecamatan_model->tampil_data()->result();
 		$this->load->view('template/header');
-		if($this->session->userdata('user_id') == 1){
-        	   $this->load->view('template/navbar');
-        	}elseif($this->session->userdata('user_id') == 2){
-        	   $this->load->view('template/navpetugas');
-        	}
+        $this->load->view('template/navbar');
 		$this->load->view('partial/datakecamatan/data', $data);
 		$this->load->view('template/footer');
 	}
@@ -25,11 +24,7 @@ class Kecamatan extends CI_Controller {
 	public function tambah(){
 		$data['v_kecamatan'] = $this->kecamatan_model->tampil_data()->result();
 		$this->load->view('template/header');
-		if($this->session->userdata('user_id') == 1){
-        	   $this->load->view('template/navbar');
-        	}elseif($this->session->userdata('user_id') == 2){
-        	   $this->load->view('template/navpetugas');
-        	}
+        $this->load->view('template/navbar');
 		$this->load->view('partial/datakecamatan/tambahdata',$data);
 		$this->load->view('template/footer');
 	}
@@ -60,11 +55,7 @@ class Kecamatan extends CI_Controller {
 		$where = array('kec_kode'=>$id);
 		$data['v_kecamatan'] = $this->kecamatan_model->edit_data('kecamatan', $where)->row_array();
 		$this->load->view('template/header');
-		if($this->session->userdata('user_id') == 1){
-        	   $this->load->view('template/navbar');
-        	}elseif($this->session->userdata('user_id') == 2){
-        	   $this->load->view('template/navpetugas');
-        	}
+        $this->load->view('template/navbar');
 		$this->load->view('partial/datakecamatan/editdata',$data);
 		$this->load->view('template/footer');
 	}
@@ -73,11 +64,8 @@ class Kecamatan extends CI_Controller {
 		$keyword = $this->input->post('keyword');
     	$data['v_kecamatan'] = $this->kecamatan_model->getKeyword($keyword);
 		$this->load->view('template/header');
-		if($this->session->userdata('user_id') == 1){
-        	   $this->load->view('template/navbar');
-        	}elseif($this->session->userdata('user_id') == 2){
-        	   $this->load->view('template/navpetugas');
-        	}
+		$this->load->view('template/header');
+        $this->load->view('template/navbar');
 		$this->load->view('partial/datakecamatan/data', $data);
 		$this->load->view('template/footer');
 	}

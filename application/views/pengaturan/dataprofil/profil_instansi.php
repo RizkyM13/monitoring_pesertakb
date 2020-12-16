@@ -21,10 +21,9 @@
                       <th>Kode</th>
                       <th>Instansi</th>
                       <th>Alamat</th>
+                      <th>Kode Kabupaten</th>
                       <th>Telepon</th>
-                      <th>Email</th>
                       <th>Website</th>
-                      <th>Kode Pos</th>
                       <th>Aksi</th>
                   </tr>
                 </thead>
@@ -39,24 +38,23 @@
                       <td><?= $item->kode?></td>
                       <td><?= $item->instansi?></td>
                       <td><?= $item->alamat?></td>
+                      <td><?= $item->kab_kode?></td>
                       <td><?= $item->telp?></td>
-                      <td><?= $item->email?></td>
-                      <td><?= $item->website?></td>
                       <td><?= $item->kodepos?></td>
                      
                     
                       <td>
-                        <a href="<?php echo base_url() . 'setting/profil/menu'; ?>/<?php echo $item->id ?>"class="btn btn-success btn-xs">
+                        <a href="<?php echo base_url() . 'setting/profil/detail'; ?>/<?php echo $item->id ?>"class="btn btn-success btn-xs">
                             <i class="fa fa-check"></i>
                         </a>
-                          <a href="<?php echo base_url() . 'setting/profil/edit'; ?>/<?php echo $item->id ?>" class="btn btn-primary btn-xs">
+
+                        <a href="<?php echo base_url() . 'setting/profil/edit'; ?>/<?php echo $item->id ?>" class="btn btn-primary btn-xs">
                               <i class="fa fa-pencil"></i>
                         </a>
                           
-                          <a class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
+                        <a href="<?php echo base_url() . 'setting/profil/hapus'; ?>/<?php echo $item->id ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
                               <i class="fa fa-trash-o "></i>
-                          </a> 
-                          
+                        </a> 
                         </td>
                       
                   </tr>

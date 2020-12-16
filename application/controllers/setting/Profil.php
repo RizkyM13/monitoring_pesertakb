@@ -7,6 +7,9 @@ class Profil extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('profil_model');
+		if ($this->session->userdata('kader_id')==null) {
+			redirect('auth');
+		}
 	}
 
 	public function index()

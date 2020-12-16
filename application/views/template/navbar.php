@@ -207,6 +207,7 @@
         MAIN SIDEBAR MENU
         *********************************************************************************************************************************************************** -->
   <!--sidebar start-->
+  <?php if ($this->session->userdata('kader_id') == 1) { ?>
     <aside>
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
@@ -277,4 +278,91 @@
         <!-- sidebar menu end-->
       </div>
     </aside>
+
+    <?php }elseif ($this->session->userdata('kader_id') == 2) { ?>
+      <aside>
+      <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu" id="nav-accordion">
+          <p class="centered"><a href="profile.html"><img src="<?= base_url() ?>/assets/img/KB.jpg" class="img-circle" width="80"></a></p>
+          <h5 class="centered">Petugas</h5>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-book"></i>
+              <span>Master Data</span>
+              </a>
+            <ul class="sub">
+              <li><a href="<?= base_url(). 'master-data/kecamatan' ?>">Data Kecamatan</a></li>
+              <li><a href="<?= base_url(). 'master-data/desa' ?>">Data Desa</a></li>
+              <li><a href="<?= base_url(). 'master-data/rw' ?>">Data RW</a></li>
+              <li><a href="<?= base_url(). 'master-data/rt' ?>">Data RT</a></li>
+              <li><a href="<?= base_url(). 'master-data/faskes' ?>">Data Faskes</a></li>
+              <li><a href="<?= base_url(). 'master-data/faskesjenis' ?>">Data Faskes Jenis</a></li>
+              <li><a href="<?= base_url(). 'master-data/kader' ?>">Data Kader</a></li>
+              <li><a href="<?= base_url(). 'master-data/suku' ?>">Ms Suku</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-book"></i>
+              <span>Transaksi</span>
+              </a>
+            <ul class="sub">
+              <li><a href="<?= base_url().'transaksi/kk'?>">Data KK</a></li>
+              <li><a href="<?= base_url().'transaksi/penduduk'?>">Data Penduduk</a></li>
+              <li><a href="<?= base_url().'transaksi/kontrasepsi'?>">Data Kontrasepsi</a></li>
+              <li><a href="<?= base_url().'transaksi/kunjungan_ulang'?>">Kunjungan Ulang Akseptor</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-desktop"></i>
+              <span>Laporan</span>
+              </a>
+            <ul class="sub">
+              <li><a href="<?= base_url() ?>/assets/general.html">General</a></li>
+              <li><a href="<?= base_url() ?>/assets/buttons.html">Buttons</a></li>
+              <li><a href="<?= base_url() ?>/assets/panels.html">Panels</a></li>
+              <li><a href="<?= base_url() ?>/assets/font_awesome.html">Font Awesome</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </aside>
+    <?php }elseif ($this->session->userdata('kader_id') == 2) { ?>
+      <aside>
+      <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu" id="nav-accordion">
+          <p class="centered"><a href="profile.html"><img src="<?= base_url() ?>/assets/img/KB.jpg" class="img-circle" width="80"></a></p>
+          <h5 class="centered">Dinas</h5>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-book"></i>
+              <span>Transaksi</span>
+              </a>
+            <ul class="sub">
+              <li><a href="<?= base_url().'transaksi/kk'?>">Data KK</a></li>
+              <li><a href="<?= base_url().'transaksi/penduduk'?>">Data Penduduk</a></li>
+              <li><a href="<?= base_url().'transaksi/kontrasepsi'?>">Data Kontrasepsi</a></li>
+              <li><a href="<?= base_url().'transaksi/kunjungan_ulang'?>">Kunjungan Ulang Akseptor</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-desktop"></i>
+              <span>Laporan</span>
+              </a>
+            <ul class="sub">
+              <li><a href="<?= base_url() ?>/assets/general.html">General</a></li>
+              <li><a href="<?= base_url() ?>/assets/buttons.html">Buttons</a></li>
+              <li><a href="<?= base_url() ?>/assets/panels.html">Panels</a></li>
+              <li><a href="<?= base_url() ?>/assets/font_awesome.html">Font Awesome</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <?php } ?>
     <!--sidebar end-->

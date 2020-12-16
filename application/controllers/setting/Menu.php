@@ -7,6 +7,9 @@ class Menu extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('menu_model');
+		if ($this->session->userdata('kader_id')==null) {
+			redirect('auth');
+		}
 	}
 
 	public function index()
@@ -45,7 +48,7 @@ class Menu extends CI_Controller {
 			'mn_induk'			=> $mn_induk,
 			'mn_icon'			=> $mn_icon,
 			'mn_url'			=> $mn_url,
-			'mn_aktif'			=> $mn_aktif,
+			'mn_aktif'			=> $mn_aktif
 
 	);
 
@@ -96,15 +99,15 @@ class Menu extends CI_Controller {
 			'mn_induk'			=> $mn_induk,
 			'mn_icon'			=> $mn_icon,
 			'mn_url'			=> $mn_url,
-			'mn_aktif'			=> $mn_aktif,
+			'mn_aktif'			=> $mn_aktif
 
-	);
+		);
 
 		$where = array(
 			'mn_id'=>$mn_id
 		);
 
-		$this->menu_model->update_data($where, $data, 'menu');
+		$this->menu_model->update_data($where, $data, 'ms_menu');
 		redirect('setting/menu');
 	}
 
