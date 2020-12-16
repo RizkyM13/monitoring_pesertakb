@@ -35,14 +35,14 @@
       *********************************************************************************************************************************************************** -->
   <div id="login-page">
   <div class="container">
-    <form class="form-login" action="<?php echo base_url().'auth/index'?>" method="post">
+    <form class="form-login" action="<?php echo base_url().'auth/proses'?>" method="post">
         <h2 class="form-login-heading">Silahkan Login</h2>
         <div class="login-wrap">
-        <input id="username" name="username" type="text" class="form-control" placeholder="Masukkan Username" autofocus>
+        <input id="user_name" name="user_name" type="text" class="form-control" placeholder="Masukkan Username" autofocus>
         <?= form_error('username', '<small class="text-danger pl-4">', '</small>'); ?>
 
         <br>
-        <input id="password" name="password" type="password" class="form-control" placeholder=" Masukkan Password">
+        <input id="user_password" name="user_password" type="password" class="form-control" placeholder=" Masukkan Password">
         
         <?= form_error('password', '<small class="text-danger pl-4">', '</small>'); ?>
           <!--label class="checkbox">
