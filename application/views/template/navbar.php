@@ -330,7 +330,7 @@
         </ul>
       </div>
     </aside>
-    <?php }elseif ($this->session->userdata('kader_id') == 2) { ?>
+    <?php }elseif ($this->session->userdata('kader_id') == 3) { ?>
       <aside>
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
