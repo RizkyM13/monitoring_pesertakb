@@ -14,7 +14,7 @@
                   <tbody>
                     <tr>
                       <td>
-                        <span class="check"><input type="checkbox" class="checked"> Dashboard</span>
+                        <span class="check"><input type="checkbox" <?= check_access($list['id'], ) ?> ></span>
                       </td>
                     </tr>
 

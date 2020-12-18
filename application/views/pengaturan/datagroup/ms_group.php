@@ -18,7 +18,6 @@
                   <thead>
                   <tr role="row">
                       <th>No</th>
-                      <th>ID Group</th>
                       <th>Kode Group</th>
                       <th>Nama Group</th>
                       <th>Group Aktif</th>
@@ -29,11 +28,10 @@
                   <tr>
                     <?php
                           
-                            $i = $this->uri->segment('3') + 1;
+                            $i = 1;
                             foreach ($v_ms_group as $item) {
                             ?>
                       <td><?= $i++ ?></td>
-                      <td><?= $item->grp_id ?></td>
                       <td><?= $item->grp_kode?></td>
                       <td><?= $item->grp_nama?></td>
                       <td><?= $item->grp_aktif == 1 ? 'Aktif' : 'Non Aktif'?></th>
@@ -45,9 +43,9 @@
                               <i class="fa fa-pencil"></i>
                         </a>
                           
-                          <a class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
-                              <i class="fa fa-trash-o "></i>
-                          </a> 
+                          <a href="<?php echo base_url() . 'setting/group/hapus'; ?>/<?php echo $item->grp_id ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
+                              <i class="fa fa-trash-o"></i>
+                        </a>
                           
                         </td>
                       

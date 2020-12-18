@@ -207,162 +207,48 @@
         MAIN SIDEBAR MENU
         *********************************************************************************************************************************************************** -->
   <!--sidebar start-->
-  <?php if ($this->session->userdata('kader_id') == 1) { ?>
+  
     <aside>
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
           <p class="centered"><a href="profile.html"><img src="<?= base_url() ?>/assets/img/KB.jpg" class="img-circle" width="80"></a></p>
-          <h5 class="centered">Admin</h5>
-          <li class="mt">
-            <a href="<?= base_url(). 'Dashboard'?>">
-              <i class="fa fa-dashboard"></i>
-              <span>Dashboard</span>
-              </a>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;">
-              <i class="fa fa-cogs"></i>
-              <span>Setting</span>
-              </a>
-            <ul class="sub">
-              <li><a href="<?= base_url(). 'setting/profil'?>">Profil Instansi</a></li>
-              <li><a href="<?= base_url(). 'setting/menu'?>">Ms Menu</a></li>
-              <li><a href="<?= base_url(). 'setting/group'?>">Ms Group</a></li>
-              <li><a href="<?= base_url(). 'setting/user'?>">Ms User</a></li>
-            </ul>
-          </li>
 
-          <li class="sub-menu">
-            <a href="javascript:;">
-              <i class="fa fa-book"></i>
-              <span>Master Data</span>
-              </a>
-            <ul class="sub">
-              <li><a href="<?= base_url(). 'master-data/kecamatan' ?>">Data Kecamatan</a></li>
-              <li><a href="<?= base_url(). 'master-data/desa' ?>">Data Desa</a></li>
-              <li><a href="<?= base_url(). 'master-data/rw' ?>">Data RW</a></li>
-              <li><a href="<?= base_url(). 'master-data/rt' ?>">Data RT</a></li>
-              <li><a href="<?= base_url(). 'master-data/faskes' ?>">Data Faskes</a></li>
-              <li><a href="<?= base_url(). 'master-data/faskesjenis' ?>">Data Faskes Jenis</a></li>
-              <li><a href="<?= base_url(). 'master-data/kader' ?>">Data Kader</a></li>
-              <li><a href="<?= base_url(). 'master-data/suku' ?>">Ms Suku</a></li>
-            </ul>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;">
-              <i class="fa fa-book"></i>
-              <span>Transaksi</span>
-              </a>
-            <ul class="sub">
-              <li><a href="<?= base_url().'transaksi/kk'?>">Data KK</a></li>
-              <li><a href="<?= base_url().'transaksi/penduduk'?>">Data Penduduk</a></li>
-              <li><a href="<?= base_url().'transaksi/kontrasepsi'?>">Data Kontrasepsi</a></li>
-              <li><a href="<?= base_url().'transaksi/kunjungan_ulang'?>">Kunjungan Ulang Akseptor</a></li>
-            </ul>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;">
-              <i class="fa fa-desktop"></i>
-              <span>Laporan</span>
-              </a>
-            <ul class="sub">
-              <li><a href="<?= base_url() ?>/assets/general.html">General</a></li>
-              <li><a href="<?= base_url() ?>/assets/buttons.html">Buttons</a></li>
-              <li><a href="<?= base_url() ?>/assets/panels.html">Panels</a></li>
-              <li><a href="<?= base_url() ?>/assets/font_awesome.html">Font Awesome</a></li>
-            </ul>
-          </li>
+          <!-- query menu -->
 
+          <?php 
+          $user_id = $this->session->userdata('kader_id');
+            $queryMenu = "SELECT `ms_group`.`grp_id`, `grp_nama` FROM `ms_group` JOIN `ms_user_group` ON `ms_group`.`grp_id` = `ms_user_group`.`grp_id` WHERE   `ms_user_group`.`user_id` = $user_id ORDER BY `ms_user_group`.`grp_id` ASC";
+            $menu = $this->db->query($queryMenu)->result_array();
+          ?>
+
+          <!-- looping menu -->
+          <?php foreach ($menu as $m) : ?>
+          <!-- sub menu -->
+            <h5 class="centered"><?=$m['grp_nama']; ?></h5>
+            
+          <?php 
+          $menuId = $m['grp_id'];
+            $querySubMenu = "SELECT * FROM `ms_menu` JOIN `ms_group_menu` ON `ms_menu`.`mn_id` = `ms_group_menu`.`menu_id` WHERE `ms_group_menu`.`grp_id` = $menuId AND `ms_menu`.`mn_aktif` = 1 ";
+
+            $subMenu = $this->db->query($querySubMenu)->result_array();
+          ?>
+            <?php 
+            foreach ($subMenu as $sm) : 
+            ?>
+              <li class="sub-menu">
+                <a href="<?= base_url($sm['mn_url']); ?>">
+                <i class="<?= $sm['mn_icon']; ?>"></i>
+                <span><?=$sm['mn_nama']; ?></span>
+                </a>
+              </li>
+
+            <?php endforeach; ?>
+          <?php endforeach; ?>
         </ul>
         <!-- sidebar menu end-->
       </div>
     </aside>
 
-    <?php }elseif ($this->session->userdata('kader_id') == 2) { ?>
-      <aside>
-      <div id="sidebar" class="nav-collapse ">
-        <!-- sidebar menu start-->
-        <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="profile.html"><img src="<?= base_url() ?>/assets/img/KB.jpg" class="img-circle" width="80"></a></p>
-          <h5 class="centered">Petugas</h5>
-          <li class="sub-menu">
-            <a href="javascript:;">
-              <i class="fa fa-book"></i>
-              <span>Master Data</span>
-              </a>
-            <ul class="sub">
-              <li><a href="<?= base_url(). 'master-data/kecamatan' ?>">Data Kecamatan</a></li>
-              <li><a href="<?= base_url(). 'master-data/desa' ?>">Data Desa</a></li>
-              <li><a href="<?= base_url(). 'master-data/rw' ?>">Data RW</a></li>
-              <li><a href="<?= base_url(). 'master-data/rt' ?>">Data RT</a></li>
-              <li><a href="<?= base_url(). 'master-data/faskes' ?>">Data Faskes</a></li>
-              <li><a href="<?= base_url(). 'master-data/faskesjenis' ?>">Data Faskes Jenis</a></li>
-              <li><a href="<?= base_url(). 'master-data/kader' ?>">Data Kader</a></li>
-              <li><a href="<?= base_url(). 'master-data/suku' ?>">Ms Suku</a></li>
-            </ul>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;">
-              <i class="fa fa-book"></i>
-              <span>Transaksi</span>
-              </a>
-            <ul class="sub">
-              <li><a href="<?= base_url().'transaksi/kk'?>">Data KK</a></li>
-              <li><a href="<?= base_url().'transaksi/penduduk'?>">Data Penduduk</a></li>
-              <li><a href="<?= base_url().'transaksi/kontrasepsi'?>">Data Kontrasepsi</a></li>
-              <li><a href="<?= base_url().'transaksi/kunjungan_ulang'?>">Kunjungan Ulang Akseptor</a></li>
-            </ul>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;">
-              <i class="fa fa-desktop"></i>
-              <span>Laporan</span>
-              </a>
-            <ul class="sub">
-              <li><a href="<?= base_url() ?>/assets/general.html">General</a></li>
-              <li><a href="<?= base_url() ?>/assets/buttons.html">Buttons</a></li>
-              <li><a href="<?= base_url() ?>/assets/panels.html">Panels</a></li>
-              <li><a href="<?= base_url() ?>/assets/font_awesome.html">Font Awesome</a></li>
-            </ul>
-          </li>
-
-        </ul>
-      </div>
-    </aside>
-    <?php }elseif ($this->session->userdata('kader_id') == 3) { ?>
-      <aside>
-      <div id="sidebar" class="nav-collapse ">
-        <!-- sidebar menu start-->
-        <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="profile.html"><img src="<?= base_url() ?>/assets/img/KB.jpg" class="img-circle" width="80"></a></p>
-          <h5 class="centered">Dinas</h5>
-          <li class="sub-menu">
-            <a href="javascript:;">
-              <i class="fa fa-book"></i>
-              <span>Transaksi</span>
-              </a>
-            <ul class="sub">
-              <li><a href="<?= base_url().'transaksi/kk'?>">Data KK</a></li>
-              <li><a href="<?= base_url().'transaksi/penduduk'?>">Data Penduduk</a></li>
-              <li><a href="<?= base_url().'transaksi/kontrasepsi'?>">Data Kontrasepsi</a></li>
-              <li><a href="<?= base_url().'transaksi/kunjungan_ulang'?>">Kunjungan Ulang Akseptor</a></li>
-            </ul>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;">
-              <i class="fa fa-desktop"></i>
-              <span>Laporan</span>
-              </a>
-            <ul class="sub">
-              <li><a href="<?= base_url() ?>/assets/general.html">General</a></li>
-              <li><a href="<?= base_url() ?>/assets/buttons.html">Buttons</a></li>
-              <li><a href="<?= base_url() ?>/assets/panels.html">Panels</a></li>
-              <li><a href="<?= base_url() ?>/assets/font_awesome.html">Font Awesome</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </aside>
-    <?php } ?>
-    <!--sidebar end-->
+    
+      
