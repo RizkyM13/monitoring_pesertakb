@@ -218,31 +218,46 @@
 
           <?php 
           $user_id = $this->session->userdata('kader_id');
-            $queryMenu = "SELECT `ms_group`.`grp_id`, `grp_nama` FROM `ms_group` JOIN `ms_user_group` ON `ms_group`.`grp_id` = `ms_user_group`.`grp_id` WHERE   `ms_user_group`.`user_id` = $user_id ORDER BY `ms_user_group`.`grp_id` ASC";
-            $menu = $this->db->query($queryMenu)->result_array();
+            $queryUser = "SELECT `ms_group`.`grp_id`, `grp_nama` FROM `ms_group` JOIN `ms_user_group` ON `ms_group`.`grp_id` = `ms_user_group`.`grp_id` WHERE   `ms_user_group`.`user_id` = $user_id ORDER BY `ms_user_group`.`grp_id` ASC";
+            $user = $this->db->query($queryUser)->result_array();
           ?>
 
           <!-- looping menu -->
-          <?php foreach ($menu as $m) : ?>
+          <?php foreach ($user as $u) : ?>
           <!-- sub menu -->
-            <h5 class="centered"><?=$m['grp_nama']; ?></h5>
+            <h5 class="centered"><?=$u['grp_nama']; ?></h5>
             
           <?php 
-          $menuId = $m['grp_id'];
-            $querySubMenu = "SELECT * FROM `ms_menu` JOIN `ms_group_menu` ON `ms_menu`.`mn_id` = `ms_group_menu`.`menu_id` WHERE `ms_group_menu`.`grp_id` = $menuId AND `ms_menu`.`mn_aktif` = 1 ";
+          $userId = $u['grp_id'];
+            $queryMenu = "SELECT * FROM `ms_menu` JOIN `ms_group_menu` ON `ms_menu`.`mn_id` = `ms_group_menu`.`menu_id` WHERE `ms_group_menu`.`grp_id` = $userId AND `ms_menu`.`mn_aktif` = 1 ";
 
-            $subMenu = $this->db->query($querySubMenu)->result_array();
+            $menu = $this->db->query($queryMenu)->result_array();
           ?>
-            <?php 
-            foreach ($subMenu as $sm) : 
-            ?>
-              <li class="sub-menu">
-                <a href="<?= base_url($sm['mn_url']); ?>">
-                <i class="<?= $sm['mn_icon']; ?>"></i>
-                <span><?=$sm['mn_nama']; ?></span>
+            <?php foreach ($menu as $m) : ?>
+              <li class="md">
+                <a href="javascript:;">
+                <i class="<?= $m['mn_icon']; ?>"></i>
+                <span><?=$m['mn_nama']; ?></span>
                 </a>
               </li>
 
+            <?php 
+            $menuId = $m['mn_id'];
+              $querySubMenu = "SELECT * FROM `ms_menu` JOIN `ms_group_menu` ON `ms_menu`.`mn_id` = `ms_group_menu`.`menu_id` WHERE `ms_menu`.`mn_induk` = $menuId AND `ms_menu`.`mn_aktif` = 1 ";
+
+              $subMenu = $this->db->query($querySubMenu)->result_array();
+          ?>
+          
+              <li class="sub-menu">
+                <?php foreach ($subMenu as $sm) : ?>
+                
+                <a href="<?=$sm['mn_url']; ?>">
+                <span><?=$sm['mn_nama']; ?></span>
+                </a>
+
+                <?php endforeach; ?>
+              </li>
+              
             <?php endforeach; ?>
           <?php endforeach; ?>
         </ul>

@@ -6,6 +6,7 @@ class Dashboard extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		//$this->load->model('dashboard_model');
 		if ($this->session->userdata('kader_id')==null) {
 			redirect('auth');
 		}
