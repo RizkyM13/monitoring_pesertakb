@@ -3,7 +3,7 @@
 <div class="col-lg-12">
           <div class="form-panel">
             <br>
-              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'master-data/kecamatan/update'; ?>">
+              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'kecamatan/update'; ?>">
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Kode Kecamatan</label>
                     <div class="col-sm-10">
@@ -20,7 +20,7 @@
                   <label class="col-sm-2 col-sm-2 control-label">Kecamatan Aktif</label>
                     <div class="col-sm-10">
                       <select name="kec_aktif" class="form-control">
-                          <option value="">--Pilih Status--</option>
+                          
                           <option value="1">Aktif</option>
                           <option value="0">Non Aktif</option>
                        
@@ -28,7 +28,7 @@
                     </div>
                 </div>
                   <button type="submit" class="btn btn-primary">Simpan</button>
-                  <a href="<?php echo base_url() . 'master-data/kecamatan'; ?>" class="btn btn-danger">Kembali</a>
+                  <a href="<?php echo base_url() . 'kecamatan'; ?>" class="btn btn-danger">Kembali</a>
                 
               </form>
               

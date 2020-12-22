@@ -11,6 +11,7 @@ class Usergroup extends CI_Controller {
 
 	public function index()
 	{
+		
 		$data['v_user_group'] = $this->usergroup_model->tampil_data()->result();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
@@ -19,6 +20,8 @@ class Usergroup extends CI_Controller {
 	}
 
 	public function tambah(){
+	$data['usernama'] = $this->usergroup_model->getNamaUser();
+	$data['groupnama'] = $this->usergroup_model->getNamaGroup();
 	$data['v_user_group'] = $this->usergroup_model->tampil_data()->result();
 	//$data['status'] = $this->m_kk->tampil_data()->result();
 		$this->load->view('template/header');
@@ -43,16 +46,18 @@ class Usergroup extends CI_Controller {
 		);
 
 		$this->usergroup_model->input_data($data, 'ms_user_group');
-		redirect('setting/usergroup');
+		redirect('usergroup');
 	}
 
 	public function hapus ($id=''){
 		$where = array('user_id'=>$id);
 		$this->usergroup_model->hapus_data($where, 'ms_user_group');
-		redirect('setting/usergroup');
+		redirect('usergroup');
 	}
 
 	public function edit($id){
+		$data['usernama'] = $this->usergroup_model->getNamaUser();
+		$data['groupnama'] = $this->usergroup_model->getNamaGroup();
 		$where = array('user_id'=>$id);
 		$data['v_user_group'] = $this->usergroup_model->edit_data('ms_user_group', $where)->row_array();
 		$this->load->view('template/header');
@@ -84,6 +89,6 @@ class Usergroup extends CI_Controller {
 		);
 
 		$this->usergroup_model->update_data($where, $data, 'ms_user_group');
-		redirect('setting/usergroup');
+		redirect('usergroup');
 	}
 }

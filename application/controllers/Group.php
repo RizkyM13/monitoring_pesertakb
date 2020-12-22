@@ -44,13 +44,13 @@ class Group extends CI_Controller {
 		);
 
 		$this->group_model->input_data($data, 'ms_group');
-		redirect('setting/group');
+		redirect('group');
 	}
 
 	public function hapus ($id=''){
 		$where = array('grp_id'=>$id);
 		$this->group_model->hapus_data($where, 'ms_group');
-		redirect('setting/group');
+		redirect('group');
 	}
 
 	public function edit($id){
@@ -100,6 +100,6 @@ class Group extends CI_Controller {
 		);
 
 		$this->group_model->update_data($where, $data, 'ms_group');
-		redirect('setting/group');
+		redirect('group');
 	}
 }

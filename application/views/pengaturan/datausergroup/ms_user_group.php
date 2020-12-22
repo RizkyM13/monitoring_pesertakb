@@ -9,15 +9,15 @@
     </div>
 <div class="col-lg-12">
             <div class="form-panel">
-              <a href="<?= base_url(). 'setting/usergroup/tambah'?>" class="btn btn-primary">Tambah Data</a>
+              <a href="<?= base_url(). 'usergroup/tambah'?>" class="btn btn-primary">Tambah Data</a>
               <hr>
               <section id="unseen">
                 <table class="table table-bordered table-striped table-condensed">
                   <thead>
                   <tr>
                       <th>No</th>
-                      
-                      <th>ID Group</th>
+                      <th>Nama User</th>
+                      <th>Group</th>
                       <th>Update By</th>
                       <th>Update Time</th>
                       <th>Aksi</th>
@@ -30,18 +30,16 @@
                             foreach ($v_user_group as $item) {
                             ?>
                       <th><?= $i++ ?></th>
-                      <th><?= $item->grp_id ?></th>
+                      <th><?= $item->user_name ?></th>
+                      <th><?= $item->grp_nama ?></th>
                       <th><?= $item->update_by?></th>
                       <th><?= $item->update_time?></th>
                       <th>
-                        <button class="btn btn-success btn-xs">
-                            <i class="fa fa-check"></i>
-                          </button>
-                          <a href="<?php echo base_url() . 'setting/usergroup/edit'; ?>/<?php echo $item->user_id ?>" class="btn btn-primary btn-xs">
+                          <a href="<?php echo base_url() . 'usergroup/edit'; ?>/<?php echo $item->user_id ?>" class="btn btn-primary btn-xs">
                               <i class="fa fa-pencil"></i>
                           </a>
                           
-                          <a href="<?php echo base_url() . 'setting/usergroup/hapus';?>/<?php echo $item->user_id ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
+                          <a href="<?php echo base_url() . 'usergroup/hapus';?>/<?php echo $item->user_id ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
                               <i class="fa fa-trash-o "></i>
                           </a> 
                           

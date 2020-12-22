@@ -45,13 +45,13 @@ class Rw extends CI_Controller {
 		);
 
 		$this->rw_model->input_data($data, 'data_rw');
-		redirect('master-data/rw');
+		redirect('rw');
 	}
 
 	public function hapus ($id=''){
 		$where = array('rw_id'=>$id);
 		$this->rw_model->hapus_data($where, 'data_rw');
-		redirect('master-data/rw');
+		redirect('rw');
 	}
 
 	public function edit($id){
@@ -93,6 +93,6 @@ class Rw extends CI_Controller {
 		);
 
 		$this->rw_model->update_data($where, $data, 'data_rw');
-		redirect('master-data/rw');
+		redirect('rw');
 	}
 }

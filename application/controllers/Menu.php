@@ -53,13 +53,13 @@ class Menu extends CI_Controller {
 	);
 
 		$this->menu_model->input_data($data, 'ms_menu');
-		redirect('setting/menu');
+		redirect('menu');
 	}
 
 	public function hapus ($id=''){
 		$where = array('mn_id'=>$id);
 		$this->menu_model->hapus_data($where, 'ms_menu');
-		redirect('setting/menu');
+		redirect('menu');
 	}
 
 	public function edit($id){
@@ -108,7 +108,7 @@ class Menu extends CI_Controller {
 		);
 
 		$this->menu_model->update_data($where, $data, 'ms_menu');
-		redirect('setting/menu');
+		redirect('menu');
 	}
 
 }

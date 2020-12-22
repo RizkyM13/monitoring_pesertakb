@@ -15,6 +15,7 @@ class Dashboard extends CI_Controller {
 	public function index()
 	{
 		//check_not_login();
+		//$data['content'] = 'setting/profil';
 		$this->load->view('template/header');
        	$this->load->view('template/navbar');	
 		$this->load->view('dashboard');

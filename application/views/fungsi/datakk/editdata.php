@@ -3,7 +3,7 @@
 <div class="col-lg-12">
           <div class="form-panel">
             <br>
-              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'transaksi/kk/update'; ?>">
+              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'kk/update'; ?>">
                 <div class="form-group">
                   
                     <div class="col-sm-10">
@@ -39,7 +39,7 @@
                       <input type="hidden" name="kk_lastupdate_by"class="form-control" placeholder="Masukkan Status KK" value="<?php echo $this->session->userdata('user_status') ?>">
                 
                   <button type="submit" class="btn btn-primary">Simpan</button>
-                  <a href="<?php echo base_url() . 'transaksi/kk'; ?>" class="btn btn-danger">Kembali</a>
+                  <a href="<?php echo base_url() . 'kk'; ?>" class="btn btn-danger">Kembali</a>
                 
               </form>
               

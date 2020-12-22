@@ -44,13 +44,13 @@ class Faskesjenis extends CI_Controller {
 		);
 
 		$this->faskesjenis_model->input_data($data, 'ms_faskes_jenis');
-		redirect('master-data/faskesjenis');
+		redirect('faskesjenis');
 	}
 
 	public function hapus ($id=''){
 		$where = array('faskesjenis_id'=>$id);
 		$this->faskesjenis_model->hapus_data($where, 'ms_faskes_jenis');
-		redirect('master-data/faskesjenis');
+		redirect('faskesjenis');
 	}
 
 	public function edit($id){
@@ -91,6 +91,6 @@ class Faskesjenis extends CI_Controller {
 		);
 
 		$this->faskesjenis_model->update_data($where, $data, 'ms_faskes_jenis');
-		redirect('master-data/faskesjenis');
+		redirect('faskesjenis');
 	}
 }

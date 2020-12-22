@@ -80,7 +80,7 @@
                   </div>
                 </div>
 
-                <a href="<?php echo base_url() . 'setting/profil'; ?>" class="btn btn-danger">Kembali</a>
+                <a href="<?php echo base_url() . 'profil'; ?>" class="btn btn-danger">Kembali</a>
               </form>
             </div>
           </div>

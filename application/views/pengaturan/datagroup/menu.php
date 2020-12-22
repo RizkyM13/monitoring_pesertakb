@@ -46,7 +46,7 @@
 
                 </table>
                   <button type="submit" class="btn btn-primary">Simpan</button>
-                  <a href="<?php echo base_url() . 'setting/group'; ?>" class="btn btn-danger">Kembali</a>
+                  <a href="<?php echo base_url() . 'group'; ?>" class="btn btn-danger">Kembali</a>
               </div>
             </div>
           </div>

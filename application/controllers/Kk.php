@@ -53,13 +53,13 @@ class Kk extends CI_Controller {
 		);
 
 		$this->kk_model->input_data($data, 'kk');
-		redirect('transaksi/kk');
+		redirect('kk');
 	}
 
 	public function hapus ($id=''){
 		$where = array('kk_id'=>$id);
 		$this->kk_model->hapus_data($where, 'kk');
-		redirect('transaksi/kk');
+		redirect('kk');
 	}
 
 	public function edit($id){
@@ -102,6 +102,6 @@ class Kk extends CI_Controller {
 		);
 
 		$this->kk_model->update_data($where, $data, 'kk');
-		redirect('transaksi/kk');
+		redirect('kk');
 	}
 }

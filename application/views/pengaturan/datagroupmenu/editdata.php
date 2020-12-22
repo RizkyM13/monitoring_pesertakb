@@ -30,7 +30,7 @@
                 </div>
                 
                   <button type="submit" class="btn btn-primary">Simpan</button>
-                  <a href="<?php echo base_url() . 'setting/groupmenu'; ?>" class="btn btn-danger">Kembali</a>
+                  <a href="<?php echo base_url() . 'groupmenu'; ?>" class="btn btn-danger">Kembali</a>
                 
               </form>
               

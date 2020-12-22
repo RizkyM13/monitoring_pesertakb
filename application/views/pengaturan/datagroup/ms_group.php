@@ -9,7 +9,7 @@
 <div class="col-lg-12">
 <div class="form-panel">
 
-               <a href="<?php echo base_url() . 'setting/group/tambah'; ?>" class="btn btn-primary right">Tambah Data</a>
+               <a href="<?php echo base_url() . 'group/tambah'; ?>" class="btn btn-primary right">Tambah Data</a>
         
             <div class="adv-table">
             <hr>
@@ -36,14 +36,14 @@
                       <td><?= $item->grp_nama?></td>
                       <td><?= $item->grp_aktif == 1 ? 'Aktif' : 'Non Aktif'?></th>
                       <td>
-                        <a href="<?php echo base_url() . 'setting/group/menu'; ?>/<?php echo $item->grp_id ?>"class="btn btn-success btn-xs">
+                        <a href="<?php echo base_url() . 'group/menu'; ?>/<?php echo $item->grp_id ?>"class="btn btn-success btn-xs">
                             <i class="fa fa-check"></i>
                         </a>
-                          <a href="<?php echo base_url() . 'setting/group/edit'; ?>/<?php echo $item->grp_id?>" class="btn btn-primary btn-xs">
+                          <a href="<?php echo base_url() . 'group/edit'; ?>/<?php echo $item->grp_id?>" class="btn btn-primary btn-xs">
                               <i class="fa fa-pencil"></i>
                         </a>
                           
-                          <a href="<?php echo base_url() . 'setting/group/hapus'; ?>/<?php echo $item->grp_id ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
+                          <a href="<?php echo base_url() . 'group/hapus'; ?>/<?php echo $item->grp_id ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
                               <i class="fa fa-trash-o"></i>
                         </a>
                           

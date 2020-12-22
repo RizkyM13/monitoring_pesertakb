@@ -3,7 +3,7 @@
 <div class="col-lg-12">
           <div class="form-panel">
             <br>
-              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'master-data/desa/tambah_aksi'; ?>">
+              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'desa/tambah_aksi'; ?>">
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Kode Desa</label>
                     <div class="col-sm-3 mb-3 mb-sm-0">
@@ -45,7 +45,7 @@
                 </div>
                   
                   <button type="submit" class="btn btn-primary">Simpan</button>
-                  <a href="<?php echo base_url() . 'master-data/desa'; ?>" class="btn btn-danger">Kembali</a>
+                  <a href="<?php echo base_url() . 'desa'; ?>" class="btn btn-danger">Kembali</a>
                 
               </form>
               

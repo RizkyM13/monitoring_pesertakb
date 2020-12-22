@@ -9,7 +9,7 @@
 <div class="col-lg-12">
 <div class="form-panel">
 	
-               <a href="<?php echo base_url() . 'transaksi/penduduk/tambah'; ?>" class="btn btn-primary right" accesskey="t">Tambah Data</a>
+               <a href="<?php echo base_url() . 'penduduk/tambah'; ?>" class="btn btn-primary right" accesskey="t">Tambah Data</a>
 
           <div class="adv-table">
             <hr>
@@ -44,14 +44,14 @@
                       
                       <td>
                         
-                          <a href="<?php echo base_url() . 'transaksi/penduduk/detail'; ?>/<?php echo $item->penduduk_id ?>" class="btn btn-success btn-xs">
+                          <a href="<?php echo base_url() . 'penduduk/detail'; ?>/<?php echo $item->penduduk_id ?>" class="btn btn-success btn-xs">
                               <i class="fa fa-check"></i>
                           </a>
-                          <a href="<?php echo base_url() . 'transaksi/penduduk/edit'; ?>/<?php echo $item->penduduk_id ?>" class="btn btn-primary btn-xs">
+                          <a href="<?php echo base_url() . 'penduduk/edit'; ?>/<?php echo $item->penduduk_id ?>" class="btn btn-primary btn-xs">
                               <i class="fa fa-pencil"></i>
                           </a>
                           
-                          <a href="<?php echo base_url() . 'transaksi/penduduk/hapus';?>/<?php echo $item->penduduk_id ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
+                          <a href="<?php echo base_url() . 'penduduk/hapus';?>/<?php echo $item->penduduk_id ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
                               <i class="fa fa-trash-o "></i>
                           </a> 
                           

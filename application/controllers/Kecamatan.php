@@ -42,13 +42,13 @@ class Kecamatan extends CI_Controller {
 		);
 
 		$this->kecamatan_model->input_data($data, 'kecamatan');
-		redirect('master-data/kecamatan');
+		redirect('kecamatan');
 	}
 
 	public function hapus ($id=''){
 		$where = array('kec_kode'=>$id);
 		$this->kecamatan_model->hapus_data($where, 'kecamatan');
-		redirect('master-data/kecamatan');
+		redirect('kecamatan');
 	}
 
 	public function edit($id){
@@ -88,6 +88,6 @@ class Kecamatan extends CI_Controller {
 		);
 
 		$this->kecamatan_model->update_data($where, $data, 'kecamatan');
-		redirect('master-data/kecamatan');
+		redirect('kecamatan');
 	}
 }

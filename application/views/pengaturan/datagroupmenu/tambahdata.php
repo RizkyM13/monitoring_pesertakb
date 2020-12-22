@@ -3,7 +3,7 @@
 <div class="col-lg-12">
           <div class="form-panel">
             <br>
-              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'setting/groupmenu/tambah'; ?>">
+              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'groupmenu/tambah'; ?>">
                 <div class="form-group">
                   
                     <div class="col-sm-10">
@@ -32,7 +32,7 @@
                 </div>
                   
                   <button type="submit" class="btn btn-primary">Simpan</button>
-                  <a href="<?php echo base_url() . 'setting/groupmenu'; ?>" class="btn btn-danger">Kembali</a>
+                  <a href="<?php echo base_url() . 'groupmenu'; ?>" class="btn btn-danger">Kembali</a>
                 
               </form>
               

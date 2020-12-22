@@ -3,7 +3,7 @@
 <div class="col-lg-12">
           <div class="form-panel">
             <br>
-              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'transaksi/penduduk/update'; ?>">
+              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'penduduk/update'; ?>">
                       
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">ID Penduduk</label>
@@ -189,7 +189,7 @@
                 
                 
                   <button type="submit" class="btn btn-primary">Simpan</button>
-                  <a href="<?php echo base_url() . 'transaksi/penduduk'; ?>" class="btn btn-danger">Kembali</a>
+                  <a href="<?php echo base_url() . 'penduduk'; ?>" class="btn btn-danger">Kembali</a>
                 
               </form>
               

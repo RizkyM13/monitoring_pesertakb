@@ -3,7 +3,7 @@
 <div class="col-lg-12">
           <div class="form-panel">
             <br>
-              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'setting/user/update'; ?>">
+              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'user/update'; ?>">
                 
                   
                       <input type="hidden" name="user_id" class="form-control" placeholder="Masukkan ID User" value="<?php echo $v_ms_user['user_id'] ?>">
@@ -49,7 +49,7 @@
                 
                 
                   <button type="submit" class="btn btn-primary">Simpan</button>
-                  <a href="<?php echo base_url() . 'setting/user'; ?>" class="btn btn-danger">Kembali</a>
+                  <a href="<?php echo base_url() . 'user'; ?>" class="btn btn-danger">Kembali</a>
                 
               </form>
               

@@ -44,13 +44,13 @@ class Suku extends CI_Controller {
 		);
 
 		$this->suku_model->input_data($data, 'ms_suku');
-		redirect('master-data/suku');
+		redirect('suku');
 	}
 
 	public function hapus ($id=''){
 		$where = array('suku_id'=>$id);
 		$this->suku_model->hapus_data($where, 'ms_suku');
-		redirect('master-data/suku');
+		redirect('suku');
 	}
 
 	public function edit($id){
@@ -91,6 +91,6 @@ class Suku extends CI_Controller {
 		);
 
 		$this->suku_model->update_data($where, $data, 'ms_suku');
-		redirect('master-data/suku');
+		redirect('suku');
 	}
 }

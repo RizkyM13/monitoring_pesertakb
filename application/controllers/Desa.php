@@ -24,10 +24,7 @@ class Desa extends CI_Controller {
 		$data['v_desa'] = $this->desa_model->tampil_data()->result();
 		$data['nama'] = $this->desa_model->getDesa();
 		$this->load->view('template/header');
-		
-        	   $this->load->view('template/navbar');
-        	
-        	
+       	$this->load->view('template/navbar');	
 		$this->load->view('partial/datadesa/tambahdata',$data);
 		$this->load->view('template/footer');
 	}
@@ -47,13 +44,13 @@ class Desa extends CI_Controller {
 		);
 
 		$this->desa_model->input_data($data, 'desa');
-		redirect('master-data/desa');
+		redirect('desa');
 	}
 
 	public function hapus ($id=''){
 		$where = array('desa_kode'=>$id);
 		$this->desa_model->hapus_data($where, 'desa');
-		redirect('master-data/desa');
+		redirect('desa');
 	}
 
 	public function edit($id){
@@ -99,6 +96,6 @@ class Desa extends CI_Controller {
 		);
 
 		$this->desa_model->update_data($where, $data, 'desa');
-		redirect('master-data/desa');
+		redirect('desa');
 	}
 }

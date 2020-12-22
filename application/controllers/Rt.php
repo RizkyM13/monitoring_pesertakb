@@ -44,13 +44,13 @@ class Rt extends CI_Controller {
 		);
 
 		$this->rt_model->input_data($data, 'data_rt');
-		redirect('master-data/rt');
+		redirect('rt');
 	}
 
 	public function hapus ($id=''){
 		$where = array('rt_id'=>$id);
 		$this->rt_model->hapus_data($where, 'data_rt');
-		redirect('master-data/rt');
+		redirect('rt');
 	}
 
 	public function edit($id){
@@ -100,6 +100,6 @@ class Rt extends CI_Controller {
 		);
 
 		$this->rt_model->update_data($where, $data, 'data_rt');
-		redirect('master-data/rt');
+		redirect('rt');
 	}
 }

@@ -54,13 +54,13 @@ class Kader extends CI_Controller {
 		);
 
 		$this->kader_model->input_data($data, 'kader');
-		redirect('master-data/kader');
+		redirect('kader');
 	}
 
 	public function hapus ($id=''){
 		$where = array('kader_id'=>$id);
 		$this->kader_model->hapus_data($where, 'kader');
-		redirect('master-data/kader');
+		redirect('kader');
 	}
 
 	public function edit($id){
@@ -110,6 +110,6 @@ class Kader extends CI_Controller {
 		);
 
 		$this->kader_model->update_data($where, $data, 'kader');
-		redirect('master-data/kader');
+		redirect('kader');
 	}
 }

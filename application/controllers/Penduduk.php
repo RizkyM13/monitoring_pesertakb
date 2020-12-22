@@ -95,13 +95,13 @@ class Penduduk extends CI_Controller {
 		);
 
 		$this->penduduk_model->input_data($data, 'penduduk');
-		redirect('transaksi/penduduk');
+		redirect('penduduk');
 	}
 
 	public function hapus ($id=''){
 		$where = array('penduduk_id'=>$id);
 		$this->penduduk_model->hapus_data($where, 'penduduk');
-		redirect('transaksi/penduduk');
+		redirect('penduduk');
 	}
 
 	public function edit($id){
@@ -192,7 +192,7 @@ class Penduduk extends CI_Controller {
 		);
 
 		$this->penduduk_model->update_data($where, $data, 'penduduk');
-		redirect('transaksi/penduduk');
+		redirect('penduduk');
 	}
 
 	public function detail($id){

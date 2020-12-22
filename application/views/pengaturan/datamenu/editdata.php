@@ -3,7 +3,7 @@
 <div class="col-lg-12">
           <div class="form-panel">
             <br>
-              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'setting/menu/update'; ?>">
+              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'menu/update'; ?>">
                 
                       <input type="hidden" name="mn_id" class="form-control" placeholder="Masukkan ID Group">
                     
@@ -55,7 +55,7 @@
                 </div>
                 
                   <button type="submit" class="btn btn-primary">Simpan</button>
-                  <a href="<?php echo base_url() . 'setting/menu'; ?>" class="btn btn-danger">Kembali</a>
+                  <a href="<?php echo base_url() . 'menu'; ?>" class="btn btn-danger">Kembali</a>
                   
                 
               </form>

@@ -13,7 +13,7 @@ class Profil extends CI_Controller {
 	}
 
 	public function index()
-	{
+	{	
 		$data['v_profil'] = $this->profil_model->tampil_data()->result();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
@@ -58,13 +58,13 @@ class Profil extends CI_Controller {
 		);
 
 		$this->profil_model->input_data($data, 'profil');
-		redirect('setting/profil');
+		redirect('profil');
 	}
 
 	public function hapus ($id=''){
 		$where = array('id'=>$id);
 		$this->profil_model->hapus_data($where, 'profil');
-		redirect('setting/profil');
+		redirect('profil');
 	}
 
 	public function edit($id){
@@ -109,7 +109,7 @@ class Profil extends CI_Controller {
 		);
 
 		$this->profil_model->update_data($where, $data, 'profil');
-		redirect('setting/profil');
+		redirect('profil');
 	}
 
 	public function detail($id){

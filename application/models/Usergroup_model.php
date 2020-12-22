@@ -8,7 +8,16 @@ class Usergroup_model extends CI_Model {
 		
 	//}
 	function tampil_data(){
-		return $this->db->get('ms_user_group');
+		return $this->db->query('SELECT r.user_name, g.grp_nama, b.user_id, b.grp_id, b.update_by, b.update_time FROM `ms_user_group` as b JOIN ms_user as r ON r.user_id=b.user_id JOIN ms_group as g ON g.grp_id=b.grp_id');
+		//return $this->db->get('ms_user_group');
+	}
+
+	function getNamaUser(){
+		return $this->db->get('ms_user');
+	}
+
+	function getNamaGroup(){
+		return $this->db->get('ms_group');
 	}
 
 	function input_data($data, $table){

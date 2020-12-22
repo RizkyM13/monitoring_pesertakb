@@ -213,7 +213,7 @@
                   </div>
                 </div>
 
-                <a href="<?php echo base_url() . 'transaksi/penduduk'; ?>" class="btn btn-danger">Kembali</a>
+                <a href="<?php echo base_url() . 'penduduk'; ?>" class="btn btn-danger">Kembali</a>
               </form>
             </div>
           </div>

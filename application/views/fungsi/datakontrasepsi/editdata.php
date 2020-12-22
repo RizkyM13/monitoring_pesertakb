@@ -3,7 +3,7 @@
 <div class="col-lg-12">
           <div class="form-panel">
             <br>
-              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'transaksi/kontrasepsi/update'; ?>">
+              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'kontrasepsi/update'; ?>">
                 
                       <input type="hidden" name="kontrasepsi_id" class="form-control" placeholder="Masukkan ID" value="<?php echo $v_kontrasepsi['kontrasepsi_id'] ?>">
                    
@@ -39,7 +39,7 @@
                 </div>
                 
                   <button type="submit" class="btn btn-primary">Simpan</button>
-                  <a href="<?php echo base_url() . 'transaksi/kontrasepsi'; ?>" class="btn btn-danger">Kembali</a>
+                  <a href="<?php echo base_url() . 'kontrasepsi'; ?>" class="btn btn-danger">Kembali</a>
                 
               </form>
               

@@ -3,7 +3,7 @@
 <div class="col-lg-12">
           <div class="form-panel">
             <br>
-              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'transaksi/kontrasepsi/tambah_aksi'; ?>">
+              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'kontrasepsi/tambah_aksi'; ?>">
                       <input type="hidden" name="kontrasepsi_id" class="form-control" placeholder="Masukkan ID">
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Kode Kontrasepsi</label>
@@ -36,7 +36,7 @@
                 </div>
                 
                   <button type="submit" class="btn btn-primary">Simpan</button>
-                  <a href="<?php echo base_url() . 'transaksi/kontrasepsi'; ?>" class="btn btn-danger">Kembali</a>
+                  <a href="<?php echo base_url() . 'kontrasepsi'; ?>" class="btn btn-danger">Kembali</a>
                 
               </form>
               

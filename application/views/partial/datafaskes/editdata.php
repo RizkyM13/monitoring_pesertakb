@@ -3,7 +3,7 @@
 <div class="col-lg-12">
           <div class="form-panel">
             <br>
-              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'master-data/faskes/update'; ?>">
+              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'faskes/update'; ?>">
                 
                       <input type="hidden" name="faskes_id" class="form-control" placeholder="Masukkan ID Faskes" value="<?php echo $v_faskes['faskes_id'] ?>">
                     
@@ -51,7 +51,7 @@
                   <label class="col-sm-2 col-sm-2 control-label">Faskes Aktif</label>
                     <div class="col-sm-10">
                       <select name="faskes_aktif" class="form-control">
-                          <option value="">--Pilih Status--</option>
+                          
                           <option value="1">Aktif</option>
                           <option value="0">Non Aktif</option>
                        
@@ -60,7 +60,7 @@
                 </div>
                 
                   <button type="submit" class="btn btn-primary">Simpan</button>
-                  <a href="<?php echo base_url() . 'master-data/faskes'; ?>" class="btn btn-danger">Kembali</a>
+                  <a href="<?php echo base_url() . 'faskes'; ?>" class="btn btn-danger">Kembali</a>
                 
               </form>
               

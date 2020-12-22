@@ -47,13 +47,13 @@ class User extends CI_Controller {
 		);
 
 		$this->user_model->input_data($data, 'ms_user');
-		redirect('setting/user');
+		redirect('user');
 	}
 
 	public function hapus ($id=''){
 		$where = array('user_id'=>$id);
 		$this->user_model->hapus_data($where, 'ms_user');
-		redirect('setting/user');
+		redirect('user');
 	}
 
 	public function edit($id){
@@ -98,6 +98,6 @@ class User extends CI_Controller {
 		);
 
 		$this->user_model->update_data($where, $data, 'ms_user');
-		redirect('setting/user');
+		redirect('user');
 	}
 }

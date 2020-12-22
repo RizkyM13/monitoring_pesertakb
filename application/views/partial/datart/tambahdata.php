@@ -3,7 +3,7 @@
 <div class="col-lg-12">
           <div class="form-panel">
             <br>
-              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'master-data/rt/tambah_aksi'; ?>">
+              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'rt/tambah_aksi'; ?>">
                 
                       <input type="hidden" name="rt_id" class="form-control" placeholder="Masukkan ID RT">
                     
@@ -32,7 +32,7 @@
                 
                   
                   <button type="submit" class="btn btn-primary">Simpan</button>
-                  <a href="<?php echo base_url() . 'master-data/rt'; ?>" class="btn btn-danger">Kembali</a>
+                  <a href="<?php echo base_url() . 'rt'; ?>" class="btn btn-danger">Kembali</a>
                 
               </form>
               

@@ -3,7 +3,7 @@
 <div class="col-lg-12">
           <div class="form-panel">
             <br>
-              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'setting/profil/update'; ?>">
+              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'profil/update'; ?>">
                 
                   
                    
@@ -72,7 +72,7 @@
                     </div>
                 </div>
                   <button type="submit" class="btn btn-primary">Simpan</button>
-                  <a href="<?php echo base_url() . 'setting/profil'; ?>" class="btn btn-danger">Kembali</a>
+                  <a href="<?php echo base_url() . 'profil'; ?>" class="btn btn-danger">Kembali</a>
                 
               </form>
               

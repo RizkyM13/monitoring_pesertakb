@@ -47,13 +47,13 @@ class Kontrasepsi extends CI_Controller {
 		);
 
 		$this->kontrasepsi_model->input_data($data, 'ms_kontrasepsi');
-		redirect('transaksi/kontrasepsi');
+		redirect('kontrasepsi');
 	}
 
 	public function hapus ($id=''){
 		$where = array('kontrasepsi_id'=>$id);
 		$this->kontrasepsi_model->hapus_data($where, 'ms_kontrasepsi');
-		redirect('transaksi/kontrasepsi');
+		redirect('kontrasepsi');
 	}
 
 	public function edit($id){
@@ -95,6 +95,6 @@ class Kontrasepsi extends CI_Controller {
 		);
 
 		$this->kontrasepsi_model->update_data($where, $data, 'ms_kontrasepsi');
-		redirect('transaksi/kontrasepsi');
+		redirect('kontrasepsi');
 	}
 }

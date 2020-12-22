@@ -239,7 +239,7 @@
                 <i class="<?= $m['mn_icon']; ?>"></i>
                 <span><?=$m['mn_nama']; ?></span>
                 </a>
-              </li>
+              
 
             <?php 
             $menuId = $m['mn_id'];
@@ -248,16 +248,15 @@
               $subMenu = $this->db->query($querySubMenu)->result_array();
           ?>
           
-              <li class="sub-menu">
+              <ul class="sub">
                 <?php foreach ($subMenu as $sm) : ?>
-                
                 <a href="<?=$sm['mn_url']; ?>">
                 <span><?=$sm['mn_nama']; ?></span>
                 </a>
-
+            
                 <?php endforeach; ?>
+              </ul>
               </li>
-              
             <?php endforeach; ?>
           <?php endforeach; ?>
         </ul>

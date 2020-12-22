@@ -55,13 +55,13 @@ class Faskes extends CI_Controller {
 		);
 
 		$this->faskes_model->input_data($data, 'ms_faskes');
-		redirect('master-data/faskes');
+		redirect('faskes');
 	}
 
 	public function hapus ($id=''){
 		$where = array('faskes_id'=>$id);
 		$this->faskes_model->hapus_data($where, 'ms_faskes');
-		redirect('master-data/faskes');
+		redirect('faskes');
 	}
 
 	public function edit($id){
@@ -113,6 +113,6 @@ class Faskes extends CI_Controller {
 		);
 
 		$this->faskes_model->update_data($where, $data, 'ms_faskes');
-		redirect('master-data/faskes');
+		redirect('faskes');
 	}
 }

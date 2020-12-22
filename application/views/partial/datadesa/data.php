@@ -9,7 +9,7 @@
 
     <div class="col-lg-12">
     <div class="form-panel">
-            <a href="<?php echo base_url() . 'master-data/desa/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
+            <a href="<?php echo base_url() . 'desa/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
 
               <hr>
               <section id="unseen">
@@ -36,14 +36,12 @@
                       <td><?= $item->desa_nama  ?></td>
                       <td><?= $item->desa_aktif == 1 ? 'Aktif' : 'Non Aktif'?></th>
                       <td>
-                        <button class="btn btn-success btn-xs">
-                            <i class="fa fa-check"></i>
-                          </button>
-                          <a href="<?php echo base_url() . 'master-data/desa/edit'; ?>/<?php echo $item->desa_kode ?>" class="btn btn-primary btn-xs">
+                        
+                          <a href="<?php echo base_url() . 'desa/edit'; ?>/<?php echo $item->desa_kode ?>" class="btn btn-primary btn-xs">
                               <i class="fa fa-pencil"></i>
                           </a>
                           
-                          <a href="<?php echo base_url() . 'master-data/desa/hapus';?>/<?php echo $item->desa_kode ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
+                          <a href="<?php echo base_url() . 'desa/hapus';?>/<?php echo $item->desa_kode ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
                               <i class="fa fa-trash-o "></i>
                           </a> 
                           

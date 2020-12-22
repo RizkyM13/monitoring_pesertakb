@@ -3,7 +3,7 @@
 <div class="col-lg-12">
           <div class="form-panel">
             <br>
-              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'transaksi/penduduk/tambah_aksi'; ?>">
+              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'penduduk/tambah_aksi'; ?>">
                       <input type="hidden" name="penduduk_id" class="form-control" placeholder="Masukkan ID Penduduk">
                       
                 <div class="form-group">
@@ -242,7 +242,7 @@
                 
                 
                   <button type="submit" class="btn btn-primary">Simpan</button>
-                  <a href="<?php echo base_url() . 'transaksi/penduduk'; ?>" class="btn btn-danger">Kembali</a>
+                  <a href="<?php echo base_url() . 'penduduk'; ?>" class="btn btn-danger">Kembali</a>
                 
               </form>
               

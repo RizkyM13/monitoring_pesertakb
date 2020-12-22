@@ -45,13 +45,13 @@ class Groupmenu extends CI_Controller {
 		);
 
 		$this->groupmenu_model->input_data($data, 'ms_group_menu');
-		redirect('setting/groupmenu');
+		redirect('groupmenu');
 	}
 
 	public function hapus ($id=''){
 		$where = array('menu_id'=>$id);
 		$this->groupmenu_model->hapus_data($where, 'ms_group_menu');
-		redirect('setting/groupmenu');
+		redirect('groupmenu');
 	}
 
 	public function edit($id){
@@ -86,6 +86,6 @@ class Groupmenu extends CI_Controller {
 		);
 
 		$this->groupmenu_model->update_data($where, $data, 'ms_group_menu');
-		redirect('setting/groupmenu');
+		redirect('groupmenu');
 	}
 }
