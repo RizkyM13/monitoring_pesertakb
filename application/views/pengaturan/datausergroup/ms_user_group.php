@@ -11,8 +11,9 @@
             <div class="form-panel">
               <a href="<?= base_url(). 'usergroup/tambah'?>" class="btn btn-primary">Tambah Data</a>
               <hr>
+              <div class="adv-table">
               <section id="unseen">
-                <table class="table table-bordered table-striped table-condensed">
+                <table class="display table table-bordered" id="hidden-table-info">
                   <thead>
                   <tr>
                       <th>No</th>
@@ -29,12 +30,12 @@
                             $i = 1;
                             foreach ($v_user_group as $item) {
                             ?>
-                      <th><?= $i++ ?></th>
-                      <th><?= $item->user_name ?></th>
-                      <th><?= $item->grp_nama ?></th>
-                      <th><?= $item->update_by?></th>
-                      <th><?= $item->update_time?></th>
-                      <th>
+                      <td><?= $i++ ?></td>
+                      <td><?= $item->user_name ?></td>
+                      <td><?= $item->grp_nama ?></td>
+                      <td><?= $item->user_name?></td>
+                      <td><?= $item->update_time?></td>
+                      <td>
                           <a href="<?php echo base_url() . 'usergroup/edit'; ?>/<?php echo $item->user_id ?>" class="btn btn-primary btn-xs">
                               <i class="fa fa-pencil"></i>
                           </a>
@@ -43,7 +44,7 @@
                               <i class="fa fa-trash-o "></i>
                           </a> 
                           
-                        </th>
+                        </td>
                   </tr>
                   <?php } ?>
                 </tbody>
@@ -52,5 +53,6 @@
             </div>
             <!-- /content-panel -->
           </div>
+        </div>
 </section>
 </section>

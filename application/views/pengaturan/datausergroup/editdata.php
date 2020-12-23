@@ -10,9 +10,9 @@
                     <select name="user_id" class="form-control">
                         <option value="">-- Pilih User --</option>
                         <?php
-                        foreach ($usernama as $v) {
+                        foreach ($user as $v) {
                         ?>
-                        <option value="<?php echo $v->user_id ?>"><?php echo $v->user_name ?></option>}
+                        <option value="<?php echo $v->user_id ?>"><?php echo $v->user_name ?></option>
                         
                         <?php
                         }
@@ -27,9 +27,9 @@
                     <select name="grp_id" class="form-control">
                         <option value="">-- Pilih User --</option>
                         <?php
-                        foreach ($groupnama as $v) {
+                        foreach ($group as $v) {
                         ?>
-                        <option value="<?php echo $v->grp_id ?>"><?php echo $v->grp_nama ?></option>}
+                        <option value="<?php echo $v->grp_id ?>"><?php echo $v->grp_nama ?></option>
                         
                         <?php
                         }
@@ -41,12 +41,9 @@
                  
                   
                     
-                      <input type="hidden" name="update_by"class="form-control" value="<?= $user_id;?>" placeholder="Ubah Update By"> 
-                    
-                
-                 
-                    
-                      <input type="hidden" name="update_time"class="form-control" value="<?= $timestamp;?>"  placeholder="Ubah Update Time" readonly>
+                      <input type="hidden" name="update_by"class="form-control" placeholder="Masukkan Status KK" value="<?php echo $this->session->userdata('kader_id') ?>">
+
+                      <input type="hidden" name="update_time"class="form-control" placeholder="Masukkan Status KK" value="<?php echo date('Y-m-d H:i:s', time()) ?>">
                     
                 
                   <button type="submit" class="btn btn-primary">Simpan</button>

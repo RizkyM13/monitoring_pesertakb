@@ -20,10 +20,10 @@ class Usergroup extends CI_Controller {
 	}
 
 	public function tambah(){
-	$data['usernama'] = $this->usergroup_model->getNamaUser();
-	$data['groupnama'] = $this->usergroup_model->getNamaGroup();
-	$data['v_user_group'] = $this->usergroup_model->tampil_data()->result();
-	//$data['status'] = $this->m_kk->tampil_data()->result();
+		$data['user'] = $this->usergroup_model->getNamaUser();
+		$data['group'] = $this->usergroup_model->getNamaGroup();
+		$data['v_user_group'] = $this->usergroup_model->tampil_data()->result();
+		//$data['status'] = $this->m_kk->tampil_data()->result();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('pengaturan/datausergroup/tambahdata',$data);
@@ -56,15 +56,15 @@ class Usergroup extends CI_Controller {
 	}
 
 	public function edit($id){
-		$data['usernama'] = $this->usergroup_model->getNamaUser();
-		$data['groupnama'] = $this->usergroup_model->getNamaGroup();
+		$data['user'] = $this->usergroup_model->getNamaUser();
+		$data['group'] = $this->usergroup_model->getNamaGroup();
 		$where = array('user_id'=>$id);
 		$data['v_user_group'] = $this->usergroup_model->edit_data('ms_user_group', $where)->row_array();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 
-		$data['user_id'] = $this->session->userdata('user_id');
-		$data['timestamp'] = date("Y-m-d H:i:s");
+		//$data['user_id'] = $this->session->userdata('user_id');
+		//$data['timestamp'] = date("Y-m-d H:i:s");
 		$this->load->view('pengaturan/datausergroup/editdata',$data);
 		$this->load->view('template/footer');
 	}

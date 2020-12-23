@@ -39,7 +39,7 @@
                       <td><?= $item->kk_id ?></td>
                       <td><?= $item->kk_no?></td>
                       <td><?= $item->kk_tgl?></td>
-                      <td><?= $item->kk_status?></td>
+                      <td><?= $item->kk_status == 1 ? 'Aktif' : 'Non Aktif' ?></td>
                       <td><?= $item->kk_lastupdate?></td>
                       <td><?= $item->kk_lastupdate_by?></td>
                       <td>

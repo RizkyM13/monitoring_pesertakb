@@ -36,14 +36,13 @@
                       <td><?= $i++ ?></td>
                       <td><?= $item->kader_nama?></td>
                       <td><?= $item->user_name?></td>
-                      
-                      <td><?= $item->user_status?></td>
+                      <td><?= $item->user_status = 1 ? 'Aktif' : 'Non Aktif' ?></td>
                       <td>
                           <a href="<?php echo base_url() . 'user/edit'; ?>/<?php echo $item->user_id ?>" class="btn btn-primary btn-xs">
                               <i class="fa fa-pencil"></i>
                         </a>
                           
-                          <a href="<?php echo base_url() . 'profil/hapus'; ?>/<?php echo $item->user_id ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
+                          <a href="<?php echo base_url() . 'user/hapus'; ?>/<?php echo $item->user_id ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
                               <i class="fa fa-trash-o "></i>
                         </a>  
                           

@@ -58,10 +58,7 @@ class Desa extends CI_Controller {
 		$data['v_desa'] = $this->desa_model->edit_data('desa', $where)->row_array();
 		$data['nama'] = $this->desa_model->getDesa();
 		$this->load->view('template/header');
-		
-        	   $this->load->view('template/navbar');
-        	
-        	   
+        $this->load->view('template/navbar');	   
 		$this->load->view('partial/datadesa/editdata',$data);
 		$this->load->view('template/footer');
 	}
