@@ -14,7 +14,7 @@
                   <label class="col-sm-2 col-sm-2 control-label">Kecamatan</label>
                     <div class="col-sm-3 mb-3 mb-sm-0">
                     <select name="kec_kode" class="form-control">
-                        <option value="">-- Pilih Kecamatan --</option>
+                        
                         <?php
                         foreach ($nama as $v) {
                         ?>
@@ -36,7 +36,7 @@
                   <label class="col-sm-2 col-sm-2 control-label">Desa Aktif</label>
                     <div class="col-sm-3 mb-3 mb-sm-0">
                       <select name="desa_aktif" class="form-control">
-                          <option value="">--Pilih Status--</option>
+                          
                           <option value="1">Aktif</option>
                           <option value="0">Non Aktif</option>
                        

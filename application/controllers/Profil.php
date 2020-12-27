@@ -115,7 +115,6 @@ class Profil extends CI_Controller {
 	public function detail($id){
 		$where = array('id'=>$id);
 		$data['v_profil'] = $this->profil_model->detail('profil', $where)->row_array();
-		//$this->db->get_where('penduduk',array('penduduk_id'=>$id))->row_array();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
 		$this->load->view('pengaturan/dataprofil/menu_profil', $data);

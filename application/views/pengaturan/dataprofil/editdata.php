@@ -78,7 +78,6 @@
               
             </div>
           </div>
-          <!-- col-lg-12-->
         
       </section>
     </section>

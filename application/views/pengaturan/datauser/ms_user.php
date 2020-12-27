@@ -36,7 +36,7 @@
                       <td><?= $i++ ?></td>
                       <td><?= $item->kader_nama?></td>
                       <td><?= $item->user_name?></td>
-                      <td><?= $item->user_status = 1 ? 'Aktif' : 'Non Aktif' ?></td>
+                      <td><?= $item->user_status == 1 ? 'Aktif' : 'Non Aktif' ?></td>
                       <td>
                           <a href="<?php echo base_url() . 'user/edit'; ?>/<?php echo $item->user_id ?>" class="btn btn-primary btn-xs">
                               <i class="fa fa-pencil"></i>

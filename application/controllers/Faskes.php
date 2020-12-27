@@ -16,20 +16,17 @@ class Faskes extends CI_Controller {
 	{
 		$data['v_faskes'] = $this->faskes_model->tampil_data()->result();
 		$this->load->view('template/header');
-		
-        	   $this->load->view('template/navbar');
-        	
+       	$this->load->view('template/navbar');	
 		$this->load->view('partial/datafaskes/data', $data);
 		$this->load->view('template/footer');
 	}
 
 	public function tambah(){
-		$data['v_faskes'] = $this->faskes_model->tampil_data()->result();
-		$data['nama'] = $this->faskes_model->getFaskes();
+		$data['v_faskes'] 	= $this->faskes_model->tampil_data()->result();
+		$data['faskes'] 	= $this->faskes_model->getFaskes();
+		$data['desa'] 		= $this->faskes_model->getDesa();
 		$this->load->view('template/header');
-		
-        	   $this->load->view('template/navbar');
-        	
+        $this->load->view('template/navbar');
 		$this->load->view('partial/datafaskes/tambahdata',$data);
 		$this->load->view('template/footer');
 	}
@@ -65,25 +62,21 @@ class Faskes extends CI_Controller {
 	}
 
 	public function edit($id){
-		$where = array('faskes_id'=>$id);
-		$data['v_faskes'] = $this->faskes_model->edit_data('ms_faskes', $where)->row_array();
-		$data['nama'] = $this->faskes_model->getFaskes();
+		$where 				= array('faskes_id'=>$id);
+		$data['v_faskes'] 	= $this->faskes_model->edit_data('ms_faskes', $where)->row_array();
+		$data['faskes'] 	= $this->faskes_model->getFaskes();
+		$data['desa'] 		= $this->faskes_model->getDesa();
 		$this->load->view('template/header');
-		
-        	   $this->load->view('template/navbar');
-        	
+        $this->load->view('template/navbar');	
 		$this->load->view('partial/datafaskes/editdata',$data);
 		$this->load->view('template/footer');
 	}
 
 	public function search(){
-		$keyword = $this->input->post('keyword');
-		$data['v_faskes'] = $this->faskes_model->getKeyword($keyword);
+		$keyword 			= $this->input->post('keyword');
+		$data['v_faskes'] 	= $this->faskes_model->getKeyword($keyword);
 		$this->load->view('template/header');
-		
-        	   $this->load->view('template/navbar');
-        	
-        	
+       	$this->load->view('template/navbar');	
 		$this->load->view('partial/datafaskes/data', $data);
 		$this->load->view('template/footer');
 	}

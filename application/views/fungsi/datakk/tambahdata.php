@@ -22,17 +22,14 @@
                   <label class="col-sm-2 col-sm-2 control-label">Status KK</label>
                     <div class="col-sm-10">
                       <select name="kk_status" class="form-control">
-                          
-                          <option value="">--Pilih Status--</option>
                           <option value="1">Aktif</option>
                           <option value="0">Non Aktif</option>
-                          
                       </select>
                     </div>
                 </div>
 
                       <input type="hidden" name="kk_lastupdate"class="form-control" placeholder="Masukkan Status KK" value="<?php echo date('Y-m-d H:i:s', time()) ?>">
-                      <input type="hidden" name="kk_lastupdate_by"class="form-control" placeholder="Masukkan Status KK" value="<?php echo $this->session->userdata('user_id'); ?> ">
+                      <input type="hidden" name="kk_lastupdate_by"class="form-control" placeholder="Masukkan Status KK" value="<?php echo $this->session->userdata('kader_id'); ?> ">
                   
                 
                   <button type="submit" class="btn btn-primary">Simpan</button>

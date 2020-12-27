@@ -9,7 +9,7 @@
 
     <div class="col-lg-12">
     <div class="form-panel">
-            <a href="<?php echo base_url() . 'transaksi/faskes/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
+            <a href="<?php echo base_url() . 'faskes/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
             
               <hr>
               <section id="unseen">
@@ -33,11 +33,11 @@
                     foreach ($v_faskes as $item) {
                   ?>
                       <td><?= $i++ ?></th>
-                      <td><?= $item->faskesjenis_id   ?></td>
+                      <td><?= $item->faskesjenis_nama   ?></td>
                       <td><?= $item->faskes_kode  ?></td>
                       <td><?= $item->faskes_nama  ?></td>
                       <td><?= $item->faskes_alamat  ?></td>
-                      <td><?= $item->desa_kode  ?></td>
+                      <td><?= $item->desa_nama  ?></td>
                       <td><?= $item->faskes_aktif == 1 ? 'Aktif' : 'Non Aktif'?></th>
                       <td>
 

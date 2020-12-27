@@ -8,12 +8,16 @@ class Faskes_model extends CI_Model {
 		
 	//}
 	function tampil_data(){
-		return $this->db->query('SELECT r.desa_nama, b.faskes_id, b.faskesjenis_id, b.faskes_kode, b.faskes_nama, b.faskes_alamat, b.desa_kode, b.faskes_aktif FROM `ms_faskes` as b JOIN desa as r ON r.desa_kode=b.desa_kode');
+		return $this->db->query('SELECT r.desa_nama, g.faskesjenis_nama, b.faskes_id, b.faskesjenis_id, b.faskes_kode, b.faskes_nama, b.faskes_alamat, b.desa_kode, b.faskes_aktif FROM ms_faskes b JOIN desa r ON r.desa_kode=b.desa_kode JOIN ms_faskes_jenis g ON g.faskesjenis_id=b.faskesjenis_id');
 		//return $this->db->get('ms_faskes');
 	}
 
-	function getFaskes(){
+	function getDesa(){
 		return $this->db->get('desa')->result();
+	}
+
+	function getFaskes(){
+		return $this->db->get('ms_faskes_jenis')->result();
 	}
 
 	function getKeyword($keyword){

@@ -8,7 +8,7 @@
     </div>
  <div class="col-lg-12">
     <div class="form-panel">
-            <a href="<?php echo base_url() . 'master-data/desa/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
+            <a href="<?php echo base_url() . 'rt/tambah'; ?>" class="btn btn-primary">Tambah Data</a>
             
             <hr>
               <section id="unseen">

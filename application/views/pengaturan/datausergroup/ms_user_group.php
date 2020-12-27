@@ -33,7 +33,7 @@
                       <td><?= $i++ ?></td>
                       <td><?= $item->user_name ?></td>
                       <td><?= $item->grp_nama ?></td>
-                      <td><?= $item->user_name?></td>
+                      <td><?= $item->user_name ?></td>
                       <td><?= $item->update_time?></td>
                       <td>
                           <a href="<?php echo base_url() . 'usergroup/edit'; ?>/<?php echo $item->user_id ?>" class="btn btn-primary btn-xs">

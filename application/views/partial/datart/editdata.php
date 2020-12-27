@@ -11,7 +11,7 @@
                   <label class="col-sm-2 col-sm-2 control-label">RW</label>
                     <div class="col-sm-10">
                     <select name="rw_id" class="form-control">
-                        <option value="">-- Pilih RW --</option>
+                        
                         <?php
                         foreach ($nama as $v) {
                         ?>

@@ -36,13 +36,13 @@
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Kode Kabupaten</label>
                     <div class="col-sm-10">
-                      <input type="text" name="kab_kode" class="form-control" placeholder="Masukkan Kode Kabupaten">
+                      <input type="number" name="kab_kode" class="form-control" placeholder="Masukkan Kode Kabupaten">
                     </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">No Telepon</label>
                     <div class="col-sm-10">
-                      <input type="text" name="telp" class="form-control" placeholder="Masukkan No Telepon">
+                      <input type="number" name="telp" class="form-control" placeholder="Masukkan No Telepon">
                     </div>
                 </div>
                 <div class="form-group">
@@ -60,7 +60,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Kode Pos</label>
                     <div class="col-sm-10">
-                      <input type="text" name="kodepos" class="form-control" placeholder="Masukkan Kode Pos">
+                      <input type="number" name="kodepos" class="form-control" placeholder="Masukkan Kode Pos">
                     </div>
                 </div>
                 <div class="form-group">

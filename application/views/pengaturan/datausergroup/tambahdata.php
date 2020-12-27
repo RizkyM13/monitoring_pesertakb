@@ -9,7 +9,7 @@
                   <label class="col-sm-2 col-sm-2 control-label">Nama User</label>
                     <div class="col-sm-3 mb-3 mb-sm-0">
                     <select name="user_id" class="form-control">
-                        <option value="">-- Pilih User --</option>
+                        
                         <?php
                         foreach ($user as $v) {
                         ?>
@@ -26,7 +26,7 @@
                   <label class="col-sm-2 col-sm-2 control-label">Nama Group</label>
                     <div class="col-sm-3 mb-3 mb-sm-0">
                     <select name="grp_id" class="form-control">
-                        <option value="">-- Pilih Group --</option>
+                        
                         <?php
                         foreach ($group as $v) {
                         ?>

@@ -27,7 +27,7 @@
                   <label class="col-sm-2 col-sm-2 control-label">Kontrasepsi Aktif</label>
                     <div class="col-sm-10">
                       <select name="kontrasepsi_aktif" class="form-control">
-                          <option value="">--Pilih Status--</option>
+                          
                           <option value="1">Aktif</option>
                           <option value="0">Non Aktif</option>
                        

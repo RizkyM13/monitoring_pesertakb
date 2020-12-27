@@ -11,7 +11,7 @@
                   <label class="col-sm-2 col-sm-2 control-label">Nama Desa</label>
                     <div class="col-sm-10">
                     <select name="desa_kode" class="form-control">
-                        <option value="">-- Pilih Desa --</option>
+                        
                         <?php
                         foreach ($nama as $v) {
                         ?>

@@ -4,17 +4,16 @@
           <div class="form-panel">
             <br>
               <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'user/tambah_aksi'; ?>">
-                <div class="form-group">
+                
                  
                     
                       <input type="hidden" name="user_id" class="form-control" placeholder="Masukkan ID User">
                     
-                </div>
+                
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Kader</label>
                     <div class="col-sm-10">
                     <select name="kader_id" class="form-control">
-                        <option value="">-- Pilih Kader --</option>
                         <?php
                         foreach ($nama as $v) {
                         ?>

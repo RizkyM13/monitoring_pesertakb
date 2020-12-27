@@ -15,7 +15,6 @@ class Rw extends CI_Controller {
 	public function index()
 	{
 		$data['v_rw'] = $this->rw_model->tampil_data()->result();
-
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
 		$this->load->view('partial/datarw/data', $data);

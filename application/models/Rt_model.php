@@ -14,7 +14,7 @@ class Rt_model extends CI_Model {
 		//return $this->db->get('data_rt');
 	}
 
-	function getdata_rt(){
+	function getRt(){
 		return $this->db->get('data_rw')->result();
 	}
 

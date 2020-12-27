@@ -44,11 +44,8 @@
                   <label class="col-sm-2 col-sm-2 control-label">Jenis Kelamin</label>
                     <div class="col-sm-10">
                       <select name="jenis_kelamin" class="form-control">
-                          
-                          <option value="">--Pilih Jenis Kelamin--</option>
                           <option value="L">Laki-Laki</option>
-                          <option value="P">Perempuan</option>
-                          
+                          <option value="P">Perempuan</option>    
                       </select>
                     </div>
                 </div>
@@ -78,13 +75,10 @@
                   <label class="col-sm-2 col-sm-2 control-label">Golongan Darah</label>
                     <div class="col-sm-10">
                       <select name="gol_darah" class="form-control">
-                          
-                          <option value="">--Pilih Golongan Darah--</option>
                           <option value="A">A</option>
-                          <option value="B">B</option>
                           <option value="AB">AB</option>
-                          <option value="O">O</option>
-                          
+                          <option value="B">B</option>
+                          <option value="O">O</option> 
                       </select>
                     </div>
                 </div>
@@ -93,11 +87,8 @@
                   <label class="col-sm-2 col-sm-2 control-label">Rhesus</label>
                     <div class="col-sm-10">
                       <select name="rhesus" class="form-control">
-                          
-                          <option value="">--Pilih Rhesus--</option>
                           <option value="+">Positif</option>
-                          <option value="-">Negatif</option>
-                          
+                          <option value="-">Negatif</option>                          
                       </select>
                     </div>
                 </div>
@@ -105,9 +96,18 @@
                  <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Suku</label>
                     <div class="col-sm-10">
-                      <input type="number" name="suku_id"class="form-control" placeholder="Masukkan ID Suku">
-                    </div>
+                    <select name="suku_id" class="form-control">
+                        <?php
+                        foreach ($suku as $v) {
+                        ?>
+                        <option value="<?php echo $v->suku_id ?>"><?php echo $v->suku_nama ?></option>
+                        
+                        <?php
+                        }
+                        ?>
+                    </select>
                 </div>
+              </div>
 
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Agama</label>
@@ -166,7 +166,7 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Nomor Kitas</label>
+                  <label class="col-sm-2 col-sm-2 control-label">Nomor Kartu Izin Terbatas (KITAS)</label>
                     <div class="col-sm-10">
                       <input type="number" name="no_kitas"class="form-control" placeholder="Masukkan Nomor Kitas">
                     </div>
@@ -187,14 +187,11 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Status</label>
+                  <label class="col-sm-2 col-sm-2 control-label">Status Kependudukan</label>
                     <div class="col-sm-10">
                       <select name="stt" class="form-control">
-                          
-                          <option value="">--Pilih Status--</option>
                           <option value="1">Mati</option>
-                          <option value="0">Pindah</option>
-                          
+                          <option value="0">Pindah</option>    
                       </select>
                     </div>
                 </div>
@@ -203,35 +200,60 @@
                   <label class="col-sm-2 col-sm-2 control-label">Domisili Desa</label>
                     <div class="col-sm-10">
                       <select name="ada" class="form-control">
-                          
-                          <option value="">--Pilih Status--</option>
                           <option value="1">Ya</option>
                           <option value="0">Tidak</option>
-                          
                       </select>
                     </div>
                 </div>
 
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Kode Desa</label>
+                  <label class="col-sm-2 col-sm-2 control-label">Desa</label>
                     <div class="col-sm-10">
-                      <input type="number" name="kode_desa"class="form-control" placeholder="Masukkan Kode Desa">
-                    </div>
+                    <select name="desa_kode" class="form-control">
+                        <?php
+                        foreach ($desa as $v) {
+                        ?>
+                        <option value="<?php echo $v->desa_kode ?>"><?php echo $v->desa_nama ?></option>
+                        
+                        <?php
+                        }
+                        ?>
+                    </select>
                 </div>
+              </div>
 
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">RT</label>
                     <div class="col-sm-10">
-                      <input type="number" name="rt"class="form-control" placeholder="Masukkan RT">
-                    </div>
+                    <select name="rt_id" class="form-control">
+                        <?php
+                        foreach ($rt as $v) {
+                        ?>
+                        <option value="<?php echo $v->rt_id ?>"><?php echo $v->rt ?></option>
+                        
+                        <?php
+                        }
+                        ?>
+                    </select>
                 </div>
-
-                <div class="form-group">
+              </div>
+                 
+                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">RW</label>
                     <div class="col-sm-10">
-                      <input type="number" name="rw"class="form-control" placeholder="Masukkan RW">
-                    </div>
+                    <select name="rw_id" class="form-control">
+                        <?php
+                        foreach ($rw as $v) {
+                        ?>
+                        <option value="<?php echo $v->rw_id ?>"><?php echo $v->rw ?></option>
+                        
+                        <?php
+                        }
+                        ?>
+                    </select>
                 </div>
+              </div>
+
 
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">KK</label>

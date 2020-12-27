@@ -43,7 +43,7 @@ class User extends CI_Controller {
 			'kader_id'				=> $kader_id,
 			'user_name'				=> $user_name,
 			'user_password'			=> $user_password,
-			'user_status'			=> $user_status,
+			'user_status'			=> $user_status
 		);
 
 		$this->user_model->input_data($data, 'ms_user');
@@ -90,7 +90,7 @@ class User extends CI_Controller {
 			'kader_id'				=> $kader_id,
 			'user_name'				=> $user_name,
 			'user_password'			=> $user_password,
-			'user_status'			=> $user_status,
+			'user_status'			=> $user_status
 		);
 
 		$where = array(

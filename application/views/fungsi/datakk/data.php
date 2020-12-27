@@ -19,7 +19,6 @@
                   <thead>
                   <tr role="row">
                       <th>No</th>
-                      <th>ID KK</th>
                       <th>No KK</th>
                       <th>Tanggal KK</th>
                       <th>Status KK</th>
@@ -36,12 +35,11 @@
                             foreach ($v_kk as $item) {
                             ?>
                       <td><?= $i++ ?></td>
-                      <td><?= $item->kk_id ?></td>
                       <td><?= $item->kk_no?></td>
                       <td><?= $item->kk_tgl?></td>
                       <td><?= $item->kk_status == 1 ? 'Aktif' : 'Non Aktif' ?></td>
                       <td><?= $item->kk_lastupdate?></td>
-                      <td><?= $item->kk_lastupdate_by?></td>
+                      <td><?= $item->user_name?></td>
                       <td>
                         
 
@@ -49,7 +47,7 @@
                               <i class="fa fa-pencil"></i>
                         </a>
 
-                        <a href="<?php echo base_url() . 'kk/hapus'; ?>/<?php echo $item->kk_id ?>" class="btn btn-danger btn-xs">
+                        <a href="<?php echo base_url() . 'kk/hapus'; ?>/<?php echo $item->kk_id ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
                               <i class="fa fa-trash-o"></i>
                         </a>
                           

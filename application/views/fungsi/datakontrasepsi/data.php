@@ -18,7 +18,6 @@
                   <thead>
                   <tr role="row">
                       <th>No</th>
-                      <th>ID Kontrasepsi</th>
                       <th>Kode Kontransepsi</th>
                       <th>Nama Kontransepsi</th>
                       <th>Kontransepsi Kedaluarsa</th>
@@ -34,7 +33,6 @@
                             foreach ($v_kontrasepsi as $item) {
                             ?>
                       <td><?= $i++ ?></td>
-                      <td><?= $item->kontrasepsi_id?></td>
                       <td><?= $item->kontransepsi_kode?></td>
                       <td><?= $item->kontransepsi_nama?></td>
                       <td><?= $item->kontransepsi_expired?></td>
@@ -46,7 +44,7 @@
                               <i class="fa fa-pencil"></i>
                         </a>
 
-                        <a href="<?php echo base_url() . 'kontrasepsi/hapus'; ?>/<?php echo $item->kontrasepsi_id ?>" class="btn btn-danger btn-xs">
+                        <a href="<?php echo base_url() . 'kontrasepsi/hapus'; ?>/<?php echo $item->kontrasepsi_id ?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin Menghapus Data?')">
                               <i class="fa fa-trash-o"></i>
                         </a>
                           

@@ -8,11 +8,20 @@
                       <input type="hidden" name="rw_id" class="form-control" placeholder="Masukkan ID RW">
                     
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Kode Desa</label>
+                  <label class="col-sm-2 col-sm-2 control-label">Desa</label>
                     <div class="col-sm-10">
-                      <input type="number" name="desa_kode" class="form-control" placeholder="Masukkan Kode Desa">
-                    </div>
+                    <select name="desa_kode" class="form-control">
+                        <?php
+                        foreach ($nama as $v) {
+                        ?>
+                        <option value="<?php echo $v->desa_kode ?>"><?php echo $v->desa_nama ?></option>}
+                        
+                        <?php
+                        }
+                        ?>
+                    </select>
                 </div>
+              </div>
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">RW</label>
                     <div class="col-sm-10">

@@ -23,7 +23,7 @@ class Rt extends CI_Controller {
 
 	public function tambah(){
 		$data['v_rt'] = $this->rt_model->tampil_data()->result();
-		$data['nama'] = $this->rt_model->getRw();
+		$data['nama'] = $this->rt_model->getRt();
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
 		$this->load->view('partial/datart/tambahdata',$data);
@@ -56,22 +56,14 @@ class Rt extends CI_Controller {
 	public function edit($id){
 		$where = array('rt_id'=>$id);
 		$data['v_rt'] = $this->rt_model->edit_data('data_rt', $where)->row_array();
-		$data['nama'] = $this->rt_model->getRw();
+		$data['nama'] = $this->rt_model->getRt();
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
 		$this->load->view('partial/datart/editdata',$data);
 		$this->load->view('template/footer');
 	}
 
-	public function seacrh(){
-		$data['v_rt'] = $this->rt_model->getKeyword();
-		$keyword = $this->input->post('keyword');
-		$this->load->view('template/header');
-		$this->load->view('template/header');
-        $this->load->view('template/navbar');
-		$this->load->view('partial/datart/data', $data);
-		$this->load->view('template/footer');
-	}
+	
 	public function search(){
 		$keyword = $this->input->post('keyword');
     	$data['v_rt'] = $this->rt_model->getKeyword($keyword);
