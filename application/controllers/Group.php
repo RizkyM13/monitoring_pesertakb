@@ -65,9 +65,10 @@ class Group extends CI_Controller {
 	public function menu($id){
 		$where = array('grp_id'=>$id);
 		$data['v_ms_group'] = $this->group_model->detail('ms_group', $where)->row_array();
+		$data['menu'] = $this->group_model->getMenu();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');
-		$this->load->view('pengaturan/datagroup/menu2', $data);
+		$this->load->view('pengaturan/datagroup/menu', $data);
 		$this->load->view('template/footer');
 	}
 
