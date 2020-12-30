@@ -25,6 +25,7 @@ class Profil_model extends CI_Model {
 		 return $this->db->get()->result();
 	}
 
+
 	function input_data($data, $table){
 		$this->db->insert($table, $data);
 	}

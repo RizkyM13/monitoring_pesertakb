@@ -3,7 +3,7 @@
 <div class="col-lg-12">
           <div class="form-panel">
             <br>
-              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'profil/tambah_aksi'; ?>">
+              <form class="form-horizontal style-form" method="post" action="<?php echo base_url() . 'profil/tambah_aksi'; ?>" enctype="multipart/form-data">
                 
                   
                       <input type="hidden" name="id" class="form-control" placeholder="Masukkan ID">
@@ -34,9 +34,15 @@
                     </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Kode Kabupaten</label>
+                  <label class="col-sm-2 col-sm-2 control-label">Nama Kabupaten</label>
                     <div class="col-sm-10">
-                      <input type="number" name="kab_kode" class="form-control" placeholder="Masukkan Kode Kabupaten">
+                      <select name="kab_nama" class="form-control">
+                          <option value="surabaya">Surabaya</option>
+                          <option value="sidoarjo">Sidoarjo</option>
+                          <option value="jember">Jember</option>
+                          <option value="malang">Malang</option>
+                       
+                      </select>
                     </div>
                 </div>
                 <div class="form-group">
@@ -66,7 +72,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Logo</label>
                     <div class="col-sm-10">
-                      <input type="text" name="logo" class="form-control" placeholder="Masukkan Logo">
+                      <input type="file" name="logo" class="form-control" placeholder="Masukkan Logo">
                     </div>
                 </div>
                   <button type="submit" class="btn btn-primary">Simpan</button>

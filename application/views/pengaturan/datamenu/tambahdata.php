@@ -28,7 +28,14 @@
                  <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Menu Induk</label>
                     <div class="col-sm-10">
-                      <input type="number" name="mn_induk"class="form-control" placeholder="Masukkan Menu Induk">
+                      <select name="mn_induk" class="form-control">
+                          <option value="0">0</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                       
+                      </select>
                     </div>
                 </div>
                  <div class="form-group">

@@ -39,9 +39,9 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="col-lg-2 col-sm-2 control-label">Kode Kabupaten</label>
+                  <label class="col-lg-2 col-sm-2 control-label">Nama Kabupaten</label>
                   <div class="col-lg-10">
-                    <p class="form-control-static"><?php echo $v_profil['kab_kode'] ?></p>
+                    <p class="form-control-static"><?php echo $v_profil['kab_nama'] ?></p>
                   </div>
                 </div>
 

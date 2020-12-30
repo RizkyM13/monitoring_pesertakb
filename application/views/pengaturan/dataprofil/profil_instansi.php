@@ -21,9 +21,10 @@
                       <th>Kode</th>
                       <th>Instansi</th>
                       <th>Alamat</th>
-                      <th>Kode Kabupaten</th>
+                      <th>Nama Kabupaten</th>
                       <th>Telepon</th>
-                      <th>Website</th>
+                      <th>Kode Pos</th>
+                      <th>Logo</th>
                       <th>Aksi</th>
                   </tr>
                 </thead>
@@ -38,9 +39,10 @@
                       <td><?= $item->kode?></td>
                       <td><?= $item->instansi?></td>
                       <td><?= $item->alamat?></td>
-                      <td><?= $item->kab_kode?></td>
+                      <td><?= $item->kab_nama?></td>
                       <td><?= $item->telp?></td>
                       <td><?= $item->kodepos?></td>
+                      <td><img width="50" height="50" src="logo/<?= $item->logo ?>"></td>
                      
                     
                       <td>

@@ -30,9 +30,16 @@
                     </div>
                 </div>
                 <div class="form-group">
-                  <label class="col-sm-2 col-sm-2 control-label">Induk Menu</label>
+                  <label class="col-sm-2 col-sm-2 control-label">Menu Induk</label>
                     <div class="col-sm-10">
-                      <input type="text" name="mn_induk" class="form-control" placeholder="Masukkan Induk Menu" value="<?php echo $v_ms_menu['mn_induk'] ?>">
+                      <select name="mn_induk" class="form-control">
+                          <option value="0">0</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                       
+                      </select>
                     </div>
                 </div>
                 <div class="form-group">

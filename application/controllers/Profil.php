@@ -30,35 +30,51 @@ class Profil extends CI_Controller {
 	}
 
 	public function tambah_aksi(){
-		$id					= $this->input->post('id');
-		$kode				= $this->input->post('kode');
-		$instansi			= $this->input->post('instansi');
-		$instansi_nick		= $this->input->post('instansi_nick');
-		$alamat				= $this->input->post('alamat');
-		$kab_kode			= $this->input->post('kab_kode');
-		$telp				= $this->input->post('telp');
-		$email				= $this->input->post('email');
-		$website			= $this->input->post('website');
-		$kodepos			= $this->input->post('kodepos');
-		$logo				= $this->input->post('logo');
+		$config['upload_path']		= './logo/';
+		$config['allowed_types']	= 'gif|jpg|png|jpeg';
+		$config['max_size']			= 0;
+		$config['max_width']		= 0;
+		$config['max_height']		= 0;
+		$config['file_name']		= $_FILES['logo']['name'];
+
+		$this->load->library('upload', $config);
+		$this->upload->initialize($config);
+
+		if (!$this->upload->do_upload('logo')) {
+			echo "gagal upload logo";
+		}else{
+			$id					= $this->input->post('id');
+			$kode				= $this->input->post('kode');
+			$instansi			= $this->input->post('instansi');
+			$instansi_nick		= $this->input->post('instansi_nick');
+			$alamat				= $this->input->post('alamat');
+			$kab_nama			= $this->input->post('kab_nama');
+			$telp				= $this->input->post('telp');
+			$email				= $this->input->post('email');
+			$website			= $this->input->post('website');
+			$kodepos			= $this->input->post('kodepos');
+			$file 				= $this->upload->data();
+			$logo				= $file['file_name'];
 		
 
-		$data = array(
-			'id'				=> $id,
-			'kode'				=> $kode,
-			'instansi'			=> $instansi,
-			'instansi_nick'		=> $instansi_nick,
-			'alamat'			=> $alamat,
-			'kab_kode'			=> $kab_kode,
-			'telp'				=> $telp,
-			'email'				=> $email,
-			'website'			=> $website,
-			'kodepos'			=> $kodepos,
-			'logo'				=> $logo
-		);
+			$data = array(
+				'id'				=> $id,
+				'kode'				=> $kode,
+				'instansi'			=> $instansi,
+				'instansi_nick'		=> $instansi_nick,
+				'alamat'			=> $alamat,
+				'kab_nama'			=> $kab_nama,
+				'telp'				=> $telp,
+				'email'				=> $email,
+				'website'			=> $website,
+				'kodepos'			=> $kodepos,
+				'logo'				=> $logo
+			);
 
-		$this->profil_model->input_data($data, 'profil');
-		redirect('profil');
+				$this->profil_model->input_data($data, 'profil');
+				redirect('profil');
+
+		}
 	}
 
 	public function hapus ($id=''){
@@ -77,39 +93,92 @@ class Profil extends CI_Controller {
 	}
 
 	public function update(){
-		$id					= $this->input->post('id');
-		$kode				= $this->input->post('kode');
-		$instansi			= $this->input->post('instansi');
-		$instansi_nick		= $this->input->post('instansi_nick');
-		$alamat				= $this->input->post('alamat');
-		$kab_kode			= $this->input->post('kab_kode');
-		$telp				= $this->input->post('telp');
-		$email				= $this->input->post('email');
-		$website			= $this->input->post('website');
-		$kodepos			= $this->input->post('kodepos');
-		$logo				= $this->input->post('logo');
+		if (empty($_FILES['logo']['name'])) {
+
+			$id					= $this->input->post('id');
+			$kode				= $this->input->post('kode');
+			$instansi			= $this->input->post('instansi');
+			$instansi_nick		= $this->input->post('instansi_nick');
+			$alamat				= $this->input->post('alamat');
+			$kab_nama			= $this->input->post('kab_nama');
+			$telp				= $this->input->post('telp');
+			$email				= $this->input->post('email');
+			$website			= $this->input->post('website');
+			$kodepos			= $this->input->post('kodepos');
+			
 		
 
-		$data = array(
-			'id'				=> $id,
-			'kode'				=> $kode,
-			'instansi'			=> $instansi,
-			'instansi_nick'		=> $instansi_nick,
-			'alamat'			=> $alamat,
-			'kab_kode'			=> $kab_kode,
-			'telp'				=> $telp,
-			'email'				=> $email,
-			'website'			=> $website,
-			'kodepos'			=> $kodepos,
-			'logo'				=> $logo
-		);
+			$data = array(
+				'id'				=> $id,
+				'kode'				=> $kode,
+				'instansi'			=> $instansi,
+				'instansi_nick'		=> $instansi_nick,
+				'alamat'			=> $alamat,
+				'kab_nama'			=> $kab_nama,
+				'telp'				=> $telp,
+				'email'				=> $email,
+				'website'			=> $website,
+				'kodepos'			=> $kodepos
+				
+			);
 
-		$where = array(
-			'id'=>$id
-		);
+			$where = array(
+				'id'=>$id
+			);
 
-		$this->profil_model->update_data($where, $data, 'profil');
-		redirect('profil');
+			$this->profil_model->update_data($where, $data, 'profil');
+			redirect('profil');
+		} else{
+			$config['upload_path']		= './logo/';
+			$config['allowed_types']	= 'gif|jpg|png|jpeg';
+			$config['max_size']			= 0;
+			$config['max_width']		= 0;
+			$config['max_height']		= 0;
+			$config['file_name']		= $_FILES['logo']['name'];
+
+			$this->load->library('upload', $config);
+			$this->upload->initialize($config);
+
+			if (!$this->upload->do_upload('logo')) {
+				echo "gagal upload logo";
+			} else{
+				$id					= $this->input->post('id');
+				$kode				= $this->input->post('kode');
+				$instansi			= $this->input->post('instansi');
+				$instansi_nick		= $this->input->post('instansi_nick');
+				$alamat				= $this->input->post('alamat');
+				$kab_nama			= $this->input->post('kab_nama');
+				$telp				= $this->input->post('telp');
+				$email				= $this->input->post('email');
+				$website			= $this->input->post('website');
+				$kodepos			= $this->input->post('kodepos');
+				$file 				= $this->upload->data();
+				$logo				= $file['file_name'];
+		
+
+				$data = array(
+				'id'				=> $id,
+				'kode'				=> $kode,
+				'instansi'			=> $instansi,
+				'instansi_nick'		=> $instansi_nick,
+				'alamat'			=> $alamat,
+				'kab_nama'			=> $kab_nama,
+				'telp'				=> $telp,
+				'email'				=> $email,
+				'website'			=> $website,
+				'kodepos'			=> $kodepos,
+				'logo'				=> $logo
+			);
+
+				$where = array(
+					'id'=>$id
+				);
+
+				$this->profil_model->update_data($where, $data, 'profil');
+				redirect('profil');
+			}
+		}
+		
 	}
 
 	public function detail($id){
