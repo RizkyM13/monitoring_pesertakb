@@ -11,10 +11,17 @@ class Group_model extends CI_Model {
 		return $this->db->get('ms_group');
 	}
 
-	function getMenu(){
-		return $this->db->query('SELECT r.menu_id, b.grp_id, b.grp_kode, b.grp_nama, b.grp_aktif FROM `ms_group` as b JOIN ms_group_menu as r ON r.grp_id=b.grp_id');
-		//return $this->db->get('ms_group_menu')->result();
+	function getAkses(){
+		return $this->db->get('ms_group_menu')->result();
 	}
+
+	function getMenu(){
+		return $this->db->query('SELECT * FROM `ms_menu` ')->result();
+
+		//return $this->db->get('ms_menu')->result();
+	}
+
+
 
 	function getKeyword($keyword){
 		 $this->db->select('*');
@@ -44,7 +51,6 @@ class Group_model extends CI_Model {
 	}
 
 	function detail($table,$where){
-		return $this->db->query('SELECT r.grp_id, b.grp_id, b.grp_kode, b.grp_nama, b.grp_aktif FROM `ms_group` as b JOIN ms_group_menu as r ON r.grp_id=b.grp_id');
 		return $this->db->get_where($table, $where);
 	}
 }

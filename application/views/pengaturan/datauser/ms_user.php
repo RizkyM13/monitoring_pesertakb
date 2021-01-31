@@ -23,6 +23,7 @@
                       <th>Nama Kader</th>
                       <th>Username</th>
                       <th>Status User</th>
+                      <th>Setting User In Group</th>
                       <th>Aksi</th>
                   </tr>
                 </thead>
@@ -37,6 +38,10 @@
                       <td><?= $item->kader_nama?></td>
                       <td><?= $item->user_name?></td>
                       <td><?= $item->user_status == 1 ? 'Aktif' : 'Non Aktif' ?></td>
+                      <td>
+                        <a href="<?php echo base_url() . 'user/setting'; ?>/<?php echo $item->user_id ?>" class="btn btn-success btn-xs">
+                              <i class="fa fa-cogs"></i>
+                      </td>
                       <td>
                           <a href="<?php echo base_url() . 'user/edit'; ?>/<?php echo $item->user_id ?>" class="btn btn-primary btn-xs">
                               <i class="fa fa-pencil"></i>

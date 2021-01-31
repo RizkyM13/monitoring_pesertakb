@@ -16,6 +16,10 @@ class User_model extends CI_Model {
 		return $this->db->get('kader')->result();
 	}
 
+	function getAkses(){
+		return $this->db->query('SELECT * FROM `ms_group` ')->result();
+	}
+
 	function getKeyword($keyword){
 		 $this->db->select('*');
 		 $this->db->from('ms_user');
@@ -42,6 +46,10 @@ class User_model extends CI_Model {
 	}
 
 	function edit_data($table,$where){
+		return $this->db->get_where($table, $where);
+	}
+
+	function detail($table,$where){
 		return $this->db->get_where($table, $where);
 	}
 }

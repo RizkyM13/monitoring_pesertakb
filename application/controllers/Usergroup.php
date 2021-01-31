@@ -11,7 +11,8 @@ class Usergroup extends CI_Controller {
 
 	public function index()
 	{
-		
+		$data['user'] = $this->usergroup_model->getNamaUser();
+		$data['group'] = $this->usergroup_model->getNamaGroup();
 		$data['v_user_group'] = $this->usergroup_model->tampil_data()->result();
 		$this->load->view('template/header');
 		$this->load->view('template/navbar');

@@ -24,4 +24,16 @@ function check_admin(){
 	}
 }
 
+function check_access($grp_id, $menu_id){
+	$ci = get_instance();
+
+	$ci->db->where('grp_id', $grp_id);
+	$ci->db->where('menu_id', $menu_id);
+	$result = $ci->db->get('ms_group_menu');
+	
+	if ($result->num_rows() > 0) {
+		return "checked='checked'";
+	}
+}
+
 ?>

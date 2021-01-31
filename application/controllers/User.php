@@ -75,6 +75,17 @@ class User extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
+	public function setting($id){
+		$where = array('user_id'=>$id);
+		$data['v_ms_user'] = $this->user_model->detail('ms_user', $where)->row_array();
+		//$data['menu'] = $this->group_model->getMenu();
+		$data['akses'] = $this->user_model->getAkses();
+		$this->load->view('template/header');
+		$this->load->view('template/navbar');
+		$this->load->view('pengaturan/datauser/setting', $data);
+		$this->load->view('template/footer');
+	}
+
 	public function update(){
 		$user_id				= $this->input->post('user_id');
 		$kader_id				= $this->input->post('kader_id');

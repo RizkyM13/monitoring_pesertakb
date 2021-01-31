@@ -207,62 +207,75 @@
         MAIN SIDEBAR MENU
         *********************************************************************************************************************************************************** -->
   <!--sidebar start-->
-  
     <aside>
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
           <p class="centered"><a href="profile.html"><img src="<?= base_url() ?>/assets/img/KB.jpg" class="img-circle" width="80"></a></p>
-
-          <!-- query menu -->
-
-          <?php 
-          $user_id = $this->session->userdata('kader_id');
-            $queryUser = "SELECT `ms_group`.`grp_id`, `grp_nama` FROM `ms_group` JOIN `ms_user_group` ON `ms_group`.`grp_id` = `ms_user_group`.`grp_id` WHERE   `ms_user_group`.`user_id` = $user_id ORDER BY `ms_user_group`.`grp_id` ASC";
-            $user = $this->db->query($queryUser)->result_array();
-          ?>
-
-          <!-- looping menu -->
-          <?php foreach ($user as $u) : ?>
-          <!-- sub menu -->
-            <h5 class="centered"><?=$u['grp_nama']; ?></h5>
-            
-          <?php 
-          $userId = $u['grp_id'];
-            $queryMenu = "SELECT * FROM `ms_menu` JOIN `ms_group_menu` ON `ms_menu`.`mn_id` = `ms_group_menu`.`menu_id` WHERE `ms_group_menu`.`grp_id` = $userId AND `ms_menu`.`mn_aktif` = 1 ";
-
-            $menu = $this->db->query($queryMenu)->result_array();
-          ?>
-            <?php foreach ($menu as $m) : ?>
-              <li class="md">
-                <a href="javascript:;">
-                <i class="<?= $m['mn_icon']; ?>"></i>
-                <span><?=$m['mn_nama']; ?></span>
-                </a>
+          <h5 class="centered"></h5>
+          <li class="mt">
+            <a href="<?= base_url(). 'Dashboard'?>">
+              <i class="fa fa-dashboard"></i>
+              <span>Dashboard</span>
+              </a>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-cogs"></i>
+              <span>Setting</span>
+              </a>
+            <ul class="sub">
+              <li><a href="<?= base_url(). 'profil'?>">Profil Instansi</a></li>
+              <li><a href="<?= base_url(). 'menu'?>">Ms Menu</a></li>
+              <li><a href="<?= base_url(). 'group'?>">Ms Group</a></li>
+              <li><a href="<?= base_url(). 'user'?>">Ms User</a></li>
+              <li><a href="<?= base_url(). 'usergroup'?>">Ms User group</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-book"></i>
+              <span>Master Data</span>
+              </a>
+            <ul class="sub">
+              <li><a href="<?= base_url(). 'kecamatan' ?>">Data Kecamatan</a></li>
+              <li><a href="<?= base_url(). 'desa' ?>">Data Desa</a></li>
+              <li><a href="<?= base_url(). 'rw' ?>">Data RW</a></li>
+              <li><a href="<?= base_url(). 'rt' ?>">Data RT</a></li>
+              <li><a href="<?= base_url(). 'faskes' ?>">Data Faskes</a></li>
+              <li><a href="<?= base_url(). 'faskesjenis' ?>">Data Faskes Jenis</a></li>
+              <li><a href="<?= base_url(). 'kader' ?>">Data Kader</a></li>
+              <li><a href="<?= base_url(). 'kontrasepsi'?>">Data Jenis KB</a></li>
+              <li><a href="<?= base_url(). 'kunjungan_ulang'?>">Kunjungan Ulang Akseptor</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-book"></i>
+              <span>Transaksi</span>
+              </a>
+            <ul class="sub">
+              <li><a href="<?= base_url().'kk'?>">Data KK</a></li>
+              <li><a href="<?= base_url().'penduduk'?>">Data Penduduk</a></li>
+              <li><a href="<?= base_url().'akseptor'?>">Data Akseptor KB</a></li>
               
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-desktop"></i>
+              <span>Laporan</span>
+              </a>
+            <ul class="sub">
+              <li><a href="<?= base_url() ?>/assets/general.html">General</a></li>
+              <li><a href="<?= base_url() ?>/assets/buttons.html">Buttons</a></li>
+              <li><a href="<?= base_url() ?>/assets/panels.html">Panels</a></li>
+              <li><a href="<?= base_url() ?>/assets/font_awesome.html">Font Awesome</a></li>
+            </ul>
+          </li>
 
-            <?php 
-            $menuId = $m['mn_id'];
-              $querySubMenu = "SELECT * FROM `ms_menu` JOIN `ms_group_menu` ON `ms_menu`.`mn_id` = `ms_group_menu`.`menu_id` WHERE `ms_menu`.`mn_induk` = $menuId AND `ms_menu`.`mn_aktif` = 1 ";
-
-              $subMenu = $this->db->query($querySubMenu)->result_array();
-          ?>
-          
-              <ul class="sub">
-                <?php foreach ($subMenu as $sm) : ?>
-                <a href="<?=$sm['mn_url']; ?>">
-                <span><?=$sm['mn_nama']; ?></span>
-                </a>
-            
-                <?php endforeach; ?>
-              </ul>
-              </li>
-            <?php endforeach; ?>
-          <?php endforeach; ?>
         </ul>
         <!-- sidebar menu end-->
       </div>
     </aside>
-
-    
-      
+    <!--sidebar end-->
