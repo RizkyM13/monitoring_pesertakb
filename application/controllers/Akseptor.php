@@ -1,29 +1,30 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Kunjungan_ulang extends CI_Controller {
+class Akseptor extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('kunjungan_model');
+		$this->load->model('akseptor_model');
 		if ($this->session->userdata('kader_id')==null) {
 			redirect('auth');
 		}
-		
 	}
 
 	public function index()
 	{
-		$data['v_kts'] = $this->kunjungan_model->tampil_data()->result();
+		$data['v_akp'] = $this->akseptor_model->tampil_data()->result();
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
-		$this->load->view('fungsi/datakontrasepsi/data', $data);
+		$this->load->view('fungsi/dataakseptor/data',$data);
 		$this->load->view('template/footer');
 	}
+
 	public function tambah(){
-		$data['v_akp'] = $this->kontrasepsi_model->tampil_data()->result();
-		$data['faskes'] = $this->kontrasepsi_model->getFaskes();
-		$data['kontrasepsi'] = $this->kontrasepsi_model->getKontrasepsi();
+		$data['v_akp'] = $this->akseptor_model->tampil_data()->result();
+		$data['faskes'] = $this->akseptor_model->getFaskes();
+		$data['kontrasepsi'] = $this->akseptor_model->getKontrasepsi();
+		$data['alamat'] = $this->akseptor_model->getAlamat();
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
 		$this->load->view('fungsi/dataakseptor/tambahdata',$data);
@@ -34,10 +35,9 @@ class Kunjungan_ulang extends CI_Controller {
 		$akseptor_id		= $this->input->post('akseptor_id');
 		$tgl				= $this->input->post('tgl');
 		$no_kartu			= $this->input->post('no_kartu');
-		$faskes_id			= $this->input->post('faskes_id');
+		$faskesjenis_id		= $this->input->post('faskesjenis_id');
 		$nama_akseptor 		= $this->input->post('nama_akseptor');
 		$nama_pasangan		= $this->input->post('nama_pasangan');
-		$kec_kode			= $this->input->post('kec_kode');
 		$desa_kode			= $this->input->post('desa_kode');
 		$pekerjaan			= $this->input->post('pekerjaan');
 		$umur				= $this->input->post('umur');
@@ -49,10 +49,9 @@ class Kunjungan_ulang extends CI_Controller {
 			'akseptor_id'		=> $akseptor_id,
 			'tgl'				=> $tgl,
 			'no_kartu'			=> $no_kartu,
-			'faskes_id'			=> $faskes_id,
+			'faskesjenis_id'	=> $faskesjenis_id,
 			'nama_akseptor'		=> $nama_akseptor,
 			'nama_pasangan'		=> $nama_pasangan,
-			'kec_kode'			=> $kec_kode,
 			'desa_kode'			=> $desa_kode,
 			'pekerjaan'			=> $pekerjaan,
 			'umur'				=> $umur,
@@ -76,6 +75,7 @@ class Kunjungan_ulang extends CI_Controller {
 		$data['v_akp'] = $this->akseptor_model->edit_data('akseptor', $where)->row_array();
 		$data['faskes'] = $this->akseptor_model->getFaskes();
 		$data['kontrasepsi'] = $this->akseptor_model->getKontrasepsi();
+		$data['alamat'] = $this->akseptor_model->getAlamat();
 		$this->load->view('template/header');
         $this->load->view('template/navbar');
 		$this->load->view('fungsi/dataakseptor/editdata',$data);
@@ -86,10 +86,9 @@ class Kunjungan_ulang extends CI_Controller {
 		$akseptor_id		= $this->input->post('akseptor_id');
 		$tgl				= $this->input->post('tgl');
 		$no_kartu			= $this->input->post('no_kartu');
-		$faskes_id			= $this->input->post('faskes_id');
+		$faskesjenis_id		= $this->input->post('faskesjenis_id');
 		$nama_akseptor 		= $this->input->post('nama_akseptor');
 		$nama_pasangan		= $this->input->post('nama_pasangan');
-		$kec_kode			= $this->input->post('kec_kode');
 		$desa_kode			= $this->input->post('desa_kode');
 		$pekerjaan			= $this->input->post('pekerjaan');
 		$umur				= $this->input->post('umur');
@@ -101,10 +100,9 @@ class Kunjungan_ulang extends CI_Controller {
 			'akseptor_id'		=> $akseptor_id,
 			'tgl'				=> $tgl,
 			'no_kartu'			=> $no_kartu,
-			'faskes_id'			=> $faskes_id,
+			'faskesjenis_id'	=> $faskesjenis_id,
 			'nama_akseptor'		=> $nama_akseptor,
 			'nama_pasangan'		=> $nama_pasangan,
-			'kec_kode'			=> $kec_kode,
 			'desa_kode'			=> $desa_kode,
 			'pekerjaan'			=> $pekerjaan,
 			'umur'				=> $umur,

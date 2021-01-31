@@ -8,7 +8,7 @@
                 <div class="form-group">
                   <label class="col-sm-2 col-sm-2 control-label">Nomor KK</label>
                     <div class="col-sm-10">
-                      <input type="text" name="kk_no" class="form-control" placeholder="Masukkan Nomor KK">
+                      <input type="number" name="kk_no" class="form-control" placeholder="Masukkan Nomor KK">
                     </div>
                 </div>
                 <div class="form-group">
